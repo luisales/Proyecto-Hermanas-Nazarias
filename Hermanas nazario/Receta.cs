@@ -124,10 +124,12 @@ namespace Hermanas_nazario
         int a;
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            int i = dataGridView2.CurrentRow.Index;
-            a = int.Parse(dataGridView2[0, i].Value.ToString());
-            button2.Enabled = true;
+            if (e.RowIndex != -1)
+            {
+                int i = dataGridView2.CurrentRow.Index;
+                a = int.Parse(dataGridView2[0, i].Value.ToString());
+                button2.Enabled = true;
+            }
            
         }
 
