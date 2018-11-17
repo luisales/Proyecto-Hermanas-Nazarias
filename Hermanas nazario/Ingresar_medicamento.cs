@@ -47,7 +47,7 @@ namespace Hermanas_nazario
                 return;
             }
             int ver = Base_de_datos.validarNomMed(txtnom.Text);
-            if(ver!=1)
+            if (ver != 1)
             {
                 MessageBox.Show("Medicamento ya existente");
                 return;
@@ -57,7 +57,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if(int.Parse(txtcant.Text) ==0)
+            if (int.Parse(txtcant.Text) == 0)
             {
                 MessageBox.Show("Imposible ingresar 0");
                 return;
@@ -98,7 +98,7 @@ namespace Hermanas_nazario
 
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
         }
 
         private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
@@ -117,3 +117,4 @@ namespace Hermanas_nazario
         }
     }
 }
+
