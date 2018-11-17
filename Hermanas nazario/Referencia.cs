@@ -19,6 +19,7 @@ namespace Hermanas_nazario
         String Espace = "\n\n\n\n";
         String Linea = "__________________________";
         String Nombre;
+
         public Referencia()
         {
             InitializeComponent();
@@ -125,7 +126,7 @@ namespace Hermanas_nazario
         {
 
             if (dataGridView1.DataSource != null)
-            {
+            {   
                 int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
                 NombrePaciente = (Convert.ToString(selectedRow.Cells[1].Value)+" "+ Convert.ToString(selectedRow.Cells[2].Value) + " " + Convert.ToString(selectedRow.Cells[3].Value));
@@ -134,7 +135,51 @@ namespace Hermanas_nazario
                 String Titulo2 = "\nAguas del Padre, Siguatepeque, Comayagua\n";
                 Nombre = Base_de_datos.Referencia();
                 txtTitulo.Text = (Titulo + Titulo2 + Nombre);
-                String Cuerpo = ("Aguas del Padre, Siguatepeque 17 de Noviembre del 2015");
+                String Fecha="";
+                int Mes=DateTime.Now.Month;
+                switch(Mes)
+                {
+                    case 1:
+                        Fecha = (DateTime.Now.Day.ToString() + " Enero del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 2:
+                        Fecha = (DateTime.Now.Day.ToString() + " Febrero del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 3:
+                        Fecha = (DateTime.Now.Day.ToString() + " Marzo del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 4:
+                        Fecha = (DateTime.Now.Day.ToString() + " Abril del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 5:
+                        Fecha = (DateTime.Now.Day.ToString() + " Mayo del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 6:
+                        Fecha = (DateTime.Now.Day.ToString() + " Junio del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 7:
+                        Fecha = (DateTime.Now.Day.ToString() + " Julio del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 8:
+                        Fecha = (DateTime.Now.Day.ToString() + " Agosto del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 9:
+                        Fecha = (DateTime.Now.Day.ToString() + " Septiembre del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 10:
+                        Fecha = (DateTime.Now.Day.ToString() + " Octubre del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 11:
+                        Fecha = (DateTime.Now.Day.ToString() + " Noviembre del " + DateTime.Now.Year.ToString());
+                    break;
+                    case 12:
+                        Fecha = (DateTime.Now.Day.ToString() + " Diciembre del " + DateTime.Now.Year.ToString());
+
+                    break;
+
+                }
+       
+                String Cuerpo = ("Aguas del Padre, "+Fecha);
                 String Cuerpo2 = ("\nNombre del (a)Paciente: " + NombrePaciente);
                 txtCuerpo.Text = (Cuerpo + Cuerpo2);
                 txtFirma.Text = (Linea +"\n"+ Nombre);
@@ -189,6 +234,28 @@ namespace Hermanas_nazario
         private void Referencia_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkModificar.Checked==true)
+            {
+                txtTitulo.Enabled = true;
+                txtCuerpo.Enabled = true;
+                txtFirma.Enabled = true;
+            }
+            if (checkModificar.Checked == false)
+            {
+                txtTitulo.Enabled = false;
+                txtCuerpo.Enabled = false;
+                txtFirma.Enabled = false;
+            }
+
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

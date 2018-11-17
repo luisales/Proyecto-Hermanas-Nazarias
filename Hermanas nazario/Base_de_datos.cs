@@ -1083,7 +1083,7 @@ namespace Hermanas_nazario
                 {
 
                     
-                    Nombre = ("Dr/a."+registro["Primer_nombre_empleado"].ToString() +" "+ registro["Primer_apellido_empleado"].ToString() +" "+ registro["Segundo_apellido_empleado"].ToString());
+                    Nombre = ("Dr(a)."+registro["Primer_nombre_empleado"].ToString() +" "+ registro["Primer_apellido_empleado"].ToString() +" "+ registro["Segundo_apellido_empleado"].ToString());
                     con.Close();
                     return Nombre;
 
