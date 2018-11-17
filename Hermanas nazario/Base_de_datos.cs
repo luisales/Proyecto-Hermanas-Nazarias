@@ -37,10 +37,11 @@ namespace Hermanas_nazario
         public static string unidad;
         public static int rol;
         public static int cod_empleado;
+        public static string User;
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVBLUE;Initial Catalog=Clinica;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True");
 
             return con;
         }
@@ -1062,6 +1063,37 @@ namespace Hermanas_nazario
             {
                 MessageBox.Show("hola");
             }
+            //Corregir Hola
+        }
+        public static string Referencia()
+        {
+            SqlConnection con;
+            con = Conectar();
+            string Nombre;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT a.Nombre_usuario,b.Primer_nombre_empleado,b.Primer_apellido_empleado, b.Segundo_apellido_empleado from [dbo].[Usuarios] a inner join [dbo].[Empleados] b on a.Codigo_empleado=b.Codigo_empleado where a.Nombre_usuario = @id", con);
+            cmd.Parameters.AddWithValue("@id", User);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count >= 1)
+            {
+                SqlDataReader registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+
+                    
+                    Nombre = ("Dr/a."+registro["Primer_nombre_empleado"].ToString() +" "+ registro["Primer_apellido_empleado"].ToString() +" "+ registro["Segundo_apellido_empleado"].ToString());
+                    con.Close();
+                    return Nombre;
+
+                }
+                
+
+            }
+            return null;
+            
+            //Corregir Hola
         }
     }
 }

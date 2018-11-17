@@ -40,8 +40,12 @@ namespace Hermanas_nazario
             contra = Encriptar.EncriptarContra(txtcontraseña.Text);
             int x = 0;
             x=Base_de_datos.Log(txtusuario.Text, contra);
-            if(x==1)
-            this.Hide();
+            if (x == 1)
+            {
+                Base_de_datos.User=txtusuario.Text;
+                this.Hide();
+                
+            }
             else
             {
                 txtcontraseña.Clear();
@@ -59,6 +63,11 @@ namespace Hermanas_nazario
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -44,6 +44,8 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.txtCuerpo = new System.Windows.Forms.RichTextBox();
             this.txtTitulo = new System.Windows.Forms.RichTextBox();
+            this.lblSeleccion = new System.Windows.Forms.Label();
+            this.txtFirma = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -221,9 +223,9 @@
             // txtCuerpo
             // 
             this.txtCuerpo.Enabled = false;
-            this.txtCuerpo.Location = new System.Drawing.Point(900, 363);
+            this.txtCuerpo.Location = new System.Drawing.Point(900, 372);
             this.txtCuerpo.Name = "txtCuerpo";
-            this.txtCuerpo.Size = new System.Drawing.Size(700, 426);
+            this.txtCuerpo.Size = new System.Drawing.Size(700, 141);
             this.txtCuerpo.TabIndex = 97;
             this.txtCuerpo.Text = "";
             // 
@@ -237,11 +239,31 @@
             this.txtTitulo.TabIndex = 98;
             this.txtTitulo.Text = "";
             // 
+            // lblSeleccion
+            // 
+            this.lblSeleccion.AutoSize = true;
+            this.lblSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccion.Location = new System.Drawing.Point(35, 572);
+            this.lblSeleccion.Name = "lblSeleccion";
+            this.lblSeleccion.Size = new System.Drawing.Size(0, 36);
+            this.lblSeleccion.TabIndex = 99;
+            // 
+            // txtFirma
+            // 
+            this.txtFirma.Enabled = false;
+            this.txtFirma.Location = new System.Drawing.Point(900, 547);
+            this.txtFirma.Name = "txtFirma";
+            this.txtFirma.Size = new System.Drawing.Size(700, 129);
+            this.txtFirma.TabIndex = 100;
+            this.txtFirma.Text = "";
+            // 
             // Referencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1663, 864);
+            this.Controls.Add(this.txtFirma);
+            this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.txtCuerpo);
             this.Controls.Add(this.btnGenerar);
@@ -259,6 +281,7 @@
             this.Name = "Referencia";
             this.Text = "Referencia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Referencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -288,5 +311,7 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.RichTextBox txtCuerpo;
         private System.Windows.Forms.RichTextBox txtTitulo;
+        private System.Windows.Forms.Label lblSeleccion;
+        private System.Windows.Forms.RichTextBox txtFirma;
     }
 }
