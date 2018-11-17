@@ -271,11 +271,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1636, 880);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtGencita);
             this.Controls.Add(this.btnGencita);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox5);
