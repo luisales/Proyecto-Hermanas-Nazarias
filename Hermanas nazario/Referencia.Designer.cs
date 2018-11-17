@@ -44,6 +44,9 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.txtCuerpo = new System.Windows.Forms.RichTextBox();
             this.txtTitulo = new System.Windows.Forms.RichTextBox();
+            this.lblSeleccion = new System.Windows.Forms.Label();
+            this.txtFirma = new System.Windows.Forms.RichTextBox();
+            this.checkModificar = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -210,20 +213,20 @@
             // btnGenerar
             // 
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(648, 723);
+            this.btnGenerar.Location = new System.Drawing.Point(574, 623);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(168, 66);
             this.btnGenerar.TabIndex = 96;
-            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.Text = "Guardar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtCuerpo
             // 
             this.txtCuerpo.Enabled = false;
-            this.txtCuerpo.Location = new System.Drawing.Point(900, 363);
+            this.txtCuerpo.Location = new System.Drawing.Point(900, 315);
             this.txtCuerpo.Name = "txtCuerpo";
-            this.txtCuerpo.Size = new System.Drawing.Size(700, 426);
+            this.txtCuerpo.Size = new System.Drawing.Size(700, 208);
             this.txtCuerpo.TabIndex = 97;
             this.txtCuerpo.Text = "";
             // 
@@ -233,15 +236,48 @@
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Location = new System.Drawing.Point(900, 163);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(700, 178);
+            this.txtTitulo.Size = new System.Drawing.Size(700, 127);
             this.txtTitulo.TabIndex = 98;
             this.txtTitulo.Text = "";
+            // 
+            // lblSeleccion
+            // 
+            this.lblSeleccion.AutoSize = true;
+            this.lblSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccion.Location = new System.Drawing.Point(35, 572);
+            this.lblSeleccion.Name = "lblSeleccion";
+            this.lblSeleccion.Size = new System.Drawing.Size(0, 36);
+            this.lblSeleccion.TabIndex = 99;
+            // 
+            // txtFirma
+            // 
+            this.txtFirma.Enabled = false;
+            this.txtFirma.Location = new System.Drawing.Point(900, 547);
+            this.txtFirma.Name = "txtFirma";
+            this.txtFirma.Size = new System.Drawing.Size(700, 129);
+            this.txtFirma.TabIndex = 100;
+            this.txtFirma.Text = "";
+            // 
+            // checkModificar
+            // 
+            this.checkModificar.AutoSize = true;
+            this.checkModificar.Location = new System.Drawing.Point(900, 133);
+            this.checkModificar.Name = "checkModificar";
+            this.checkModificar.Size = new System.Drawing.Size(99, 24);
+            this.checkModificar.TabIndex = 101;
+            this.checkModificar.Text = "Modificar";
+            this.checkModificar.UseVisualStyleBackColor = true;
+            this.checkModificar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkModificar.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
             // 
             // Referencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1663, 864);
+            this.Controls.Add(this.checkModificar);
+            this.Controls.Add(this.txtFirma);
+            this.Controls.Add(this.lblSeleccion);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.txtCuerpo);
             this.Controls.Add(this.btnGenerar);
@@ -259,6 +295,7 @@
             this.Name = "Referencia";
             this.Text = "Referencia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Referencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -288,5 +325,8 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.RichTextBox txtCuerpo;
         private System.Windows.Forms.RichTextBox txtTitulo;
+        private System.Windows.Forms.Label lblSeleccion;
+        private System.Windows.Forms.RichTextBox txtFirma;
+        private System.Windows.Forms.CheckBox checkModificar;
     }
 }
