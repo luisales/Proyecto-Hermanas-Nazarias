@@ -124,5 +124,12 @@ namespace Hermanas_nazario
             Generar_factura a = new Generar_factura();
             a.Show();
         }
+
+        private void referenciaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Referencia a = new Referencia();
+            a.Show();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.registarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarFacturarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarIngresoDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarMedicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@
             this.referenciaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generarFacturarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +139,13 @@
             this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
             this.facturacionToolStripMenuItem.Text = "Facturacion";
             // 
+            // generarFacturarToolStripMenuItem
+            // 
+            this.generarFacturarToolStripMenuItem.Name = "generarFacturarToolStripMenuItem";
+            this.generarFacturarToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.generarFacturarToolStripMenuItem.Text = "Generar Factura";
+            this.generarFacturarToolStripMenuItem.Click += new System.EventHandler(this.generarFacturarToolStripMenuItem_Click);
+            // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -182,6 +189,7 @@
             this.referenciaMedicaToolStripMenuItem.Name = "referenciaMedicaToolStripMenuItem";
             this.referenciaMedicaToolStripMenuItem.Size = new System.Drawing.Size(244, 30);
             this.referenciaMedicaToolStripMenuItem.Text = "Referencia Medica";
+            this.referenciaMedicaToolStripMenuItem.Click += new System.EventHandler(this.referenciaMedicaToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
@@ -196,13 +204,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 29);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // generarFacturarToolStripMenuItem
-            // 
-            this.generarFacturarToolStripMenuItem.Name = "generarFacturarToolStripMenuItem";
-            this.generarFacturarToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
-            this.generarFacturarToolStripMenuItem.Text = "Generar Factura";
-            this.generarFacturarToolStripMenuItem.Click += new System.EventHandler(this.generarFacturarToolStripMenuItem_Click);
             // 
             // menu
             // 

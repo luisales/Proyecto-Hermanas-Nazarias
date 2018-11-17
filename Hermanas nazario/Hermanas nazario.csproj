@@ -76,6 +76,10 @@
     <Reference Include="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -162,6 +166,12 @@
     <Compile Include="Recuperar_contrasenia.Designer.cs">
       <DependentUpon>Recuperar_contrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Referencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referencia.Designer.cs">
+      <DependentUpon>Referencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registro de usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +245,9 @@
     <EmbeddedResource Include="Recuperar_contrasenia.resx">
       <DependentUpon>Recuperar_contrasenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Referencia.resx">
+      <DependentUpon>Referencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registro de usuario.resx">
       <DependentUpon>Registro de usuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +288,7 @@
       <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Hermanas nazario_ClaveTemporal.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
