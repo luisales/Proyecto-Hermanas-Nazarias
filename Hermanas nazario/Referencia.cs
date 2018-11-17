@@ -196,7 +196,7 @@ namespace Hermanas_nazario
             try
             {
                 //Poner direccion bien y agregar fecha
-                PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\luisa\Desktop\Portales\Test.pdf", FileMode.Create));
+                PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\Velasquez\Desktop\Test.pdf", FileMode.Create));
                 doc.Open();
                 
                 Paragraph Parrafo = new Paragraph(txtTitulo.Text);
@@ -217,9 +217,12 @@ namespace Hermanas_nazario
                 Parrafo3.Alignment = Element.ALIGN_CENTER;
                 doc.Add(Parrafo3);
                 
-          
 
                 doc.Close();
+                MessageBox.Show("Guardado con exito");
+                this.Hide();
+                menu a = new menu();
+                a.Show();
             }
             catch (Exception ex)
             {
