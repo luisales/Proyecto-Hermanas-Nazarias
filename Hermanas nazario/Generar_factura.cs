@@ -13,6 +13,8 @@ namespace Hermanas_nazario
     public partial class Generar_factura : Form
     {
         float TotalFinal;
+        float total;
+        float descuento;
 
         public Generar_factura()
         {
@@ -74,10 +76,12 @@ namespace Hermanas_nazario
                
 
 
-                float total = Base_de_datos.total_medicamentos(txtCita.Text);
-                float descuento = total * (Base_de_datos.porcentaje_riesgo(txtCita.Text) / 100);
+                total = Base_de_datos.total_medicamentos(txtCita.Text);
+                descuento = total * (Base_de_datos.porcentaje_riesgo(txtCita.Text) / 100);
 
-                TotalFinal = (total - descuento);
+                txtSubTotal.Text = descuento.ToString();
+
+                TotalFinal =  descuento;
                 txtTotal.Text = TotalFinal.ToString();
 
                 txtValorC.Enabled = true;
@@ -97,7 +101,12 @@ namespace Hermanas_nazario
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            
+            if (!string.IsNullOrEmpty(txtValorC.Text) == false)
+            {
+                MessageBox.Show("Ingrease el valor de la consulta");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(txtValorC.Text) == false)
             {
                 MessageBox.Show("Ingrease el valor de la consulta");
@@ -205,10 +214,11 @@ namespace Hermanas_nazario
             txtIngresar.Enabled = false;
             btnCancelar.Enabled = false;
             chkIngresar.Checked = false;
+            txtSubTotal.Text = "0";
             
             dataGridView1.DataSource = null;
 
-
+            txtSubTotal.Text = "0";
             txtTotal.Text = "0";
             txtIngresar.Text = "0";
             txtValorC.Text = "0";
@@ -234,12 +244,23 @@ namespace Hermanas_nazario
 
         private void txtValorC_TextChanged(object sender, EventArgs e)
         {
+            
+
             if (btnPagar.Enabled == true)
             {
                 if (txtValorC.TextLength >= 1)
+                { 
+                    txtConsulta.Text = txtValorC.Text;
+                txtSubTotal.Text = descuento.ToString();
+        
                     txtTotal.Text = (TotalFinal + int.Parse(txtValorC.Text)).ToString();
+                }
                 if (txtValorC.TextLength == 0)
-                    txtTotal.Text = (TotalFinal + 0).ToString();
+                { 
+                    txtConsulta.Text = "0";
+                 txtSubTotal.Text = descuento.ToString();
+                txtTotal.Text = (TotalFinal + 0).ToString();
+                }
             }
         }
 
@@ -268,6 +289,15 @@ namespace Hermanas_nazario
             }
             
         }
-        
+
+        private void Generar_factura_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
