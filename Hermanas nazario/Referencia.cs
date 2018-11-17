@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text.pdf;
+using System.IO;
+using iTextSharp.text;
 
 namespace Hermanas_nazario
 {
@@ -128,7 +131,23 @@ namespace Hermanas_nazario
             String Titulo = "\t\tDispensario Médico Hermana Nazaria";
             String Titulo2 = "\n\tAguas del Padre, Siguatepeque, Comayagua";
             txtTitulo.Text = (Titulo+Titulo2);
-            
+            Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
+            try
+            {
+                PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\luisa\Desktop\Portales\Test.pdf", FileMode.Create));
+                doc.Open();
+                Paragraph da = new Paragraph(txtTitulo.Text);
+                doc.Add(da);
+                doc.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+
+            }
         }
     }
 }
