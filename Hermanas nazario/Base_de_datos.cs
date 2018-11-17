@@ -41,7 +41,7 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVROJO;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
 
             return con;
         }
