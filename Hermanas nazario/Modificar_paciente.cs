@@ -233,6 +233,10 @@ namespace Hermanas_nazario
                 return;
             }
 
+            Base_de_datos.Actualizar_P(int.Parse(txtExpediente.Text), txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtdia.Text + "/" + txtmes.Text + "/" + txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo);
+
+            MessageBox.Show("Expediente modificado.");
+
             txtnom1.Enabled = false;
             txtnom2.Enabled = false;
             txtape1.Enabled = false;
@@ -260,9 +264,7 @@ namespace Hermanas_nazario
             txtmadre.Clear();
             txtpadre.Clear();
 
-            Base_de_datos.Actualizar_P(int.Parse(txtExpediente.Text), txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtdia.Text + "/" + txtmes.Text + "/" + txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo);
 
-            MessageBox.Show("Expediente modificado.");
 
             
         }
