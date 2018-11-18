@@ -19,6 +19,8 @@ namespace Hermanas_nazario
         public Generar_factura()
         {
             InitializeComponent();
+            txtCita.Text = Base_de_datos.cita;
+            Base_de_datos.decis = 2;
         }
 
         private void chkIngresar_CheckedChanged(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Base_de_datos.cita = "";
             this.Hide();
             menu a = new menu();
             a.Show();
@@ -157,6 +160,7 @@ namespace Hermanas_nazario
                     txtCita.Text = "";
                     txtCita.Focus();
                     txtValorC.Text = "";
+                    Base_de_datos.cita = "";
                 }
             }
             else
@@ -198,6 +202,7 @@ namespace Hermanas_nazario
                     txtCita.Text = "";
                     txtCita.Focus();
                     txtValorC.Text = "";
+                    Base_de_datos.cita = "";
                 }
             }
           
@@ -298,6 +303,13 @@ namespace Hermanas_nazario
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Busqueda_citas a = new Busqueda_citas();
+            a.Show();
         }
     }
 }

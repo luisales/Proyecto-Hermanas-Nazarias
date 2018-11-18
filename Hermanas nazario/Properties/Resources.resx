@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="helloquence-51716-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helloquence-51716-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,31 +130,31 @@
   <data name="imagenmen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagenmen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="punto rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\punto rojo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagenmenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagenmenu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagenmenu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagenmenu1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="helloquence-51716-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\helloquence-51716-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imagenmenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagenmenu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rawpixel-603649-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rawpixel-603649-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\volver-boton-de-flecha-de-navegacion-que-apunta-hacia-la-izquierda (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Signo_más" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Signo_más.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

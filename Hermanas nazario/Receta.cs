@@ -16,6 +16,7 @@ namespace Hermanas_nazario
         {
             InitializeComponent();
             txtcita.Text = Base_de_datos.cita;
+            Base_de_datos.decis = 1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

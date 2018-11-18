@@ -83,8 +83,10 @@ namespace Hermanas_nazario
 
                 txtcod.Focus();
 
-
+                this.Hide();
                 MessageBox.Show("Cantidad Modificada Correctamente");
+                Busqueda_medicamentos a = new Busqueda_medicamentos();
+                a.Show();
 
             }
             else

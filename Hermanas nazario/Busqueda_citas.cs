@@ -69,13 +69,30 @@ namespace Hermanas_nazario
         {
             if (dgvcitas.DataSource != null)
             {
+                if(Base_de_datos.decis==1)
+                {
+                    int i = dgvcitas.CurrentRow.Index;
+                    Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
+                    this.Hide();
+                    Receta a = new Receta();
+                    a.Show();
+                }
+                else if(Base_de_datos.decis == 2)
+                {
+                    int i = dgvcitas.CurrentRow.Index;
+                    Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
+                    this.Hide();
+                    Generar_factura b = new Generar_factura();
+                    b.Show();
+                }
+                
 
-                int i = dgvcitas.CurrentRow.Index;
-                Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
-                this.Hide();
-                Receta a = new Receta();
-                a.Show();
             }
+        }
+
+        private void dgvcitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
