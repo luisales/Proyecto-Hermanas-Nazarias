@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +50,12 @@
             this.referenciaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.datosEstadisticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicamentosMasVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -60,12 +69,13 @@
             this.facturacionToolStripMenuItem,
             this.inventarioToolStripMenuItem,
             this.documentosMedicosToolStripMenuItem,
+            this.datosEstadisticosToolStripMenuItem,
             this.cerrarSesionToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(932, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,7 +143,8 @@
             // facturacionToolStripMenuItem
             // 
             this.facturacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generarFacturarToolStripMenuItem});
+            this.generarFacturarToolStripMenuItem,
+            this.buscarFacturaToolStripMenuItem});
             this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
             this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.facturacionToolStripMenuItem.Text = "Facturacion";
@@ -197,15 +208,60 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // buscarFacturaToolStripMenuItem
+            // 
+            this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
+            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.buscarFacturaToolStripMenuItem.Text = "Buscar Factura";
+            this.buscarFacturaToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(31, 98);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(806, 300);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
+            title1.Name = "Title1";
+            title1.Text = "Medicamentos mas vendidos";
+            this.chart1.Titles.Add(title1);
+            this.chart1.Visible = false;
+            // 
+            // datosEstadisticosToolStripMenuItem
+            // 
+            this.datosEstadisticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicamentosMasVendidosToolStripMenuItem});
+            this.datosEstadisticosToolStripMenuItem.Name = "datosEstadisticosToolStripMenuItem";
+            this.datosEstadisticosToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.datosEstadisticosToolStripMenuItem.Text = "Datos estadisticos";
+            // 
+            // medicamentosMasVendidosToolStripMenuItem
+            // 
+            this.medicamentosMasVendidosToolStripMenuItem.Name = "medicamentosMasVendidosToolStripMenuItem";
+            this.medicamentosMasVendidosToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
+            this.medicamentosMasVendidosToolStripMenuItem.Text = "Medicamentos mas vendidos";
+            this.medicamentosMasVendidosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosMasVendidosToolStripMenuItem_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hermanas_nazario.Properties.Resources.imagenmenu1;
-            this.ClientSize = new System.Drawing.Size(932, 479);
+            this.ClientSize = new System.Drawing.Size(1132, 556);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "menu";
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -213,6 +269,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +295,9 @@
         private System.Windows.Forms.ToolStripMenuItem generarRecetaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarMedicamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarFacturarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarFacturaToolStripMenuItem;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ToolStripMenuItem datosEstadisticosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicamentosMasVendidosToolStripMenuItem;
     }
 }

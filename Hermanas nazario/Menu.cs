@@ -19,6 +19,8 @@ namespace Hermanas_nazario
             {
                 registrarUsuarioToolStripMenuItem.Enabled = false;
             }
+            Base_de_datos.esta();
+            chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -130,6 +132,18 @@ namespace Hermanas_nazario
             Hide();
             Referencia a = new Referencia();
             a.Show();
+        }
+
+        private void buscarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Busqueda_factura a = new Busqueda_factura();
+            a.Show();
+        }
+
+        private void medicamentosMasVendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chart1.Visible = true;
         }
     }
 }

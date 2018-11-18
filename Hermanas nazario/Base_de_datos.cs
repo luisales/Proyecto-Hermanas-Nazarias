@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Collections;
 
 namespace Hermanas_nazario
 {
@@ -39,6 +40,8 @@ namespace Hermanas_nazario
         public static int cod_empleado;
         public static string User;
         public static int decis = 0;
+        public static ArrayList nombremedicamento = new ArrayList();
+        public static ArrayList cantidadmedicamento = new ArrayList();
 
         public static SqlConnection Conectar()
         {
@@ -488,6 +491,26 @@ namespace Hermanas_nazario
 
             }
           
+        }
+
+        public static void busqueda_factura(int id, DataGridView dgv)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select a.Codigo_factura 'Factura', a.Precio_cita 'Precio de cita', a.Donacion, b.Fecha_cita from [dbo].[Facturas] a inner join [dbo].[Citas] b on a.Codigo_cita=b.Codigo_cita where b.Codigo_expediente_paciente = @id; ", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count >= 1)
+            {
+                dgv.DataSource = dt;
+                con.Close();
+
+            }
+
         }
 
         public static void Ingresar_cita(int codigo, string fecha)
@@ -1095,6 +1118,24 @@ namespace Hermanas_nazario
             return null;
             
             //Corregir Hola
+        }
+
+        public static void esta()
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Medicamento_vendido", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while(dr.Read())
+            {
+                cantidadmedicamento.Add(dr.GetInt32(0));
+                nombremedicamento.Add(dr.GetString(1));
+            }
+
         }
     }
 }

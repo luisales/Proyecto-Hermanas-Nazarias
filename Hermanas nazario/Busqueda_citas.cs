@@ -94,5 +94,10 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void Busqueda_citas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
