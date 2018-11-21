@@ -39,7 +39,8 @@ namespace Hermanas_nazario
         public static int rol;
         public static int cod_empleado;
         public static string User;
-        public static int decis = 0;
+        public static int decis = 0,b;
+        public static string diagnostico, tratamiento, nombre_cita;
         public static ArrayList nombremedicamento = new ArrayList();
         public static ArrayList cantidadmedicamento = new ArrayList();
 
@@ -1137,6 +1138,117 @@ namespace Hermanas_nazario
             }
 
         }
+        /*
+        create proc [dbo].[Medicamento_vendido]
+as
+begin
+select top 5 sum(b.Cantidad) 'vendidos', c.Nombre_medicamento from  [dbo].[Facturas] a inner join [dbo].[Recetas] b on a.Codigo_cita=b.Codigo_cita inner join [dbo].[Medicamentos] c on b.Codigo_medicamento=c.Codigo_medicamento
+group by c.Nombre_medicamento
+order by sum(b.Cantidad) desc
+end
+*/
+        public static void Actualizar_cita(int codigo, string diag, string trat)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Actualizar_cita", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Codigo_cita", codigo));
+                cmd.Parameters.Add(new SqlParameter("@Diagnostico", diag));
+                cmd.Parameters.Add(new SqlParameter("@Tratamiento", trat));
+
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        /* create proc	Actualizar_cita
+(
+@Codigo_cita as int,
+@Diagnostico as nvarchar(500),
+@Tratamiento as nvarchar(500)
+)
+as
+begin
+
+update [dbo].[Citas]
+set 
+[Diagnostico]=@Diagnostico,
+[Tratamiento]=@Tratamiento
+where [Codigo_cita]=@Codigo_cita
+
+end
+*/
+        public static int Validar_cita(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open(); 
+            SqlCommand cmd = new SqlCommand("select b.Primer_nombre_paciente,b.Segundo_nombre_paciente, b.Primer_apellido_paciente, Diagnostico, Tratamiento from [dbo].[Citas] a inner join [dbo].[Pacientes] b on a.Codigo_expediente_paciente=b.Codigo_expediente_paciente where Codigo_cita = @id AND Diagnostico is null", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                SqlDataReader registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+                    nombre_cita = registro["Primer_nombre_paciente"].ToString() + " " + registro["Segundo_nombre_paciente"].ToString() + " " + registro["Primer_apellido_paciente"].ToString();
+                    con.Close();
+                }
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+
+        public static void Extraer_diagnostico(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select b.Primer_nombre_paciente,b.Segundo_nombre_paciente, b.Primer_apellido_paciente, a.Diagnostico, a.Tratamiento from [dbo].[Citas] a inner join [dbo].[Pacientes] b on a.Codigo_expediente_paciente=b.Codigo_expediente_paciente where Codigo_cita = @id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                SqlDataReader registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+                    diagnostico = registro["Diagnostico"].ToString();
+                    tratamiento = registro["Tratamiento"].ToString();
+                    nombre_cita = registro["Primer_nombre_paciente"].ToString() + " " + registro["Segundo_nombre_paciente"].ToString() + " " + registro["Primer_apellido_paciente"].ToString();
+                    con.Close();
+                }
+                    
+
+            }
+            else
+            {
+                con.Close();
+            }
+        }
+        
     }
 }
 

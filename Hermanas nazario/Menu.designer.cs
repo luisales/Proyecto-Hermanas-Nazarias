@@ -43,17 +43,17 @@
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarFacturarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarIngresoDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarMedicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentosMedicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.referenciaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.datosEstadisticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicamentosMasVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -156,6 +156,13 @@
             this.generarFacturarToolStripMenuItem.Text = "Generar Factura";
             this.generarFacturarToolStripMenuItem.Click += new System.EventHandler(this.generarFacturarToolStripMenuItem_Click);
             // 
+            // buscarFacturaToolStripMenuItem
+            // 
+            this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
+            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.buscarFacturaToolStripMenuItem.Text = "Buscar Factura";
+            this.buscarFacturaToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem_Click);
+            // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -194,6 +201,21 @@
             this.referenciaMedicaToolStripMenuItem.Text = "Referencia Medica";
             this.referenciaMedicaToolStripMenuItem.Click += new System.EventHandler(this.referenciaMedicaToolStripMenuItem_Click);
             // 
+            // datosEstadisticosToolStripMenuItem
+            // 
+            this.datosEstadisticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicamentosMasVendidosToolStripMenuItem});
+            this.datosEstadisticosToolStripMenuItem.Name = "datosEstadisticosToolStripMenuItem";
+            this.datosEstadisticosToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.datosEstadisticosToolStripMenuItem.Text = "Datos estadisticos";
+            // 
+            // medicamentosMasVendidosToolStripMenuItem
+            // 
+            this.medicamentosMasVendidosToolStripMenuItem.Name = "medicamentosMasVendidosToolStripMenuItem";
+            this.medicamentosMasVendidosToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
+            this.medicamentosMasVendidosToolStripMenuItem.Text = "Medicamentos mas vendidos";
+            this.medicamentosMasVendidosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosMasVendidosToolStripMenuItem_Click);
+            // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
@@ -208,15 +230,9 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // buscarFacturaToolStripMenuItem
-            // 
-            this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
-            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.buscarFacturaToolStripMenuItem.Text = "Buscar Factura";
-            this.buscarFacturaToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem_Click);
-            // 
             // chart1
             // 
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -236,21 +252,7 @@
             title1.Text = "Medicamentos mas vendidos";
             this.chart1.Titles.Add(title1);
             this.chart1.Visible = false;
-            // 
-            // datosEstadisticosToolStripMenuItem
-            // 
-            this.datosEstadisticosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.medicamentosMasVendidosToolStripMenuItem});
-            this.datosEstadisticosToolStripMenuItem.Name = "datosEstadisticosToolStripMenuItem";
-            this.datosEstadisticosToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
-            this.datosEstadisticosToolStripMenuItem.Text = "Datos estadisticos";
-            // 
-            // medicamentosMasVendidosToolStripMenuItem
-            // 
-            this.medicamentosMasVendidosToolStripMenuItem.Name = "medicamentosMasVendidosToolStripMenuItem";
-            this.medicamentosMasVendidosToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
-            this.medicamentosMasVendidosToolStripMenuItem.Text = "Medicamentos mas vendidos";
-            this.medicamentosMasVendidosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosMasVendidosToolStripMenuItem_Click);
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // menu
             // 

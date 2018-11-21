@@ -69,7 +69,7 @@ namespace Hermanas_nazario
         {
             if (dgvcitas.DataSource != null)
             {
-                if(Base_de_datos.decis==1)
+                if (Base_de_datos.decis==1)
                 {
                     int i = dgvcitas.CurrentRow.Index;
                     Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
@@ -85,6 +85,28 @@ namespace Hermanas_nazario
                     Generar_factura b = new Generar_factura();
                     b.Show();
                 }
+                else if(Base_de_datos.decis==3)
+                {
+                    int val;
+                    int i = dgvcitas.CurrentRow.Index;
+                    Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
+                    val = Base_de_datos.Validar_cita(Base_de_datos.cita);
+                    if (val == 1)
+                    {
+                        this.Hide();
+                        Diagnostico c = new Diagnostico();
+                        c.Show();
+                    }
+                    else
+                    {
+                        Base_de_datos.Extraer_diagnostico(Base_de_datos.cita);
+                        this.Hide();
+                        Mostrar_Diagnostico d = new Mostrar_Diagnostico();
+                        d.Show();
+                    }
+                    
+                }
+
                 
 
             }
@@ -96,6 +118,11 @@ namespace Hermanas_nazario
         }
 
         private void Busqueda_citas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Busqueda_citas_Resize(object sender, EventArgs e)
         {
 
         }
