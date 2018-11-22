@@ -72,11 +72,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOcupacion = new System.Windows.Forms.TextBox();
+            this.txtLugarTrabajo = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txttel = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTelEmer = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -592,35 +592,35 @@
             this.label18.TabIndex = 44;
             this.label18.Text = "Telefono Emergencia: ";
             // 
-            // textBox1
+            // txtOcupacion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(652, 618);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 30);
-            this.textBox1.TabIndex = 45;
+            this.txtOcupacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOcupacion.Location = new System.Drawing.Point(652, 618);
+            this.txtOcupacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOcupacion.MaxLength = 50;
+            this.txtOcupacion.Name = "txtOcupacion";
+            this.txtOcupacion.Size = new System.Drawing.Size(326, 30);
+            this.txtOcupacion.TabIndex = 45;
             // 
-            // textBox2
+            // txtLugarTrabajo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(652, 671);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.MaxLength = 50;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(588, 30);
-            this.textBox2.TabIndex = 46;
+            this.txtLugarTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugarTrabajo.Location = new System.Drawing.Point(652, 671);
+            this.txtLugarTrabajo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLugarTrabajo.MaxLength = 50;
+            this.txtLugarTrabajo.Name = "txtLugarTrabajo";
+            this.txtLugarTrabajo.Size = new System.Drawing.Size(588, 30);
+            this.txtLugarTrabajo.TabIndex = 46;
             // 
-            // textBox3
+            // txtDireccion
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(652, 722);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.MaxLength = 50;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(588, 30);
-            this.textBox3.TabIndex = 47;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(652, 722);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccion.MaxLength = 50;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(588, 30);
+            this.txtDireccion.TabIndex = 47;
             // 
             // txttel
             // 
@@ -631,27 +631,29 @@
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(160, 30);
             this.txttel.TabIndex = 65;
+            this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
             // 
-            // textBox4
+            // txtTelEmer
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(1080, 770);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.MaxLength = 8;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 30);
-            this.textBox4.TabIndex = 66;
+            this.txtTelEmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelEmer.Location = new System.Drawing.Point(1080, 770);
+            this.txtTelEmer.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelEmer.MaxLength = 8;
+            this.txtTelEmer.Name = "txtTelEmer";
+            this.txtTelEmer.Size = new System.Drawing.Size(160, 30);
+            this.txtTelEmer.TabIndex = 66;
+            this.txtTelEmer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelEmer_KeyPress);
             // 
             // Registro_pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 952);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTelEmer);
             this.Controls.Add(this.txttel);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtLugarTrabajo);
+            this.Controls.Add(this.txtOcupacion);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -761,11 +763,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOcupacion;
+        private System.Windows.Forms.TextBox txtLugarTrabajo;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txttel;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTelEmer;
     }
 }
 

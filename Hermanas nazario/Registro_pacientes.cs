@@ -156,7 +156,7 @@ namespace Hermanas_nazario
             }
             if(txtid.TextLength<13)
             {
-                MessageBox.Show("El campo de de identidad debe ser de 13 digitos");
+                MessageBox.Show("El campo de identidad debe ser de 13 digitos");
                 return;
             }
             if (txtriesgo.Text != "Alto" && txtriesgo.Text != "Medio" && txtriesgo.Text != "Bajo")
@@ -189,6 +189,20 @@ namespace Hermanas_nazario
                 MessageBox.Show("La fecha no puede ser mayor a la actual");
                 return;
             }
+            if (txttel.TextLength < 8 && (!string.IsNullOrEmpty(txttel.Text) == true))
+            {
+                MessageBox.Show("El campo de telefono debe ser de 8 digitos");
+                return;
+            }
+            if (txtTelEmer.TextLength < 8 && (!string.IsNullOrEmpty(txtTelEmer.Text) == true))
+            {
+                MessageBox.Show("El campo de telefono de emergencia debe ser de 8 digitos");
+                return;
+            }
+
+
+
+
             int b = Base_de_datos.validarIDp(txtid.Text);
             if(b==0)
             {
@@ -196,7 +210,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo);
+            Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(),txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
 
             Base_de_datos.expediente(txtid.Text);
             this.Close();
@@ -267,6 +281,16 @@ namespace Hermanas_nazario
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txttel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+        }
+
+        private void txtTelEmer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
         }
     }
 }

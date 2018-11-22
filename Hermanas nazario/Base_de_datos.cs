@@ -43,11 +43,17 @@ namespace Hermanas_nazario
         public static string diagnostico, tratamiento, nombre_cita;
         public static ArrayList nombremedicamento = new ArrayList();
         public static ArrayList cantidadmedicamento = new ArrayList();
+        public static string Ocupacion;
+        public static string LugarT ;
+        public static string Direccion ;
+        public static string tel ;
+        public static string telE;
 
         public static SqlConnection Conectar()
         {
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); luis
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)
@@ -81,7 +87,7 @@ namespace Hermanas_nazario
 
         }
 
-        public static void Registro(string nom1, string nom2, string ape1, string ape2, string lugar, string fecha, string padre, string madre, string identidad, string sexo, int riesgo)
+        public static void Registro(string nom1, string nom2, string ape1, string ape2, string lugar, string fecha, string padre, string madre, string identidad, string sexo, int riesgo, string Ocupacion, string LugarT, string Direccion, string tel, string telE)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -102,6 +108,12 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Numero_identidad_paciente", identidad));
                 cmd.Parameters.Add(new SqlParameter("@Sexo_paciente", sexo));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_riesgo", riesgo));
+                cmd.Parameters.Add(new SqlParameter("@Ocupacion_paciente", Ocupacion));
+                cmd.Parameters.Add(new SqlParameter("@Lugar_trabajo_paciente", LugarT));
+                cmd.Parameters.Add(new SqlParameter("@Direccion_paciente", Direccion));
+                cmd.Parameters.Add(new SqlParameter("@Telefono_paciente", tel));
+                cmd.Parameters.Add(new SqlParameter("@Telefono_emergencia", telE));
+
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -279,7 +291,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("select [Primer_nombre_paciente], [Segundo_nombre_paciente], [Primer_apellido_paciente], [Segundo_apellido_paciente],[Lugar_nacimiento_paciente], day([Fecha_nacimiento_paciente]) as dia, month([Fecha_nacimiento_paciente]) as mes,year([Fecha_nacimiento_paciente]) as anio,[Nombre_padre_paciente], [Nombre_madre_paciente], [Numero_identidad_paciente], [Sexo_paciente], [Codigo_riesgo] from Pacientes WHERE Codigo_expediente_paciente=@id", con);
+            SqlCommand cmd = new SqlCommand("select [Primer_nombre_paciente], [Segundo_nombre_paciente], [Primer_apellido_paciente], [Segundo_apellido_paciente],[Lugar_nacimiento_paciente], day([Fecha_nacimiento_paciente]) as dia, month([Fecha_nacimiento_paciente]) as mes,year([Fecha_nacimiento_paciente]) as anio,[Nombre_padre_paciente], [Nombre_madre_paciente], [Numero_identidad_paciente], [Sexo_paciente], [Codigo_riesgo], [Ocupacion_paciente], [Lugar_trabajo_paciente], [Direccion_paciente], [Telefono_paciente], [Telefono_emergencia]   from Pacientes WHERE Codigo_expediente_paciente=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -304,6 +316,12 @@ namespace Hermanas_nazario
                     Base_de_datos.Identidad = registro["Numero_identidad_paciente"].ToString();
                     Base_de_datos.Sexo = registro["Sexo_paciente"].ToString();
                     Base_de_datos.Riesgo = registro["Codigo_riesgo"].ToString();
+                    Base_de_datos.Ocupacion = registro["Ocupacion_paciente"].ToString();
+                    Base_de_datos.LugarT = registro["Lugar_trabajo_paciente"].ToString();
+                    Base_de_datos.Direccion = registro["Direccion_paciente"].ToString();
+                    Base_de_datos.tel = registro["Telefono_paciente"].ToString();
+                    Base_de_datos.telE = registro["Telefono_emergencia"].ToString();
+
                 }
                 con.Close();
                 return 1;
@@ -342,7 +360,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Actualizar_P(int expediente, string nom1, string nom2, string ape1, string ape2, string lugar, string fecha, string padre, string madre, string identidad, string sexo, int riesgo)
+        public static void Actualizar_P(int expediente, string nom1, string nom2, string ape1, string ape2, string lugar, string fecha, string padre, string madre, string identidad, string sexo, int riesgo, string Ocupacion, string LugarT, string Direccion, string tel, string telE)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -364,6 +382,11 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Numero_identidad_paciente", identidad));
                 cmd.Parameters.Add(new SqlParameter("@Sexo_paciente", sexo));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_riesgo", riesgo));
+                cmd.Parameters.Add(new SqlParameter("@Ocupacion_paciente", Ocupacion));
+                cmd.Parameters.Add(new SqlParameter("@Lugar_trabajo_paciente", LugarT));
+                cmd.Parameters.Add(new SqlParameter("@Direccion_paciente", Direccion));
+                cmd.Parameters.Add(new SqlParameter("@Telefono_paciente", tel));
+                cmd.Parameters.Add(new SqlParameter("@Telefono_emergencia", telE));
                 cmd.ExecuteNonQuery();
             }
             catch

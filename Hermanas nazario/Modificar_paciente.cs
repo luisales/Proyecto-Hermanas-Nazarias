@@ -42,6 +42,12 @@ namespace Hermanas_nazario
                 txtlugar.Clear();
                 txtmadre.Clear();
                 txtpadre.Clear();
+                txtOcupacion.Clear();
+                txtDireccion.Clear();
+                txttel.Clear();
+                txtTelEmer.Clear();
+                txtLugarTrabajo.Clear();
+               
 
                 txtnom1.Text = Base_de_datos.Nombre1;
                 txtnom2.Text = Base_de_datos.Nombre2;
@@ -54,6 +60,12 @@ namespace Hermanas_nazario
                 txtdia.Text = Base_de_datos.dia;
                 txtmes.Text = Base_de_datos.mes;
                 txtanio.Text = Base_de_datos.anio;
+                txtOcupacion.Text = Base_de_datos.Ocupacion;
+                txtLugarTrabajo.Text = Base_de_datos.LugarT;
+                txtDireccion.Text = Base_de_datos.Direccion;
+                txttel.Text = Base_de_datos.tel;
+                txtTelEmer.Text = Base_de_datos.telE;
+                
 
                 if (Base_de_datos.Sexo == "M")
                 {
@@ -92,7 +104,13 @@ namespace Hermanas_nazario
                 txtmadre.Enabled = true;
                 txtpadre.Enabled = true;
                 txtriesgo.Enabled = true;
+                txtOcupacion.Enabled = true;
+                txtDireccion.Enabled = true;
+                txttel.Enabled = true;
+                txtTelEmer.Enabled = true;
+                txtlugar.Enabled = true;
                 btnModificar.Enabled = true;
+                txtLugarTrabajo.Enabled = true;
             }
 
             else
@@ -114,7 +132,13 @@ namespace Hermanas_nazario
                 txtmadre.Enabled = false;
                 txtpadre.Enabled = false;
                 txtriesgo.Enabled = false;
+                txtOcupacion.Enabled = false;
+                txtDireccion.Enabled = false;
+                txttel.Enabled = false;
+                txtTelEmer.Enabled = false;
+                txtlugar.Enabled = false;
                 btnModificar.Enabled = false;
+                txtLugarTrabajo.Enabled = false;
 
                 txtnom1.Clear();
                 txtnom2.Clear();
@@ -126,6 +150,13 @@ namespace Hermanas_nazario
                 txtlugar.Clear();
                 txtmadre.Clear();
                 txtpadre.Clear();
+                txtOcupacion.Clear();
+                txtDireccion.Clear();
+                txttel.Clear();
+                txtTelEmer.Clear();
+                txtlugar.Clear();
+                txtLugarTrabajo.Clear();
+               
             }
               
         }
@@ -232,8 +263,18 @@ namespace Hermanas_nazario
                 MessageBox.Show("La fecha no puede ser mayor a la actual");
                 return;
             }
+            if (txttel.TextLength < 8 && (!string.IsNullOrEmpty(txttel.Text) == true))
+            {
+                MessageBox.Show("El campo de telefono debe ser de 8 digitos");
+                return;
+            }
+            if (txtTelEmer.TextLength < 8 && (!string.IsNullOrEmpty(txtTelEmer.Text) == true))
+            {
+                MessageBox.Show("El campo de telefono de emergencia debe ser de 8 digitos");
+                return;
+            }
 
-            Base_de_datos.Actualizar_P(int.Parse(txtExpediente.Text), txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtdia.Text + "/" + txtmes.Text + "/" + txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo);
+            Base_de_datos.Actualizar_P(int.Parse(txtExpediente.Text), txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtdia.Text + "/" + txtmes.Text + "/" + txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(), txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
 
             MessageBox.Show("Expediente modificado.");
 
@@ -250,6 +291,13 @@ namespace Hermanas_nazario
             txtmadre.Enabled = false;
             txtpadre.Enabled = false;
             txtriesgo.Enabled = false;
+            txtOcupacion.Enabled = false;
+            txtDireccion.Enabled = false;
+            txttel.Enabled = false;
+            txtTelEmer.Enabled = false;
+            txtlugar.Enabled = false;
+            txtLugarTrabajo.Enabled = false;
+
             btnModificar.Enabled = false;
 
             txtnom1.Clear();
@@ -263,10 +311,17 @@ namespace Hermanas_nazario
             txtanio.Clear();
             txtmadre.Clear();
             txtpadre.Clear();
-
-
-
+            txtOcupacion.Clear();
+            txtDireccion.Clear();
+            txttel.Clear();
+            txtTelEmer.Clear();
+            txtlugar.Clear();
+            txtLugarTrabajo.Clear();
             
+
+
+
+
         }
 
         private void txtnom1_KeyPress(object sender, KeyPressEventArgs e)
@@ -402,7 +457,14 @@ namespace Hermanas_nazario
                 txtmadre.Enabled = false;
                 txtpadre.Enabled = false;
                 txtriesgo.Enabled = false;
-                btnModificar.Enabled = false;
+                txtOcupacion.Enabled = false;
+                txtDireccion.Enabled = false;
+                txttel.Enabled = false;
+                txtTelEmer.Enabled = false;
+                txtlugar.Enabled = false;
+                txtLugarTrabajo.Enabled = false;
+
+            btnModificar.Enabled = false;
 
                 txtnom1.Clear();
                 txtnom2.Clear();
@@ -415,6 +477,14 @@ namespace Hermanas_nazario
                 txtanio.Clear();
                 txtmadre.Clear();
                 txtpadre.Clear();
+                txtOcupacion.Clear();
+                txtDireccion.Clear();
+                txttel.Clear();
+                txtTelEmer.Clear();
+                txtlugar.Clear();
+                txtLugarTrabajo.Clear();
+      
+
             if ((!string.IsNullOrEmpty(txtExpediente.Text)))
 
                 btnBuscar.Enabled = true;
@@ -429,6 +499,16 @@ namespace Hermanas_nazario
         private void ModifcacionPaciente_Load(object sender, EventArgs e)
         {
             btnBuscar.PerformClick();
+        }
+
+        private void txttel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+        }
+
+        private void txtTelEmer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
         }
     }
 }
