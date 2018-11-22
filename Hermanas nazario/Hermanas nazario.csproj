@@ -119,6 +119,11 @@
     <Compile Include="Busqueda_medicamentos.designer.cs">
       <DependentUpon>Busqueda_medicamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clinica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clinica.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClinicaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -304,6 +309,17 @@
     <EmbeddedResource Include="vencimineto inventario.resx">
       <DependentUpon>vencimineto inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Clinica.xsc">
+      <DependentUpon>Clinica.xsd</DependentUpon>
+    </None>
+    <None Include="Clinica.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Clinica.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Clinica.xss">
+      <DependentUpon>Clinica.xsd</DependentUpon>
+    </None>
     <None Include="ClinicaDataSet.xsc">
       <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
     </None>
