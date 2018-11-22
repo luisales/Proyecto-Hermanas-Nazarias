@@ -161,5 +161,24 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void agregarRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registro_roles a = new Registro_roles();
+            a.Show();
+        }
+
+        private void modifcarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modificacion_roles a = new Modificacion_roles();
+            a.Show();
+        }
     }
 }

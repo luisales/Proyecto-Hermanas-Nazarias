@@ -1272,7 +1272,29 @@ end
                 con.Close();
             }
         }
-        
+
+        public static void Registro_Rol(string nombreRol)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
     }
 }
 
