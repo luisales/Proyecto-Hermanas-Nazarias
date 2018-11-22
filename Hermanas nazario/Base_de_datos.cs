@@ -46,8 +46,8 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)
@@ -1120,7 +1120,8 @@ namespace Hermanas_nazario
             
             //Corregir Hola
         }
-
+        
+       
         public static void esta()
         {
             SqlConnection con;
