@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Hermanas_nazario
+{
+    public partial class Diagnostico : Form
+    {
+        public Diagnostico()
+        {
+            InitializeComponent();
+            label3.Text = Base_de_datos.nombre_cita;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richTextBox1.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            if (!string.IsNullOrEmpty(richTextBox2.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            Base_de_datos.Actualizar_cita(int.Parse(Base_de_datos.cita), richTextBox1.Text, richTextBox2.Text);
+            MessageBox.Show("Guardado con exito");
+            this.Hide();
+            Busqueda_citas a = new Busqueda_citas();
+            a.Show();
+        }
+
+        private void Diagnostico_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Busqueda_citas a = new Busqueda_citas();
+            a.Show();
+        }
+    }
+}

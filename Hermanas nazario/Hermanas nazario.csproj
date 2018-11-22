@@ -124,6 +124,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Diagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnostico.Designer.cs">
+      <DependentUpon>Diagnostico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encriptar.cs" />
     <Compile Include="Generar_factura.cs">
       <SubType>Form</SubType>
@@ -160,6 +166,12 @@
     </Compile>
     <Compile Include="Modificar_paciente.designer.cs">
       <DependentUpon>Modificar_paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mostrar_Diagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mostrar_Diagnostico.Designer.cs">
+      <DependentUpon>Mostrar_Diagnostico.cs</DependentUpon>
     </Compile>
     <Compile Include="Receta.cs">
       <SubType>Form</SubType>
@@ -230,6 +242,9 @@
     <EmbeddedResource Include="Busqueda_medicamentos.resx">
       <DependentUpon>Busqueda_medicamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Diagnostico.resx">
+      <DependentUpon>Diagnostico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Generar_factura.resx">
       <DependentUpon>Generar_factura.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_paciente.resx">
       <DependentUpon>Modificar_paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mostrar_Diagnostico.resx">
+      <DependentUpon>Mostrar_Diagnostico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Receta.resx">

@@ -19,8 +19,6 @@ namespace Hermanas_nazario
             {
                 registrarUsuarioToolStripMenuItem.Enabled = false;
             }
-            Base_de_datos.esta();
-            chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -80,6 +78,7 @@ namespace Hermanas_nazario
 
         private void buscarCitasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Base_de_datos.decis = 3;
             this.Hide();
             Busqueda_citas a = new Busqueda_citas();
             a.Show();
@@ -140,10 +139,27 @@ namespace Hermanas_nazario
             Busqueda_factura a = new Busqueda_factura();
             a.Show();
         }
-
         private void medicamentosMasVendidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            chart1.Visible = true;
+            if(Base_de_datos.b==0)
+            {
+                Base_de_datos.esta();
+                chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
+                chart1.Visible = true;
+                Base_de_datos.b = 1;
+            }
+            else
+            {
+                chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
+                chart1.Visible = true;
+
+            }
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
