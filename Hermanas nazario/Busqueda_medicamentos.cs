@@ -160,5 +160,10 @@ namespace Hermanas_nazario
             btnIng.Enabled = false;
             btnSac.Enabled = false;
         }
+
+        private void lblCod_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

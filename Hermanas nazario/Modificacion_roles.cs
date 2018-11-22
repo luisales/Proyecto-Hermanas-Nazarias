@@ -23,5 +23,60 @@ namespace Hermanas_nazario
             menu a = new menu();
             a.Show();
         }
+
+        private void Modificacion_roles_Load(object sender, EventArgs e)
+        {
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarRoles();
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtCodigoRol.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(txtNombreRol.Text) == false)
+            {
+                MessageBox.Show("Llene el nombre del rol");
+                return;
+            }
+
+            Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper());
+
+           MessageBox.Show("Rol modificado.");
+
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarRoles();
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
+
+            txtCodigoRol.Clear();
+            txtNombreRol.Clear();
+            btnModificar.Enabled = false;
+        }
+
+        private void txtCodigoRol_TextChanged(object sender, EventArgs e)
+        {
+            txtNombreRol.Enabled = false;
+            btnModificar.Enabled = false;
+
+            if ((!string.IsNullOrEmpty(txtCodigoRol.Text)))
+            {
+                txtNombreRol.Enabled = true;
+                btnModificar.Enabled = true;
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            txtCodigoRol.Text = Convert.ToString(selectedRow.Cells[0].Value);
+            txtNombreRol.Text = Convert.ToString(selectedRow.Cells[1].Value);
+        }
     }
 }

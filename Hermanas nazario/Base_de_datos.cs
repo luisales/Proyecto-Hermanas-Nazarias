@@ -1284,6 +1284,7 @@ end
                 SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+ 
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -1293,6 +1294,64 @@ end
             {
                 con.Close();
             }
+        }
+
+
+        public void BuscarRoles()
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_rol  'Código del Rol', Nombre_rol 'Nombre del Rol' from[dbo].[Roles]" , con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
+        public static void Actualizar_Rol(int CodigoRol, string nombreRol)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Actualizar_Rol", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
+                cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
         }
 
     }
