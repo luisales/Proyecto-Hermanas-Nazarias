@@ -15,6 +15,8 @@ namespace Hermanas_nazario
         float TotalFinal;
         float total;
         float descuento;
+        float TotalMedicamentos;
+        float totalDescuento;
 
         public Generar_factura()
         {
@@ -81,7 +83,10 @@ namespace Hermanas_nazario
 
                 total = Base_de_datos.total_medicamentos(txtCita.Text);
                 descuento = total * (Base_de_datos.porcentaje_riesgo(txtCita.Text) / 100);
+                totalDescuento = total - descuento;
 
+                txtMedicamentos.Text = total.ToString();
+                txtDesc.Text = totalDescuento.ToString();
                 txtSubTotal.Text = descuento.ToString();
 
                 TotalFinal =  descuento;
@@ -166,6 +171,10 @@ namespace Hermanas_nazario
                     txtCita.Text = "";
                     txtCita.Focus();
                     txtValorC.Text = "";
+                    txtConsulta.Text = "0";
+                    txtDesc.Text = "0";
+                    txtMedicamentos.Text = "0";
+                    txtSubTotal.Text = "0";
                     Base_de_datos.cita = "";
                 }
             }
@@ -208,6 +217,10 @@ namespace Hermanas_nazario
                     txtCita.Text = "";
                     txtCita.Focus();
                     txtValorC.Text = "";
+                    txtConsulta.Text = "0";
+                    txtDesc.Text = "0";
+                    txtMedicamentos.Text = "0";
+                    txtSubTotal.Text = "0";
                     Base_de_datos.cita = "";
                 }
             }
@@ -226,7 +239,9 @@ namespace Hermanas_nazario
             btnCancelar.Enabled = false;
             chkIngresar.Checked = false;
             txtSubTotal.Text = "0";
-            
+            txtMedicamentos.Text = "0";
+            txtDesc.Text = "0";
+            txtConsulta.Text = "0";
             dataGridView1.DataSource = null;
 
             txtSubTotal.Text = "0";
@@ -263,14 +278,19 @@ namespace Hermanas_nazario
                 { 
                     txtConsulta.Text = txtValorC.Text;
                 txtSubTotal.Text = descuento.ToString();
+                    txtMedicamentos.Text = total.ToString();
+                    txtDesc.Text = totalDescuento.ToString();
+
         
                     txtTotal.Text = (TotalFinal + int.Parse(txtValorC.Text)).ToString();
                 }
                 if (txtValorC.TextLength == 0)
                 { 
-                    txtConsulta.Text = "0";
+                 txtConsulta.Text = "0";
+                 txtDesc.Text = totalDescuento.ToString();
                  txtSubTotal.Text = descuento.ToString();
-                txtTotal.Text = (TotalFinal + 0).ToString();
+                 txtMedicamentos.Text = total.ToString();
+                 txtTotal.Text = (TotalFinal + 0).ToString();
                 }
             }
         }
@@ -296,6 +316,10 @@ namespace Hermanas_nazario
                 txtIngresar.Text = "0";
                 txtValorC.Text = "0";
                 txtCita.Text = "";
+                txtDesc.Text = "0";
+                txtMedicamentos.Text = "0";
+                txtSubTotal.Text = "0";
+                txtConsulta.Text = "0";
                 txtCita.Focus();
             }
             
