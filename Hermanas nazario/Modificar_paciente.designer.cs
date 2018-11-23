@@ -263,6 +263,7 @@
             this.txtlugar.Name = "txtlugar";
             this.txtlugar.Size = new System.Drawing.Size(326, 30);
             this.txtlugar.TabIndex = 40;
+            this.txtlugar.TextChanged += new System.EventHandler(this.txtlugar_TextChanged);
             // 
             // label6
             // 
@@ -693,7 +694,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 1057);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.txtTelEmer);
             this.Controls.Add(this.txttel);
             this.Controls.Add(this.txtDireccion);

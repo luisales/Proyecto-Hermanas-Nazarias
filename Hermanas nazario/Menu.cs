@@ -180,5 +180,12 @@ namespace Hermanas_nazario
             Modificacion_roles a = new Modificacion_roles();
             a.Show();
         }
+
+        private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modificar_empleado a = new Modificar_empleado();
+            a.Show();
+        }
     }
 }

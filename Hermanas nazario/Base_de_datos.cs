@@ -39,21 +39,32 @@ namespace Hermanas_nazario
         public static int rol;
         public static int cod_empleado;
         public static string User;
-        public static int decis = 0,b;
+        public static int decis = 0, b;
         public static string diagnostico, tratamiento, nombre_cita;
         public static ArrayList nombremedicamento = new ArrayList();
         public static ArrayList cantidadmedicamento = new ArrayList();
         public static string Ocupacion;
-        public static string LugarT ;
-        public static string Direccion ;
-        public static string tel ;
+        public static string LugarT;
+        public static string Direccion;
+        public static string tel;
         public static string telE;
+        public static string nombre1_empleado;
+        public static string nombre2_empleado;
+        public static string apellido1_empleado;
+        public static string apellido2_empleado;
+        public static string correo_empleado;
+        public static string numero_identidad_empleado;
+        public static string sexo_empleado;
+        public static string numero_telefono_empleado;
+        public static string cargo_empleado;
 
         public static SqlConnection Conectar()
         {
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); luis
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True"); omar
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True"); mauricio
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)
@@ -180,7 +191,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void registrar_empleado(string nom1, string nom2, string ape1, string ape2, string correo, string id, string sexo, string tel)
+        public static void registrar_empleado(string nom1, string nom2, string ape1, string ape2, string correo, string id, string sexo, string tel,string cargo)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -198,6 +209,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Numero_identidad_empleado", id));
                 cmd.Parameters.Add(new SqlParameter("@Sexo_empleado", sexo));
                 cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel));
+                cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Empleado guardado con exito");
             }
@@ -1352,6 +1364,70 @@ end
             }
 
 
+        }
+
+        public static int Validar_Cod_empleado(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT [Primer_nombre_empleado],[Segundo_nombre_empleado],[Primer_apellido_empleado],[Segundo_apellido_empleado],[Correo_empleado],[Numero_identidad_empleado],[Sexo_empleado],[Telefono_empleado],[Cargo_empleado] FROM [dbo].[Empleados] WHERE [Codigo_empleado]=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                SqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.Read())
+                {
+                    Base_de_datos.nombre1_empleado = registro["Primer_nombre_empleado"].ToString();
+                    Base_de_datos.nombre2_empleado = registro["Segundo_nombre_empleado"].ToString();
+                    Base_de_datos.apellido1_empleado = registro["Primer_apellido_empleado"].ToString();
+                    Base_de_datos.apellido2_empleado = registro["Segundo_apellido_empleado"].ToString();
+                    Base_de_datos.correo_empleado = registro["Correo_empleado"].ToString();
+                    Base_de_datos.numero_identidad_empleado = registro["Numero_identidad_empleado"].ToString();
+                    Base_de_datos.sexo_empleado = registro["Sexo_empleado"].ToString();
+                    Base_de_datos.numero_telefono_empleado = registro["Telefono_empleado"].ToString();
+                    Base_de_datos.cargo_empleado= registro["Cargo_empleado"].ToString();
+                }
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
+
+        public static void Actualizar_empleado(int codigo_empleado, string nombre1, string nombre2, string apellido1, string apellido2, string correo_empleado, string id_empleado, string sexo, string tel_empleado,string cargo)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Actualizar_empleado", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", codigo_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Primer_nombre_empleado", nombre1));
+                cmd.Parameters.Add(new SqlParameter("@Segundo_nombre_empleado", nombre2));
+                cmd.Parameters.Add(new SqlParameter("@Primer_apellido_empleado", apellido1));
+                cmd.Parameters.Add(new SqlParameter("@Segundo_apellido_empleado", apellido2));
+                cmd.Parameters.Add(new SqlParameter("@Correo_empleado", correo_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Identidad_empleado", id_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Sexo_empleado", sexo));
+                cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
+                cmd.ExecuteNonQuery();
+            con.Close();
+            
+            
         }
 
     }
