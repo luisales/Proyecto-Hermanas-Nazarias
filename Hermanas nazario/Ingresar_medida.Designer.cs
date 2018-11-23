@@ -49,6 +49,7 @@
             // 
             // btningresar
             // 
+            this.btningresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btningresar.Location = new System.Drawing.Point(392, 285);
@@ -57,7 +58,7 @@
             this.btningresar.Size = new System.Drawing.Size(159, 55);
             this.btningresar.TabIndex = 61;
             this.btningresar.Text = "Registrar";
-            this.btningresar.UseVisualStyleBackColor = true;
+            this.btningresar.UseVisualStyleBackColor = false;
             this.btningresar.Click += new System.EventHandler(this.btningresar_Click);
             // 
             // label1

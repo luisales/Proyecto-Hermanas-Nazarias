@@ -55,6 +55,7 @@
             this.dgvcitas.AllowUserToOrderColumns = true;
             this.dgvcitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvcitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvcitas.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvcitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcitas.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvcitas.Location = new System.Drawing.Point(694, 290);
@@ -106,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1281, 562);
+            this.ClientSize = new System.Drawing.Size(1539, 562);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvcitas);
