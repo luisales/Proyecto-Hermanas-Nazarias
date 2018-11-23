@@ -81,7 +81,7 @@ namespace Hermanas_nazario
             Base_de_datos.decis = 3;
             this.Hide();
             Busqueda_citas a = new Busqueda_citas();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -169,15 +169,32 @@ namespace Hermanas_nazario
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Registro_roles a = new Registro_roles();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void modifcarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Modificacion_roles a = new Modificacion_roles();
+            a.ShowDialog();
+        }
+
+        private void ingresarMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ingresar_medida a = new Ingresar_medida();
+            a.ShowDialog();
+        }
+
+        private void modifcarMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modificacion_medida a = new Modificacion_medida();
+            a.ShowDialog();
+        }
+
+        private void generarRecetaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Receta a = new Receta();
             a.Show();
         }
     }

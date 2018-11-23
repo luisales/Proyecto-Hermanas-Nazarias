@@ -81,5 +81,21 @@ namespace Hermanas_nazario
         {
             Validar.solonumeros(e);
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Visible = true;
+            Base_de_datos a = new Base_de_datos();
+            a.BuscarEmpleado();
+            dataGridView1.DataSource = a.Mostrar_Resultados();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            txtemp.Text = Convert.ToString(selectedRow.Cells[0].Value);
+            dataGridView1.Visible = false;
+        }
     }
 }
