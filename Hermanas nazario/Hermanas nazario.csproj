@@ -154,6 +154,12 @@
     <Compile Include="Ingresar_medicamento.Designer.cs">
       <DependentUpon>Ingresar_medicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingresar_medida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingresar_medida.Designer.cs">
+      <DependentUpon>Ingresar_medida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,12 @@
     </Compile>
     <Compile Include="Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificacion_medida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificacion_medida.Designer.cs">
+      <DependentUpon>Modificacion_medida.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificacion_roles.cs">
       <SubType>Form</SubType>
@@ -271,11 +283,17 @@
     <EmbeddedResource Include="Ingresar_medicamento.resx">
       <DependentUpon>Ingresar_medicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ingresar_medida.resx">
+      <DependentUpon>Ingresar_medida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificacion_medida.resx">
+      <DependentUpon>Modificacion_medida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificacion_roles.resx">
       <DependentUpon>Modificacion_roles.cs</DependentUpon>

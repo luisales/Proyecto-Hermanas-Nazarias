@@ -43,7 +43,7 @@ namespace Hermanas_nazario
         {
             Base_de_datos.cita = "";
             this.Hide();
-            menu a = new menu();
+            Receta a = new Receta();
             a.Show();
         }
 
