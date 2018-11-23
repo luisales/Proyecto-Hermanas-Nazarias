@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.dgvcitas = new System.Windows.Forms.DataGridView();
@@ -43,18 +43,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(398, 132);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(445, 157);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 29);
+            this.label1.Size = new System.Drawing.Size(426, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Numero de expediente del paciente: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(896, 133);
+            this.txtcodigo.Location = new System.Drawing.Point(902, 158);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcodigo.MaxLength = 8;
             this.txtcodigo.Name = "txtcodigo";
@@ -72,24 +72,23 @@
             this.dgvcitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvcitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvcitas.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvcitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcitas.EnableHeadersVisualStyles = false;
-            this.dgvcitas.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dgvcitas.Location = new System.Drawing.Point(609, 252);
+            this.dgvcitas.GridColor = System.Drawing.SystemColors.GrayText;
+            this.dgvcitas.Location = new System.Drawing.Point(465, 274);
             this.dgvcitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvcitas.Name = "dgvcitas";
             this.dgvcitas.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvcitas.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvcitas.Size = new System.Drawing.Size(423, 220);
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            this.dgvcitas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvcitas.Size = new System.Drawing.Size(636, 220);
             this.dgvcitas.TabIndex = 3;
             this.dgvcitas.VirtualMode = true;
             this.dgvcitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcitas_CellClick);
@@ -99,7 +98,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(601, 37);
+            this.label5.Location = new System.Drawing.Point(591, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(441, 46);
             this.label5.TabIndex = 25;
@@ -122,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1417, 652);
+            this.ClientSize = new System.Drawing.Size(1293, 641);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvcitas);

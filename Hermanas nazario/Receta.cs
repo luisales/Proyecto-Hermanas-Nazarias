@@ -240,5 +240,24 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se ha guardado con exito");
+            if (MessageBox.Show("Desea regresar al menu?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                menu a = new menu();
+                a.Show();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Base_de_datos.cita = txtcita.Text;
+            this.Hide();
+            Generar_factura a = new Generar_factura();
+            a.Show();
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Hermanas_nazario
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int codigo;
+            int codigo, medida=0;
             if (!string.IsNullOrEmpty(txtnom.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -62,9 +62,22 @@ namespace Hermanas_nazario
                 MessageBox.Show("Imposible ingresar 0");
                 return;
             }
+            if (txtUnidad.Text == "Caja")
+            {
+                medida = 1;
+            }
+            if (txtUnidad.Text == "Unidad")
+            {
+                medida = 2;
+            }
+            if (txtUnidad.Text == "Frasco")
+            {
+                medida = 3;
+            }
 
 
-            Base_de_datos.registrar_medicamento(txtnom.Text, richTextBox1.Text, int.Parse(txtcant.Text), double.Parse(txtprecio.Text), txtUnidad.Text);
+
+            Base_de_datos.registrar_medicamento(txtnom.Text, richTextBox1.Text, int.Parse(txtcant.Text), double.Parse(txtprecio.Text), medida);
             codigo = Base_de_datos.codigo_medicamento();
             Base_de_datos.Ingresar_medicamento(codigo, int.Parse(txtcant.Text), fecha, dateTimePicker1.Value.ToString("MM/dd/yyyy"), Base_de_datos.cod_empleado);
             this.Hide();

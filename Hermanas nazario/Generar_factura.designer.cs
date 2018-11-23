@@ -53,6 +53,10 @@
             this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.txtConsulta = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.Label();
+            this.txtMedicamentos = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,6 +86,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(660, 150);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -89,7 +94,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(149, 53);
             this.btnBuscar.TabIndex = 23;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
@@ -109,6 +114,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -163,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1268, 613);
+            this.label3.Location = new System.Drawing.Point(1268, 719);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 29);
             this.label3.TabIndex = 27;
@@ -173,7 +179,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(1375, 609);
+            this.txtTotal.Location = new System.Drawing.Point(1375, 715);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.MaxLength = 30;
             this.txtTotal.Name = "txtTotal";
@@ -200,7 +206,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(985, 519);
+            this.label4.Location = new System.Drawing.Point(893, 529);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 29);
             this.label4.TabIndex = 30;
@@ -210,7 +216,7 @@
             // 
             this.txtIngresar.Enabled = false;
             this.txtIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngresar.Location = new System.Drawing.Point(1052, 517);
+            this.txtIngresar.Location = new System.Drawing.Point(960, 527);
             this.txtIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIngresar.MaxLength = 7;
             this.txtIngresar.Name = "txtIngresar";
@@ -225,7 +231,7 @@
             // 
             this.chkIngresar.AutoSize = true;
             this.chkIngresar.Enabled = false;
-            this.chkIngresar.Location = new System.Drawing.Point(888, 526);
+            this.chkIngresar.Location = new System.Drawing.Point(796, 535);
             this.chkIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkIngresar.Name = "chkIngresar";
             this.chkIngresar.Size = new System.Drawing.Size(82, 21);
@@ -236,15 +242,16 @@
             // 
             // btnPagar
             // 
+            this.btnPagar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPagar.Enabled = false;
             this.btnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagar.Location = new System.Drawing.Point(1167, 687);
+            this.btnPagar.Location = new System.Drawing.Point(796, 699);
             this.btnPagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(149, 53);
             this.btnPagar.TabIndex = 33;
             this.btnPagar.Text = "Pagar";
-            this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.UseVisualStyleBackColor = false;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // pictureBox1
@@ -261,15 +268,16 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Tomato;
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(1336, 684);
+            this.btnCancelar.Location = new System.Drawing.Point(972, 699);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(149, 53);
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label5
@@ -286,7 +294,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1213, 505);
+            this.label6.Location = new System.Drawing.Point(1215, 604);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 29);
             this.label6.TabIndex = 38;
@@ -296,7 +304,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1223, 558);
+            this.label7.Location = new System.Drawing.Point(1223, 663);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 29);
             this.label7.TabIndex = 39;
@@ -306,7 +314,7 @@
             // 
             this.txtSubTotal.Enabled = false;
             this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTotal.Location = new System.Drawing.Point(1375, 505);
+            this.txtSubTotal.Location = new System.Drawing.Point(1376, 604);
             this.txtSubTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSubTotal.MaxLength = 30;
             this.txtSubTotal.Name = "txtSubTotal";
@@ -318,7 +326,7 @@
             // 
             this.txtConsulta.Enabled = false;
             this.txtConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsulta.Location = new System.Drawing.Point(1375, 554);
+            this.txtConsulta.Location = new System.Drawing.Point(1375, 660);
             this.txtConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConsulta.MaxLength = 30;
             this.txtConsulta.Name = "txtConsulta";
@@ -331,6 +339,7 @@
             this.pictureBox2.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
             this.pictureBox2.Location = new System.Drawing.Point(601, 162);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,11 +347,59 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1153, 507);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(186, 29);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "Medicamentos:";
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.AutoSize = true;
+            this.txtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescuento.Location = new System.Drawing.Point(1201, 555);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(141, 29);
+            this.txtDescuento.TabIndex = 71;
+            this.txtDescuento.Text = "Descuento:";
+            // 
+            // txtMedicamentos
+            // 
+            this.txtMedicamentos.Enabled = false;
+            this.txtMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedicamentos.Location = new System.Drawing.Point(1375, 501);
+            this.txtMedicamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMedicamentos.MaxLength = 30;
+            this.txtMedicamentos.Name = "txtMedicamentos";
+            this.txtMedicamentos.Size = new System.Drawing.Size(109, 36);
+            this.txtMedicamentos.TabIndex = 72;
+            this.txtMedicamentos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Enabled = false;
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(1376, 553);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDesc.MaxLength = 30;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(109, 36);
+            this.txtDesc.TabIndex = 73;
+            this.txtDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Generar_factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1543, 768);
+            this.ClientSize = new System.Drawing.Size(1727, 830);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.txtMedicamentos);
+            this.Controls.Add(this.txtDescuento);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.txtSubTotal);
@@ -403,5 +460,9 @@
         private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.TextBox txtConsulta;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label txtDescuento;
+        private System.Windows.Forms.TextBox txtMedicamentos;
+        private System.Windows.Forms.TextBox txtDesc;
     }
 }

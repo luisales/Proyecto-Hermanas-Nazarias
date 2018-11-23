@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hermanas_nazario
 {
-    public partial class Registro_roles : Form
+    public partial class Ingresar_medida : Form
     {
-        public Registro_roles()
+        public Ingresar_medida()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void btningresar_Click(object sender, EventArgs e)
@@ -30,15 +25,15 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Registro_Rol(txtNombreRol.Text.ToUpper());
+            Base_de_datos.Registro_Medida(txtNombreRol.Text);
+            MessageBox.Show("Registrado con exito");
 
             this.Hide();
-
         }
 
-        private void Registro_roles_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }

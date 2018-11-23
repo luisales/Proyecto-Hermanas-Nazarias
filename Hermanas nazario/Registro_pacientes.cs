@@ -104,16 +104,6 @@ namespace Hermanas_nazario
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            if(int.Parse(txtmes.Text)==2 && int.Parse(txtdia.Text)>29)
-            {
-                MessageBox.Show("Fecha invalida: no existe el dia");
-                return;
-            }
-            if((int.Parse(txtmes.Text) == 4 && int.Parse(txtdia.Text) > 30) || (int.Parse(txtmes.Text) == 6 && int.Parse(txtdia.Text) > 30) || (int.Parse(txtmes.Text) == 9 && int.Parse(txtdia.Text) > 30) || (int.Parse(txtmes.Text) == 11 && int.Parse(txtdia.Text) > 30))
-            {
-                MessageBox.Show("Fecha invalida: no existe el dia");
-                return;
-            }
             if (!string.IsNullOrEmpty(txtnom1.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -164,7 +154,17 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if((int.Parse(txtdia.Text))<=0 || (int.Parse(txtdia.Text))>31)
+            if (int.Parse(txtmes.Text) == 2 && int.Parse(txtdia.Text) > 29)
+            {
+                MessageBox.Show("Fecha invalida: no existe el dia");
+                return;
+            }
+            if ((int.Parse(txtmes.Text) == 4 && int.Parse(txtdia.Text) > 30) || (int.Parse(txtmes.Text) == 6 && int.Parse(txtdia.Text) > 30) || (int.Parse(txtmes.Text) == 9 && int.Parse(txtdia.Text) > 30) || (int.Parse(txtmes.Text) == 11 && int.Parse(txtdia.Text) > 30))
+            {
+                MessageBox.Show("Fecha invalida: no existe el dia");
+                return;
+            }
+            if ((int.Parse(txtdia.Text))<=0 || (int.Parse(txtdia.Text))>31)
             {
                 MessageBox.Show("El dia tiene que ser 1-31");
                 return;
