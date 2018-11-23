@@ -121,8 +121,14 @@ namespace Hermanas_nazario
                 MessageBox.Show("Ingrese el valor a pagar");
                 return;
             }
-
-            if(chkIngresar.Checked)
+            int validar;
+            validar = Base_de_datos.ValidarFactura(txtCita.Text);
+            if(validar==1)
+            {
+                MessageBox.Show("Esta factura ya esta pagada");
+                return;
+            }
+            if (chkIngresar.Checked)
             {
                 if (MessageBox.Show("Esta seguro desea ingresar la factura","Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

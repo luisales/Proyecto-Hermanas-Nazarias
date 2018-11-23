@@ -236,6 +236,7 @@
             // 
             // txtLugarTrabajo
             // 
+            this.txtLugarTrabajo.Enabled = false;
             this.txtLugarTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarTrabajo.Location = new System.Drawing.Point(1309, 623);
             this.txtLugarTrabajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -246,6 +247,7 @@
             // 
             // txtDireccion
             // 
+            this.txtDireccion.Enabled = false;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(876, 693);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -256,6 +258,7 @@
             // 
             // txttel
             // 
+            this.txttel.Enabled = false;
             this.txttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttel.Location = new System.Drawing.Point(876, 748);
             this.txttel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -267,6 +270,7 @@
             // 
             // txtTelEmer
             // 
+            this.txtTelEmer.Enabled = false;
             this.txtTelEmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelEmer.Location = new System.Drawing.Point(1447, 752);
             this.txtTelEmer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -662,6 +666,7 @@
             // 
             // txtOcupacion
             // 
+            this.txtOcupacion.Enabled = false;
             this.txtOcupacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOcupacion.Location = new System.Drawing.Point(541, 625);
             this.txtOcupacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -1434,6 +1434,62 @@ end
                 con.Close();
             }
         }
+
+        public static int ValidarFactura(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Facturas] where Codigo_cita = @id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+        
+        public void BuscarEmpleado()
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_empleado, Primer_nombre_empleado 'Primer Nombre', Segundo_nombre_empleado 'Segundo Nombre', Primer_apellido_empleado 'Apellido' from[dbo].[Empleados]", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
     }
 }
 

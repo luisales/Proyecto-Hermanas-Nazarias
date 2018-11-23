@@ -81,7 +81,7 @@ namespace Hermanas_nazario
             Base_de_datos.decis = 3;
             this.Hide();
             Busqueda_citas a = new Busqueda_citas();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
