@@ -48,6 +48,7 @@ namespace Hermanas_nazario
         public static string Direccion ;
         public static string tel ;
         public static string telE;
+        public static string Permisos;
 
         public static SqlConnection Conectar()
         {
@@ -984,7 +985,23 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
+        public static void BuscarPermisos(string Rol)
+        {
 
+
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select b.Permisos_rol from [dbo].[Empleado_Rol] a inner join [dbo].[Roles] b on  a.Codigo_rol=b.Codigo_rol where b.Codigo_rol=@Rol", con);
+            cmd.Parameters.AddWithValue("Rol", Rol);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                Permisos = Perm["Permisos_rol"].ToString();
+                con.Close();
+            }
+            
+        }
         public static float total_medicamentos(string id)
         {
             SqlConnection con;
@@ -1102,16 +1119,14 @@ namespace Hermanas_nazario
 
                     rol = int.Parse(registro["Codigo_rol"].ToString());
                     cod_empleado = int.Parse(registro["Codigo_empleado"].ToString());
+                    
                     con.Close();
-
+                    
                 }
 
             }
-            else
-            {
-                MessageBox.Show("hola");
-            }
-            //Corregir Hola
+           
+           
         }
         public static string Referencia()
         {
@@ -1273,7 +1288,7 @@ end
             }
         }
 
-        public static void Registro_Rol(string nombreRol)
+        public static void Registro_Rol(string nombreRol, string Permisos)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1284,7 +1299,7 @@ end
                 SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
- 
+                cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -1329,7 +1344,7 @@ end
         }
 
 
-        public static void Actualizar_Rol(int CodigoRol, string nombreRol)
+        public static void Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1341,6 +1356,7 @@ end
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
                 cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                cmd.Parameters.Add(new SqlParameter("@Permisos_rol", permisosRol));
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -1489,6 +1505,8 @@ end
                 con.Close();
             }
         }
+
+        
 
     }
 }

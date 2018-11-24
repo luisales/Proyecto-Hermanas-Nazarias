@@ -43,6 +43,7 @@ namespace Hermanas_nazario
             if (x == 1)
             {
                 Base_de_datos.User=txtusuario.Text;
+                
                 this.Hide();
                 
             }
@@ -50,6 +51,8 @@ namespace Hermanas_nazario
             {
                 txtcontraseña.Clear();
             }
+            
+            ;
 
         }
 

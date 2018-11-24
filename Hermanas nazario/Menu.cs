@@ -15,10 +15,58 @@ namespace Hermanas_nazario
         public menu()
         {
             InitializeComponent();
-            if (Base_de_datos.rol == 2)
+
+            
+            Base_de_datos.BuscarPermisos(Base_de_datos.rol.ToString());         
+            
+            if (Base_de_datos.Permisos.Contains("A") )
             {
-                registrarUsuarioToolStripMenuItem.Enabled = false;
+                pacientesToolStripMenuItem.Enabled = true;
+            } else
+                pacientesToolStripMenuItem.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("B"))
+            {
+               registarEmpleadoToolStripMenuItem.Enabled = true;
             }
+            else
+                registarEmpleadoToolStripMenuItem.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("C"))
+            {
+                registrarUsuarioToolStripMenuItem.Enabled = true;
+            }
+            else
+                registrarUsuarioToolStripMenuItem.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("D"))
+            {
+                facturacionToolStripMenuItem.Enabled = true;
+            }
+            else
+                facturacionToolStripMenuItem.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("E"))
+            {
+                inventarioToolStripMenuItem.Enabled = true;
+            }
+            else
+                inventarioToolStripMenuItem.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("F"))
+            {
+                documentosMedicosToolStripMenuItem.Enabled = true;
+            }
+            else
+                documentosMedicosToolStripMenuItem.Enabled = false;
+
+         
+            if (Base_de_datos.Permisos.Contains("G"))
+            {
+                mantenimientosToolStripMenuItem.Enabled = true;
+            }
+            else           
+                 mantenimientosToolStripMenuItem.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)

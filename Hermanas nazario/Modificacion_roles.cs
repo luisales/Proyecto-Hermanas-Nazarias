@@ -31,7 +31,7 @@ namespace Hermanas_nazario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            string Permisos="";
             if (!string.IsNullOrEmpty(txtCodigoRol.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -43,11 +43,40 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene el nombre del rol");
                 return;
             }
+            if (chkPacientes.Checked)
+            {
+                Permisos = (Permisos + "A");
+            }
+            if (chkEmpleados.Checked)
+            {
+                Permisos = (Permisos + "B");
+            }
+            if (chkUsuarios.Checked)
+            {
+                Permisos = (Permisos + "C");
+            }
+            if (chkFacturacion.Checked)
+            {
+                Permisos = (Permisos + "D");
+            }
+            if (chkInventario.Checked)
+            {
+                Permisos = (Permisos + "E");
+            }
+            if (chkDocumentos.Checked)
+            {
+                Permisos = (Permisos + "F");
+            }
+            if (chkMantenimientos.Checked)
+            {
+                Permisos = (Permisos + "G");
+            }
+            
 
-            Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper());
+            Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos );
 
            MessageBox.Show("Rol modificado.");
-
+            
             Base_de_datos busc = new Base_de_datos();
             busc.BuscarRoles();
             dataGridView1.DataSource = busc.Mostrar_Resultados();
@@ -55,6 +84,7 @@ namespace Hermanas_nazario
             txtCodigoRol.Clear();
             txtNombreRol.Clear();
             btnModificar.Enabled = false;
+            
         }
 
         private void txtCodigoRol_TextChanged(object sender, EventArgs e)

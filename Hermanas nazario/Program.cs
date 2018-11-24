@@ -16,7 +16,7 @@ namespace Hermanas_nazario
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ModifcacionPaciente());
+            Application.Run(new Login());
         }
     }
 }

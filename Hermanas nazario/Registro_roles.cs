@@ -24,13 +24,42 @@ namespace Hermanas_nazario
 
         private void btningresar_Click(object sender, EventArgs e)
         {
+            string Permisos = "";
             if (!string.IsNullOrEmpty(txtNombreRol.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
+            if (chkPacientes.Checked)
+            {
+                Permisos = (Permisos + "A");
+            }
+            if (chkEmpleados.Checked)
+            {
+                Permisos = (Permisos + "B");
+            }
+            if (chkUsuarios.Checked)
+            {
+                Permisos = (Permisos + "C");
+            }
+            if (chkFacturacion.Checked)
+            {
+                Permisos = (Permisos + "D");
+            }
+            if (chkInventario.Checked)
+            {
+                Permisos = (Permisos + "E");
+            }
+            if (chkDocumentos.Checked)
+            {
+                Permisos = (Permisos + "F");
+            }
+            if (chkMantenimientos.Checked)
+            {
+                Permisos = (Permisos + "G");
+            }
 
-            Base_de_datos.Registro_Rol(txtNombreRol.Text.ToUpper());
+            Base_de_datos.Registro_Rol(txtNombreRol.Text.ToUpper(), Permisos);
 
             this.Hide();
 
