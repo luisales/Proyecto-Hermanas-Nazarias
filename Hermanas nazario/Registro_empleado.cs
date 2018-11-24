@@ -59,7 +59,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Identidad ya existente");
                 return;
             }
-            Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text);
+            Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper());
             this.Close();
             menu a = new menu();
             a.Show();
@@ -139,6 +139,11 @@ namespace Hermanas_nazario
 
         private void Registro_empleado_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void txtcargo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.sololetras(e);
         }
     }
 }

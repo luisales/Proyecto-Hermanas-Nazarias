@@ -510,5 +510,10 @@ namespace Hermanas_nazario
         {
             Validar.solonumeros(e);
         }
+
+        private void txtlugar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

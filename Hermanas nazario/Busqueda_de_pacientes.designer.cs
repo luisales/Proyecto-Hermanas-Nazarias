@@ -59,7 +59,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(763, 40);
+            this.label5.Location = new System.Drawing.Point(808, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(551, 46);
             this.label5.TabIndex = 10;
@@ -69,7 +69,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(513, 131);
+            this.label1.Location = new System.Drawing.Point(572, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 29);
             this.label1.TabIndex = 11;
@@ -79,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1078, 134);
+            this.label3.Location = new System.Drawing.Point(1137, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 29);
             this.label3.TabIndex = 12;
@@ -88,7 +88,7 @@
             // txtnom
             // 
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.Location = new System.Drawing.Point(757, 131);
+            this.txtnom.Location = new System.Drawing.Point(816, 195);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(189, 36);
@@ -99,7 +99,7 @@
             // txtape
             // 
             this.txtape.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtape.Location = new System.Drawing.Point(1302, 131);
+            this.txtape.Location = new System.Drawing.Point(1361, 195);
             this.txtape.MaxLength = 30;
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(189, 36);
@@ -114,6 +114,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,7 +138,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(284, 134);
+            this.groupBox1.Location = new System.Drawing.Point(283, 184);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,7 +177,7 @@
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(757, 131);
+            this.txtId.Location = new System.Drawing.Point(816, 195);
             this.txtId.MaxLength = 13;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(189, 36);
@@ -193,17 +194,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(333, 40);
+            this.label2.Location = new System.Drawing.Point(343, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 36;
             this.label2.Text = "label2";
+            this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox2.Location = new System.Drawing.Point(1279, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(1338, 208);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(17, 12);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +215,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(734, 144);
+            this.pictureBox5.Location = new System.Drawing.Point(793, 208);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(17, 12);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,6 +235,7 @@
             // 
             // btnGencita
             // 
+            this.btnGencita.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGencita.Enabled = false;
             this.btnGencita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGencita.Location = new System.Drawing.Point(975, 551);
@@ -241,7 +244,7 @@
             this.btnGencita.Size = new System.Drawing.Size(202, 41);
             this.btnGencita.TabIndex = 34;
             this.btnGencita.Text = "Generar Cita";
-            this.btnGencita.UseVisualStyleBackColor = true;
+            this.btnGencita.UseVisualStyleBackColor = false;
             this.btnGencita.Click += new System.EventHandler(this.btnGencita_Click);
             // 
             // txtGencita
@@ -258,6 +261,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.Tan;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(1217, 551);
@@ -266,14 +270,14 @@
             this.btnModificar.Size = new System.Drawing.Size(202, 41);
             this.btnModificar.TabIndex = 37;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // Busqueda_de_pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1454, 704);
+            this.ClientSize = new System.Drawing.Size(1732, 704);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label2);

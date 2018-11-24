@@ -39,21 +39,33 @@ namespace Hermanas_nazario
         public static int rol;
         public static int cod_empleado;
         public static string User;
-        public static int decis = 0,b;
+        public static int decis = 0, b;
         public static string diagnostico, tratamiento, nombre_cita;
         public static ArrayList nombremedicamento = new ArrayList();
         public static ArrayList cantidadmedicamento = new ArrayList();
         public static string Ocupacion;
-        public static string LugarT ;
-        public static string Direccion ;
-        public static string tel ;
+        public static string LugarT;
+        public static string Direccion;
+        public static string tel;
         public static string telE;
+        public static string nombre1_empleado;
+        public static string nombre2_empleado;
+        public static string apellido1_empleado;
+        public static string apellido2_empleado;
+        public static string correo_empleado;
+        public static string numero_identidad_empleado;
+        public static string sexo_empleado;
+        public static string numero_telefono_empleado;
+        public static string cargo_empleado;
         public static string Permisos;
 
         public static SqlConnection Conectar()
         {
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); luis
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True"); omar
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True"); mauricio
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -181,7 +193,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void registrar_empleado(string nom1, string nom2, string ape1, string ape2, string correo, string id, string sexo, string tel)
+        public static void registrar_empleado(string nom1, string nom2, string ape1, string ape2, string correo, string id, string sexo, string tel,string cargo)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -199,6 +211,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Numero_identidad_empleado", id));
                 cmd.Parameters.Add(new SqlParameter("@Sexo_empleado", sexo));
                 cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel));
+                cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Empleado guardado con exito");
             }
@@ -1449,61 +1462,43 @@ end
             {
                 con.Close();
             }
+
+
         }
 
-        public static int ValidarFactura(string id)
+        public static int Validar_Cod_empleado(string id)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from [dbo].[Facturas] where Codigo_cita = @id", con);
+            SqlCommand cmd = new SqlCommand("SELECT [Primer_nombre_empleado],[Segundo_nombre_empleado],[Primer_apellido_empleado],[Segundo_apellido_empleado],[Correo_empleado],[Numero_identidad_empleado],[Sexo_empleado],[Telefono_empleado],[Cargo_empleado] FROM [dbo].[Empleados] WHERE [Codigo_empleado]=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            if (dt.Rows.Count >= 1)
+            if (dt.Rows.Count == 1)
             {
+                SqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.Read())
+                {
+                    Base_de_datos.nombre1_empleado = registro["Primer_nombre_empleado"].ToString();
+                    Base_de_datos.nombre2_empleado = registro["Segundo_nombre_empleado"].ToString();
+                    Base_de_datos.apellido1_empleado = registro["Primer_apellido_empleado"].ToString();
+                    Base_de_datos.apellido2_empleado = registro["Segundo_apellido_empleado"].ToString();
+                    Base_de_datos.correo_empleado = registro["Correo_empleado"].ToString();
+                    Base_de_datos.numero_identidad_empleado = registro["Numero_identidad_empleado"].ToString();
+                    Base_de_datos.sexo_empleado = registro["Sexo_empleado"].ToString();
+                    Base_de_datos.numero_telefono_empleado = registro["Telefono_empleado"].ToString();
+                    Base_de_datos.cargo_empleado= registro["Cargo_empleado"].ToString();
+                }
                 con.Close();
                 return 1;
             }
-            else
-            {
-                con.Close();
-                return 0;
-            }
-        }
-        
-        public void BuscarEmpleado()
-        {
 
 
-            SqlConnection con;
-            con = Conectar();
-            try
-            {
-                con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_empleado, Primer_nombre_empleado 'Primer Nombre', Segundo_nombre_empleado 'Segundo Nombre', Primer_apellido_empleado 'Apellido' from[dbo].[Empleados]", con);
-                da.SelectCommand.CommandType = CommandType.Text;
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if (dt.Rows.Count >= 1)
-                {
-                    Resultado = dt;
-                    con.Close();
-
-                }
-
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                con.Close();
-            }
         }
 
         

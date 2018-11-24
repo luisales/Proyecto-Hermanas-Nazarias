@@ -60,6 +60,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.generarRecetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pacientesToolStripMenuItem,
             this.registarEmpleadoToolStripMenuItem,
+            this.modificarEmpleadoToolStripMenuItem,
             this.registrarUsuarioToolStripMenuItem,
             this.facturacionToolStripMenuItem,
             this.inventarioToolStripMenuItem,
@@ -309,6 +311,13 @@
             this.generarRecetaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.generarRecetaToolStripMenuItem.Text = "Generar receta";
             this.generarRecetaToolStripMenuItem.Click += new System.EventHandler(this.generarRecetaToolStripMenuItem_Click_1);
+            // 
+            // modificarEmpleadoToolStripMenuItem
+            // 
+            this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
+            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
+            this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
+            this.modificarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.modificarEmpleadoToolStripMenuItem_Click);
             // 
             // menu
             // 

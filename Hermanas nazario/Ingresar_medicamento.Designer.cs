@@ -150,6 +150,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(975, 672);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -157,7 +158,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(149, 53);
             this.btnBuscar.TabIndex = 70;
             this.btnBuscar.Text = "Ingresar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pictureBox1
@@ -198,6 +199,7 @@
             this.label7.Size = new System.Drawing.Size(46, 17);
             this.label7.TabIndex = 76;
             this.label7.Text = "label7";
+            this.label7.Visible = false;
             // 
             // timer1
             // 

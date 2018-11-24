@@ -330,6 +330,7 @@
             // 
             // btnregistrar
             // 
+            this.btnregistrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Location = new System.Drawing.Point(926, 869);
             this.btnregistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -337,7 +338,7 @@
             this.btnregistrar.Size = new System.Drawing.Size(149, 53);
             this.btnregistrar.TabIndex = 22;
             this.btnregistrar.Text = "Registrar";
-            this.btnregistrar.UseVisualStyleBackColor = true;
+            this.btnregistrar.UseVisualStyleBackColor = false;
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
             // pictureBox8

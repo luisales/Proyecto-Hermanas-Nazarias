@@ -131,6 +131,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Enabled = false;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(1197, 134);
@@ -139,7 +140,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(149, 53);
             this.btnBuscar.TabIndex = 62;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pictureBox1
@@ -155,6 +156,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(1022, 918);
@@ -163,7 +165,7 @@
             this.btnModificar.Size = new System.Drawing.Size(149, 53);
             this.btnModificar.TabIndex = 51;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label16
@@ -313,6 +315,15 @@
             // 
             // txtnom2
             // 
+            this.txtlugar.Enabled = false;
+            this.txtlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlugar.Location = new System.Drawing.Point(685, 492);
+            this.txtlugar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtlugar.MaxLength = 9;
+            this.txtlugar.Name = "txtlugar";
+            this.txtlugar.Size = new System.Drawing.Size(326, 30);
+            this.txtlugar.TabIndex = 40;
+            this.txtlugar.TextChanged += new System.EventHandler(this.txtlugar_TextChanged);
             this.txtnom2.Enabled = false;
             this.txtnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom2.Location = new System.Drawing.Point(806, 217);
@@ -679,7 +690,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1914, 1045);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.txtTelEmer);
             this.Controls.Add(this.txttel);
             this.Controls.Add(this.txtDireccion);

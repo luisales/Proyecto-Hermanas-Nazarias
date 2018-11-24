@@ -184,6 +184,12 @@
     <Compile Include="Modificacion_roles.Designer.cs">
       <DependentUpon>Modificacion_roles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modificar_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_empleado.Designer.cs">
+      <DependentUpon>Modificar_empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificar_paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modificacion_roles.resx">
       <DependentUpon>Modificacion_roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_empleado.resx">
+      <DependentUpon>Modificar_empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_paciente.resx">
       <DependentUpon>Modificar_paciente.cs</DependentUpon>
