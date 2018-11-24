@@ -34,14 +34,14 @@
             this.txtNombreRol = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chkPacientes = new System.Windows.Forms.CheckBox();
-            this.chkEmpleados = new System.Windows.Forms.CheckBox();
-            this.chkUsuarios = new System.Windows.Forms.CheckBox();
-            this.chkFacturacion = new System.Windows.Forms.CheckBox();
-            this.chkInventario = new System.Windows.Forms.CheckBox();
-            this.chkDocumentos = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.chkMantenimientos = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chkDocumentos = new System.Windows.Forms.CheckBox();
+            this.chkInventario = new System.Windows.Forms.CheckBox();
+            this.chkFacturacion = new System.Windows.Forms.CheckBox();
+            this.chkUsuarios = new System.Windows.Forms.CheckBox();
+            this.chkEmpleados = new System.Windows.Forms.CheckBox();
+            this.chkPacientes = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -114,93 +114,93 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // chkPacientes
+            // chkMantenimientos
             // 
-            this.chkPacientes.AutoSize = true;
-            this.chkPacientes.Location = new System.Drawing.Point(689, 197);
-            this.chkPacientes.Name = "chkPacientes";
-            this.chkPacientes.Size = new System.Drawing.Size(105, 24);
-            this.chkPacientes.TabIndex = 58;
-            this.chkPacientes.Text = "Pacientes";
-            this.chkPacientes.UseVisualStyleBackColor = true;
-            // 
-            // chkEmpleados
-            // 
-            this.chkEmpleados.AutoSize = true;
-            this.chkEmpleados.Location = new System.Drawing.Point(689, 228);
-            this.chkEmpleados.Name = "chkEmpleados";
-            this.chkEmpleados.Size = new System.Drawing.Size(184, 24);
-            this.chkEmpleados.TabIndex = 59;
-            this.chkEmpleados.Text = "Registrar Empleados";
-            this.chkEmpleados.UseVisualStyleBackColor = true;
-            // 
-            // chkUsuarios
-            // 
-            this.chkUsuarios.AutoSize = true;
-            this.chkUsuarios.Location = new System.Drawing.Point(689, 259);
-            this.chkUsuarios.Name = "chkUsuarios";
-            this.chkUsuarios.Size = new System.Drawing.Size(159, 24);
-            this.chkUsuarios.TabIndex = 60;
-            this.chkUsuarios.Text = "Registrar Usuario";
-            this.chkUsuarios.UseVisualStyleBackColor = true;
-            // 
-            // chkFacturacion
-            // 
-            this.chkFacturacion.AutoSize = true;
-            this.chkFacturacion.Location = new System.Drawing.Point(689, 290);
-            this.chkFacturacion.Name = "chkFacturacion";
-            this.chkFacturacion.Size = new System.Drawing.Size(119, 24);
-            this.chkFacturacion.TabIndex = 61;
-            this.chkFacturacion.Text = "Facturación";
-            this.chkFacturacion.UseVisualStyleBackColor = true;
-            // 
-            // chkInventario
-            // 
-            this.chkInventario.AutoSize = true;
-            this.chkInventario.Location = new System.Drawing.Point(689, 321);
-            this.chkInventario.Name = "chkInventario";
-            this.chkInventario.Size = new System.Drawing.Size(105, 24);
-            this.chkInventario.TabIndex = 62;
-            this.chkInventario.Text = "Inventario";
-            this.chkInventario.UseVisualStyleBackColor = true;
-            // 
-            // chkDocumentos
-            // 
-            this.chkDocumentos.AutoSize = true;
-            this.chkDocumentos.Location = new System.Drawing.Point(689, 352);
-            this.chkDocumentos.Name = "chkDocumentos";
-            this.chkDocumentos.Size = new System.Drawing.Size(126, 24);
-            this.chkDocumentos.TabIndex = 63;
-            this.chkDocumentos.Text = "Documentos";
-            this.chkDocumentos.UseVisualStyleBackColor = true;
+            this.chkMantenimientos.AutoSize = true;
+            this.chkMantenimientos.Location = new System.Drawing.Point(732, 425);
+            this.chkMantenimientos.Name = "chkMantenimientos";
+            this.chkMantenimientos.Size = new System.Drawing.Size(148, 24);
+            this.chkMantenimientos.TabIndex = 74;
+            this.chkMantenimientos.Text = "Mantenimientos";
+            this.chkMantenimientos.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(699, 136);
+            this.label2.Location = new System.Drawing.Point(742, 179);
             this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(235, 42);
-            this.label2.TabIndex = 65;
+            this.label2.TabIndex = 73;
             this.label2.Text = "Permisos";
             // 
-            // chkMantenimientos
+            // chkDocumentos
             // 
-            this.chkMantenimientos.AutoSize = true;
-            this.chkMantenimientos.Location = new System.Drawing.Point(689, 382);
-            this.chkMantenimientos.Name = "chkMantenimientos";
-            this.chkMantenimientos.Size = new System.Drawing.Size(148, 24);
-            this.chkMantenimientos.TabIndex = 66;
-            this.chkMantenimientos.Text = "Mantenimientos";
-            this.chkMantenimientos.UseVisualStyleBackColor = true;
+            this.chkDocumentos.AutoSize = true;
+            this.chkDocumentos.Location = new System.Drawing.Point(732, 395);
+            this.chkDocumentos.Name = "chkDocumentos";
+            this.chkDocumentos.Size = new System.Drawing.Size(126, 24);
+            this.chkDocumentos.TabIndex = 72;
+            this.chkDocumentos.Text = "Documentos";
+            this.chkDocumentos.UseVisualStyleBackColor = true;
+            // 
+            // chkInventario
+            // 
+            this.chkInventario.AutoSize = true;
+            this.chkInventario.Location = new System.Drawing.Point(732, 364);
+            this.chkInventario.Name = "chkInventario";
+            this.chkInventario.Size = new System.Drawing.Size(105, 24);
+            this.chkInventario.TabIndex = 71;
+            this.chkInventario.Text = "Inventario";
+            this.chkInventario.UseVisualStyleBackColor = true;
+            // 
+            // chkFacturacion
+            // 
+            this.chkFacturacion.AutoSize = true;
+            this.chkFacturacion.Location = new System.Drawing.Point(732, 333);
+            this.chkFacturacion.Name = "chkFacturacion";
+            this.chkFacturacion.Size = new System.Drawing.Size(119, 24);
+            this.chkFacturacion.TabIndex = 70;
+            this.chkFacturacion.Text = "Facturación";
+            this.chkFacturacion.UseVisualStyleBackColor = true;
+            // 
+            // chkUsuarios
+            // 
+            this.chkUsuarios.AutoSize = true;
+            this.chkUsuarios.Location = new System.Drawing.Point(732, 302);
+            this.chkUsuarios.Name = "chkUsuarios";
+            this.chkUsuarios.Size = new System.Drawing.Size(159, 24);
+            this.chkUsuarios.TabIndex = 69;
+            this.chkUsuarios.Text = "Registrar Usuario";
+            this.chkUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // chkEmpleados
+            // 
+            this.chkEmpleados.AutoSize = true;
+            this.chkEmpleados.Location = new System.Drawing.Point(732, 271);
+            this.chkEmpleados.Name = "chkEmpleados";
+            this.chkEmpleados.Size = new System.Drawing.Size(184, 24);
+            this.chkEmpleados.TabIndex = 68;
+            this.chkEmpleados.Text = "Registrar Empleados";
+            this.chkEmpleados.UseVisualStyleBackColor = true;
+            // 
+            // chkPacientes
+            // 
+            this.chkPacientes.AutoSize = true;
+            this.chkPacientes.Location = new System.Drawing.Point(732, 240);
+            this.chkPacientes.Name = "chkPacientes";
+            this.chkPacientes.Size = new System.Drawing.Size(105, 24);
+            this.chkPacientes.TabIndex = 67;
+            this.chkPacientes.Text = "Pacientes";
+            this.chkPacientes.UseVisualStyleBackColor = true;
             // 
             // Registro_roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 491);
+            this.ClientSize = new System.Drawing.Size(1012, 491);
             this.Controls.Add(this.chkMantenimientos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chkDocumentos);
@@ -235,13 +235,13 @@
         private System.Windows.Forms.Button btningresar;
         private System.Windows.Forms.TextBox txtNombreRol;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.CheckBox chkPacientes;
-        private System.Windows.Forms.CheckBox chkEmpleados;
-        private System.Windows.Forms.CheckBox chkUsuarios;
-        private System.Windows.Forms.CheckBox chkFacturacion;
-        private System.Windows.Forms.CheckBox chkInventario;
-        private System.Windows.Forms.CheckBox chkDocumentos;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkMantenimientos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox chkDocumentos;
+        private System.Windows.Forms.CheckBox chkInventario;
+        private System.Windows.Forms.CheckBox chkFacturacion;
+        private System.Windows.Forms.CheckBox chkUsuarios;
+        private System.Windows.Forms.CheckBox chkEmpleados;
+        private System.Windows.Forms.CheckBox chkPacientes;
     }
 }

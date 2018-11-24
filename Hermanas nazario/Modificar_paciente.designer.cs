@@ -315,15 +315,6 @@
             // 
             // txtnom2
             // 
-            this.txtlugar.Enabled = false;
-            this.txtlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlugar.Location = new System.Drawing.Point(685, 492);
-            this.txtlugar.Margin = new System.Windows.Forms.Padding(2);
-            this.txtlugar.MaxLength = 9;
-            this.txtlugar.Name = "txtlugar";
-            this.txtlugar.Size = new System.Drawing.Size(326, 30);
-            this.txtlugar.TabIndex = 40;
-            this.txtlugar.TextChanged += new System.EventHandler(this.txtlugar_TextChanged);
             this.txtnom2.Enabled = false;
             this.txtnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom2.Location = new System.Drawing.Point(806, 217);
@@ -690,7 +681,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1914, 1045);
             this.Controls.Add(this.txtTelEmer);
             this.Controls.Add(this.txttel);
             this.Controls.Add(this.txtDireccion);

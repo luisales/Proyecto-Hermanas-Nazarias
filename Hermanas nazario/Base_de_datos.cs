@@ -16,11 +16,21 @@ namespace Hermanas_nazario
         public static string Nombre1;
         public static string Nombre2;
         public static string Apellido1;
+        public static int decis = 0, b;
         public static string Apellid2;
         public static string Lugar;
         public static string Fecha;
         public static string NombreP;
         public static string NombreM;
+        public static string nombre1_empleado;
+        public static string nombre2_empleado;
+        public static string apellido1_empleado;
+        public static string apellido2_empleado;
+        public static string correo_empleado;
+        public static string numero_identidad_empleado;
+        public static string sexo_empleado;
+        public static string numero_telefono_empleado;
+        public static string cargo_empleado;
         public static string Identidad;
         public static string Sexo;
         public static string Riesgo;
@@ -39,33 +49,20 @@ namespace Hermanas_nazario
         public static int rol;
         public static int cod_empleado;
         public static string User;
-        public static int decis = 0, b;
         public static string diagnostico, tratamiento, nombre_cita;
         public static ArrayList nombremedicamento = new ArrayList();
         public static ArrayList cantidadmedicamento = new ArrayList();
         public static string Ocupacion;
-        public static string LugarT;
-        public static string Direccion;
-        public static string tel;
+        public static string LugarT ;
+        public static string Direccion ;
+        public static string tel ;
         public static string telE;
-        public static string nombre1_empleado;
-        public static string nombre2_empleado;
-        public static string apellido1_empleado;
-        public static string apellido2_empleado;
-        public static string correo_empleado;
-        public static string numero_identidad_empleado;
-        public static string sexo_empleado;
-        public static string numero_telefono_empleado;
-        public static string cargo_empleado;
         public static string Permisos;
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); luis
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True"); omar
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True"); mauricio
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
+           // SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -193,7 +190,8 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void registrar_empleado(string nom1, string nom2, string ape1, string ape2, string correo, string id, string sexo, string tel,string cargo)
+        public static void registrar_empleado(string nom1, string nom2, string ape1, string ape2, string correo, string id, string sexo, string tel, string cargo)
+
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -998,23 +996,7 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
-        public static void BuscarPermisos(string Rol)
-        {
 
-
-            SqlConnection con;
-            con = Conectar();
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select b.Permisos_rol from [dbo].[Empleado_Rol] a inner join [dbo].[Roles] b on  a.Codigo_rol=b.Codigo_rol where b.Codigo_rol=@Rol", con);
-            cmd.Parameters.AddWithValue("Rol", Rol);
-            SqlDataReader Perm = cmd.ExecuteReader();
-            if (Perm.Read())
-            {
-                Permisos = Perm["Permisos_rol"].ToString();
-                con.Close();
-            }
-            
-        }
         public static float total_medicamentos(string id)
         {
             SqlConnection con;
@@ -1132,14 +1114,16 @@ namespace Hermanas_nazario
 
                     rol = int.Parse(registro["Codigo_rol"].ToString());
                     cod_empleado = int.Parse(registro["Codigo_empleado"].ToString());
-                    
                     con.Close();
-                    
+
                 }
 
             }
-           
-           
+            else
+            {
+                MessageBox.Show("hola");
+            }
+            //Corregir Hola
         }
         public static string Referencia()
         {
@@ -1313,6 +1297,7 @@ end
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
                 cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
+
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -1462,26 +1447,75 @@ end
             {
                 con.Close();
             }
-
-
         }
 
-        public static int Validar_Cod_empleado(string id)
+        public static int ValidarFactura(string id)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
 
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Facturas] where Codigo_cita = @id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+        
+        public void BuscarEmpleado()
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_empleado, Primer_nombre_empleado 'Primer Nombre', Segundo_nombre_empleado 'Segundo Nombre', Primer_apellido_empleado 'Apellido' from[dbo].[Empleados]", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public static int Validar_Cod_empleado(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT [Primer_nombre_empleado],[Segundo_nombre_empleado],[Primer_apellido_empleado],[Segundo_apellido_empleado],[Correo_empleado],[Numero_identidad_empleado],[Sexo_empleado],[Telefono_empleado],[Cargo_empleado] FROM [dbo].[Empleados] WHERE [Codigo_empleado]=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             if (dt.Rows.Count == 1)
             {
                 SqlDataReader registro = cmd.ExecuteReader();
-
                 if (registro.Read())
                 {
                     Base_de_datos.nombre1_empleado = registro["Primer_nombre_empleado"].ToString();
@@ -1492,16 +1526,57 @@ end
                     Base_de_datos.numero_identidad_empleado = registro["Numero_identidad_empleado"].ToString();
                     Base_de_datos.sexo_empleado = registro["Sexo_empleado"].ToString();
                     Base_de_datos.numero_telefono_empleado = registro["Telefono_empleado"].ToString();
-                    Base_de_datos.cargo_empleado= registro["Cargo_empleado"].ToString();
+                    Base_de_datos.cargo_empleado = registro["Cargo_empleado"].ToString();
                 }
                 con.Close();
                 return 1;
             }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+        public static void Actualizar_empleado(int codigo_empleado, string nombre1, string nombre2, string apellido1, string apellido2, string correo_empleado, string id_empleado, string sexo, string tel_empleado, string cargo)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Actualizar_empleado", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", codigo_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Primer_nombre_empleado", nombre1));
+            cmd.Parameters.Add(new SqlParameter("@Segundo_nombre_empleado", nombre2));
+            cmd.Parameters.Add(new SqlParameter("@Primer_apellido_empleado", apellido1));
+            cmd.Parameters.Add(new SqlParameter("@Segundo_apellido_empleado", apellido2));
+            cmd.Parameters.Add(new SqlParameter("@Correo_empleado", correo_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Identidad_empleado", id_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Sexo_empleado", sexo));
+            cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
+            cmd.ExecuteNonQuery();
+            con.Close();
 
 
         }
+        public static void BuscarPermisos(string Rol)
+        {
 
-        
+
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select b.Permisos_rol from [dbo].[Empleado_Rol] a inner join [dbo].[Roles] b on  a.Codigo_rol=b.Codigo_rol where b.Codigo_rol=@Rol", con);
+            cmd.Parameters.AddWithValue("Rol", Rol);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                Permisos = Perm["Permisos_rol"].ToString();
+                con.Close();
+            }
+
+        }
 
     }
 }

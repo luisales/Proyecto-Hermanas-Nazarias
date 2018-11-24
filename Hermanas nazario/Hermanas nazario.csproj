@@ -187,7 +187,7 @@
     <Compile Include="Modificar_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modificar_empleado.Designer.cs">
+    <Compile Include="Modificar_empleado.designer.cs">
       <DependentUpon>Modificar_empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificar_paciente.cs">
@@ -229,7 +229,7 @@
     <Compile Include="Registro_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro_empleado.Designer.cs">
+    <Compile Include="Registro_empleado.designer.cs">
       <DependentUpon>Registro_empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro_pacientes.cs">

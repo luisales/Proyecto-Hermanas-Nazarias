@@ -31,7 +31,7 @@ namespace Hermanas_nazario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            string Permisos="";
+            string Permisos = "";
             if (!string.IsNullOrEmpty(txtCodigoRol.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -71,12 +71,9 @@ namespace Hermanas_nazario
             {
                 Permisos = (Permisos + "G");
             }
-            
-
-            Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos );
-
+            Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos);
            MessageBox.Show("Rol modificado.");
-            
+
             Base_de_datos busc = new Base_de_datos();
             busc.BuscarRoles();
             dataGridView1.DataSource = busc.Mostrar_Resultados();
@@ -84,7 +81,7 @@ namespace Hermanas_nazario
             txtCodigoRol.Clear();
             txtNombreRol.Clear();
             btnModificar.Enabled = false;
-            
+            Hide();
         }
 
         private void txtCodigoRol_TextChanged(object sender, EventArgs e)

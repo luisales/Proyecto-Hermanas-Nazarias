@@ -183,7 +183,7 @@ namespace Hermanas_nazario
         }
 
 
-        string sexo;
+       
         private void rdm_CheckedChanged(object sender, EventArgs e)
         {
             

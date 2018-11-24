@@ -60,7 +60,6 @@ namespace Hermanas_nazario
             }
 
             Base_de_datos.Registro_Rol(txtNombreRol.Text.ToUpper(), Permisos);
-
             this.Hide();
 
         }

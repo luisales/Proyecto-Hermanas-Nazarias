@@ -15,19 +15,18 @@ namespace Hermanas_nazario
         public menu()
         {
             InitializeComponent();
+            Base_de_datos.BuscarPermisos(Base_de_datos.rol.ToString());
 
-            
-            Base_de_datos.BuscarPermisos(Base_de_datos.rol.ToString());         
-            
-            if (Base_de_datos.Permisos.Contains("A") )
+            if (Base_de_datos.Permisos.Contains("A"))
             {
                 pacientesToolStripMenuItem.Enabled = true;
-            } else
+            }
+            else
                 pacientesToolStripMenuItem.Enabled = false;
 
             if (Base_de_datos.Permisos.Contains("B"))
             {
-               registarEmpleadoToolStripMenuItem.Enabled = true;
+                registarEmpleadoToolStripMenuItem.Enabled = true;
             }
             else
                 registarEmpleadoToolStripMenuItem.Enabled = false;
@@ -60,13 +59,13 @@ namespace Hermanas_nazario
             else
                 documentosMedicosToolStripMenuItem.Enabled = false;
 
-         
+
             if (Base_de_datos.Permisos.Contains("G"))
             {
                 mantenimientosToolStripMenuItem.Enabled = true;
             }
-            else           
-                 mantenimientosToolStripMenuItem.Enabled = false;
+            else
+                mantenimientosToolStripMenuItem.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -244,34 +243,15 @@ namespace Hermanas_nazario
             this.Hide();
             Receta a = new Receta();
             a.Show();
-            Registro_roles a = new Registro_roles();
-            a.ShowDialog();
         }
 
         private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Modificacion_roles a = new Modificacion_roles();
-            a.ShowDialog();
-        }
-
-        private void ingresarMedidaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Ingresar_medida a = new Ingresar_medida();
-            a.ShowDialog();
-        }
-
-        private void modifcarMedidaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Modificacion_medida a = new Modificacion_medida();
-            a.ShowDialog();
-        }
-
-        private void generarRecetaToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
+              
             this.Hide();
-            Receta a = new Receta();
             Modificar_empleado a = new Modificar_empleado();
             a.Show();
         }
+    
     }
 }
