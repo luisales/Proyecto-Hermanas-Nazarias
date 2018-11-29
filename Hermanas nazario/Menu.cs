@@ -75,7 +75,7 @@ namespace Hermanas_nazario
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void registrarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
