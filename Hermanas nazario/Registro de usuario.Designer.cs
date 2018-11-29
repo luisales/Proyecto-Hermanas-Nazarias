@@ -100,7 +100,7 @@
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btningresar.Location = new System.Drawing.Point(956, 558);
-            this.btningresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btningresar.Margin = new System.Windows.Forms.Padding(4);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(159, 55);
             this.btningresar.TabIndex = 16;
@@ -147,7 +147,7 @@
             this.txtemp.Location = new System.Drawing.Point(981, 405);
             this.txtemp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtemp.Name = "txtemp";
-            this.txtemp.Size = new System.Drawing.Size(47, 36);
+            this.txtemp.Size = new System.Drawing.Size(101, 36);
             this.txtemp.TabIndex = 36;
             this.txtemp.TextChanged += new System.EventHandler(this.txtemp_TextChanged);
             this.txtemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemp_KeyPress);
@@ -268,7 +268,7 @@
             // 
             this.pictureBox7.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox7.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
-            this.pictureBox7.Location = new System.Drawing.Point(1034, 409);
+            this.pictureBox7.Location = new System.Drawing.Point(1088, 409);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(29, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,7 +285,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1069, 347);
+            this.dataGridView1.Location = new System.Drawing.Point(1123, 347);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -293,6 +293,7 @@
             this.dataGridView1.TabIndex = 71;
             this.dataGridView1.Visible = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Registro_de_usuario
             // 

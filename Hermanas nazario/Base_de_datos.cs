@@ -16,7 +16,7 @@ namespace Hermanas_nazario
         public static string Nombre1;
         public static string Nombre2;
         public static string Apellido1;
-        public static int decis = 0, b;
+        public static int decis = 0, b, c;
         public static string Apellid2;
         public static string Lugar;
         public static string Fecha;
@@ -58,11 +58,13 @@ namespace Hermanas_nazario
         public static string tel ;
         public static string telE;
         public static string Permisos;
+        public static ArrayList nombrePacientes = new ArrayList();
+        public static ArrayList cantidadPacientes = new ArrayList();
 
         public static SqlConnection Conectar()
         {
-           // SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+           // SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -1171,6 +1173,24 @@ namespace Hermanas_nazario
             {
                 cantidadmedicamento.Add(dr.GetInt32(0));
                 nombremedicamento.Add(dr.GetString(1));
+            }
+
+        }
+
+        public static void esta2()
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("PacientesAtendidos", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cantidadPacientes.Add(dr.GetInt32(0));
+                nombrePacientes.Add("atendidos");
             }
 
         }

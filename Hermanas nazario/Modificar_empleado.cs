@@ -67,6 +67,7 @@ namespace Hermanas_nazario
                 txttel.Enabled = true;
                 txtcargo.Enabled = true;
                 button1.Enabled = true;
+                txtcargo.Enabled = true;
 
 
             }
@@ -87,6 +88,7 @@ namespace Hermanas_nazario
                 txttel.Enabled = false;
                 txtcargo.Enabled = false;
                 button1.Enabled = false;
+                txtcargo.Enabled = false;
 
 
                 txtnom1.Clear();
@@ -273,6 +275,13 @@ namespace Hermanas_nazario
         private void txtape2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            menu a = new menu();
+            a.Show();
         }
     }
     }

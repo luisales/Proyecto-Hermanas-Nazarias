@@ -97,5 +97,10 @@ namespace Hermanas_nazario
             txtemp.Text = Convert.ToString(selectedRow.Cells[0].Value);
             dataGridView1.Visible = false;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

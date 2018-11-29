@@ -173,7 +173,7 @@ namespace Hermanas_nazario
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime fech = DateTime.Now;
-            label2.Text = fech.ToString("MM/dd/yyyy hh:mm:ss");
+            label2.Text = fech.ToString("MM/dd/yyyy HH:mm:ss");
             fecha = label2.Text.ToString();
         }
 

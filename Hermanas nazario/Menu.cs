@@ -113,9 +113,6 @@ namespace Hermanas_nazario
 
         private void registarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Registro_empleado a = new Registro_empleado();
-            a.Show();
         }
 
         private void menu_FormClosing(object sender, FormClosingEventArgs e)
@@ -192,6 +189,7 @@ namespace Hermanas_nazario
             {
                 Base_de_datos.esta();
                 chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
+                pictureBox1.Visible = true;
                 chart1.Visible = true;
                 Base_de_datos.b = 1;
             }
@@ -199,6 +197,7 @@ namespace Hermanas_nazario
             {
                 chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
                 chart1.Visible = true;
+                pictureBox1.Visible = true;
 
             }
 
@@ -252,6 +251,38 @@ namespace Hermanas_nazario
             Modificar_empleado a = new Modificar_empleado();
             a.Show();
         }
-    
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            chart1.Visible = false;
+
+        }
+
+        private void registrarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registro_empleado a = new Registro_empleado();
+            a.Show();
+        }
+
+        private void semanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Base_de_datos.c == 0)
+            {
+                Base_de_datos.esta2();
+                chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
+                pictureBox2.Visible = true;
+                chart2.Visible = true;
+                Base_de_datos.c = 1;
+            }
+            else
+            {
+                chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
+                chart2.Visible = true;
+                pictureBox2.Visible = true;
+
+            }
+        }
     }
 }
