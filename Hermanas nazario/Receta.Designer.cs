@@ -56,22 +56,24 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtriesgo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(874, 110);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(1311, 169);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 25);
+            this.label11.Size = new System.Drawing.Size(222, 36);
             this.label11.TabIndex = 61;
             this.label11.Text = "Codigo de cita: ";
             // 
@@ -79,10 +81,10 @@
             // 
             this.txtcita.Enabled = false;
             this.txtcita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcita.Location = new System.Drawing.Point(1104, 110);
-            this.txtcita.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcita.Location = new System.Drawing.Point(1656, 169);
+            this.txtcita.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtcita.Name = "txtcita";
-            this.txtcita.Size = new System.Drawing.Size(64, 30);
+            this.txtcita.Size = new System.Drawing.Size(94, 41);
             this.txtcita.TabIndex = 64;
             this.txtcita.TextChanged += new System.EventHandler(this.txtcita_TextChanged);
             this.txtcita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcita_KeyPress);
@@ -91,20 +93,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(874, 175);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(1311, 269);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 25);
+            this.label2.Size = new System.Drawing.Size(351, 36);
             this.label2.TabIndex = 66;
             this.label2.Text = "Codigo de medicamento: ";
             // 
             // txtmedicamento
             // 
             this.txtmedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmedicamento.Location = new System.Drawing.Point(1104, 175);
-            this.txtmedicamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtmedicamento.Location = new System.Drawing.Point(1656, 269);
+            this.txtmedicamento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtmedicamento.Name = "txtmedicamento";
-            this.txtmedicamento.Size = new System.Drawing.Size(64, 30);
+            this.txtmedicamento.Size = new System.Drawing.Size(94, 41);
             this.txtmedicamento.TabIndex = 67;
             this.txtmedicamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmedicamento_KeyPress);
             // 
@@ -112,10 +113,9 @@
             // 
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
-            this.pictureBox1.Location = new System.Drawing.Point(1173, 113);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1760, 174);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 23);
+            this.pictureBox1.Size = new System.Drawing.Size(33, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
@@ -125,10 +125,9 @@
             // 
             this.pictureBox2.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 15);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 66);
+            this.pictureBox2.Size = new System.Drawing.Size(108, 102);
             this.pictureBox2.TabIndex = 69;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -137,20 +136,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(874, 241);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1311, 371);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
+            this.label1.Size = new System.Drawing.Size(150, 36);
             this.label1.TabIndex = 72;
             this.label1.Text = "Cantidad: ";
             // 
             // txtcantidad
             // 
             this.txtcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcantidad.Location = new System.Drawing.Point(1104, 239);
-            this.txtcantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcantidad.Location = new System.Drawing.Point(1656, 368);
+            this.txtcantidad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(64, 30);
+            this.txtcantidad.Size = new System.Drawing.Size(94, 41);
             this.txtcantidad.TabIndex = 73;
             this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
@@ -167,12 +165,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView2.Location = new System.Drawing.Point(820, 353);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(1230, 543);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(514, 122);
+            this.dataGridView2.Size = new System.Drawing.Size(771, 188);
             this.dataGridView2.TabIndex = 74;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -199,10 +196,10 @@
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombre.Location = new System.Drawing.Point(1104, 298);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtnombre.Location = new System.Drawing.Point(1656, 458);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(64, 30);
+            this.txtnombre.Size = new System.Drawing.Size(94, 41);
             this.txtnombre.TabIndex = 75;
             this.txtnombre.Visible = false;
             // 
@@ -210,10 +207,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(868, 291);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(1302, 448);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 44);
+            this.button1.Size = new System.Drawing.Size(152, 68);
             this.button1.TabIndex = 76;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = false;
@@ -224,10 +221,10 @@
             this.button2.BackColor = System.Drawing.Color.Tomato;
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1192, 291);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(1788, 448);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 44);
+            this.button2.Size = new System.Drawing.Size(152, 68);
             this.button2.TabIndex = 77;
             this.button2.Text = "Quitar";
             this.button2.UseVisualStyleBackColor = false;
@@ -242,12 +239,11 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(195, 353);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(292, 543);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(882, 188);
             this.dataGridView1.TabIndex = 71;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -256,11 +252,10 @@
             // 
             this.txtCod.Enabled = false;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(548, 172);
-            this.txtCod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCod.Location = new System.Drawing.Point(822, 265);
             this.txtCod.MaxLength = 13;
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(143, 30);
+            this.txtCod.Size = new System.Drawing.Size(212, 41);
             this.txtCod.TabIndex = 83;
             this.txtCod.Visible = false;
             this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
@@ -270,11 +265,9 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(290, 157);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(435, 242);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(134, 65);
+            this.groupBox1.Size = new System.Drawing.Size(201, 100);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Metodo de Busqueda";
@@ -282,10 +275,9 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(4, 37);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Location = new System.Drawing.Point(6, 57);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 17);
+            this.radioButton2.Size = new System.Drawing.Size(84, 24);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "Código";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -295,10 +287,9 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(4, 17);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Location = new System.Drawing.Point(6, 26);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
+            this.radioButton1.Size = new System.Drawing.Size(90, 24);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nombre";
@@ -308,10 +299,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(528, 182);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(792, 280);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox5.Size = new System.Drawing.Size(20, 15);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 81;
             this.pictureBox5.TabStop = false;
@@ -319,11 +309,10 @@
             // txtnom
             // 
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.Location = new System.Drawing.Point(549, 171);
-            this.txtnom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom.Location = new System.Drawing.Point(824, 263);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(143, 30);
+            this.txtnom.Size = new System.Drawing.Size(212, 41);
             this.txtnom.TabIndex = 79;
             this.txtnom.TextChanged += new System.EventHandler(this.txtnom_TextChanged_1);
             this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
@@ -332,30 +321,27 @@
             // 
             this.lblBusqueda.AutoSize = true;
             this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.Location = new System.Drawing.Point(441, 172);
-            this.lblBusqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBusqueda.Location = new System.Drawing.Point(662, 265);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(87, 25);
+            this.lblBusqueda.Size = new System.Drawing.Size(128, 36);
             this.lblBusqueda.TabIndex = 78;
             this.lblBusqueda.Text = "Nombre:";
             // 
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(176, 104);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(264, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(620, 410);
+            this.label7.Size = new System.Drawing.Size(930, 631);
             this.label7.TabIndex = 84;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(684, 38);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(1026, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(312, 37);
+            this.label5.Size = new System.Drawing.Size(470, 55);
             this.label5.TabIndex = 85;
             this.label5.Text = "GENERAR RECETA";
             // 
@@ -363,10 +349,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1192, 203);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(1788, 312);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 68);
+            this.button3.Size = new System.Drawing.Size(152, 105);
             this.button3.TabIndex = 86;
             this.button3.Text = "Nueva Receta";
             this.button3.UseVisualStyleBackColor = false;
@@ -376,10 +362,10 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(812, 544);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Location = new System.Drawing.Point(1218, 837);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(212, 68);
+            this.button4.Size = new System.Drawing.Size(318, 105);
             this.button4.TabIndex = 87;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
@@ -389,20 +375,46 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(571, 544);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Location = new System.Drawing.Point(856, 837);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 68);
+            this.button5.Size = new System.Drawing.Size(318, 105);
             this.button5.TabIndex = 88;
             this.button5.Text = "Generar Factura";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
+            this.pictureBox8.Location = new System.Drawing.Point(1317, 776);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(20, 15);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 90;
+            this.pictureBox8.TabStop = false;
+            // 
+            // txtriesgo
+            // 
+            this.txtriesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtriesgo.FormattingEnabled = true;
+            this.txtriesgo.Items.AddRange(new object[] {
+            "Alto",
+            "Medio",
+            "Bajo"});
+            this.txtriesgo.Location = new System.Drawing.Point(1357, 762);
+            this.txtriesgo.Name = "txtriesgo";
+            this.txtriesgo.Size = new System.Drawing.Size(583, 44);
+            this.txtriesgo.TabIndex = 89;
+            this.txtriesgo.Text = "Estado Socieconómico";
+            // 
             // Receta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(2374, 944);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.txtriesgo);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -426,7 +438,6 @@
             this.Controls.Add(this.txtcita);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Receta";
             this.Text = "Receta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -438,6 +449,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,5 +485,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.ComboBox txtriesgo;
     }
 }

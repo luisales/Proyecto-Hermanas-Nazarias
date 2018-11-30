@@ -63,8 +63,8 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -2144,6 +2144,28 @@ namespace Hermanas_nazario
                 return 1;
             }
         }
-    }
-}
+        public static void Actualizar_Riesgo(int Codigo_riesgo, string Codigo_cita)
+        {
+            int Codigo_expediente_paciente;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd2 = new SqlCommand("Select b.Codigo_expediente_paciente from [dbo].[Citas] a inner join [dbo].[Pacientes] b on a.[Codigo_expediente_paciente] = b.Codigo_expediente_paciente where a.Codigo_cita ='"+Codigo_cita+"'", con);
+            SqlDataReader registro = cmd2.ExecuteReader();
+            registro.Read();
+            Codigo_expediente_paciente= int.Parse(registro["Codigo_expediente_paciente"].ToString());
+            con.Close();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Modificar_Estado", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Codigo_expediente_paciente", Codigo_expediente_paciente));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_riesgo", Codigo_riesgo));
+            cmd.ExecuteNonQuery();
+            con.Close();
+                    
+                }
+            }
+        }
+    
+
 

@@ -243,6 +243,24 @@ namespace Hermanas_nazario
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (txtriesgo.Text != "Alto" && txtriesgo.Text != "Medio" && txtriesgo.Text != "Bajo")
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            if (txtriesgo.Text == "Alto")
+            {
+                riesgo = 1;
+            }
+            if (txtriesgo.Text == "Medio")
+            {
+                riesgo = 2;
+            }
+            if (txtriesgo.Text == "Bajo")
+            {
+                riesgo = 3;
+            }
+            Base_de_datos.Actualizar_Riesgo(riesgo, txtcita.Text);
             MessageBox.Show("Se ha guardado con exito");
             if (MessageBox.Show("Desea regresar al menu?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -251,9 +269,27 @@ namespace Hermanas_nazario
                 a.Show();
             }
         }
-
+        int riesgo;
         private void button5_Click(object sender, EventArgs e)
         {
+            if (txtriesgo.Text != "Alto" && txtriesgo.Text != "Medio" && txtriesgo.Text != "Bajo")
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            if (txtriesgo.Text == "Alto")
+            {
+                riesgo = 1;
+            }
+            if (txtriesgo.Text == "Medio")
+            {
+                riesgo = 2;
+            }
+            if (txtriesgo.Text == "Bajo")
+            {
+                riesgo = 3;
+            }
+            Base_de_datos.Actualizar_Riesgo(riesgo, txtcita.Text);
             Base_de_datos.cita = txtcita.Text;
             this.Hide();
             Generar_factura a = new Generar_factura();

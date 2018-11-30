@@ -149,11 +149,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("El campo de identidad debe ser de 13 digitos");
                 return;
             }
-            if (txtriesgo.Text != "Alto" && txtriesgo.Text != "Medio" && txtriesgo.Text != "Bajo")
-            {
-                MessageBox.Show("Llene todos los campos obligatorios");
-                return;
-            }
+         
             if (int.Parse(txtmes.Text) == 2 && int.Parse(txtdia.Text) > 29)
             {
                 MessageBox.Show("Fecha invalida: no existe el dia");
@@ -210,7 +206,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(),txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
+            Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, 3, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(),txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
 
             Base_de_datos.expediente(txtid.Text);
             this.Close();
@@ -221,23 +217,10 @@ namespace Hermanas_nazario
 
         }
 
-        int riesgo=0;
+       
         private void txtriesgo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(txtriesgo.Text=="Alto")
-            {
-                riesgo = 1;
-            }
-            if (txtriesgo.Text == "Medio")
-            {
-                riesgo = 2;
-            }
-            if (txtriesgo.Text == "Bajo")
-            {
-                riesgo = 3;
-            }
-
-
+          
         }
 
         private void txtnom1_TextChanged(object sender, EventArgs e)
