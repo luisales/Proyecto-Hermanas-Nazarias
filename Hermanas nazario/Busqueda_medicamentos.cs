@@ -67,37 +67,6 @@ namespace Hermanas_nazario
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-                lblCod.Text = Convert.ToString(selectedRow.Cells[0].Value);
-                lblNom.Text = Convert.ToString(selectedRow.Cells[1].Value);
-                lblCan.Text = Convert.ToString(selectedRow.Cells[2].Value);
-                lblDes.Text = Convert.ToString(selectedRow.Cells[3].Value);
-                txtUnidad.Text = Convert.ToString(selectedRow.Cells[4].Value);
-            }
-            if (radioButton2.Checked)
-            {
-                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-                lblCod.Text = Convert.ToString(selectedRow.Cells[0].Value);
-                lblNom.Text = Convert.ToString(selectedRow.Cells[1].Value);
-                lblCan.Text = Convert.ToString(selectedRow.Cells[2].Value);
-                lblDes.Text = Convert.ToString(selectedRow.Cells[3].Value);
-                txtUnidad.Text = Convert.ToString(selectedRow.Cells[4].Value);
-            }
-            
-
-
-            btnIng.Enabled = true;
-            btnSac.Enabled = true;
-
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();

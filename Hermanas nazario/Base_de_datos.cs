@@ -13,7 +13,7 @@ namespace Hermanas_nazario
     public class Base_de_datos
     {
         protected DataTable Resultado;
-        public static string Nombre1;
+        public static string Nombre1, codempleado;
         public static string Nombre2;
         public static string Apellido1;
         public static int decis = 0, b, c;
@@ -46,7 +46,7 @@ namespace Hermanas_nazario
         public static string CodMed;
         public static int numero;
         public static string unidad;
-        public static int rol;
+        public static int rol, paca;
         public static int cod_empleado;
         public static string User;
         public static string diagnostico, tratamiento, nombre_cita;
@@ -57,13 +57,13 @@ namespace Hermanas_nazario
         public static string Direccion ;
         public static string tel ;
         public static string telE;
-        public static string Permisos;
+        public static string Permisos, fecha1Pa, fecha2Pa;
         public static ArrayList nombrePacientes = new ArrayList();
         public static ArrayList cantidadPacientes = new ArrayList();
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2FRD256\SQLEXPRESS;Initial Catalog=Clinica; Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
@@ -1155,7 +1155,6 @@ namespace Hermanas_nazario
             }
             return null;
             
-            //Corregir Hola
         }
         
        
@@ -1184,9 +1183,13 @@ namespace Hermanas_nazario
 
             con.Open();
             SqlCommand cmd = new SqlCommand("PacientesAtendidos", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataReader dr = cmd.ExecuteReader();
 
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter("@fecha1", fecha1Pa));
+            cmd.Parameters.Add(new SqlParameter("@fecha2", fecha2Pa));
+            cmd.ExecuteNonQuery();
+                        SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 cantidadPacientes.Add(dr.GetInt32(0));
@@ -1194,15 +1197,7 @@ namespace Hermanas_nazario
             }
 
         }
-        /*
-        create proc [dbo].[Medicamento_vendido]
-as
-begin
-select top 5 sum(b.Cantidad) 'vendidos', c.Nombre_medicamento from  [dbo].[Facturas] a inner join [dbo].[Recetas] b on a.Codigo_cita=b.Codigo_cita inner join [dbo].[Medicamentos] c on b.Codigo_medicamento=c.Codigo_medicamento
-group by c.Nombre_medicamento
-order by sum(b.Cantidad) desc
-end
-*/
+       
         public static void Actualizar_cita(int codigo, string diag, string trat)
         {
             SqlConnection con;
@@ -1227,23 +1222,7 @@ end
                 con.Close();
             }
         }
-        /* create proc	Actualizar_cita
-(
-@Codigo_cita as int,
-@Diagnostico as nvarchar(500),
-@Tratamiento as nvarchar(500)
-)
-as
-begin
 
-update [dbo].[Citas]
-set 
-[Diagnostico]=@Diagnostico,
-[Tratamiento]=@Tratamiento
-where [Codigo_cita]=@Codigo_cita
-
-end
-*/
         public static int Validar_cita(string id)
         {
             SqlConnection con;
@@ -1305,27 +1284,38 @@ end
             }
         }
 
-        public static void Registro_Rol(string nombreRol, string Permisos)
+        public static int Registro_Rol(string nombreRol, string Permisos)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
-
-            try
+            if (ValidarRol(nombreRol) == 0)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
-                cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
-
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Rol existente escoja otro nombre");
+                    return 0;
             }
-            catch
+            else
             {
-            }
-            finally
-            {
-                con.Close();
+
+
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                    cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                }
+                finally
+                {
+                    con.Close();
+                   
+                }
+                return 1;
             }
         }
 
@@ -1362,30 +1352,36 @@ end
         }
 
 
-        public static void Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
+        public static int Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
-
-            try
+            if (ValidarRol(nombreRol) == 0)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Actualizar_Rol", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
-                cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
-                cmd.Parameters.Add(new SqlParameter("@Permisos_rol", permisosRol));
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Rol existente escoja otro nombre");
+                return 0;
             }
-            catch
+            else
             {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Actualizar_Rol", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                    cmd.Parameters.Add(new SqlParameter("@Permisos_rol", permisosRol));
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                }
+                finally
+                {
+                    con.Close();
+                }
+                return 1;
             }
-            finally
-            {
-                con.Close();
-            }
-
-
         }
 
         public static void Registro_Medida(string nombreMed)
@@ -1707,7 +1703,447 @@ end
 
 
         }
+        public static void EmpleadoRol(int codigo1, int codigo2)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
 
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_EmpleadoRol", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo1", codigo1));
+                cmd.Parameters.Add(new SqlParameter("@codigo2", codigo2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+        }
+
+        public static void codigoEmpleado(string ID)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Codigo_empleado FROM [dbo].[Empleados] WHERE [Numero_identidad_empleado]=@id", con);
+                cmd.Parameters.AddWithValue("@id", ID);
+                SqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.Read())
+                {
+                    codempleado=registro["Codigo_empleado"].ToString();
+                }
+
+
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        public  void BuscarSerCod(string Cod)
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_servicio  'Código Servicio', Nombre_servicio  'Nombre Servicio' from [dbo].[Servicios] where Codigo_servicio LIKE " + "'" + Cod + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public  void BuscarSerNom(string Nom)
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_servicio  'Código Servicio', Nombre_servicio  'Nombre Servicio' from[dbo].[Servicios] where Nombre_servicio LIKE " + "'" + Nom + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public static int Factura_Servicios(string Fecha)
+        {
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Ingreso_factura_servicios", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_Empleado", cod_empleado));
+            cmd.ExecuteNonQuery();
+            SqlCommand cmd2 = new SqlCommand("SELECT MAX([Codigo_facturarec]) as Codigo FROM [dbo].[Factura_Servicios]", con);
+            SqlDataReader registro = cmd2.ExecuteReader();
+            if (registro.Read())
+            {
+                return int.Parse(registro["Codigo"].ToString());
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+        public static void Detalle_Servicio(int CodigoF, int CodigoS, int Cantidad)
+        {
+
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Ingreso_Detalle_Ser", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Codigo_facturarec", CodigoF));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_Servicio", CodigoS));
+            cmd.Parameters.Add(new SqlParameter("@Cantidad", Cantidad));
+            cmd.ExecuteNonQuery();
+
+        }
+
+        public void BuscarDetalle(string Cod)
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_facturaRec  'Código Factura de Servicios', b.Codigo_Servicio  'Código Servicios', b.Nombre_servicio  'Nombre Servicio', a.Cantidad'Cantidad',b.Precio_servicio'Precio',(b.Precio_servicio* a.Cantidad)'Total'   from [dbo].[Detalle_Factura_Servicio] a inner join [dbo].[Servicios] b on a.Codigo_Servicio=b.Codigo_Servicio where Codigo_facturaRec LIKE " + "'" + Cod + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public static void Quitar_Detalle(int Cod, int CodMed)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_quitar_servicio", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Codigo_facturaRec", Cod));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_servicio", CodMed));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public static void Cancelar_Factura(int Cod)
+        {
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_quitar_factura", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Codigo_facturarec", Cod));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void BuscarEE(string id)
+        {
+            string ID;
+            ID = id;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado',c.Nombre_rol from[dbo].[Empleados] a inner join[dbo].[Empleado_Rol] b on a.Codigo_empleado = b.Codigo_empleado inner join[dbo].[Roles] c on b.Codigo_rol = c.Codigo_rol where a.Numero_identidad_empleado LIKE " + "'" + id + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public void BuscarEE(string nom, String ape)
+        {
+
+            string nombre, apellido;
+            apellido = ape;
+            nombre = nom;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado',c.Nombre_rol from[dbo].[Empleados] a inner join[dbo].[Empleado_Rol] b on a.Codigo_empleado = b.Codigo_empleado inner join[dbo].[Roles] c on b.Codigo_rol = c.Codigo_rol where Primer_nombre_empleado LIKE " + "'" + nombre + "%'" + " AND Primer_apellido_empleado LIKE " + "'" + ape + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void BuscarE(string id)
+        {
+            string ID;
+            ID = id;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado' from[dbo].[Empleados] a where a.Numero_identidad_empleado LIKE " + "'" + id + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public void BuscarE(string nom, String ape)
+        {
+
+            string nombre, apellido;
+            apellido = ape;
+            nombre = nom;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado' from [dbo].[Empleados] a where a.Primer_nombre_empleado LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido_empleado LIKE " + "'" + ape + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+
+            }
+            catch
+            {
+                con.Close();
+            }
+            
+        }
+        public static int ValidarFacturaDetalle(string Cod, string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+             con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Detalle_Factura_Servicio] where Codigo_facturaRec =@Cod and Codigo_servicio = @id ", con);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("Cod", Cod);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+             if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 0;
+            }
+            else
+            {
+                con.Close();
+                return 1;
+            }
+        }
+
+        public static int validarNomMedida(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+
+        public static int validarNomMedidaMod(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+        public static int ValidarRol(string Nom)
+        {
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom", con);
+            cmd.Parameters.AddWithValue("Nom", Nom);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 0;
+            }
+            else
+            {
+                con.Close();
+                return 1;
+            }
+        }
     }
 }
 
