@@ -30,7 +30,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Medida ya existente");
                 return;
             }
-            Base_de_datos.Registro_Medida(txtNombreRol.Text);
+            Base_de_datos.Registro_Medida(txtNombreRol.Text.ToUpper());
             MessageBox.Show("Registrado con exito");
 
             this.Hide();

@@ -283,6 +283,11 @@ namespace Hermanas_nazario
             menu a = new menu();
             a.Show();
         }
+
+        private void Modificar_empleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

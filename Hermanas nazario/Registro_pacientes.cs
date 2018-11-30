@@ -210,7 +210,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(),txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
+            Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text.ToUpper(), txtmadre.Text.ToUpper(), txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(),txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
 
             Base_de_datos.expediente(txtid.Text);
             this.Close();
@@ -291,6 +291,11 @@ namespace Hermanas_nazario
         private void txtTelEmer_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+        }
+
+        private void txtape1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
