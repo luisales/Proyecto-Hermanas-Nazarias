@@ -27,7 +27,7 @@ namespace Hermanas_nazario
             int ver = Base_de_datos.validarNomMedida(txtNombreRol.Text);
             if (ver != 1)
             {
-                MessageBox.Show("Medicamento ya existente");
+                MessageBox.Show("Medida ya existente");
                 return;
             }
             Base_de_datos.Registro_Medida(txtNombreRol.Text);
