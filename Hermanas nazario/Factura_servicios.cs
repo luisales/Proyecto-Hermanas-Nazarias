@@ -189,6 +189,33 @@ namespace Hermanas_nazario
             }
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro desea cancelar la factura", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Base_de_datos.Cancelar_Factura(int.Parse(lblCodigoFacturaSer.Text));
+                btnCancelar.Enabled = false;
+                lblCodigoFacturaSer.Text = "*";
+                lblFecha.Text = "*";
+                btnFacturaNueva.Enabled = true;
+                btnAgregar.Enabled = false;
+                dataGridView2.DataSource = null;
+                txtCantidad.Clear();
+                txtdescripcion.Clear();
+                txtCod.Clear();
+                txtnom.Clear();
+                this.Hide();
+                menu a = new menu();
+                a.Show();
+            }
+           
+        }
+
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             int indice;

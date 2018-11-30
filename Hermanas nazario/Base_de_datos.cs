@@ -1697,7 +1697,7 @@ namespace Hermanas_nazario
             SqlCommand cmd = new SqlCommand("Ingreso_factura_servicios", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@Fecha", Fecha));
-            cmd.Parameters.Add(new SqlParameter("@Codigo_Empleado",1));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_Empleado", cod_empleado));
             cmd.ExecuteNonQuery();
             SqlCommand cmd2 = new SqlCommand("SELECT MAX([Codigo_facturarec]) as Codigo FROM [dbo].[Factura_Servicios]", con);
             SqlDataReader registro = cmd2.ExecuteReader();
@@ -1782,13 +1782,22 @@ namespace Hermanas_nazario
         {
             SqlConnection con;
             con = Conectar();
-
             try
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Mante_quitar_factura", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@Codigo_facturarec", Cod));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
         public void BuscarEE(string id)
         {
@@ -1906,21 +1915,26 @@ namespace Hermanas_nazario
                 {
                     Resultado = dt;
                     con.Close();
-
                 }
 
             }
             catch
             {
-
-            }
-            finally
-            {
                 con.Close();
             }
+            
         }
-
-            if (dt.Rows.Count >= 1)
+        public static int ValidarFacturaDetalle(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+             con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Detalle_Factura_Servicio] where Codigo_facturaRec = @id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+             if (dt.Rows.Count >= 1)
             {
                 con.Close();
                 return 0;

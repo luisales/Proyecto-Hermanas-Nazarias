@@ -51,10 +51,12 @@
             this.btnQuitar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -326,6 +328,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(985, 313);
             this.dataGridView2.TabIndex = 58;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label6
             // 
@@ -337,11 +340,23 @@
             this.label6.TabIndex = 59;
             this.label6.Text = "Cantidad:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
+            this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 102);
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Factura_servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 858);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnQuitar);
@@ -365,11 +380,13 @@
             this.Controls.Add(this.txtCod);
             this.Name = "Factura_servicios";
             this.Text = "Factura_servicios";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +417,6 @@
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
