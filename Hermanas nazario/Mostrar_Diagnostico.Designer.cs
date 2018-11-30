@@ -43,9 +43,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1239, 211);
+            this.label1.Location = new System.Drawing.Point(929, 171);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 48);
+            this.label1.Size = new System.Drawing.Size(198, 39);
             this.label1.TabIndex = 31;
             this.label1.Text = "Tratamiento";
             // 
@@ -53,9 +54,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(580, 211);
+            this.label5.Location = new System.Drawing.Point(435, 171);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 48);
+            this.label5.Size = new System.Drawing.Size(196, 39);
             this.label5.TabIndex = 30;
             this.label5.Text = "Diagnostico";
             // 
@@ -63,9 +65,11 @@
             // 
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(1053, 273);
+            this.richTextBox2.Location = new System.Drawing.Point(790, 222);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox2.MaxLength = 200;
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(586, 238);
+            this.richTextBox2.Size = new System.Drawing.Size(440, 194);
             this.richTextBox2.TabIndex = 29;
             this.richTextBox2.Text = "";
             // 
@@ -73,9 +77,11 @@
             // 
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(412, 273);
+            this.richTextBox1.Location = new System.Drawing.Point(309, 222);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(586, 238);
+            this.richTextBox1.Size = new System.Drawing.Size(440, 194);
             this.richTextBox1.TabIndex = 28;
             this.richTextBox1.Text = "";
             // 
@@ -83,9 +89,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(618, 120);
+            this.label2.Location = new System.Drawing.Point(464, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 48);
+            this.label2.Size = new System.Drawing.Size(168, 39);
             this.label2.TabIndex = 32;
             this.label2.Text = "Paciente: ";
             // 
@@ -93,9 +100,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(830, 120);
+            this.label3.Location = new System.Drawing.Point(622, 98);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 48);
+            this.label3.Size = new System.Drawing.Size(168, 39);
             this.label3.TabIndex = 33;
             this.label3.Text = "Paciente: ";
             // 
@@ -103,9 +111,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(952, 581);
+            this.button1.Location = new System.Drawing.Point(714, 472);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 60);
+            this.button1.Size = new System.Drawing.Size(134, 49);
             this.button1.TabIndex = 34;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -115,18 +124,19 @@
             // 
             this.pictureBox2.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 81);
+            this.pictureBox2.Size = new System.Drawing.Size(72, 66);
             this.pictureBox2.TabIndex = 71;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Mostrar_Diagnostico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1449, 677);
+            this.ClientSize = new System.Drawing.Size(1028, 550);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -135,6 +145,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Mostrar_Diagnostico";
             this.Text = "Mostrar_Diagnostico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

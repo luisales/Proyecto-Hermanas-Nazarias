@@ -46,10 +46,10 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(898, 350);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModificar.Location = new System.Drawing.Point(674, 284);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 53);
+            this.btnModificar.Size = new System.Drawing.Size(112, 43);
             this.btnModificar.TabIndex = 61;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -59,10 +59,11 @@
             // 
             this.txtCodigoRol.Enabled = false;
             this.txtCodigoRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoRol.Location = new System.Drawing.Point(898, 186);
-            this.txtCodigoRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodigoRol.Location = new System.Drawing.Point(674, 151);
+            this.txtCodigoRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoRol.MaxLength = 8;
             this.txtCodigoRol.Name = "txtCodigoRol";
-            this.txtCodigoRol.Size = new System.Drawing.Size(83, 36);
+            this.txtCodigoRol.Size = new System.Drawing.Size(63, 30);
             this.txtCodigoRol.TabIndex = 60;
             this.txtCodigoRol.TextChanged += new System.EventHandler(this.txtCodigoRol_TextChanged);
             // 
@@ -70,10 +71,11 @@
             // 
             this.txtNombreRol.Enabled = false;
             this.txtNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRol.Location = new System.Drawing.Point(898, 266);
-            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreRol.Location = new System.Drawing.Point(674, 216);
+            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreRol.MaxLength = 30;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(247, 36);
+            this.txtNombreRol.Size = new System.Drawing.Size(186, 30);
             this.txtNombreRol.TabIndex = 59;
             // 
             // label3
@@ -81,10 +83,10 @@
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(646, 186);
-            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label3.Location = new System.Drawing.Point(484, 151);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 34);
+            this.label3.Size = new System.Drawing.Size(182, 28);
             this.label3.TabIndex = 58;
             this.label3.Text = "Codigo del Medida: ";
             // 
@@ -93,10 +95,10 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(636, 269);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label2.Location = new System.Drawing.Point(477, 219);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 34);
+            this.label2.Size = new System.Drawing.Size(189, 28);
             this.label2.TabIndex = 57;
             this.label2.Text = "Nombre del Medida:";
             // 
@@ -105,10 +107,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(97, 189);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label1.Location = new System.Drawing.Point(73, 154);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 34);
+            this.label1.Size = new System.Drawing.Size(322, 28);
             this.label1.TabIndex = 56;
             this.label1.Text = "Seleccione el medida a modificar:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -122,13 +124,13 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 249);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 202);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(352, 172);
             this.dataGridView1.TabIndex = 55;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -137,10 +139,10 @@
             // 
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -149,17 +151,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(368, 52);
+            this.label5.Location = new System.Drawing.Point(276, 42);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(545, 46);
+            this.label5.Size = new System.Drawing.Size(437, 37);
             this.label5.TabIndex = 53;
             this.label5.Text = "MODIFICACION DE MEDIDA";
             // 
             // Modificacion_medida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 590);
+            this.ClientSize = new System.Drawing.Size(928, 479);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtCodigoRol);
             this.Controls.Add(this.txtNombreRol);
@@ -169,6 +172,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Modificacion_medida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificacion_medida";
