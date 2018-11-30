@@ -40,5 +40,10 @@ namespace Hermanas_nazario
         {
             this.Hide();
         }
+
+        private void Ingresar_medida_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

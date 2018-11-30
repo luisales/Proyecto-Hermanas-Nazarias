@@ -43,6 +43,12 @@ namespace Hermanas_nazario
                 return;
             }
 
+            int ver = Base_de_datos.validarNomMedidaMod(txtNombreRol.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Medicamento ya existente");
+                return;
+            }
             Base_de_datos.Actualizar_Medida(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper());
 
             MessageBox.Show("Medida modificada.");

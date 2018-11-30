@@ -63,8 +63,8 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            //  SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -1972,6 +1972,30 @@ namespace Hermanas_nazario
             }
         }
 
+        public static int validarNomMedidaMod(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
     }
 }
 
