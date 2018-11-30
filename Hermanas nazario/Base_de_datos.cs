@@ -1350,7 +1350,27 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-
+        public static int ValidarRol(string Nom)
+        {
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom", con);
+            cmd.Parameters.AddWithValue("Nom", Nom);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 0;
+            }
+            else
+            {
+                con.Close();
+                return 1;
+            }
+        }
 
         public static int Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
         {
