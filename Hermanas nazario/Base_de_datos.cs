@@ -1448,6 +1448,37 @@ namespace Hermanas_nazario
             }
         }
 
+        public void BuscarNivel()
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_riesgo  'Codigo de Nivel', Nombre_riesgo 'Nombre de nivel' from Riesgo_Social", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public static int ValidarFactura(string id)
         {
             SqlConnection con;
@@ -1979,6 +2010,83 @@ namespace Hermanas_nazario
 
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+
+        public static void Registro_Nivel(string nombreNiv, float por)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_Nivel", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@cod", 1));
+                cmd.Parameters.Add(new SqlParameter("@nombre", nombreNiv));
+                cmd.Parameters.Add(new SqlParameter("@porcentaje", por));
+                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static void Actualizar_Nivel(int Codigo, string nombreNiv, float por)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_Nivel", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@nombre", nombreNiv));
+                cmd.Parameters.Add(new SqlParameter("@porcentaje", por));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+        }
+
+        public static int validarNomNivel(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Riesgo_social WHERE Nombre_riesgo=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

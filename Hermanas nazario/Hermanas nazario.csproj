@@ -202,6 +202,12 @@
     <Compile Include="Modificar_empleado.designer.cs">
       <DependentUpon>Modificar_empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modificar_Nivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_Nivel.Designer.cs">
+      <DependentUpon>Modificar_Nivel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificar_paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,12 @@
     </Compile>
     <Compile Include="Registro_empleado.designer.cs">
       <DependentUpon>Registro_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Nivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_Nivel.Designer.cs">
+      <DependentUpon>Registro_Nivel.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro_pacientes.cs">
       <SubType>Form</SubType>
@@ -331,6 +343,9 @@
     <EmbeddedResource Include="Modificar_empleado.resx">
       <DependentUpon>Modificar_empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_Nivel.resx">
+      <DependentUpon>Modificar_Nivel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modificar_paciente.resx">
       <DependentUpon>Modificar_paciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro_empleado.resx">
       <DependentUpon>Registro_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_Nivel.resx">
+      <DependentUpon>Registro_Nivel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro_pacientes.resx">
       <DependentUpon>Registro_pacientes.cs</DependentUpon>
