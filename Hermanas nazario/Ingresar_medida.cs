@@ -24,7 +24,12 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-
+            int ver = Base_de_datos.validarNomMedida(txtNombreRol.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Medicamento ya existente");
+                return;
+            }
             Base_de_datos.Registro_Medida(txtNombreRol.Text);
             MessageBox.Show("Registrado con exito");
 
