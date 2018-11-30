@@ -13,7 +13,7 @@ namespace Hermanas_nazario
     public class Base_de_datos
     {
         protected DataTable Resultado;
-        public static string Nombre1;
+        public static string Nombre1, codempleado;
         public static string Nombre2;
         public static string Apellido1;
         public static int decis = 0, b, c;
@@ -46,7 +46,7 @@ namespace Hermanas_nazario
         public static string CodMed;
         public static int numero;
         public static string unidad;
-        public static int rol;
+        public static int rol, paca;
         public static int cod_empleado;
         public static string User;
         public static string diagnostico, tratamiento, nombre_cita;
@@ -57,7 +57,7 @@ namespace Hermanas_nazario
         public static string Direccion ;
         public static string tel ;
         public static string telE;
-        public static string Permisos;
+        public static string Permisos, fecha1Pa, fecha2Pa;
         public static ArrayList nombrePacientes = new ArrayList();
         public static ArrayList cantidadPacientes = new ArrayList();
 
@@ -1184,9 +1184,13 @@ namespace Hermanas_nazario
 
             con.Open();
             SqlCommand cmd = new SqlCommand("PacientesAtendidos", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataReader dr = cmd.ExecuteReader();
 
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter("@fecha1", fecha1Pa));
+            cmd.Parameters.Add(new SqlParameter("@fecha2", fecha2Pa));
+            cmd.ExecuteNonQuery();
+                        SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 cantidadPacientes.Add(dr.GetInt32(0));
@@ -1596,6 +1600,189 @@ end
                 con.Close();
             }
 
+        }
+        public static void EmpleadoRol(int codigo1, int codigo2)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_EmpleadoRol", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo1", codigo1));
+                cmd.Parameters.Add(new SqlParameter("@codigo2", codigo2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+        }
+
+        public static void codigoEmpleado(string ID)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Codigo_empleado FROM [dbo].[Empleados] WHERE [Numero_identidad_empleado]=@id", con);
+                cmd.Parameters.AddWithValue("@id", ID);
+                SqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.Read())
+                {
+                    codempleado=registro["Codigo_empleado"].ToString();
+                }
+
+
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        public void BuscarEE(string id)
+        {
+            string ID;
+            ID = id;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado',c.Nombre_rol from[dbo].[Empleados] a inner join[dbo].[Empleado_Rol] b on a.Codigo_empleado = b.Codigo_empleado inner join[dbo].[Roles] c on b.Codigo_rol = c.Codigo_rol where a.Numero_identidad_empleado LIKE " + "'" + id + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public void BuscarEE(string nom, String ape)
+        {
+
+            string nombre, apellido;
+            apellido = ape;
+            nombre = nom;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado',c.Nombre_rol from[dbo].[Empleados] a inner join[dbo].[Empleado_Rol] b on a.Codigo_empleado = b.Codigo_empleado inner join[dbo].[Roles] c on b.Codigo_rol = c.Codigo_rol where Primer_nombre_empleado LIKE " + "'" + nombre + "%'" + " AND Primer_apellido_empleado LIKE " + "'" + ape + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void BuscarE(string id)
+        {
+            string ID;
+            ID = id;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado' from[dbo].[Empleados] a where a.Numero_identidad_empleado LIKE " + "'" + id + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public void BuscarE(string nom, String ape)
+        {
+
+            string nombre, apellido;
+            apellido = ape;
+            nombre = nom;
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_empleado 'Codigo empleado',a.Primer_nombre_empleado 'Primer nombre',a.Segundo_nombre_empleado'Segundo nombre',a.Primer_apellido_empleado 'Primer Apellido', a.Numero_identidad_empleado 'Identidad de empleado', a.Sexo_empleado 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono_empleado 'Telefono de empleado', a.Cargo_empleado 'Cargo de empleado' from [dbo].[Empleados] a where a.Primer_nombre_empleado LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido_empleado LIKE " + "'" + ape + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
     }

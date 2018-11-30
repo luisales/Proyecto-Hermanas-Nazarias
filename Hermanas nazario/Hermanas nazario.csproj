@@ -107,6 +107,12 @@
     <Compile Include="Busqueda_de_pacientes.designer.cs">
       <DependentUpon>Busqueda_de_pacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busqueda_empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda_empleados.Designer.cs">
+      <DependentUpon>Busqueda_empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busqueda_factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     <Compile Include="Mostrar_Diagnostico.Designer.cs">
       <DependentUpon>Mostrar_Diagnostico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pacientes_Atendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacientes_Atendidos.Designer.cs">
+      <DependentUpon>Pacientes_Atendidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Receta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +283,9 @@
     <EmbeddedResource Include="Busqueda_de_pacientes.resx">
       <DependentUpon>Busqueda_de_pacientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda_empleados.resx">
+      <DependentUpon>Busqueda_empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busqueda_factura.resx">
       <DependentUpon>Busqueda_factura.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mostrar_Diagnostico.resx">
       <DependentUpon>Mostrar_Diagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes_Atendidos.resx">
+      <DependentUpon>Pacientes_Atendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Receta.resx">
