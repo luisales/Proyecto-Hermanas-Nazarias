@@ -53,9 +53,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(429, 42);
+            this.label5.Location = new System.Drawing.Point(286, 27);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(570, 55);
+            this.label5.Size = new System.Drawing.Size(379, 37);
             this.label5.TabIndex = 11;
             this.label5.Text = "MODIFICACION DE ROL";
             // 
@@ -68,13 +69,13 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(64, 288);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 187);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(528, 265);
+            this.dataGridView1.Size = new System.Drawing.Size(352, 172);
             this.dataGridView1.TabIndex = 41;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -83,10 +84,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(98, 214);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Location = new System.Drawing.Point(65, 139);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 42);
+            this.label1.Size = new System.Drawing.Size(280, 27);
             this.label1.TabIndex = 42;
             this.label1.Text = "Seleccione el rol a modificar:";
             // 
@@ -95,10 +96,10 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(748, 312);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label2.Location = new System.Drawing.Point(499, 203);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 42);
+            this.label2.Size = new System.Drawing.Size(157, 27);
             this.label2.TabIndex = 43;
             this.label2.Text = "Nombre del Rol:";
             // 
@@ -107,10 +108,10 @@
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(762, 209);
-            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label3.Location = new System.Drawing.Point(508, 136);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 42);
+            this.label3.Size = new System.Drawing.Size(157, 27);
             this.label3.TabIndex = 45;
             this.label3.Text = "Codigo del Rol:";
             // 
@@ -118,20 +119,22 @@
             // 
             this.txtNombreRol.Enabled = false;
             this.txtNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRol.Location = new System.Drawing.Point(994, 309);
-            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreRol.Location = new System.Drawing.Point(663, 201);
+            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtNombreRol.MaxLength = 30;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(277, 41);
+            this.txtNombreRol.Size = new System.Drawing.Size(186, 30);
             this.txtNombreRol.TabIndex = 46;
             // 
             // txtCodigoRol
             // 
             this.txtCodigoRol.Enabled = false;
             this.txtCodigoRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoRol.Location = new System.Drawing.Point(994, 209);
-            this.txtCodigoRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodigoRol.Location = new System.Drawing.Point(663, 136);
+            this.txtCodigoRol.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtCodigoRol.MaxLength = 8;
             this.txtCodigoRol.Name = "txtCodigoRol";
-            this.txtCodigoRol.Size = new System.Drawing.Size(93, 41);
+            this.txtCodigoRol.Size = new System.Drawing.Size(63, 30);
             this.txtCodigoRol.TabIndex = 47;
             this.txtCodigoRol.TextChanged += new System.EventHandler(this.txtCodigoRol_TextChanged);
             // 
@@ -140,10 +143,10 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(994, 414);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModificar.Location = new System.Drawing.Point(663, 269);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(168, 66);
+            this.btnModificar.Size = new System.Drawing.Size(112, 43);
             this.btnModificar.TabIndex = 52;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -153,10 +156,10 @@
             // 
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -164,9 +167,10 @@
             // chkMantenimientos
             // 
             this.chkMantenimientos.AutoSize = true;
-            this.chkMantenimientos.Location = new System.Drawing.Point(1351, 386);
+            this.chkMantenimientos.Location = new System.Drawing.Point(901, 251);
+            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkMantenimientos.Name = "chkMantenimientos";
-            this.chkMantenimientos.Size = new System.Drawing.Size(148, 24);
+            this.chkMantenimientos.Size = new System.Drawing.Size(100, 17);
             this.chkMantenimientos.TabIndex = 74;
             this.chkMantenimientos.Text = "Mantenimientos";
             this.chkMantenimientos.UseVisualStyleBackColor = true;
@@ -176,19 +180,20 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(1361, 140);
-            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label4.Location = new System.Drawing.Point(907, 91);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 42);
+            this.label4.Size = new System.Drawing.Size(157, 27);
             this.label4.TabIndex = 73;
             this.label4.Text = "Permisos";
             // 
             // chkDocumentos
             // 
             this.chkDocumentos.AutoSize = true;
-            this.chkDocumentos.Location = new System.Drawing.Point(1351, 356);
+            this.chkDocumentos.Location = new System.Drawing.Point(901, 231);
+            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDocumentos.Name = "chkDocumentos";
-            this.chkDocumentos.Size = new System.Drawing.Size(126, 24);
+            this.chkDocumentos.Size = new System.Drawing.Size(86, 17);
             this.chkDocumentos.TabIndex = 72;
             this.chkDocumentos.Text = "Documentos";
             this.chkDocumentos.UseVisualStyleBackColor = true;
@@ -196,9 +201,10 @@
             // chkInventario
             // 
             this.chkInventario.AutoSize = true;
-            this.chkInventario.Location = new System.Drawing.Point(1351, 325);
+            this.chkInventario.Location = new System.Drawing.Point(901, 211);
+            this.chkInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkInventario.Name = "chkInventario";
-            this.chkInventario.Size = new System.Drawing.Size(105, 24);
+            this.chkInventario.Size = new System.Drawing.Size(73, 17);
             this.chkInventario.TabIndex = 71;
             this.chkInventario.Text = "Inventario";
             this.chkInventario.UseVisualStyleBackColor = true;
@@ -206,9 +212,10 @@
             // chkFacturacion
             // 
             this.chkFacturacion.AutoSize = true;
-            this.chkFacturacion.Location = new System.Drawing.Point(1351, 294);
+            this.chkFacturacion.Location = new System.Drawing.Point(901, 191);
+            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkFacturacion.Name = "chkFacturacion";
-            this.chkFacturacion.Size = new System.Drawing.Size(119, 24);
+            this.chkFacturacion.Size = new System.Drawing.Size(82, 17);
             this.chkFacturacion.TabIndex = 70;
             this.chkFacturacion.Text = "Facturación";
             this.chkFacturacion.UseVisualStyleBackColor = true;
@@ -216,9 +223,10 @@
             // chkUsuarios
             // 
             this.chkUsuarios.AutoSize = true;
-            this.chkUsuarios.Location = new System.Drawing.Point(1351, 263);
+            this.chkUsuarios.Location = new System.Drawing.Point(901, 171);
+            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkUsuarios.Name = "chkUsuarios";
-            this.chkUsuarios.Size = new System.Drawing.Size(159, 24);
+            this.chkUsuarios.Size = new System.Drawing.Size(107, 17);
             this.chkUsuarios.TabIndex = 69;
             this.chkUsuarios.Text = "Registrar Usuario";
             this.chkUsuarios.UseVisualStyleBackColor = true;
@@ -226,9 +234,10 @@
             // chkEmpleados
             // 
             this.chkEmpleados.AutoSize = true;
-            this.chkEmpleados.Location = new System.Drawing.Point(1351, 232);
+            this.chkEmpleados.Location = new System.Drawing.Point(901, 151);
+            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkEmpleados.Name = "chkEmpleados";
-            this.chkEmpleados.Size = new System.Drawing.Size(184, 24);
+            this.chkEmpleados.Size = new System.Drawing.Size(123, 17);
             this.chkEmpleados.TabIndex = 68;
             this.chkEmpleados.Text = "Registrar Empleados";
             this.chkEmpleados.UseVisualStyleBackColor = true;
@@ -236,18 +245,19 @@
             // chkPacientes
             // 
             this.chkPacientes.AutoSize = true;
-            this.chkPacientes.Location = new System.Drawing.Point(1351, 201);
+            this.chkPacientes.Location = new System.Drawing.Point(901, 131);
+            this.chkPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkPacientes.Name = "chkPacientes";
-            this.chkPacientes.Size = new System.Drawing.Size(105, 24);
+            this.chkPacientes.Size = new System.Drawing.Size(73, 17);
             this.chkPacientes.TabIndex = 67;
             this.chkPacientes.Text = "Pacientes";
             this.chkPacientes.UseVisualStyleBackColor = true;
             // 
             // Modificacion_roles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1626, 689);
+            this.ClientSize = new System.Drawing.Size(913, 448);
             this.Controls.Add(this.chkMantenimientos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chkDocumentos);
@@ -265,7 +275,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Modificacion_roles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificacion_roles";

@@ -16,7 +16,18 @@ namespace Hermanas_nazario
         {
             InitializeComponent();
             Base_de_datos.BuscarPermisos(Base_de_datos.rol.ToString());
+            if(Base_de_datos.paca==1)
+            {
+                pictureBox2.Visible = true;
+                chart2.Visible = true;
+                    Base_de_datos.esta2();
+                    chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
+                    pictureBox2.Visible = true;
+                    chart2.Visible = true;
+                    Base_de_datos.c = 1;
 
+
+            }
             if (Base_de_datos.Permisos.Contains("A"))
             {
                 pacientesToolStripMenuItem.Enabled = true;
@@ -268,21 +279,30 @@ namespace Hermanas_nazario
 
         private void semanaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Base_de_datos.c == 0)
-            {
-                Base_de_datos.esta2();
-                chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
-                pictureBox2.Visible = true;
-                chart2.Visible = true;
-                Base_de_datos.c = 1;
-            }
-            else
-            {
-                chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
-                chart2.Visible = true;
-                pictureBox2.Visible = true;
+            
+        }
 
-            }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            pictureBox2.Visible = false;
+            chart2.Visible = false;
+        }
+
+        private void pacientesAtendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pacientes_Atendidos a = new Pacientes_Atendidos();
+            a.Show();
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
+
+        }
+
+        private void buscarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Busqueda_empleados a = new Busqueda_empleados();
+            a.Show();
         }
     }
 }

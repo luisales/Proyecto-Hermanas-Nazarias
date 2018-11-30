@@ -19,6 +19,7 @@ namespace Hermanas_nazario
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
+            
             if (!string.IsNullOrEmpty(txtnom1.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -39,7 +40,12 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if(txtid.TextLength<13)
+            if (!string.IsNullOrEmpty(txtrol.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            if (txtid.TextLength<13)
             {
                 MessageBox.Show("El campo de identidad debe tener 13 digitos");
                 return;
@@ -60,6 +66,8 @@ namespace Hermanas_nazario
                 return;
             }
             Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper());
+            Base_de_datos.codigoEmpleado(txtid.Text);
+            Base_de_datos.EmpleadoRol(int.Parse(Base_de_datos.codempleado), int.Parse(txtrol.Text));
             this.Close();
             menu a = new menu();
             a.Show();
