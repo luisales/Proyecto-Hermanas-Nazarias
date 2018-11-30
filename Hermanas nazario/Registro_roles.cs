@@ -59,9 +59,23 @@ namespace Hermanas_nazario
                 Permisos = (Permisos + "G");
             }
 
-            Base_de_datos.Registro_Rol(txtNombreRol.Text.ToUpper(), Permisos);
-            this.Hide();
-
+            int x =Base_de_datos.Registro_Rol(txtNombreRol.Text.ToUpper(), Permisos);
+            if (x == 1)
+            {
+                MessageBox.Show("Rol Ingresado Correctamente");
+                this.Hide();
+            }
+            else
+            {
+                txtNombreRol.Clear();
+                chkDocumentos.Checked = false;
+                chkEmpleados.Checked = false;
+                chkFacturacion.Checked = false;
+                chkInventario.Checked = false;
+                chkMantenimientos.Checked = false;
+                chkPacientes.Checked = false;
+                chkUsuarios.Checked = false;
+            }
         }
 
         private void Registro_roles_Load(object sender, EventArgs e)

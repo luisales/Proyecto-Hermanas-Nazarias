@@ -77,17 +77,34 @@ namespace Hermanas_nazario
                 {
                     Permisos = (Permisos + "G");
                 }
-                Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos);
-                MessageBox.Show("Rol modificado.");
+                int x=Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos);
+                if (x == 1)
+                {
 
-                Base_de_datos busc = new Base_de_datos();
-                busc.BuscarRoles();
-                dataGridView1.DataSource = busc.Mostrar_Resultados();
 
-                txtCodigoRol.Clear();
-                txtNombreRol.Clear();
-                btnModificar.Enabled = false;
-                Hide();
+                    MessageBox.Show("Rol modificado.");
+
+                    Base_de_datos busc = new Base_de_datos();
+                    busc.BuscarRoles();
+                    dataGridView1.DataSource = busc.Mostrar_Resultados();
+
+                    txtCodigoRol.Clear();
+                    txtNombreRol.Clear();
+                    btnModificar.Enabled = false;
+                    Hide();
+                }
+                else
+                {
+                    txtCodigoRol.Clear();
+                    txtNombreRol.Clear();
+                    chkDocumentos.Checked = false;
+                    chkEmpleados.Checked = false;
+                    chkFacturacion.Checked = false;
+                    chkInventario.Checked = false;
+                    chkMantenimientos.Checked = false;
+                    chkPacientes.Checked = false;
+                    chkUsuarios.Checked = false;
+                }
             }
                
         }

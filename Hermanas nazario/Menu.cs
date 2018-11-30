@@ -312,6 +312,19 @@ namespace Hermanas_nazario
             a.Show();
         }
 
+        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ingresar_Servicio a = new Ingresar_Servicio();
+            a.ShowDialog();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modificar_servcios a = new Modificar_servcios();
+            a.ShowDialog();
+
+        }
+
         private void ingresarNivelEconomicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Registro_Nivel a = new Registro_Nivel();
