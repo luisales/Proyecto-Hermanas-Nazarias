@@ -24,7 +24,12 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-
+            int ver = Base_de_datos.validarNomMedida(txtNombreRol.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Medida ya existente");
+                return;
+            }
             Base_de_datos.Registro_Medida(txtNombreRol.Text);
             MessageBox.Show("Registrado con exito");
 
@@ -34,6 +39,11 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void Ingresar_medida_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

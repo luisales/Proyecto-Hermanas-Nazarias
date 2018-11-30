@@ -39,10 +39,16 @@ namespace Hermanas_nazario
 
             if (!string.IsNullOrEmpty(txtNombreRol.Text) == false)
             {
-                MessageBox.Show("Llene el nombre del rol");
+                MessageBox.Show("Llene el nombre de medida");
                 return;
             }
 
+            int ver = Base_de_datos.validarNomMedidaMod(txtNombreRol.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Medida ya existente");
+                return;
+            }
             Base_de_datos.Actualizar_Medida(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper());
 
             MessageBox.Show("Medida modificada.");
