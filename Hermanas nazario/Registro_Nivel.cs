@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hermanas_nazario
 {
-    public partial class Ingresar_medida : Form
+    public partial class Registro_Nivel : Form
     {
-        public Ingresar_medida()
+        public Registro_Nivel()
         {
             InitializeComponent();
         }
@@ -24,26 +24,21 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            int ver = Base_de_datos.validarNomMedida(txtNombreRol.Text);
-            if (ver != 1)
-            {
-                MessageBox.Show("Medida ya existente");
-                return;
-            }
-            Base_de_datos.Registro_Medida(txtNombreRol.Text.ToUpper());
-            MessageBox.Show("Registrado con exito");
+                int ver = Base_de_datos.validarNomNivel(txtNombreRol.Text);
+                if (ver != 1)
+                {
+                    MessageBox.Show("Nivel ya existente");
+                    return;
+                }
+                Base_de_datos.Registro_Nivel(txtNombreRol.Text, float.Parse(textBox1.Text));
+                MessageBox.Show("Registrado con exito");
 
-            this.Hide();
-        }
+                this.Hide();
+            }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-
-        private void Ingresar_medida_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+    }

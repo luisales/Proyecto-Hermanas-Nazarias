@@ -71,7 +71,7 @@
             this.txttel.Enabled = false;
             this.txttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttel.Location = new System.Drawing.Point(700, 536);
-            this.txttel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttel.Margin = new System.Windows.Forms.Padding(2);
             this.txttel.MaxLength = 8;
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(160, 30);
@@ -94,7 +94,7 @@
             this.txtcorreo.Enabled = false;
             this.txtcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.Location = new System.Drawing.Point(700, 475);
-            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtcorreo.MaxLength = 30;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(160, 30);
@@ -129,9 +129,9 @@
             this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(586, 318);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(395, 81);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
@@ -141,7 +141,7 @@
             // 
             this.rdf.AutoSize = true;
             this.rdf.Location = new System.Drawing.Point(229, 42);
-            this.rdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdf.Margin = new System.Windows.Forms.Padding(2);
             this.rdf.Name = "rdf";
             this.rdf.Size = new System.Drawing.Size(117, 29);
             this.rdf.TabIndex = 1;
@@ -153,7 +153,7 @@
             // 
             this.rdm.AutoSize = true;
             this.rdm.Location = new System.Drawing.Point(64, 42);
-            this.rdm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdm.Margin = new System.Windows.Forms.Padding(2);
             this.rdm.Name = "rdm";
             this.rdm.Size = new System.Drawing.Size(119, 29);
             this.rdm.TabIndex = 0;
@@ -166,7 +166,7 @@
             this.txtid.Enabled = false;
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(700, 423);
-            this.txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid.Margin = new System.Windows.Forms.Padding(2);
             this.txtid.MaxLength = 13;
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(160, 30);
@@ -189,7 +189,7 @@
             this.txtape2.Enabled = false;
             this.txtape2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape2.Location = new System.Drawing.Point(1033, 271);
-            this.txtape2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtape2.Margin = new System.Windows.Forms.Padding(2);
             this.txtape2.MaxLength = 30;
             this.txtape2.Name = "txtape2";
             this.txtape2.Size = new System.Drawing.Size(143, 30);
@@ -213,7 +213,7 @@
             this.txtape1.Enabled = false;
             this.txtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape1.Location = new System.Drawing.Point(596, 274);
-            this.txtape1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtape1.Margin = new System.Windows.Forms.Padding(2);
             this.txtape1.MaxLength = 30;
             this.txtape1.Name = "txtape1";
             this.txtape1.Size = new System.Drawing.Size(143, 30);
@@ -236,7 +236,7 @@
             this.txtnom2.Enabled = false;
             this.txtnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom2.Location = new System.Drawing.Point(1033, 209);
-            this.txtnom2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom2.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom2.MaxLength = 30;
             this.txtnom2.Name = "txtnom2";
             this.txtnom2.Size = new System.Drawing.Size(143, 30);
@@ -260,7 +260,7 @@
             this.txtnom1.Enabled = false;
             this.txtnom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom1.Location = new System.Drawing.Point(596, 209);
-            this.txtnom1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom1.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom1.MaxLength = 30;
             this.txtnom1.Name = "txtnom1";
             this.txtnom1.Size = new System.Drawing.Size(143, 30);
@@ -304,7 +304,7 @@
             // 
             this.txtcodigo_empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcodigo_empleado.Location = new System.Drawing.Point(736, 127);
-            this.txtcodigo_empleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcodigo_empleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtcodigo_empleado.MaxLength = 8;
             this.txtcodigo_empleado.Name = "txtcodigo_empleado";
             this.txtcodigo_empleado.Size = new System.Drawing.Size(160, 30);
@@ -328,7 +328,7 @@
             this.txtcargo.Enabled = false;
             this.txtcargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcargo.Location = new System.Drawing.Point(700, 594);
-            this.txtcargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtcargo.MaxLength = 30;
             this.txtcargo.Name = "txtcargo";
             this.txtcargo.Size = new System.Drawing.Size(160, 30);
@@ -351,7 +351,7 @@
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
             this.pictureBox1.Location = new System.Drawing.Point(9, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 66);
             this.pictureBox1.TabIndex = 92;
@@ -362,7 +362,7 @@
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox5.Location = new System.Drawing.Point(682, 432);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(13, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +373,7 @@
             // 
             this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox4.Location = new System.Drawing.Point(579, 327);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(13, 10);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -384,7 +384,7 @@
             // 
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox3.Location = new System.Drawing.Point(579, 286);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(13, 10);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,7 +395,7 @@
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox2.Location = new System.Drawing.Point(579, 219);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(13, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -449,6 +449,7 @@
             this.Name = "Modificar_empleado";
             this.Text = "Modificar_empleado";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Modificar_empleado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

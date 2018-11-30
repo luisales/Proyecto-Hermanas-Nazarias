@@ -38,7 +38,7 @@ namespace Hermanas_nazario
 
             }
 
-            Base_de_datos.Registro_Servicio(txtNombreServicio.Text,txtDescripcion.Text,txtprecio.Text);
+            Base_de_datos.Registro_Servicio(txtNombreServicio.Text.ToUpper(), txtDescripcion.Text.ToUpper(), txtprecio.Text.ToUpper());
             MessageBox.Show("Registrado con exito");
             this.Hide();
         }
