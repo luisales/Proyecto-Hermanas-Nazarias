@@ -304,5 +304,12 @@ namespace Hermanas_nazario
             Busqueda_empleados a = new Busqueda_empleados();
             a.Show();
         }
+
+        private void generarFacturaDeServiciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Factura_servicios a = new Factura_servicios();
+            a.Show();
+        }
     }
 }
