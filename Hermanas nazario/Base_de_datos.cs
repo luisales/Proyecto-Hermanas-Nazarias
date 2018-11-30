@@ -1284,27 +1284,38 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Registro_Rol(string nombreRol, string Permisos)
+        public static int Registro_Rol(string nombreRol, string Permisos)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
-
-            try
+            if (ValidarRol(nombreRol) == 0)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
-                cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
-
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Rol existente escoja otro nombre");
+                    return 0;
             }
-            catch
+            else
             {
-            }
-            finally
-            {
-                con.Close();
+
+
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                    cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                }
+                finally
+                {
+                    con.Close();
+                   
+                }
+                return 1;
             }
         }
 
@@ -1341,30 +1352,36 @@ namespace Hermanas_nazario
         }
 
 
-        public static void Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
+        public static int Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
-
-            try
+            if (ValidarRol(nombreRol) == 0)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Actualizar_Rol", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
-                cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
-                cmd.Parameters.Add(new SqlParameter("@Permisos_rol", permisosRol));
-                cmd.ExecuteNonQuery();
+                MessageBox.Show("Rol existente escoja otro nombre");
+                return 0;
             }
-            catch
+            else
             {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Actualizar_Rol", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
+                    cmd.Parameters.Add(new SqlParameter("@Permisos_rol", permisosRol));
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                }
+                finally
+                {
+                    con.Close();
+                }
+                return 1;
             }
-            finally
-            {
-                con.Close();
-            }
-
-
         }
 
         public static void Registro_Medida(string nombreMed)
@@ -1936,6 +1953,27 @@ namespace Hermanas_nazario
             DataTable dt = new DataTable();
             da.Fill(dt);
              if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 0;
+            }
+            else
+            {
+                con.Close();
+                return 1;
+            }
+        }
+        public static int ValidarRol(string Nom)
+        {
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom", con);
+            cmd.Parameters.AddWithValue("Nom", Nom);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count >= 1)
             {
                 con.Close();
                 return 0;
