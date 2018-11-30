@@ -44,7 +44,7 @@ namespace Hermanas_nazario
 
             if (!string.IsNullOrEmpty(txtprecio.Text) == false)
             {
-                MessageBox.Show("Llene todos los campos obligatorios");
+                MessageBox.Show("Llene todos los campos obligatorios"); 
                 return;
             }
 
