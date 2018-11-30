@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +48,7 @@
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarRecetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarFacturaDeServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarIngresoDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarMedicamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,10 +56,6 @@
             this.referenciaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datosEstadisticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicamentosMasVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pacientesAtendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.semanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesAtendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,11 +69,13 @@
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.semanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.generarFacturaDeServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -160,21 +159,21 @@
             // 
             this.registrarEmpleadoToolStripMenuItem.Name = "registrarEmpleadoToolStripMenuItem";
             this.registrarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
-            this.registrarEmpleadoToolStripMenuItem.Text = "Registrar Empleado";
+            this.registrarEmpleadoToolStripMenuItem.Text = "Registrar empleado";
             this.registrarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.registrarEmpleadoToolStripMenuItem_Click);
             // 
             // modificarEmpleadoToolStripMenuItem
             // 
             this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
             this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
-            this.modificarEmpleadoToolStripMenuItem.Text = "Modificar Empleado";
+            this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
             this.modificarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.modificarEmpleadoToolStripMenuItem_Click);
             // 
             // buscarEmpleadoToolStripMenuItem
             // 
             this.buscarEmpleadoToolStripMenuItem.Name = "buscarEmpleadoToolStripMenuItem";
             this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
-            this.buscarEmpleadoToolStripMenuItem.Text = "Buscar Empleado";
+            this.buscarEmpleadoToolStripMenuItem.Text = "Buscar empleado";
             this.buscarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.buscarEmpleadoToolStripMenuItem_Click);
             // 
             // registrarUsuarioToolStripMenuItem
@@ -197,16 +196,23 @@
             // generarRecetaToolStripMenuItem
             // 
             this.generarRecetaToolStripMenuItem.Name = "generarRecetaToolStripMenuItem";
-            this.generarRecetaToolStripMenuItem.Size = new System.Drawing.Size(317, 30);
+            this.generarRecetaToolStripMenuItem.Size = new System.Drawing.Size(315, 30);
             this.generarRecetaToolStripMenuItem.Text = "Generar receta";
             this.generarRecetaToolStripMenuItem.Click += new System.EventHandler(this.generarRecetaToolStripMenuItem_Click_1);
             // 
             // buscarFacturaToolStripMenuItem
             // 
             this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
-            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(317, 30);
-            this.buscarFacturaToolStripMenuItem.Text = "Buscar Factura";
+            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(315, 30);
+            this.buscarFacturaToolStripMenuItem.Text = "Buscar factura";
             this.buscarFacturaToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem_Click);
+            // 
+            // generarFacturaDeServiciosToolStripMenuItem
+            // 
+            this.generarFacturaDeServiciosToolStripMenuItem.Name = "generarFacturaDeServiciosToolStripMenuItem";
+            this.generarFacturaDeServiciosToolStripMenuItem.Size = new System.Drawing.Size(315, 30);
+            this.generarFacturaDeServiciosToolStripMenuItem.Text = "Generar Factura de servicios";
+            this.generarFacturaDeServiciosToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaDeServiciosToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -243,7 +249,7 @@
             // 
             this.referenciaMedicaToolStripMenuItem.Name = "referenciaMedicaToolStripMenuItem";
             this.referenciaMedicaToolStripMenuItem.Size = new System.Drawing.Size(238, 30);
-            this.referenciaMedicaToolStripMenuItem.Text = "Referencia Medica";
+            this.referenciaMedicaToolStripMenuItem.Text = "Referencia médica";
             this.referenciaMedicaToolStripMenuItem.Click += new System.EventHandler(this.referenciaMedicaToolStripMenuItem_Click);
             // 
             // datosEstadisticosToolStripMenuItem
@@ -285,22 +291,22 @@
             this.agregarToolStripMenuItem,
             this.modifcarToolStripMenuItem});
             this.agregarRolesToolStripMenuItem.Name = "agregarRolesToolStripMenuItem";
-            this.agregarRolesToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
+            this.agregarRolesToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.agregarRolesToolStripMenuItem.Text = "Roles";
             this.agregarRolesToolStripMenuItem.Click += new System.EventHandler(this.agregarRolesToolStripMenuItem_Click);
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // modifcarToolStripMenuItem
             // 
             this.modifcarToolStripMenuItem.Name = "modifcarToolStripMenuItem";
-            this.modifcarToolStripMenuItem.Size = new System.Drawing.Size(167, 30);
-            this.modifcarToolStripMenuItem.Text = "Modifcar";
+            this.modifcarToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.modifcarToolStripMenuItem.Text = "Modificar";
             this.modifcarToolStripMenuItem.Click += new System.EventHandler(this.modifcarToolStripMenuItem_Click);
             // 
             // medidaToolStripMenuItem
@@ -309,7 +315,7 @@
             this.ingresarMedidaToolStripMenuItem,
             this.modifcarMedidaToolStripMenuItem});
             this.medidaToolStripMenuItem.Name = "medidaToolStripMenuItem";
-            this.medidaToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
+            this.medidaToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.medidaToolStripMenuItem.Text = "Medida";
             // 
             // ingresarMedidaToolStripMenuItem
@@ -332,20 +338,20 @@
             this.ingresarToolStripMenuItem,
             this.modificarToolStripMenuItem});
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             // 
             // ingresarToolStripMenuItem
             // 
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(171, 30);
             this.ingresarToolStripMenuItem.Text = "Ingresar";
             this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(171, 30);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -363,26 +369,41 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // semanaToolStripMenuItem
+            // 
+            this.semanaToolStripMenuItem.Name = "semanaToolStripMenuItem";
+            this.semanaToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // mesToolStripMenuItem
+            // 
+            this.mesToolStripMenuItem.Name = "mesToolStripMenuItem";
+            this.mesToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // anualToolStripMenuItem
+            // 
+            this.anualToolStripMenuItem.Name = "anualToolStripMenuItem";
+            this.anualToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
             // chart1
             // 
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Location = new System.Drawing.Point(637, 408);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Name = "Series1";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Name = "Series1";
+            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(906, 375);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
-            title1.Name = "Pacientes Atendidos";
-            title1.Text = "Medicamentos mas vendidos";
-            this.chart1.Titles.Add(title1);
+            title3.Name = "Pacientes Atendidos";
+            title3.Text = "Medicamentos mas vendidos";
+            this.chart1.Titles.Add(title3);
             this.chart1.Visible = false;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
@@ -418,31 +439,24 @@
             // 
             // chart2
             // 
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
             this.chart2.Location = new System.Drawing.Point(637, 408);
             this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.IsVisibleInLegend = false;
-            series2.Name = "Series1";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            this.chart2.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Name = "Series1";
+            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart2.Series.Add(series4);
             this.chart2.Size = new System.Drawing.Size(906, 375);
             this.chart2.TabIndex = 73;
             this.chart2.Text = "chart2";
-            title2.Name = "Title1";
-            title2.Text = "Pacientes atendidos";
-            this.chart2.Titles.Add(title2);
+            title4.Name = "Title1";
+            title4.Text = "Pacientes atendidos";
+            this.chart2.Titles.Add(title4);
             this.chart2.Visible = false;
-            // 
-            // generarFacturaDeServiciosToolStripMenuItem
-            // 
-            this.generarFacturaDeServiciosToolStripMenuItem.Name = "generarFacturaDeServiciosToolStripMenuItem";
-            this.generarFacturaDeServiciosToolStripMenuItem.Size = new System.Drawing.Size(317, 30);
-            this.generarFacturaDeServiciosToolStripMenuItem.Text = "Generar Factura de Servicios";
-            this.generarFacturaDeServiciosToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaDeServiciosToolStripMenuItem_Click);
             // 
             // menu
             // 
