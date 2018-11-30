@@ -1924,13 +1924,14 @@ namespace Hermanas_nazario
             }
             
         }
-        public static int ValidarFacturaDetalle(string id)
+        public static int ValidarFacturaDetalle(string Cod, string id)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
              con.Open();
-            SqlCommand cmd = new SqlCommand("select * from [dbo].[Detalle_Factura_Servicio] where Codigo_facturaRec = @id", con);
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Detalle_Factura_Servicio] where Codigo_facturaRec =@Cod and Codigo_servicio = @id ", con);
             cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("Cod", Cod);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

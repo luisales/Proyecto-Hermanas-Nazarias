@@ -12,7 +12,7 @@ namespace Hermanas_nazario
 {
     public partial class Factura_servicios : Form
     {
-        int CodigoS, a;
+        int CodigoS, a=0;
         public Factura_servicios()
         {
             InitializeComponent();
@@ -115,12 +115,14 @@ namespace Hermanas_nazario
                 MessageBox.Show("Seleccione una Cantidad");
                 return;
             }
-            if (Base_de_datos.ValidarFacturaDetalle(lblCodigoFacturaSer.Text)== 1)
+            if (Base_de_datos.ValidarFacturaDetalle(lblCodigoFacturaSer.Text,a.ToString())== 1)
             {
                 Base_de_datos.Detalle_Servicio(int.Parse(lblCodigoFacturaSer.Text), CodigoS, int.Parse(txtCantidad.Text));
                 Base_de_datos busc = new Base_de_datos();
                 busc.BuscarDetalle(lblCodigoFacturaSer.Text);
                 dataGridView2.DataSource = busc.Mostrar_Resultados();
+                btnGuardar.Enabled = true;
+                a= int.Parse(dataGridView2[1, 0].Value.ToString());
             }
             else
             MessageBox.Show("Servicio ya Ingresado");
@@ -129,8 +131,7 @@ namespace Hermanas_nazario
         private void button1_Click(object sender, EventArgs e)
         {
             string Anio, Mes, Dia;
-            btnAgregar.Enabled = true;
-            btnGuardar.Enabled = true;
+            btnAgregar.Enabled = true;       
             btnCancelar.Enabled = true;
             DateTime actual = DateTime.Now;
             Anio = DateTime.Parse(actual.ToString()).Year.ToString();
@@ -149,6 +150,7 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtdescripcion.Text = Convert.ToString(selectedRow.Cells[1].Value);
              CodigoS = int.Parse((selectedRow.Cells[0].Value).ToString());
+            a = int.Parse((selectedRow.Cells[0].Value).ToString());
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -186,6 +188,8 @@ namespace Hermanas_nazario
             if (MessageBox.Show("Esta seguro desea ingresar la factura", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Hide();
+                menu b= new menu();
+                b.Show();
             }
         }
 
@@ -196,7 +200,13 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro desea cancelar la factura", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (lblCodigoFacturaSer.Text == "*")
+            {
+                this.Hide();
+                menu a = new menu();
+                a.Show();
+            }
+            else if ((MessageBox.Show("Esta seguro desea cancelar la factura", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes) )
             {
                 Base_de_datos.Cancelar_Factura(int.Parse(lblCodigoFacturaSer.Text));
                 btnCancelar.Enabled = false;
@@ -213,7 +223,7 @@ namespace Hermanas_nazario
                 menu a = new menu();
                 a.Show();
             }
-           
+            
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
@@ -223,6 +233,9 @@ namespace Hermanas_nazario
             dataGridView2.Rows.RemoveAt(indice);
             Base_de_datos.Quitar_Detalle(int.Parse(lblCodigoFacturaSer.Text), a);
             btnQuitar.Enabled = false;
+            if (dataGridView2.Rows.Count == 0)
+                btnGuardar.Enabled = false;
+                
         }
         
       
