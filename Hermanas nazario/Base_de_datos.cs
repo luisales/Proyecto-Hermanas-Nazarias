@@ -63,8 +63,8 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-           // SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2FRD256\SQLEXPRESS;Initial Catalog=Clinica; Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -1595,6 +1595,116 @@ end
                 Permisos = Perm["Permisos_rol"].ToString();
                 con.Close();
             }
+
+        }
+
+        public static void Registro_Servicio(string nombreServicio, string descripcionServicio, string precioServicio)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_servicios", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@cod", 1));
+                cmd.Parameters.Add(new SqlParameter("@nombre", nombreServicio));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", descripcionServicio));
+                cmd.Parameters.Add(new SqlParameter("@precio", precioServicio));
+                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static int validarServicio(string nombre)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Servicios WHERE Nombre_servicio=@Nombre_servicio", con);
+            cmd.Parameters.AddWithValue("Nombre_servicio", nombre);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+
+        public void BuscarServicio()
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_servicio  'Codigo de servicio', Nombre_servicio 'Nombre del servicio' , Descripcion_servicio 'Descripcion del servicio' , Precio_servicio 'Precio del servicio' from [dbo].[servicios]", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static void Actualizar_Servicio(int Codigo, string nombreServicio, string descripcionServicio, string precioServicio)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_servicios", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@nombre", nombreServicio));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", descripcionServicio));
+                cmd.Parameters.Add(new SqlParameter("@precio", precioServicio));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
 
         }
 

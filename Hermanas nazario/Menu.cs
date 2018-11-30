@@ -284,5 +284,18 @@ namespace Hermanas_nazario
 
             }
         }
+
+        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ingresar_Servicio a = new Ingresar_Servicio();
+            a.ShowDialog();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modificar_servcios a = new Modificar_servcios();
+            a.ShowDialog();
+
+        }
     }
 }
