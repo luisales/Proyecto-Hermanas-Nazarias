@@ -24,7 +24,12 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-                int ver = Base_de_datos.validarNomNivel(txtNombreRol.Text);
+            if (!string.IsNullOrEmpty(textBox1.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            int ver = Base_de_datos.validarNomNivel(txtNombreRol.Text);
                 if (ver != 1)
                 {
                     MessageBox.Show("Nivel ya existente");
@@ -39,6 +44,16 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
         }
     }
     }

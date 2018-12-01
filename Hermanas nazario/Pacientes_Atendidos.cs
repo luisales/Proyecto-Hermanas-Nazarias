@@ -19,6 +19,11 @@ namespace Hermanas_nazario
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (dateTimePicker1.Value.CompareTo(dateTimePicker2.Value)==1)
+            {
+                MessageBox.Show("La primer fecha no puede ser mayor a la segunda seleccionada");
+                return;
+            }
             Base_de_datos.fecha1Pa = dateTimePicker1.Value.ToString("MM/dd/yyyy");
             Base_de_datos.fecha2Pa = dateTimePicker2.Value.ToString("MM/dd/yyyy");
             Base_de_datos.paca = 1;

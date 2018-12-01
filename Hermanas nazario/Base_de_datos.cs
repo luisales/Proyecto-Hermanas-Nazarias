@@ -63,8 +63,8 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
@@ -1193,7 +1193,7 @@ namespace Hermanas_nazario
             while (dr.Read())
             {
                 cantidadPacientes.Add(dr.GetInt32(0));
-                nombrePacientes.Add("atendidos");
+                nombrePacientes.Add("Atendidos");
             }
 
         }

@@ -45,7 +45,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(375, 207);
+            this.pictureBox5.Location = new System.Drawing.Point(434, 190);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(17, 12);
@@ -56,7 +56,7 @@
             // txtNombreRol
             // 
             this.txtNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRol.Location = new System.Drawing.Point(407, 193);
+            this.txtNombreRol.Location = new System.Drawing.Point(466, 176);
             this.txtNombreRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreRol.MaxLength = 50;
             this.txtNombreRol.Name = "txtNombreRol";
@@ -68,7 +68,7 @@
             this.btningresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btningresar.Location = new System.Drawing.Point(375, 337);
+            this.btningresar.Location = new System.Drawing.Point(393, 328);
             this.btningresar.Margin = new System.Windows.Forms.Padding(4);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(159, 55);
@@ -82,7 +82,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(124, 196);
+            this.label1.Location = new System.Drawing.Point(183, 179);
             this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(268, 34);
@@ -114,7 +114,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox2.Location = new System.Drawing.Point(375, 275);
+            this.pictureBox2.Location = new System.Drawing.Point(434, 258);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(17, 12);
@@ -125,19 +125,21 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(407, 261);
+            this.textBox1.Location = new System.Drawing.Point(466, 244);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(189, 36);
             this.textBox1.TabIndex = 71;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(124, 264);
+            this.label2.Location = new System.Drawing.Point(183, 247);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(268, 34);

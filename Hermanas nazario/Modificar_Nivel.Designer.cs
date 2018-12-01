@@ -90,7 +90,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(631, 172);
+            this.label3.Location = new System.Drawing.Point(631, 177);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(243, 34);
@@ -182,6 +182,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(189, 36);
             this.textBox1.TabIndex = 74;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label4
             // 
@@ -237,6 +238,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Name = "Modificar_Nivel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar_Nivel";
             this.Load += new System.EventHandler(this.Modificar_Nivel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

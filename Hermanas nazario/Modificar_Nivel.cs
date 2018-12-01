@@ -85,5 +85,10 @@ namespace Hermanas_nazario
                 btnModificar.Enabled = true;
             }
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+        }
     }
 }

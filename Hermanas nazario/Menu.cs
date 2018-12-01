@@ -20,7 +20,8 @@ namespace Hermanas_nazario
             {
                 pictureBox2.Visible = true;
                 chart2.Visible = true;
-                    Base_de_datos.esta2();
+                label1.Visible = true;
+                Base_de_datos.esta2();
                     chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
                     pictureBox2.Visible = true;
                     chart2.Visible = true;
@@ -94,6 +95,9 @@ namespace Hermanas_nazario
             this.Hide();
             Registro_pacientes a = new Registro_pacientes();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void burcarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,6 +105,9 @@ namespace Hermanas_nazario
             this.Hide();
             Busqueda_de_pacientes a = new Busqueda_de_pacientes();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void modificarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +115,9 @@ namespace Hermanas_nazario
             this.Hide();
             ModifcacionPaciente a = new ModifcacionPaciente();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,6 +130,9 @@ namespace Hermanas_nazario
             this.Hide();
             Registro_de_usuario a = new Registro_de_usuario();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void registarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,7 +149,10 @@ namespace Hermanas_nazario
             Base_de_datos.decis = 3;
             this.Hide();
             Busqueda_citas a = new Busqueda_citas();
-            a.ShowDialog();
+            a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,6 +160,9 @@ namespace Hermanas_nazario
             this.Hide();
             Login a = new Login();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void registrarIngresoDeMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,6 +170,9 @@ namespace Hermanas_nazario
             this.Hide();
             Ingresar_medicamento a = new Ingresar_medicamento();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void generarRecetaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,6 +180,9 @@ namespace Hermanas_nazario
             this.Hide();
             Receta a = new Receta();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void buscarMedicamentoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,6 +190,9 @@ namespace Hermanas_nazario
             this.Hide();
             Busqueda_medicamentos a = new Busqueda_medicamentos();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void registrarEgresoDeMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,6 +200,9 @@ namespace Hermanas_nazario
             Hide();
             venc x = new venc();
             x.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void generarFacturarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -179,6 +210,9 @@ namespace Hermanas_nazario
             Hide();
             Generar_factura a = new Generar_factura();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void referenciaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,6 +220,9 @@ namespace Hermanas_nazario
             Hide();
             Referencia a = new Referencia();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void buscarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -193,6 +230,9 @@ namespace Hermanas_nazario
             this.Hide();
             Busqueda_factura a = new Busqueda_factura();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
         private void medicamentosMasVendidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -202,6 +242,7 @@ namespace Hermanas_nazario
                 chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
                 pictureBox1.Visible = true;
                 chart1.Visible = true;
+                label1.Visible = true;
                 Base_de_datos.b = 1;
             }
             else
@@ -209,7 +250,7 @@ namespace Hermanas_nazario
                 chart1.Series[0].Points.DataBindXY(Base_de_datos.nombremedicamento, Base_de_datos.cantidadmedicamento);
                 chart1.Visible = true;
                 pictureBox1.Visible = true;
-
+                label1.Visible = true;
             }
 
         }
@@ -253,6 +294,9 @@ namespace Hermanas_nazario
             this.Hide();
             Receta a = new Receta();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -261,12 +305,16 @@ namespace Hermanas_nazario
             this.Hide();
             Modificar_empleado a = new Modificar_empleado();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pictureBox1.Visible = false;
             chart1.Visible = false;
+            label1.Visible = false;
 
         }
 
@@ -275,6 +323,9 @@ namespace Hermanas_nazario
             this.Hide();
             Registro_empleado a = new Registro_empleado();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void semanaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -286,6 +337,7 @@ namespace Hermanas_nazario
         {
             pictureBox2.Visible = false;
             chart2.Visible = false;
+            label1.Visible = false;
         }
 
         private void pacientesAtendidosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -303,6 +355,9 @@ namespace Hermanas_nazario
             this.Hide();
             Busqueda_empleados a = new Busqueda_empleados();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void generarFacturaDeServiciosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -310,12 +365,16 @@ namespace Hermanas_nazario
             this.Hide();
             Factura_servicios a = new Factura_servicios();
             a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Ingresar_Servicio a = new Ingresar_Servicio();
             a.ShowDialog();
+
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
