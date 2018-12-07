@@ -53,7 +53,7 @@ namespace Hermanas_nazario
                 txtcorreo.Text = Base_de_datos.correo_empleado;
                 txttel.Text = Base_de_datos.numero_telefono_empleado;
                 txtcargo.Text = Base_de_datos.cargo_empleado;
-
+                txtrol.Text = Base_de_datos.codigo_rol;
                 
 
                 
@@ -155,7 +155,7 @@ namespace Hermanas_nazario
                 sexo = "M";
             }
 
-            Base_de_datos.Actualizar_empleado(int.Parse(txtcodigo_empleado.Text),txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo.ToUpper(), txttel.Text, txtcargo.Text.ToUpper());
+            Base_de_datos.Actualizar_empleado(int.Parse(txtcodigo_empleado.Text),txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo.ToUpper(), txttel.Text, txtcargo.Text.ToUpper(), int.Parse(txtrol.Text));
             MessageBox.Show("Empleado guardado con exito");
 
             txtcodigo_empleado.Clear();
@@ -287,6 +287,22 @@ namespace Hermanas_nazario
         private void Modificar_empleado_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Visible = true;
+            Base_de_datos a = new Base_de_datos();
+            a.BuscarRoles();
+            dataGridView1.DataSource = a.Mostrar_Resultados();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            txtrol.Text = Convert.ToString(selectedRow.Cells[0].Value);
+            dataGridView1.Visible = false;
         }
     }
     }
