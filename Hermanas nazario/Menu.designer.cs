@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +110,8 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1371, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -128,7 +129,7 @@
             // registrarPacienteToolStripMenuItem
             // 
             this.registrarPacienteToolStripMenuItem.Name = "registrarPacienteToolStripMenuItem";
-            this.registrarPacienteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.registrarPacienteToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.registrarPacienteToolStripMenuItem.Text = "Registrar paciente";
             this.registrarPacienteToolStripMenuItem.Click += new System.EventHandler(this.registrarPacienteToolStripMenuItem_Click);
             // 
@@ -149,7 +150,7 @@
             // buscarCitasToolStripMenuItem
             // 
             this.buscarCitasToolStripMenuItem.Name = "buscarCitasToolStripMenuItem";
-            this.buscarCitasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.buscarCitasToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.buscarCitasToolStripMenuItem.Text = "Buscar citas";
             this.buscarCitasToolStripMenuItem.Click += new System.EventHandler(this.buscarCitasToolStripMenuItem_Click);
             // 
@@ -181,7 +182,7 @@
             // buscarEmpleadoToolStripMenuItem
             // 
             this.buscarEmpleadoToolStripMenuItem.Name = "buscarEmpleadoToolStripMenuItem";
-            this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.buscarEmpleadoToolStripMenuItem.Text = "Buscar empleado";
             this.buscarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.buscarEmpleadoToolStripMenuItem_Click);
             // 
@@ -192,21 +193,21 @@
             this.modificarUsuarioToolStripMenuItem});
             this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
             this.registrarUsuarioToolStripMenuItem.ShowShortcutKeys = false;
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.registrarUsuarioToolStripMenuItem.Text = "Usuario";
             this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem_Click);
             // 
             // registrarUsuarioToolStripMenuItem1
             // 
             this.registrarUsuarioToolStripMenuItem1.Name = "registrarUsuarioToolStripMenuItem1";
-            this.registrarUsuarioToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
+            this.registrarUsuarioToolStripMenuItem1.Size = new System.Drawing.Size(202, 26);
             this.registrarUsuarioToolStripMenuItem1.Text = "Registrar Usuario";
             this.registrarUsuarioToolStripMenuItem1.Click += new System.EventHandler(this.registrarUsuarioToolStripMenuItem1_Click);
             // 
             // modificarUsuarioToolStripMenuItem
             // 
             this.modificarUsuarioToolStripMenuItem.Name = "modificarUsuarioToolStripMenuItem";
-            this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.modificarUsuarioToolStripMenuItem.Text = "Modificar Usuario";
             this.modificarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuarioToolStripMenuItem_Click);
             // 
@@ -230,14 +231,14 @@
             // buscarFacturaToolStripMenuItem
             // 
             this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
-            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.buscarFacturaToolStripMenuItem.Text = "Buscar factura";
             this.buscarFacturaToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem_Click);
             // 
             // generarFacturaDeServiciosToolStripMenuItem
             // 
             this.generarFacturaDeServiciosToolStripMenuItem.Name = "generarFacturaDeServiciosToolStripMenuItem";
-            this.generarFacturaDeServiciosToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.generarFacturaDeServiciosToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.generarFacturaDeServiciosToolStripMenuItem.Text = "Generar Factura de servicios";
             this.generarFacturaDeServiciosToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaDeServiciosToolStripMenuItem_Click);
             // 
@@ -276,7 +277,7 @@
             // referenciaMedicaToolStripMenuItem
             // 
             this.referenciaMedicaToolStripMenuItem.Name = "referenciaMedicaToolStripMenuItem";
-            this.referenciaMedicaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.referenciaMedicaToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.referenciaMedicaToolStripMenuItem.Text = "Referencia médica";
             this.referenciaMedicaToolStripMenuItem.Click += new System.EventHandler(this.referenciaMedicaToolStripMenuItem_Click);
             // 
@@ -320,7 +321,7 @@
             this.agregarToolStripMenuItem,
             this.modifcarToolStripMenuItem});
             this.agregarRolesToolStripMenuItem.Name = "agregarRolesToolStripMenuItem";
-            this.agregarRolesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.agregarRolesToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.agregarRolesToolStripMenuItem.Text = "Roles";
             this.agregarRolesToolStripMenuItem.Click += new System.EventHandler(this.agregarRolesToolStripMenuItem_Click);
             // 
@@ -334,7 +335,7 @@
             // modifcarToolStripMenuItem
             // 
             this.modifcarToolStripMenuItem.Name = "modifcarToolStripMenuItem";
-            this.modifcarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modifcarToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.modifcarToolStripMenuItem.Text = "Modificar";
             this.modifcarToolStripMenuItem.Click += new System.EventHandler(this.modifcarToolStripMenuItem_Click);
             // 
@@ -380,7 +381,7 @@
             // modificarNivelEconomicoToolStripMenuItem
             // 
             this.modificarNivelEconomicoToolStripMenuItem.Name = "modificarNivelEconomicoToolStripMenuItem";
-            this.modificarNivelEconomicoToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.modificarNivelEconomicoToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.modificarNivelEconomicoToolStripMenuItem.Text = "Modificar Nivel Economico";
             this.modificarNivelEconomicoToolStripMenuItem.Click += new System.EventHandler(this.modificarNivelEconomicoToolStripMenuItem_Click);
             // 
@@ -403,8 +404,8 @@
             // modificarsSerivicioToolStripMenuItem
             // 
             this.modificarsSerivicioToolStripMenuItem.Name = "modificarsSerivicioToolStripMenuItem";
-            this.modificarsSerivicioToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.modificarsSerivicioToolStripMenuItem.Text = "Modificar serivicio";
+            this.modificarsSerivicioToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.modificarsSerivicioToolStripMenuItem.Text = "Modificar servicio";
             this.modificarsSerivicioToolStripMenuItem.Click += new System.EventHandler(this.modificarsSerivicioToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
@@ -462,24 +463,24 @@
             // chart1
             // 
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Location = new System.Drawing.Point(493, 215);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Name = "Series1";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Name = "Series1";
+            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(1133, 481);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            title1.Name = "Pacientes Atendidos";
-            title1.Text = "Medicamentos mas vendidos";
-            this.chart1.Titles.Add(title1);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            title3.Name = "Pacientes Atendidos";
+            title3.Text = "Medicamentos mas vendidos";
+            this.chart1.Titles.Add(title3);
             this.chart1.Visible = false;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
@@ -491,7 +492,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(1592, 215);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 72;
             this.pictureBox1.TabStop = false;
@@ -506,7 +507,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(1592, 215);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 74;
             this.pictureBox2.TabStop = false;
@@ -515,17 +516,17 @@
             // 
             // chart2
             // 
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
             this.chart2.Location = new System.Drawing.Point(493, 215);
             this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.IsVisibleInLegend = false;
-            series2.Name = "Series1";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            this.chart2.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Name = "Series1";
+            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart2.Series.Add(series4);
             this.chart2.Size = new System.Drawing.Size(1133, 481);
             this.chart2.TabIndex = 73;
             this.chart2.Text = "chart2";
@@ -540,7 +541,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(852, 125);
+            this.label1.Location = new System.Drawing.Point(852, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(507, 52);
             this.label1.TabIndex = 75;
@@ -559,7 +560,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hermanas_nazario.Properties.Resources.imagenmenu1;
-            this.ClientSize = new System.Drawing.Size(1569, 559);
+            this.ClientSize = new System.Drawing.Size(1371, 559);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.chart2);
@@ -567,6 +568,7 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "menu";
             this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -634,8 +636,8 @@
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ingresarServicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarsSerivicioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarMedicamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarMedicamentoToolStripMenuItem;
     }
 }
