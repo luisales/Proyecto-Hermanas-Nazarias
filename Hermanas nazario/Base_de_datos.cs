@@ -1509,6 +1509,37 @@ namespace Hermanas_nazario
             }
         }
 
+        public void BuscarUsuario()
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_Usuario  'Codigo de Usuario', a.Nombre_usuario 'Nombre de Usuario', b.Primer_nombre_empleado 'Nombre Empleado', b.Primer_apellido_empleado 'Apellido Empleado'  from [dbo].[Usuarios] a inner join [dbo].[Empleados] b on a.[Codigo_empleado] = b.[Codigo_empleado]", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public void BuscarNivel()
         {
 

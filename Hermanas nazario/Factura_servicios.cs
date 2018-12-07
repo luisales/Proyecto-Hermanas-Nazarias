@@ -103,6 +103,11 @@ namespace Hermanas_nazario
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (txtCantidad.Text=="0")
+            {
+                MessageBox.Show("Ingrese un numero mayor a 0");
+                return;
+            }
             if (!string.IsNullOrEmpty(txtdescripcion.Text) == false)
 
             {
