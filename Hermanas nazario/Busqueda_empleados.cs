@@ -189,7 +189,7 @@ namespace Hermanas_nazario
             if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
-                busc.BuscarE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
+                busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
             else

@@ -72,9 +72,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper());
-            Base_de_datos.codigoEmpleado(txtid.Text);
-            Base_de_datos.EmpleadoRol(int.Parse(Base_de_datos.codempleado), int.Parse(txtrol.Text));
+            Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper(), int.Parse(txtrol.Text));
             this.Close();
             menu a = new menu();
             a.Show();
