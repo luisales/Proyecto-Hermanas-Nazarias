@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Hermanas_nazario
 {
@@ -17,6 +20,9 @@ namespace Hermanas_nazario
         float descuento;
         float TotalMedicamentos;
         float totalDescuento;
+        String Espace = "\n\n\n\n";
+        String Linea = "__________________________";
+        String Nombre;
 
         public Generar_factura()
         {
@@ -66,8 +72,6 @@ namespace Hermanas_nazario
                 chkIngresar.Enabled = false;
                 dataGridView1.DataSource = null;
                 btnCancelar.Enabled = false;
-             
-                btnBuscar.Enabled = true;
 
 
             }
@@ -98,7 +102,7 @@ namespace Hermanas_nazario
 
                 btnCancelar.Enabled = true;
             
-                btnBuscar.Enabled = false;
+
 
 
             }
@@ -135,6 +139,141 @@ namespace Hermanas_nazario
             }
             if (chkIngresar.Checked)
             {
+                String Titulo = "Dispensario Médico Hermana Nazaria";
+                String Titulo2 = "\nAguas del Padre, Siguatepeque, Comayagua\n";
+                String Head;
+
+                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+
+                iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+                String Fecha = "";
+                int Mes = DateTime.Now.Month;
+                switch (Mes)
+                {
+                    case 1:
+                        Fecha = (DateTime.Now.Day.ToString() + " Enero del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 2:
+                        Fecha = (DateTime.Now.Day.ToString() + " Febrero del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 3:
+                        Fecha = (DateTime.Now.Day.ToString() + " Marzo del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 4:
+                        Fecha = (DateTime.Now.Day.ToString() + " Abril del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 5:
+                        Fecha = (DateTime.Now.Day.ToString() + " Mayo del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 6:
+                        Fecha = (DateTime.Now.Day.ToString() + " Junio del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 7:
+                        Fecha = (DateTime.Now.Day.ToString() + " Julio del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 8:
+                        Fecha = (DateTime.Now.Day.ToString() + " Agosto del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 9:
+                        Fecha = (DateTime.Now.Day.ToString() + " Septiembre del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 10:
+                        Fecha = (DateTime.Now.Day.ToString() + " Octubre del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 11:
+                        Fecha = (DateTime.Now.Day.ToString() + " Noviembre del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 12:
+                        Fecha = (DateTime.Now.Day.ToString() + " Diciembre del " + DateTime.Now.Year.ToString());
+
+                        break;
+
+                }
+                Head = (Titulo + Titulo2 + Fecha + "\n");
+                Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
+                try
+                {
+                    //Poner direccion bien y agregar fecha
+
+
+                    Paragraph Parrafo = new Paragraph(Head);
+                    Parrafo.Alignment = Element.ALIGN_CENTER;
+
+                    Paragraph Espacio = new Paragraph(Espace);
+
+                    //Creating iTextSharp Table from the DataTable data
+                    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+
+                    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                    foreach (DataGridViewColumn column in dataGridView1.Columns)
+                    {
+                        PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                        pdfTable.AddCell(cell);
+                    }
+
+
+                    int row = dataGridView1.Rows.Count;
+                    int cell2 = dataGridView1.Rows[0].Cells.Count;
+                    for (int x = 0; x < row; x++)
+                    {
+                        for (int j = 0; j < cell2; j++)
+                        {
+
+                            pdfTable.AddCell(dataGridView1.Rows[x].Cells[j].Value.ToString());
+                        }
+                    }
+                    string Valor;
+                    Valor = "Codigo Factura: " + txtCita.Text;
+                    Paragraph Cod = new Paragraph(Valor);
+                    Cod.Alignment = Element.ALIGN_JUSTIFIED;
+                    Valor = "Valor de las medicinas: LPS. " + txtMedicamentos.Text;
+                    Paragraph Med = new Paragraph(Valor);
+                    Med.Alignment = Element.ALIGN_JUSTIFIED;
+                    Valor = "Descuento: LPS. " + txtDesc.Text;
+                    Paragraph Desc = new Paragraph(Valor);
+                    Desc.Alignment = Element.ALIGN_JUSTIFIED;
+                    Valor = "Sub-Total: LPS. " + txtSubTotal.Text;
+                    Paragraph Sub = new Paragraph(Valor);
+                    Sub.Alignment = Element.ALIGN_JUSTIFIED;
+                    Valor = "Consulta: LPS. " + txtConsulta.Text;
+                    Paragraph Consulta = new Paragraph(Valor);
+                    Consulta.Alignment = Element.ALIGN_JUSTIFIED;
+                    Valor = "Total: LPS. " + txtTotal.Text;
+                    Paragraph Total = new Paragraph(Valor);
+                    Total.Alignment = Element.ALIGN_JUSTIFIED;
+                    //Exporting to PDF
+                    string folderPath = @"D:\55\";
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+                    using (FileStream stream = new FileStream(folderPath + "Factura_" + txtCita.Text + ".pdf", FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A4.Rotate(), 30f, 10f, 10f, 0f);
+                        PdfWriter.GetInstance(pdfDoc, stream);
+
+                        pdfDoc.Open();
+                        pdfDoc.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
+                        pdfDoc.Add(Parrafo);
+                        pdfDoc.Add(Espacio);
+
+                        pdfDoc.Add(pdfTable);
+                        pdfDoc.Add(Espacio);
+                        pdfDoc.Add(Med);
+                        pdfDoc.Add(Desc);
+                        pdfDoc.Add(Sub);
+                        pdfDoc.Add(Consulta);
+                        pdfDoc.Add(Total);
+                        pdfDoc.Close();
+                        stream.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 if (MessageBox.Show("Esta seguro desea ingresar la factura","Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Base_de_datos.Ingresar_factura(double.Parse(txtValorC.Text), double.Parse(txtIngresar.Text), int.Parse(txtCita.Text));
@@ -160,7 +299,6 @@ namespace Hermanas_nazario
                     txtValorC.Enabled = false;
                     btnPagar.Enabled = false;
                     chkIngresar.Enabled = false;
-                    btnBuscar.Enabled = true;
                     txtIngresar.Enabled = false;
                     chkIngresar.Checked = false;
                     btnCancelar.Enabled = false;
@@ -182,6 +320,141 @@ namespace Hermanas_nazario
             {
                 if (MessageBox.Show("Esta seguro desea ingresar la factura","Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    String Titulo = "Dispensario Médico Hermana Nazaria";
+                    String Titulo2 = "\nAguas del Padre, Siguatepeque, Comayagua\n";
+                    String Head;
+
+                    BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+
+                    iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+                    String Fecha = "";
+                    int Mes = DateTime.Now.Month;
+                    switch (Mes)
+                    {
+                        case 1:
+                            Fecha = (DateTime.Now.Day.ToString() + " Enero del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 2:
+                            Fecha = (DateTime.Now.Day.ToString() + " Febrero del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 3:
+                            Fecha = (DateTime.Now.Day.ToString() + " Marzo del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 4:
+                            Fecha = (DateTime.Now.Day.ToString() + " Abril del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 5:
+                            Fecha = (DateTime.Now.Day.ToString() + " Mayo del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 6:
+                            Fecha = (DateTime.Now.Day.ToString() + " Junio del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 7:
+                            Fecha = (DateTime.Now.Day.ToString() + " Julio del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 8:
+                            Fecha = (DateTime.Now.Day.ToString() + " Agosto del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 9:
+                            Fecha = (DateTime.Now.Day.ToString() + " Septiembre del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 10:
+                            Fecha = (DateTime.Now.Day.ToString() + " Octubre del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 11:
+                            Fecha = (DateTime.Now.Day.ToString() + " Noviembre del " + DateTime.Now.Year.ToString());
+                            break;
+                        case 12:
+                            Fecha = (DateTime.Now.Day.ToString() + " Diciembre del " + DateTime.Now.Year.ToString());
+
+                            break;
+
+                    }
+                    Head = (Titulo + Titulo2 + Fecha + "\n");
+                    Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
+                    try
+                    {
+                        //Poner direccion bien y agregar fecha
+
+
+                        Paragraph Parrafo = new Paragraph(Head);
+                        Parrafo.Alignment = Element.ALIGN_CENTER;
+
+                        Paragraph Espacio = new Paragraph(Espace);
+
+                        //Creating iTextSharp Table from the DataTable data
+                        PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+
+                        pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                        foreach (DataGridViewColumn column in dataGridView1.Columns)
+                        {
+                            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                            pdfTable.AddCell(cell);
+                        }
+
+
+                        int row = dataGridView1.Rows.Count;
+                        int cell2 = dataGridView1.Rows[0].Cells.Count;
+                        for (int x = 0; x < row; x++)
+                        {
+                            for (int j = 0; j < cell2; j++)
+                            {
+
+                                pdfTable.AddCell(dataGridView1.Rows[x].Cells[j].Value.ToString());
+                            }
+                        }
+                        string Valor;
+                        Valor = "Codigo Factura: " + txtCita.Text;
+                        Paragraph Cod = new Paragraph(Valor);
+                        Cod.Alignment = Element.ALIGN_JUSTIFIED;
+                        Valor = "Valor de las medicinas: LPS. " + txtMedicamentos.Text;
+                        Paragraph Med = new Paragraph(Valor);
+                        Med.Alignment = Element.ALIGN_JUSTIFIED;
+                        Valor = "Descuento: LPS. " + txtDesc.Text;
+                        Paragraph Desc = new Paragraph(Valor);
+                        Desc.Alignment = Element.ALIGN_JUSTIFIED;
+                        Valor = "Sub-Total: LPS. " + txtSubTotal.Text;
+                        Paragraph Sub = new Paragraph(Valor);
+                        Sub.Alignment = Element.ALIGN_JUSTIFIED;
+                        Valor = "Consulta: LPS. " + txtConsulta.Text;
+                        Paragraph Consulta = new Paragraph(Valor);
+                        Consulta.Alignment = Element.ALIGN_JUSTIFIED;
+                        Valor = "Total: LPS. " + txtTotal.Text;
+                        Paragraph Total = new Paragraph(Valor);
+                        Total.Alignment = Element.ALIGN_JUSTIFIED;
+                        //Exporting to PDF
+                        string folderPath = @"D:\55\";
+                        if (!Directory.Exists(folderPath))
+                        {
+                            Directory.CreateDirectory(folderPath);
+                        }
+                        using (FileStream stream = new FileStream(folderPath + "Factura_" + txtCita.Text + ".pdf", FileMode.Create))
+                        {
+                            Document pdfDoc = new Document(PageSize.A4.Rotate(), 30f, 10f, 10f, 0f);
+                            PdfWriter.GetInstance(pdfDoc, stream);
+
+                            pdfDoc.Open();
+                            pdfDoc.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
+                            pdfDoc.Add(Parrafo);
+                            pdfDoc.Add(Espacio);
+
+                            pdfDoc.Add(pdfTable);
+                            pdfDoc.Add(Espacio);
+                            pdfDoc.Add(Med);
+                            pdfDoc.Add(Desc);
+                            pdfDoc.Add(Sub);
+                            pdfDoc.Add(Consulta);
+                            pdfDoc.Add(Total);
+                            pdfDoc.Close();
+                            stream.Close();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     Base_de_datos.Ingresar_factura(double.Parse(txtValorC.Text), double.Parse(txtTotal.Text), int.Parse(txtCita.Text));
                     Base_de_datos most = new Base_de_datos();
                     DataTable a;
@@ -205,7 +478,7 @@ namespace Hermanas_nazario
                     txtValorC.Enabled = false;
                     btnPagar.Enabled = false;
                     chkIngresar.Enabled = false;
-                    btnBuscar.Enabled = true;
+
                     txtIngresar.Enabled = false;
                     chkIngresar.Checked = false;
                     btnCancelar.Enabled = false;
@@ -234,7 +507,6 @@ namespace Hermanas_nazario
             txtValorC.Enabled = false;
             btnPagar.Enabled = false;
             chkIngresar.Enabled = false;
-            btnBuscar.Enabled = true;
             txtIngresar.Enabled = false;
             btnCancelar.Enabled = false;
             chkIngresar.Checked = false;
@@ -302,12 +574,13 @@ namespace Hermanas_nazario
 
         private void txtCita_TextChanged(object sender, EventArgs e)
         {
+
             if (btnPagar.Enabled==true)
             {
                 txtValorC.Enabled = false;
                 btnPagar.Enabled = false;
                 chkIngresar.Enabled = false;
-                btnBuscar.Enabled = true;
+
                 txtIngresar.Enabled = false;
                 btnCancelar.Enabled = false;
                 chkIngresar.Checked = false;
@@ -322,7 +595,54 @@ namespace Hermanas_nazario
                 txtConsulta.Text = "0";
                 txtCita.Focus();
             }
-            
+
+            if (!string.IsNullOrEmpty(txtCita.Text) == false)
+            {
+               
+                return;
+            }
+
+            Base_de_datos most = new Base_de_datos();
+
+            if (most.BuscarReceta(txtCita.Text) == 0)
+            {
+                txtValorC.Enabled = false;
+                btnPagar.Enabled = false;
+                chkIngresar.Enabled = false;
+                dataGridView1.DataSource = null;
+                btnCancelar.Enabled = false;
+
+            }
+            else
+            {
+
+
+                most.BuscarReceta(txtCita.Text);
+                dataGridView1.DataSource = most.Mostrar_Resultados();
+                Base_de_datos.porcentaje_riesgo(txtCita.Text);
+
+
+
+                total = Base_de_datos.total_medicamentos(txtCita.Text);
+                descuento = total * (Base_de_datos.porcentaje_riesgo(txtCita.Text) / 100);
+                totalDescuento = total - descuento;
+
+                txtMedicamentos.Text = total.ToString();
+                txtDesc.Text = totalDescuento.ToString();
+                txtSubTotal.Text = descuento.ToString();
+
+                TotalFinal = descuento;
+                txtTotal.Text = TotalFinal.ToString();
+
+                txtValorC.Enabled = true;
+                btnPagar.Enabled = true;
+                chkIngresar.Enabled = true;
+
+                btnCancelar.Enabled = true;
+
+            }
+
+
         }
 
         private void Generar_factura_Load(object sender, EventArgs e)
