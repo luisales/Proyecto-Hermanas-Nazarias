@@ -155,6 +155,12 @@ namespace Hermanas_nazario
                 sexo = "M";
             }
 
+            if (Base_de_datos.validarEmail(txtcorreo.Text) == false)
+            {
+                MessageBox.Show("El Email Ingresado no se encuentra en el Formato Correcto");
+                return;
+            }
+
             Base_de_datos.Actualizar_empleado(int.Parse(txtcodigo_empleado.Text),txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo.ToUpper(), txttel.Text, txtcargo.Text.ToUpper());
             MessageBox.Show("Empleado guardado con exito");
 

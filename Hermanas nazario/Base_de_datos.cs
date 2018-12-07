@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace Hermanas_nazario
 {
@@ -53,9 +54,9 @@ namespace Hermanas_nazario
         public static ArrayList nombremedicamento = new ArrayList();
         public static ArrayList cantidadmedicamento = new ArrayList();
         public static string Ocupacion;
-        public static string LugarT ;
-        public static string Direccion ;
-        public static string tel ;
+        public static string LugarT;
+        public static string Direccion;
+        public static string tel;
         public static string telE;
         public static string Permisos, fecha1Pa, fecha2Pa;
         public static ArrayList nombrePacientes = new ArrayList();
@@ -63,9 +64,10 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)
@@ -461,7 +463,7 @@ namespace Hermanas_nazario
                     con.Close();
 
                 }
-             
+
             }
             catch
             {
@@ -494,7 +496,7 @@ namespace Hermanas_nazario
                     con.Close();
 
                 }
-               
+
             }
             catch
             {
@@ -528,7 +530,7 @@ namespace Hermanas_nazario
                 con.Close();
 
             }
-          
+
         }
 
         public static void busqueda_factura(int id, DataGridView dgv)
@@ -774,7 +776,7 @@ namespace Hermanas_nazario
                     con.Close();
 
                 }
-            
+
             }
             catch
             {
@@ -804,7 +806,7 @@ namespace Hermanas_nazario
                     con.Close();
 
                 }
-               
+
             }
             catch
             {
@@ -1144,20 +1146,20 @@ namespace Hermanas_nazario
                 if (registro.Read())
                 {
 
-                    
-                    Nombre = ("Dr(a)."+registro["Primer_nombre_empleado"].ToString() +" "+ registro["Primer_apellido_empleado"].ToString() +" "+ registro["Segundo_apellido_empleado"].ToString());
+
+                    Nombre = ("Dr(a)." + registro["Primer_nombre_empleado"].ToString() + " " + registro["Primer_apellido_empleado"].ToString() + " " + registro["Segundo_apellido_empleado"].ToString());
                     con.Close();
                     return Nombre;
 
                 }
-                
+
 
             }
             return null;
-            
+
         }
-        
-       
+
+
         public static void esta()
         {
             SqlConnection con;
@@ -1168,7 +1170,7 @@ namespace Hermanas_nazario
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader dr = cmd.ExecuteReader();
 
-            while(dr.Read())
+            while (dr.Read())
             {
                 cantidadmedicamento.Add(dr.GetInt32(0));
                 nombremedicamento.Add(dr.GetString(1));
@@ -1189,7 +1191,7 @@ namespace Hermanas_nazario
             cmd.Parameters.Add(new SqlParameter("@fecha1", fecha1Pa));
             cmd.Parameters.Add(new SqlParameter("@fecha2", fecha2Pa));
             cmd.ExecuteNonQuery();
-                        SqlDataReader dr = cmd.ExecuteReader();
+            SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 cantidadPacientes.Add(dr.GetInt32(0));
@@ -1197,7 +1199,7 @@ namespace Hermanas_nazario
             }
 
         }
-       
+
         public static void Actualizar_cita(int codigo, string diag, string trat)
         {
             SqlConnection con;
@@ -1228,7 +1230,7 @@ namespace Hermanas_nazario
             SqlConnection con;
             con = Base_de_datos.Conectar();
 
-            con.Open(); 
+            con.Open();
             SqlCommand cmd = new SqlCommand("select b.Primer_nombre_paciente,b.Segundo_nombre_paciente, b.Primer_apellido_paciente, Diagnostico, Tratamiento from [dbo].[Citas] a inner join [dbo].[Pacientes] b on a.Codigo_expediente_paciente=b.Codigo_expediente_paciente where Codigo_cita = @id AND Diagnostico is null", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -1275,7 +1277,7 @@ namespace Hermanas_nazario
                     nombre_cita = registro["Primer_nombre_paciente"].ToString() + " " + registro["Segundo_nombre_paciente"].ToString() + " " + registro["Primer_apellido_paciente"].ToString();
                     con.Close();
                 }
-                    
+
 
             }
             else
@@ -1291,7 +1293,7 @@ namespace Hermanas_nazario
             if (ValidarRol(nombreRol) == 0)
             {
                 MessageBox.Show("Rol existente escoja otro nombre");
-                    return 0;
+                return 0;
             }
             else
             {
@@ -1313,7 +1315,7 @@ namespace Hermanas_nazario
                 finally
                 {
                     con.Close();
-                   
+
                 }
                 return 1;
             }
@@ -1329,7 +1331,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_rol  'Código del Rol', Nombre_rol 'Nombre del Rol' from[dbo].[Roles]" , con);
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo_rol  'Código del Rol', Nombre_rol 'Nombre del Rol' from[dbo].[Roles]", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1539,7 +1541,7 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
-        
+
         public void BuscarEmpleado()
         {
 
@@ -1789,7 +1791,7 @@ namespace Hermanas_nazario
 
                 if (registro.Read())
                 {
-                    codempleado=registro["Codigo_empleado"].ToString();
+                    codempleado = registro["Codigo_empleado"].ToString();
                 }
 
 
@@ -1803,7 +1805,7 @@ namespace Hermanas_nazario
             }
 
         }
-        public  void BuscarSerCod(string Cod)
+        public void BuscarSerCod(string Cod)
         {
 
 
@@ -1833,7 +1835,7 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-        public  void BuscarSerNom(string Nom)
+        public void BuscarSerNom(string Nom)
         {
 
 
@@ -2096,20 +2098,20 @@ namespace Hermanas_nazario
             {
                 con.Close();
             }
-            
+
         }
         public static int ValidarFacturaDetalle(string Cod, string id)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
-             con.Open();
+            con.Open();
             SqlCommand cmd = new SqlCommand("select * from [dbo].[Detalle_Factura_Servicio] where Codigo_facturaRec =@Cod and Codigo_servicio = @id ", con);
             cmd.Parameters.AddWithValue("id", id);
             cmd.Parameters.AddWithValue("Cod", Cod);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-             if (dt.Rows.Count >= 1)
+            if (dt.Rows.Count >= 1)
             {
                 con.Close();
                 return 0;
@@ -2253,10 +2255,10 @@ namespace Hermanas_nazario
             SqlConnection con;
             con = Conectar();
             con.Open();
-            SqlCommand cmd2 = new SqlCommand("Select b.Codigo_expediente_paciente from [dbo].[Citas] a inner join [dbo].[Pacientes] b on a.[Codigo_expediente_paciente] = b.Codigo_expediente_paciente where a.Codigo_cita ='"+Codigo_cita+"'", con);
+            SqlCommand cmd2 = new SqlCommand("Select b.Codigo_expediente_paciente from [dbo].[Citas] a inner join [dbo].[Pacientes] b on a.[Codigo_expediente_paciente] = b.Codigo_expediente_paciente where a.Codigo_cita ='" + Codigo_cita + "'", con);
             SqlDataReader registro = cmd2.ExecuteReader();
             registro.Read();
-            Codigo_expediente_paciente= int.Parse(registro["Codigo_expediente_paciente"].ToString());
+            Codigo_expediente_paciente = int.Parse(registro["Codigo_expediente_paciente"].ToString());
             con.Close();
             con.Open();
             SqlCommand cmd = new SqlCommand("Modificar_Estado", con);
@@ -2265,10 +2267,31 @@ namespace Hermanas_nazario
             cmd.Parameters.Add(new SqlParameter("@Codigo_riesgo", Codigo_riesgo));
             cmd.ExecuteNonQuery();
             con.Close();
-                    
+
+        }
+
+        public static Boolean validarEmail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
+            else
+            {
+                return false;
+            }
         }
+    }
+}
     
 
 
