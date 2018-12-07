@@ -12,8 +12,10 @@ namespace Hermanas_nazario
 {
     public partial class Modifiar_usuario : Form
     {
+       
         public Modifiar_usuario()
         {
+           
             InitializeComponent();
         }
 
@@ -31,6 +33,63 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtCodigoUsuario.Text = Convert.ToString(selectedRow.Cells[0].Value);
             txtNombreUsuario.Text = Convert.ToString(selectedRow.Cells[1].Value);
+            
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNombreUsuario.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+
+            int ver = Base_de_datos.validarNomUsuario(txtNombreUsuario.Text, txtCodigoUsuario.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Usuario ya existente");
+                return;
+            }
+
+            Base_de_datos.Actualizar_usuario(int.Parse(txtCodigoUsuario.Text), txtNombreUsuario.Text);
+
+            MessageBox.Show("Usuario modificado.");
+
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarUsuario();
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
+
+            txtCodigoUsuario.Clear();
+            txtNombreUsuario.Clear();
+            btnModificar.Enabled = false;
+
+
+
+        }
+
+        private void txtCodigoUsuario_TextChanged(object sender, EventArgs e)
+        {
+            txtNombreUsuario.Enabled = false;
+      
+            btnModificar.Enabled = false;
+
+            if ((!string.IsNullOrEmpty(txtCodigoUsuario.Text)))
+            {
+                txtNombreUsuario.Enabled = true;
+                
+                btnModificar.Enabled = true;
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkIngresar_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        
         }
     }
 }
