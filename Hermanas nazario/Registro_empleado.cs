@@ -65,6 +65,13 @@ namespace Hermanas_nazario
                 MessageBox.Show("Identidad ya existente");
                 return;
             }
+
+            if (Base_de_datos.validarEmail(txtcorreo.Text) == false)
+            {
+                MessageBox.Show("El Email Ingresado no se encuentra en el Formato Correcto");
+                return;
+            }
+
             Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper(), int.Parse(txtrol.Text));
             this.Close();
             menu a = new menu();
@@ -171,6 +178,11 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtrol.Text = Convert.ToString(selectedRow.Cells[0].Value);
             dataGridView1.Visible = false;
+        }
+
+        private void Registro_empleado_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
