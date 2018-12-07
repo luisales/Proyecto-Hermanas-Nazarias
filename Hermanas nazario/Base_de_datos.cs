@@ -1352,13 +1352,36 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-        public static int ValidarRol(string Nom)
+        public static int ValidarRol(string Nom )
         {
             SqlConnection con;
             con = Conectar();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom", con);
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom ", con);
             cmd.Parameters.AddWithValue("Nom", Nom);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count >= 1)
+            {
+                con.Close();
+                return 0;
+            }
+            else
+            {
+                con.Close();
+                return 1;
+            }
+        }
+
+        public static int ValidarRolExistente(string Nom, string Cod)
+        {
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom and Codigo_rol != @Cod", con);
+            cmd.Parameters.AddWithValue("Nom", Nom);
+            cmd.Parameters.AddWithValue("Cod", Cod);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -1378,7 +1401,7 @@ namespace Hermanas_nazario
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
-            if (ValidarRol(nombreRol) == 0)
+            if (ValidarRolExistente(nombreRol, CodigoRol.ToString()) == 0)
             {
                 MessageBox.Show("Rol existente escoja otro nombre");
                 return 0;
@@ -1681,6 +1704,32 @@ namespace Hermanas_nazario
             DataTable dt = new DataTable();
             da.Fill(dt);
 
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+
+        public static int validarServicioMod(string nombre, string codigo)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Servicios WHERE Nombre_servicio=@Nombre_servicio and Codigo_servicio != @Codigo_servicio", con);
+            cmd.Parameters.AddWithValue("Nombre_servicio", nombre);
+            cmd.Parameters.AddWithValue("Codigo_servicio", codigo);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+   
             if (dt.Rows.Count == 0)
             {
                 con.Close();
@@ -2148,14 +2197,15 @@ namespace Hermanas_nazario
             }
         }
 
-        public static int validarNomMedidaMod(string id)
+        public static int validarNomMedidaMod(string id, string nombre)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id and Codigo_medida != @nombre", con);
             cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("nombre", nombre);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -2268,6 +2318,32 @@ namespace Hermanas_nazario
             cmd.ExecuteNonQuery();
             con.Close();
 
+        }
+
+        public static int validarNomNivelMod(string id, string nom)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Riesgo_social WHERE Nombre_riesgo=@id and Codigo_riesgo != @nom", con);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("nom", nom);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
         }
 
         public static Boolean validarEmail(String email)

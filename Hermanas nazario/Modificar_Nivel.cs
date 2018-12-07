@@ -35,7 +35,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene el porcentaje");
                 return;
             }
-            int ver = Base_de_datos.validarNomNivel(txtNombreRol.Text);
+            int ver = Base_de_datos.validarNomNivelMod(txtNombreRol.Text, txtCodigoRol.Text);
             if (ver != 1)
             {
                 MessageBox.Show("Nivel ya existente");
@@ -51,6 +51,7 @@ namespace Hermanas_nazario
 
             txtCodigoRol.Clear();
             txtNombreRol.Clear();
+            textBox1.Clear();
             btnModificar.Enabled = false;
         }
 
@@ -78,17 +79,24 @@ namespace Hermanas_nazario
         {
             txtNombreRol.Enabled = false;
             btnModificar.Enabled = false;
+            textBox1.Enabled = false;
 
             if ((!string.IsNullOrEmpty(txtCodigoRol.Text)))
             {
                 txtNombreRol.Enabled = true;
                 btnModificar.Enabled = true;
+                textBox1.Enabled = true;
             }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

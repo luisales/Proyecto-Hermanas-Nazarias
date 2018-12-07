@@ -48,7 +48,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            if (Base_de_datos.validarServicio(txtNombreServicio.Text) == 0)
+            if (Base_de_datos.validarServicioMod(txtNombreServicio.Text, txtCodigo.Text) == 0)
             {
                 MessageBox.Show("Servicio ya existente");
                 return;
