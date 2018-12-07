@@ -127,12 +127,6 @@ namespace Hermanas_nazario
 
         private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Registro_de_usuario a = new Registro_de_usuario();
-            a.Show();
-            Base_de_datos.paca = 0;
-            Base_de_datos.nombrePacientes.Clear();
-            Base_de_datos.cantidadPacientes.Clear();
         }
 
         private void registarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -406,6 +400,25 @@ namespace Hermanas_nazario
         {
             Modificar_servcios a = new Modificar_servcios();
             a.ShowDialog();
+        }
+
+        private void registrarUsuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Registro_de_usuario a = new Registro_de_usuario();
+            a.Show();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
+        }
+
+        private void modificarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modifiar_usuario a = new Modifiar_usuario();
+            a.Show();
+            
         }
     }
 }
