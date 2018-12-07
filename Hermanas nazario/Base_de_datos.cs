@@ -1624,13 +1624,9 @@ namespace Hermanas_nazario
             cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
             cmd.ExecuteNonQuery();
             con.Close();
-
-
         }
         public static void BuscarPermisos(string Rol)
         {
-
-
             SqlConnection con;
             con = Conectar();
             con.Open();

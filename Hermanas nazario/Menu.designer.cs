@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,6 +80,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
+            this.serviciosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarServicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarsSerivicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -284,7 +287,8 @@
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarRolesToolStripMenuItem,
             this.medidaToolStripMenuItem,
-            this.nivelEconomicoToolStripMenuItem});
+            this.nivelEconomicoToolStripMenuItem,
+            this.serviciosToolStripMenuItem1});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -414,24 +418,24 @@
             // chart1
             // 
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea5.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
+            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Location = new System.Drawing.Point(493, 215);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.IsVisibleInLegend = false;
-            series5.Name = "Series1";
-            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            this.chart1.Series.Add(series5);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Name = "Series1";
+            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(1133, 481);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
-            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            title5.Name = "Pacientes Atendidos";
-            title5.Text = "Medicamentos mas vendidos";
-            this.chart1.Titles.Add(title5);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            title3.Name = "Pacientes Atendidos";
+            title3.Text = "Medicamentos mas vendidos";
+            this.chart1.Titles.Add(title3);
             this.chart1.Visible = false;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
@@ -467,24 +471,24 @@
             // 
             // chart2
             // 
-            chartArea6.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea6.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea6);
+            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
             this.chart2.Location = new System.Drawing.Point(493, 215);
             this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart2.Name = "chart2";
-            series6.ChartArea = "ChartArea1";
-            series6.IsVisibleInLegend = false;
-            series6.Name = "Series1";
-            series6.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            this.chart2.Series.Add(series6);
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Name = "Series1";
+            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            this.chart2.Series.Add(series4);
             this.chart2.Size = new System.Drawing.Size(1133, 481);
             this.chart2.TabIndex = 73;
             this.chart2.Text = "chart2";
-            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            title6.Name = "Title1";
-            title6.Text = "Pacientes atendidos";
-            this.chart2.Titles.Add(title6);
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            title4.Name = "Title1";
+            title4.Text = "Pacientes atendidos";
+            this.chart2.Titles.Add(title4);
             this.chart2.Visible = false;
             // 
             // label1
@@ -498,6 +502,29 @@
             this.label1.TabIndex = 75;
             this.label1.Text = "DATOS ESTADISTICOS";
             this.label1.Visible = false;
+            // 
+            // serviciosToolStripMenuItem1
+            // 
+            this.serviciosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarServicioToolStripMenuItem,
+            this.modificarsSerivicioToolStripMenuItem});
+            this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
+            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(196, 26);
+            this.serviciosToolStripMenuItem1.Text = "Servicios";
+            // 
+            // ingresarServicioToolStripMenuItem
+            // 
+            this.ingresarServicioToolStripMenuItem.Name = "ingresarServicioToolStripMenuItem";
+            this.ingresarServicioToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.ingresarServicioToolStripMenuItem.Text = "Ingresar servicio";
+            this.ingresarServicioToolStripMenuItem.Click += new System.EventHandler(this.ingresarServicioToolStripMenuItem_Click);
+            // 
+            // modificarsSerivicioToolStripMenuItem
+            // 
+            this.modificarsSerivicioToolStripMenuItem.Name = "modificarsSerivicioToolStripMenuItem";
+            this.modificarsSerivicioToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.modificarsSerivicioToolStripMenuItem.Text = "Modificar serivicio";
+            this.modificarsSerivicioToolStripMenuItem.Click += new System.EventHandler(this.modificarsSerivicioToolStripMenuItem_Click);
             // 
             // menu
             // 
@@ -577,5 +604,8 @@
         private System.Windows.Forms.ToolStripMenuItem ingresarNivelEconomicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarNivelEconomicoToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ingresarServicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarsSerivicioToolStripMenuItem;
     }
 }

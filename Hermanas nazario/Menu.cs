@@ -395,5 +395,17 @@ namespace Hermanas_nazario
             Modificar_Nivel a = new Modificar_Nivel();
             a.ShowDialog();
         }
+
+        private void ingresarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ingresar_Servicio a = new Ingresar_Servicio();
+            a.ShowDialog();
+        }
+
+        private void modificarsSerivicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modificar_servcios a = new Modificar_servcios();
+            a.ShowDialog();
+        }
     }
 }
