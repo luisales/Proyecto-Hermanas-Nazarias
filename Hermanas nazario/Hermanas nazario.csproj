@@ -190,6 +190,12 @@
     <Compile Include="Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modifcar_medicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifcar_medicamento.Designer.cs">
+      <DependentUpon>Modifcar_medicamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificacion_medida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifcar_medicamento.resx">
+      <DependentUpon>Modifcar_medicamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificacion_medida.resx">
       <DependentUpon>Modificacion_medida.cs</DependentUpon>

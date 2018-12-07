@@ -61,6 +61,7 @@ namespace Hermanas_nazario
         public static string Permisos, fecha1Pa, fecha2Pa;
         public static ArrayList nombrePacientes = new ArrayList();
         public static ArrayList cantidadPacientes = new ArrayList();
+        public static string vcodmed, vnom, vcant, vdesc, vprecio, vmedida;
 
 
         public static SqlConnection Conectar()
@@ -795,7 +796,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_medicamento  'Código Medicamento', a.Nombre_medicamento  'Nombre Medicamento',a.Cantidad_medicamento 'Cantidad',a.Descripcion_medicamento 'Descripcion Medicamento', b.Nombre_medida from [dbo].[Medicamentos] a inner join Medida b on a.Codigo_medida=b.[Codigo_medida] where a.Nombre_medicamento LIKE " + "'" + Nom + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_medicamento  'Código Medicamento', a.Nombre_medicamento  'Nombre Medicamento',a.Cantidad_medicamento 'Cantidad',a.Precio_medicamento 'Precio', a.Descripcion_medicamento 'Descripcion Medicamento', b.Nombre_medida from [dbo].[Medicamentos] a inner join Medida b on a.Codigo_medida=b.[Codigo_medida] where a.Nombre_medicamento LIKE " + "'" + Nom + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1628,6 +1629,38 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
+
+        public static int Validar_Cod_Medicamento(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Medicamentos] where Codigo_medicamento=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                SqlDataReader registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+                    Base_de_datos.vcodmed = registro["Codigo_medicamento"].ToString();
+                    Base_de_datos.vnom = registro["Nombre_medicamento"].ToString();
+                    Base_de_datos.vcant = registro["Cantidad_medicamento"].ToString();
+                    Base_de_datos.vdesc = registro["Descripcion_medicamento"].ToString();
+                    Base_de_datos.vprecio = registro["Precio_medicamento"].ToString();
+                    Base_de_datos.vmedida = registro["Codigo_medida"].ToString();
+                }
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
         public static void Actualizar_empleado(int codigo_empleado, string nombre1, string nombre2, string apellido1, string apellido2, string correo_empleado, string id_empleado, string sexo, string tel_empleado, string cargo, int rol)
         {
             SqlConnection con;
@@ -1647,6 +1680,24 @@ namespace Hermanas_nazario
             cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel_empleado));
             cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
             cmd.Parameters.Add(new SqlParameter("@Codigo_rol", rol));
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public static void Actualizar_Medicamento(int codigo, string nombre, string cant2, string desc2, string precio, string medida)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Actualizar_Medicamento", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Codigo", codigo));
+            cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
+            cmd.Parameters.Add(new SqlParameter("@Cantidad", cant2));
+            cmd.Parameters.Add(new SqlParameter("@Descripcion", desc2));
+            cmd.Parameters.Add(new SqlParameter("@Precio", precio));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_medida", medida));
             cmd.ExecuteNonQuery();
             con.Close();
         }
