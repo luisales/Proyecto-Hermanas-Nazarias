@@ -128,5 +128,10 @@ namespace Hermanas_nazario
             txtCodigoRol.Text = Convert.ToString(selectedRow.Cells[0].Value);
             txtNombreRol.Text = Convert.ToString(selectedRow.Cells[1].Value);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

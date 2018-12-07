@@ -43,7 +43,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            int ver = Base_de_datos.validarNomMedidaMod(txtNombreRol.Text);
+            int ver = Base_de_datos.validarNomMedidaMod(txtNombreRol.Text, txtCodigoRol.Text);
             if (ver != 1)
             {
                 MessageBox.Show("Medida ya existente");
