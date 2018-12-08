@@ -15,6 +15,7 @@ namespace Hermanas_nazario
         public Busqueda_citas()
         {
             InitializeComponent();
+            txtcodigo.Text = Base_de_datos.Cod;
         }
 
         private void label1_Click(object sender, EventArgs e)

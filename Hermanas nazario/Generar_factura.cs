@@ -243,7 +243,7 @@ namespace Hermanas_nazario
                     Paragraph Total = new Paragraph(Valor);
                     Total.Alignment = Element.ALIGN_JUSTIFIED;
                     //Exporting to PDF
-                    string folderPath = @"D:\55\";
+                    string folderPath = @"C:\Users\Velasquez\Documents\Facturas\";
                     if (!Directory.Exists(folderPath))
                     {
                         Directory.CreateDirectory(folderPath);
@@ -424,7 +424,7 @@ namespace Hermanas_nazario
                         Paragraph Total = new Paragraph(Valor);
                         Total.Alignment = Element.ALIGN_JUSTIFIED;
                         //Exporting to PDF
-                        string folderPath = @"D:\55\";
+                        string folderPath = @"C:\Users\Velasquez\Documents\Facturas\";
                         if (!Directory.Exists(folderPath))
                         {
                             Directory.CreateDirectory(folderPath);
@@ -659,6 +659,13 @@ namespace Hermanas_nazario
         {
             this.Hide();
             Busqueda_citas a = new Busqueda_citas();
+            a.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            menu a = new menu();
             a.Show();
         }
     }

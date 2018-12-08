@@ -32,9 +32,6 @@ namespace Hermanas_nazario
             }
             Base_de_datos.Actualizar_cita(int.Parse(Base_de_datos.cita), richTextBox1.Text, richTextBox2.Text);
             MessageBox.Show("Guardado con exito");
-            this.Hide();
-            Busqueda_citas a = new Busqueda_citas();
-            a.Show();
         }
 
         private void Diagnostico_Load(object sender, EventArgs e)
@@ -46,6 +43,13 @@ namespace Hermanas_nazario
         {
             this.Hide();
             Busqueda_citas a = new Busqueda_citas();
+            a.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Receta a = new Receta();
             a.Show();
         }
     }

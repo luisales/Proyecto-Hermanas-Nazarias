@@ -162,12 +162,16 @@ namespace Hermanas_nazario
         private void txtGencita_TextChanged(object sender, EventArgs e)
         {
             if ((!string.IsNullOrEmpty(txtGencita.Text)))
-
+            {
                 btnGencita.Enabled = true;
-
+                txtir.Enabled = true;
+            }
             else
-
+            {
                 btnGencita.Enabled = false;
+                txtir.Enabled = false;
+            }
+                
         }
         string fecha;
         private void timer1_Tick(object sender, EventArgs e)
@@ -204,6 +208,15 @@ namespace Hermanas_nazario
 
             this.Hide();
             ModifcacionPaciente a = new ModifcacionPaciente();
+            a.Show();
+        }
+
+        private void txtir_Click(object sender, EventArgs e)
+        {
+            Base_de_datos.decis = 3;
+            Base_de_datos.Cod = txtGencita.Text;
+            this.Hide();
+            Busqueda_citas a = new Busqueda_citas();
             a.Show();
         }
     }
