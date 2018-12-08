@@ -420,5 +420,12 @@ namespace Hermanas_nazario
             a.Show();
             
         }
+
+        private void modificarMedicamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modifcar_medicamento a = new Modifcar_medicamento();
+            a.Show();
+        }
     }
 }

@@ -61,14 +61,15 @@ namespace Hermanas_nazario
         public static string Permisos, fecha1Pa, fecha2Pa;
         public static ArrayList nombrePacientes = new ArrayList();
         public static ArrayList cantidadPacientes = new ArrayList();
+        public static string vcodmed, vnom, vcant, vdesc, vprecio, vmedida;
 
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=Clinica;Persist Security Info=True;User ID=sa;Password=123;");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-F8819RR;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)
@@ -95,6 +96,31 @@ namespace Hermanas_nazario
             {
                 MessageBox.Show("Usuario o contrasena incorrecta");
                 con.Close();
+                return 0;
+            }
+        }
+
+        public static int UsuarioCon(string txtcontraseña)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Contrasena_usuario from Usuarios WHERE Contrasena_usuario LIKE @usu", con);
+            cmd.Parameters.AddWithValue("usu", txtcontraseña);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                
+                return 1;
+            }
+            else
+            {
+
+                MessageBox.Show("contrasena incorrecta");
                 return 0;
             }
         }
@@ -795,7 +821,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_medicamento  'Código Medicamento', a.Nombre_medicamento  'Nombre Medicamento',a.Cantidad_medicamento 'Cantidad',a.Descripcion_medicamento 'Descripcion Medicamento', b.Nombre_medida from [dbo].[Medicamentos] a inner join Medida b on a.Codigo_medida=b.[Codigo_medida] where a.Nombre_medicamento LIKE " + "'" + Nom + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_medicamento  'Código Medicamento', a.Nombre_medicamento  'Nombre Medicamento',a.Cantidad_medicamento 'Cantidad',a.Precio_medicamento 'Precio', a.Descripcion_medicamento 'Descripcion Medicamento', b.Nombre_medida from [dbo].[Medicamentos] a inner join Medida b on a.Codigo_medida=b.[Codigo_medida] where a.Nombre_medicamento LIKE " + "'" + Nom + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1473,9 +1499,33 @@ namespace Hermanas_nazario
             {
                 con.Close();
             }
+        }
+
+            public static void Actualizar_usuario(int Codigo, string nombre)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_usuarios", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@nombre", nombre));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
 
 
         }
+
 
         public void BuscarMedida()
         {
@@ -1517,7 +1567,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_Usuario  'Codigo de Usuario', a.Nombre_usuario 'Nombre de Usuario', b.Primer_nombre_empleado 'Nombre Empleado', b.Primer_apellido_empleado 'Apellido Empleado'  from [dbo].[Usuarios] a inner join [dbo].[Empleados] b on a.[Codigo_empleado] = b.[Codigo_empleado]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo_Usuario  'Codigo de Usuario', a.Nombre_usuario 'Nombre de Usuario', b.Primer_nombre_empleado 'Nombre Empleado', b.Primer_apellido_empleado 'Apellido Empleado', a.Contrasena_Usuario 'Contraseña'  from [dbo].[Usuarios] a inner join [dbo].[Empleados] b on a.[Codigo_empleado] = b.[Codigo_empleado]", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1659,6 +1709,38 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
+
+        public static int Validar_Cod_Medicamento(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Medicamentos] where Codigo_medicamento=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                SqlDataReader registro = cmd.ExecuteReader();
+                if (registro.Read())
+                {
+                    Base_de_datos.vcodmed = registro["Codigo_medicamento"].ToString();
+                    Base_de_datos.vnom = registro["Nombre_medicamento"].ToString();
+                    Base_de_datos.vcant = registro["Cantidad_medicamento"].ToString();
+                    Base_de_datos.vdesc = registro["Descripcion_medicamento"].ToString();
+                    Base_de_datos.vprecio = registro["Precio_medicamento"].ToString();
+                    Base_de_datos.vmedida = registro["Codigo_medida"].ToString();
+                }
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
         public static void Actualizar_empleado(int codigo_empleado, string nombre1, string nombre2, string apellido1, string apellido2, string correo_empleado, string id_empleado, string sexo, string tel_empleado, string cargo, int rol)
         {
             SqlConnection con;
@@ -1678,6 +1760,24 @@ namespace Hermanas_nazario
             cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel_empleado));
             cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
             cmd.Parameters.Add(new SqlParameter("@Codigo_rol", rol));
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public static void Actualizar_Medicamento(int codigo, string nombre, string cant2, string desc2, string precio, string medida)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Actualizar_Medicamento", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Codigo", codigo));
+            cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
+            cmd.Parameters.Add(new SqlParameter("@Cantidad", cant2));
+            cmd.Parameters.Add(new SqlParameter("@Descripcion", desc2));
+            cmd.Parameters.Add(new SqlParameter("@Precio", precio));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_medida", medida));
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -2235,6 +2335,32 @@ namespace Hermanas_nazario
 
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id and Codigo_medida != @nombre", con);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("nombre", nombre);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+
+        public static int validarNomUsuario(string id, string nombre)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Usuarios WHERE Nombre_Usuario=@id and Codigo_Usuario != @nombre", con);
             cmd.Parameters.AddWithValue("id", id);
             cmd.Parameters.AddWithValue("nombre", nombre);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
