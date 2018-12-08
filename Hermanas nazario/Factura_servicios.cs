@@ -7,12 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Hermanas_nazario
 {
     public partial class Factura_servicios : Form
     {
         int CodigoS, a=0;
+        String Espace = "\n\n\n\n";
+        String Linea = "__________________________";
+        String Nombre;
+
         public Factura_servicios()
         {
             InitializeComponent();
@@ -192,8 +199,125 @@ namespace Hermanas_nazario
         {
             if (MessageBox.Show("Esta seguro desea ingresar la factura", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                String Titulo = "Dispensario Médico Hermana Nazaria";
+                String Titulo2 = "\nAguas del Padre, Siguatepeque, Comayagua\n";
+                String Head;
+
+                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+
+                iTextSharp.text.Font font = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
+                String Fecha = "";
+                int Mes = DateTime.Now.Month;
+                switch (Mes)
+                {
+                    case 1:
+                        Fecha = (DateTime.Now.Day.ToString() + " Enero del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 2:
+                        Fecha = (DateTime.Now.Day.ToString() + " Febrero del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 3:
+                        Fecha = (DateTime.Now.Day.ToString() + " Marzo del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 4:
+                        Fecha = (DateTime.Now.Day.ToString() + " Abril del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 5:
+                        Fecha = (DateTime.Now.Day.ToString() + " Mayo del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 6:
+                        Fecha = (DateTime.Now.Day.ToString() + " Junio del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 7:
+                        Fecha = (DateTime.Now.Day.ToString() + " Julio del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 8:
+                        Fecha = (DateTime.Now.Day.ToString() + " Agosto del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 9:
+                        Fecha = (DateTime.Now.Day.ToString() + " Septiembre del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 10:
+                        Fecha = (DateTime.Now.Day.ToString() + " Octubre del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 11:
+                        Fecha = (DateTime.Now.Day.ToString() + " Noviembre del " + DateTime.Now.Year.ToString());
+                        break;
+                    case 12:
+                        Fecha = (DateTime.Now.Day.ToString() + " Diciembre del " + DateTime.Now.Year.ToString());
+
+                        break;
+
+                }
+                Head = (Titulo + Titulo2 + Fecha + "\n");
+                Document doc = new Document(PageSize.LETTER, 10, 10, 42, 35);
+                try
+                {
+                    //Poner direccion bien y agregar fecha
+
+
+                    Paragraph Parrafo = new Paragraph(Head);
+                    Parrafo.Alignment = Element.ALIGN_CENTER;
+
+                    Paragraph Espacio = new Paragraph(Espace);
+
+                    //Creating iTextSharp Table from the DataTable data
+                    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+
+                    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                    foreach (DataGridViewColumn column in dataGridView1.Columns)
+                    {
+                        PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                        pdfTable.AddCell(cell);
+                    }
+
+
+                    int row = dataGridView1.Rows.Count;
+                    int cell2 = dataGridView1.Rows[0].Cells.Count;
+                    for (int x = 0; x < row; x++)
+                    {
+                        for (int j = 0; j < cell2; j++)
+                        {
+
+                            pdfTable.AddCell(dataGridView1.Rows[x].Cells[j].Value.ToString());
+                        }
+                    }
+                    string Valor;
+                    Valor = "Codigo Factura: " + lblCodigoFacturaSer.Text;
+                    Paragraph Cod = new Paragraph(Valor);
+                    Cod.Alignment = Element.ALIGN_JUSTIFIED;
+
+                    //Exporting to PDF
+                    string folderPath = @"D:\55\";
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+                    using (FileStream stream = new FileStream(folderPath + "Factura_Servicios_" + lblCodigoFacturaSer.Text + ".pdf", FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A4.Rotate(), 30f, 10f, 10f, 0f);
+                        PdfWriter.GetInstance(pdfDoc, stream);
+
+                        pdfDoc.Open();
+                        pdfDoc.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
+                        pdfDoc.Add(Parrafo);
+                        pdfDoc.Add(Espacio);
+
+                        pdfDoc.Add(pdfTable);
+                        pdfDoc.Add(Espacio);
+                        pdfDoc.Close();
+                        stream.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
                 Hide();
-                menu b= new menu();
+                menu b = new menu();
                 b.Show();
             }
         }
