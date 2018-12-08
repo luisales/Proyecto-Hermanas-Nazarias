@@ -16,6 +16,7 @@ namespace Hermanas_nazario
         public Modificar_empleado()
         {
             InitializeComponent();
+            txtcodigo_empleado.Text = Base_de_datos.Cod;
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -285,14 +286,24 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            menu a = new menu();
-            a.Show();
+            if(Base_de_datos.accesoci==1)
+            {
+                this.Hide();
+                Busqueda_empleados b = new Busqueda_empleados();
+                b.Show();
+            }
+            else
+            {
+                this.Hide();
+                menu a = new menu();
+                a.Show();
+            }
+
         }
 
         private void Modificar_empleado_Load(object sender, EventArgs e)
         {
-
+            btnbuscar.PerformClick();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)

@@ -262,25 +262,25 @@ namespace Hermanas_nazario
                     Paragraph Espacio = new Paragraph(Espace);
 
                     //Creating iTextSharp Table from the DataTable data
-                    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+                    PdfPTable pdfTable = new PdfPTable(dataGridView2.ColumnCount);
 
                     pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                    foreach (DataGridViewColumn column in dataGridView1.Columns)
+                    foreach (DataGridViewColumn column in dataGridView2.Columns)
                     {
                         PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                         pdfTable.AddCell(cell);
                     }
 
 
-                    int row = dataGridView1.Rows.Count;
-                    int cell2 = dataGridView1.Rows[0].Cells.Count;
+                    int row = dataGridView2.Rows.Count;
+                    int cell2 = dataGridView2.Rows[0].Cells.Count;
                     for (int x = 0; x < row; x++)
                     {
                         for (int j = 0; j < cell2; j++)
                         {
 
-                            pdfTable.AddCell(dataGridView1.Rows[x].Cells[j].Value.ToString());
+                            pdfTable.AddCell(dataGridView2.Rows[x].Cells[j].Value.ToString());
                         }
                     }
                     string Valor;
@@ -289,7 +289,7 @@ namespace Hermanas_nazario
                     Cod.Alignment = Element.ALIGN_JUSTIFIED;
 
                     //Exporting to PDF
-                    string folderPath = @"D:\55\";
+                    string folderPath = @"C:\Users\Velasquez\Documents\Facturas\";
                     if (!Directory.Exists(folderPath))
                     {
                         Directory.CreateDirectory(folderPath);

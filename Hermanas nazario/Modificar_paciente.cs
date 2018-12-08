@@ -373,10 +373,21 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Base_de_datos.Cod = "";
-            menu a = new menu();
-            a.Show();
+            if(Base_de_datos.accesoci==1)
+            {
+                this.Hide();
+                Base_de_datos.Cod = "";
+                Busqueda_de_pacientes b = new Busqueda_de_pacientes();
+                b.Show();
+            }
+            else
+            {
+                this.Hide();
+                Base_de_datos.Cod = "";
+                menu a = new menu();
+                a.Show();
+            }
+
         }
 
         private void txtdia_KeyPress(object sender, KeyPressEventArgs e)

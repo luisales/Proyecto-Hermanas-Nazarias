@@ -17,11 +17,11 @@ namespace Hermanas_nazario
         public static string Nombre1, codempleado;
         public static string Nombre2;
         public static string Apellido1;
-        public static int decis = 0, b, c;
+        public static int decis = 0, b, c, accesoci;
         public static string Apellid2;
         public static string Lugar;
-        public static string Fecha;
         public static string NombreP;
+        public static string Fecha;
         public static string NombreM;
         public static string nombre1_empleado;
         public static string nombre2_empleado;

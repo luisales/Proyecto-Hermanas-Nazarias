@@ -52,6 +52,7 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Base_de_datos.accesoci = 0;
             this.Hide();
             menu a = new menu();
             a.Show();
@@ -202,6 +203,7 @@ namespace Hermanas_nazario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            Base_de_datos.accesoci = 1;
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             Base_de_datos.Cod = Convert.ToString(selectedRow.Cells[0].Value);
@@ -213,6 +215,7 @@ namespace Hermanas_nazario
 
         private void txtir_Click(object sender, EventArgs e)
         {
+            Base_de_datos.accesoci = 1;
             Base_de_datos.decis = 3;
             Base_de_datos.Cod = txtGencita.Text;
             this.Hide();

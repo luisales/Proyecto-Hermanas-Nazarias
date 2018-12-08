@@ -48,10 +48,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdf = new System.Windows.Forms.RadioButton();
             this.rdm = new System.Windows.Forms.RadioButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnregistrar = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,9 +76,9 @@
             this.txttel = new System.Windows.Forms.TextBox();
             this.txtTelEmer = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,7 +101,7 @@
             // txtnom1
             // 
             this.txtnom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom1.Location = new System.Drawing.Point(341, 116);
+            this.txtnom1.Location = new System.Drawing.Point(345, 116);
             this.txtnom1.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom1.MaxLength = 30;
             this.txtnom1.Name = "txtnom1";
@@ -146,7 +146,7 @@
             // txtape1
             // 
             this.txtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtape1.Location = new System.Drawing.Point(1244, 116);
+            this.txtape1.Location = new System.Drawing.Point(1250, 116);
             this.txtape1.Margin = new System.Windows.Forms.Padding(2);
             this.txtape1.MaxLength = 30;
             this.txtape1.Name = "txtape1";
@@ -199,7 +199,7 @@
             // txtlugar
             // 
             this.txtlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlugar.Location = new System.Drawing.Point(1262, 398);
+            this.txtlugar.Location = new System.Drawing.Point(1264, 398);
             this.txtlugar.Margin = new System.Windows.Forms.Padding(2);
             this.txtlugar.MaxLength = 50;
             this.txtlugar.Name = "txtlugar";
@@ -311,6 +311,17 @@
             this.rdm.UseVisualStyleBackColor = true;
             this.rdm.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
+            this.pictureBox4.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(18, 12);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 26;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnregistrar
             // 
             this.btnregistrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -345,17 +356,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 27;
             this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox4.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(18, 12);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 26;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -467,7 +467,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox7.Location = new System.Drawing.Point(1028, 330);
+            this.pictureBox7.Location = new System.Drawing.Point(1014, 335);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(18, 12);
@@ -478,7 +478,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox9.Location = new System.Drawing.Point(1134, 332);
+            this.pictureBox9.Location = new System.Drawing.Point(1123, 335);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(18, 12);
@@ -489,7 +489,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox10.Location = new System.Drawing.Point(1241, 335);
+            this.pictureBox10.Location = new System.Drawing.Point(1236, 335);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(18, 12);
@@ -655,9 +655,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

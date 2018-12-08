@@ -45,10 +45,18 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            menu a = new Hermanas_nazario.menu();
-            a.Show();
-            
+            if(Base_de_datos.accesoci==1)
+            {
+                this.Hide();
+                Busqueda_de_pacientes b = new Busqueda_de_pacientes();
+                b.Show();
+            }
+            else
+            {
+                this.Hide();
+                menu a = new Hermanas_nazario.menu();
+                a.Show();
+            }       
         }
 
         private void txtcodigo_TextChanged(object sender, EventArgs e)

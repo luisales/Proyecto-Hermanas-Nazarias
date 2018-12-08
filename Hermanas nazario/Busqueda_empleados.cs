@@ -142,10 +142,6 @@ namespace Hermanas_nazario
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
         }
-
-        private void txtGencita_TextChanged(object sender, EventArgs e)
-        {
-        }
         string fecha;
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -156,11 +152,6 @@ namespace Hermanas_nazario
 
         private void txtId_Click(object sender, EventArgs e)
         {
-        }
-
-        private void txtGencita_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -200,6 +191,7 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            Base_de_datos.accesoci = 0;
             this.Hide();
             menu a = new menu();
             a.Show();
@@ -272,6 +264,28 @@ namespace Hermanas_nazario
             {
                 dataGridView1.DataSource = null;
             }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.DataSource != null)
+            {
+                int i = dataGridView1.CurrentRow.Index;
+                txtGencita.Text = dataGridView1[0, i].Value.ToString();
+                btnModificar.Enabled = true;
+            }
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            Base_de_datos.accesoci = 1;
+            int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+            Base_de_datos.Cod = Convert.ToString(selectedRow.Cells[0].Value);
+
+            this.Hide();
+            Modificar_empleado a = new Modificar_empleado();
+            a.Show();
         }
     }
 }

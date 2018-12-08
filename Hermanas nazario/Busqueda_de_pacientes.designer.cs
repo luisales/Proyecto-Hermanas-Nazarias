@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,12 +43,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.btnGencita = new System.Windows.Forms.Button();
-            this.txtGencita = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.txtir = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtir = new System.Windows.Forms.Button();
+            this.txtGencita = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -118,14 +118,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(531, 326);
@@ -221,18 +221,6 @@
             this.btnGencita.UseVisualStyleBackColor = false;
             this.btnGencita.Click += new System.EventHandler(this.btnGencita_Click);
             // 
-            // txtGencita
-            // 
-            this.txtGencita.Enabled = false;
-            this.txtGencita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGencita.Location = new System.Drawing.Point(1036, 523);
-            this.txtGencita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGencita.Name = "txtGencita";
-            this.txtGencita.Size = new System.Drawing.Size(111, 36);
-            this.txtGencita.TabIndex = 35;
-            this.txtGencita.Click += new System.EventHandler(this.txtGencita_Click);
-            this.txtGencita.TextChanged += new System.EventHandler(this.txtGencita_TextChanged);
-            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Tan;
@@ -246,6 +234,20 @@
             this.btnModificar.Text = "Modificar paciente";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // txtir
+            // 
+            this.txtir.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtir.Enabled = false;
+            this.txtir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtir.Location = new System.Drawing.Point(1402, 523);
+            this.txtir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtir.Name = "txtir";
+            this.txtir.Size = new System.Drawing.Size(188, 41);
+            this.txtir.TabIndex = 38;
+            this.txtir.Text = "Ir a cita";
+            this.txtir.UseVisualStyleBackColor = false;
+            this.txtir.Click += new System.EventHandler(this.txtir_Click);
             // 
             // pictureBox2
             // 
@@ -281,19 +283,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtir
+            // txtGencita
             // 
-            this.txtir.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtir.Enabled = false;
-            this.txtir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtir.Location = new System.Drawing.Point(1402, 523);
-            this.txtir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtir.Name = "txtir";
-            this.txtir.Size = new System.Drawing.Size(188, 41);
-            this.txtir.TabIndex = 38;
-            this.txtir.Text = "Ir a cita";
-            this.txtir.UseVisualStyleBackColor = false;
-            this.txtir.Click += new System.EventHandler(this.txtir_Click);
+            this.txtGencita.Enabled = false;
+            this.txtGencita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGencita.Location = new System.Drawing.Point(1036, 523);
+            this.txtGencita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtGencita.Name = "txtGencita";
+            this.txtGencita.Size = new System.Drawing.Size(111, 36);
+            this.txtGencita.TabIndex = 35;
+            this.txtGencita.Click += new System.EventHandler(this.txtGencita_Click);
+            this.txtGencita.TextChanged += new System.EventHandler(this.txtGencita_TextChanged);
             // 
             // Busqueda_de_pacientes
             // 
@@ -350,8 +350,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGencita;
-        private System.Windows.Forms.TextBox txtGencita;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button txtir;
+        private System.Windows.Forms.TextBox txtGencita;
     }
 }
