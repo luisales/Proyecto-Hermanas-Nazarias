@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Velasquez\Documents\</PublishUrl>
+    <PublishUrl>C:\Users\Velasquez\Documents\insta\insta2\insta3\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -124,16 +124,6 @@
     </Compile>
     <Compile Include="Busqueda_medicamentos.designer.cs">
       <DependentUpon>Busqueda_medicamentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Clinica.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Clinica.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Diagnostico.cs">
       <SubType>Form</SubType>
@@ -435,28 +425,6 @@
     <EmbeddedResource Include="vencimineto inventario.resx">
       <DependentUpon>vencimineto inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Clinica.xsc">
-      <DependentUpon>Clinica.xsd</DependentUpon>
-    </None>
-    <None Include="Clinica.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Clinica.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Clinica.xss">
-      <DependentUpon>Clinica.xsd</DependentUpon>
-    </None>
-    <None Include="ClinicaDataSet.xsc">
-      <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ClinicaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ClinicaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ClinicaDataSet.xss">
-      <DependentUpon>ClinicaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Hermanas nazario_ClaveTemporal.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -490,7 +458,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
