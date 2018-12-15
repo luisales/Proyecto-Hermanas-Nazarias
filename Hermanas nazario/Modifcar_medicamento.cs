@@ -127,5 +127,15 @@ namespace Hermanas_nazario
             menu a = new menu();
             a.Show();
         }
+
+        private void codigomed_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void codigomed_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+        }
     }
 }
