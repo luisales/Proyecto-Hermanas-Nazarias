@@ -91,8 +91,8 @@ namespace Hermanas_nazario
             Base_de_datos.CodMed = lblCod.Text;
             Base_de_datos.nommedi = lblNom.Text;
             Base_de_datos.cant = lblCan.Text;
-            Base_de_datos.desc = lblDes.Text;
-            Base_de_datos.unidad = txtUnidad.Text;
+            Base_de_datos.desc = txtUnidad.Text;
+            Base_de_datos.unidad = label10.Text;
            
             this.Close();
             Ingresar_medicamentoEx a = new Ingresar_medicamentoEx();
@@ -111,6 +111,7 @@ namespace Hermanas_nazario
                 lblCan.Text = Convert.ToString(selectedRow.Cells[2].Value);
                 lblDes.Text = Convert.ToString(selectedRow.Cells[3].Value);
                 txtUnidad.Text = Convert.ToString(selectedRow.Cells[4].Value);
+                label10.Text = Convert.ToString(selectedRow.Cells[5].Value);
             }
             if (radioButton2.Checked)
             {
@@ -121,6 +122,7 @@ namespace Hermanas_nazario
                 lblCan.Text = Convert.ToString(selectedRow.Cells[2].Value);
                 lblDes.Text = Convert.ToString(selectedRow.Cells[3].Value);
                 txtUnidad.Text = Convert.ToString(selectedRow.Cells[4].Value);
+                label10.Text = Convert.ToString(selectedRow.Cells[5].Value);
             }
 
 
