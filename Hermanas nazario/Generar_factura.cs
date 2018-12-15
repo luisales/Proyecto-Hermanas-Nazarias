@@ -243,7 +243,7 @@ namespace Hermanas_nazario
                     Paragraph Total = new Paragraph(Valor);
                     Total.Alignment = Element.ALIGN_JUSTIFIED;
                     //Exporting to PDF
-                    string folderPath = @"C:\Users\Velasquez\Documents\Facturas\";
+                    string folderPath = @"C:\Facturas\";
                     if (!Directory.Exists(folderPath))
                     {
                         Directory.CreateDirectory(folderPath);
@@ -424,7 +424,7 @@ namespace Hermanas_nazario
                         Paragraph Total = new Paragraph(Valor);
                         Total.Alignment = Element.ALIGN_JUSTIFIED;
                         //Exporting to PDF
-                        string folderPath = @"C:\Users\Velasquez\Documents\Facturas\";
+                        string folderPath = @"C:\Facturas\";
                         if (!Directory.Exists(folderPath))
                         {
                             Directory.CreateDirectory(folderPath);

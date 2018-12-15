@@ -196,7 +196,7 @@ namespace Hermanas_nazario
             try
             {
                 //Poner direccion bien y agregar fecha
-                PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\Velasquez\Desktop\Test.pdf", FileMode.Create));
+                PdfWriter.GetInstance(doc, new FileStream(@"C:\Facturas\Text.pdf", FileMode.Create));
                 doc.Open();
                 
                 Paragraph Parrafo = new Paragraph(txtTitulo.Text);

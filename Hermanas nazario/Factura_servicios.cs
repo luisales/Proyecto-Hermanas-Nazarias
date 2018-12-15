@@ -289,7 +289,7 @@ namespace Hermanas_nazario
                     Cod.Alignment = Element.ALIGN_JUSTIFIED;
 
                     //Exporting to PDF
-                    string folderPath = @"C:\Users\Velasquez\Documents\Facturas\";
+                    string folderPath = @"C:\Facturas\";
                     if (!Directory.Exists(folderPath))
                     {
                         Directory.CreateDirectory(folderPath);
