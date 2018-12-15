@@ -334,6 +334,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(930, 631);
             this.label7.TabIndex = 84;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label5
             // 
@@ -412,7 +413,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2374, 944);
+            this.ClientSize = new System.Drawing.Size(1828, 944);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.txtriesgo);
             this.Controls.Add(this.button5);
