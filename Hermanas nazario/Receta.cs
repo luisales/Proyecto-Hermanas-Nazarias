@@ -17,6 +17,8 @@ namespace Hermanas_nazario
             InitializeComponent();
             txtcita.Text = Base_de_datos.cita;
             Base_de_datos.decis = 1;
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarMedNom(txtnom.Text.ToUpper());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -204,7 +206,7 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged_1(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1)
+            if (radioButton1.Checked && txtnom.TextLength >= 0)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.BuscarMedNom(txtnom.Text.ToUpper());
@@ -294,6 +296,11 @@ namespace Hermanas_nazario
             this.Hide();
             Generar_factura a = new Generar_factura();
             a.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
