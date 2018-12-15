@@ -18,7 +18,8 @@ namespace Hermanas_nazario
             txtcita.Text = Base_de_datos.cita;
             Base_de_datos.decis = 1;
             Base_de_datos busc = new Base_de_datos();
-            busc.BuscarMedNom(txtnom.Text.ToUpper());
+            busc.BuscarMedNom("");
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

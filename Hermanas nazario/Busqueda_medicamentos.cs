@@ -16,7 +16,8 @@ namespace Hermanas_nazario
         {
             Base_de_datos busc = new Base_de_datos();
             InitializeComponent();
-            busc.BuscarMedNom(txtnom.Text.ToUpper());
+            busc.BuscarMedNom("");
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

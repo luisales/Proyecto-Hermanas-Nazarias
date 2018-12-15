@@ -54,7 +54,7 @@ namespace Hermanas_nazario
                 richTextBox1.Enabled = true;
                 txtUnidad.Enabled = true;
 
-
+                codigomed.Enabled = false;
             }
 
             else
@@ -108,6 +108,7 @@ namespace Hermanas_nazario
             richTextBox1.Clear();
             txtcant.Clear();
             txtprecio.Clear();
+            codigomed.Enabled = true;
         }
 
         private void label8_Click(object sender, EventArgs e)
