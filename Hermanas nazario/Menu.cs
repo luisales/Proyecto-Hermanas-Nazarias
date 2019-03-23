@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Hermanas_nazario
 {
@@ -92,9 +93,8 @@ namespace Hermanas_nazario
 
         private void registrarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Registro_pacientes a = new Registro_pacientes();
-            a.Show();
+            a.ShowDialog();
             Base_de_datos.paca = 0;
             Base_de_datos.nombrePacientes.Clear();
             Base_de_datos.cantidadPacientes.Clear();
@@ -426,6 +426,13 @@ namespace Hermanas_nazario
             this.Hide();
             Modifcar_medicamento a = new Modifcar_medicamento();
             a.Show();
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = @"C:\ModuloAyuda\index.html";
+            proceso.Start();
         }
     }
 }

@@ -56,8 +56,6 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menu a = new menu();
-            a.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -277,6 +275,26 @@ namespace Hermanas_nazario
         }
 
         private void txtape1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

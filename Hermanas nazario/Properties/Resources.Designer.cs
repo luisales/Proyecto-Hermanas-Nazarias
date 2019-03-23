@@ -153,6 +153,26 @@ namespace Hermanas_nazario.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoo {
+            get {
+                object obj = ResourceManager.GetObject("logoo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap punto_rojo {
             get {
                 object obj = ResourceManager.GetObject("punto rojo", resourceCulture);
@@ -176,6 +196,16 @@ namespace Hermanas_nazario.Properties {
         internal static System.Drawing.Bitmap Signo_más {
             get {
                 object obj = ResourceManager.GetObject("Signo_más", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sin_nombre {
+            get {
+                object obj = ResourceManager.GetObject("Sin nombre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
