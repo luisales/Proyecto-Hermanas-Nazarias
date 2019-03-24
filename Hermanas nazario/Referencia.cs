@@ -234,11 +234,6 @@ namespace Hermanas_nazario
             }
         }
 
-        private void Referencia_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkModificar.Checked==true)
@@ -258,6 +253,32 @@ namespace Hermanas_nazario
 
         private void checkBox1_CheckStateChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            Validar.solonumeros(e);
+            Validar.espacio(e);
+
+
+        }
+
+        private void txtape_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            Validar.sololetras(e);
+            Validar.espacio(e);
+
+
+        }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            Validar.sololetras(e);
+            Validar.espacio(e);
 
         }
     }

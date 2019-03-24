@@ -52,8 +52,15 @@ namespace Hermanas_nazario
                         MessageBox.Show("Permitido solo numeros");
                     }
                 }
-            
-        
+
+        public static void espacio(KeyPressEventArgs v)
+        {
+            v.Handled = char.IsWhiteSpace(v.KeyChar);
+        }
+
+       
+
+
     }
 }
  

@@ -338,6 +338,7 @@
             this.txtnom2.Name = "txtnom2";
             this.txtnom2.Size = new System.Drawing.Size(143, 30);
             this.txtnom2.TabIndex = 2;
+            this.txtnom2.TextChanged += new System.EventHandler(this.txtnom2_TextChanged);
             this.txtnom2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom2_KeyPress);
             // 
             // label3
@@ -706,6 +707,7 @@
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(160, 30);
             this.txtOcupacion.TabIndex = 10;
+            this.txtOcupacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOcupacion_KeyPress);
             // 
             // label20
             // 

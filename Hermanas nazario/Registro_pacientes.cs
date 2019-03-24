@@ -66,6 +66,8 @@ namespace Hermanas_nazario
         private void txtnom1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
+            
+
         }
 
         private void txtnom2_KeyPress(object sender, KeyPressEventArgs e)
