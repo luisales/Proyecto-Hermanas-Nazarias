@@ -87,7 +87,7 @@ namespace Hermanas_nazario
 
             if (dt.Rows.Count == 1)
             {
-                menu a = new menu();
+                Form1 a = new Form1();
                 a.Show();
                 con.Close();
                 return 1;

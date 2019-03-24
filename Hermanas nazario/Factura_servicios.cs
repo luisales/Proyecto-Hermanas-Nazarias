@@ -339,8 +339,6 @@ namespace Hermanas_nazario
             if (lblCodigoFacturaSer.Text == "*")
             {
                 this.Hide();
-                menu a = new menu();
-                a.Show();
             }
             else if ((MessageBox.Show("Esta seguro desea cancelar la factura", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes) )
             {
