@@ -260,7 +260,7 @@ namespace Hermanas_nazario
         {
             
             Validar.solonumeros(e);
-            Validar.espacio(e);
+            
 
 
         }
@@ -269,7 +269,7 @@ namespace Hermanas_nazario
         {
             
             Validar.sololetras(e);
-            Validar.espacio(e);
+            
 
 
         }
@@ -278,7 +278,7 @@ namespace Hermanas_nazario
         {
             
             Validar.sololetras(e);
-            Validar.espacio(e);
+            
 
         }
     }

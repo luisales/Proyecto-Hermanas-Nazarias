@@ -15,7 +15,11 @@ namespace Hermanas_nazario
                 {
                     v.Handled = false;
                 }
-                else if (Char.IsControl(v.KeyChar))
+            else if (char.IsWhiteSpace(v.KeyChar))
+            {
+                v.Handled = true;
+            }
+            else if (Char.IsControl(v.KeyChar))
                 {
                     v.Handled = false;
                 }
@@ -34,33 +38,39 @@ namespace Hermanas_nazario
 
                 public static void solonumeros(KeyPressEventArgs v)
                 {
-                    if (char.IsDigit(v.KeyChar))
-                    {
-                        v.Handled = false;
-                    }
-                    else if (char.IsSeparator(v.KeyChar))
-                    {
-                        v.Handled = false;
-                    }
-                    else if (char.IsControl(v.KeyChar))
-                    {
-                        v.Handled = false;
-                    }
-                    else
-                    {
-                        v.Handled = true;
-                        MessageBox.Show("Permitido solo numeros");
-                    }
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if(char.IsWhiteSpace(v.KeyChar))
+            {
+                v.Handled = true;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Permitido solo numeros");
+            }
                 }
+
 
         public static void espacio(KeyPressEventArgs v)
         {
-            v.Handled = char.IsWhiteSpace(v.KeyChar);
+           
+            if (char.IsWhiteSpace(v.KeyChar))
+            {
+                v.Handled = true;
         }
-
-       
-
 
     }
 }
- 
+}
+

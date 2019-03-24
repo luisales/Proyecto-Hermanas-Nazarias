@@ -327,7 +327,7 @@ namespace Hermanas_nazario
         private void txtnom1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
-            Validar.espacio(e);
+            
         }
 
 
@@ -335,26 +335,26 @@ namespace Hermanas_nazario
         private void txtid_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+            
         }
 
         private void txtnom2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
-            Validar.espacio(e);
+            
         }
 
         private void txtape1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
-            Validar.espacio(e);
+            
 
         }
 
         private void txtape2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
-            Validar.espacio(e);
+            
         }
 
         private void txtmadre_TextChanged(object sender, EventArgs e)
@@ -376,7 +376,7 @@ namespace Hermanas_nazario
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -401,13 +401,13 @@ namespace Hermanas_nazario
         private void txtdia_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+            
         }
 
         private void txtmes_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+           
         }
 
         private void txtanio_TextChanged(object sender, EventArgs e)
@@ -418,7 +418,7 @@ namespace Hermanas_nazario
         private void txtanio_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+            
         }
 
         string sexo;
@@ -526,13 +526,13 @@ namespace Hermanas_nazario
         private void txttel_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+           
         }
 
         private void txtTelEmer_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+            
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

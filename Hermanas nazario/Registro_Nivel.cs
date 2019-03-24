@@ -54,7 +54,7 @@ namespace Hermanas_nazario
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
-            Validar.espacio(e);
+           // Validar.espacio(e);
         }
 
         private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
