@@ -171,7 +171,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(136, 48);
-            this.btnModificar.TabIndex = 51;
+            this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -211,7 +211,7 @@
             this.txtriesgo.Margin = new System.Windows.Forms.Padding(2);
             this.txtriesgo.Name = "txtriesgo";
             this.txtriesgo.Size = new System.Drawing.Size(326, 33);
-            this.txtriesgo.TabIndex = 50;
+            this.txtriesgo.TabIndex = 13;
             this.txtriesgo.Text = "Riesgo social";
             this.txtriesgo.SelectedIndexChanged += new System.EventHandler(this.txtriesgo_SelectedIndexChanged);
             // 
@@ -257,7 +257,7 @@
             this.txtLugarTrabajo.MaxLength = 50;
             this.txtLugarTrabajo.Name = "txtLugarTrabajo";
             this.txtLugarTrabajo.Size = new System.Drawing.Size(326, 30);
-            this.txtLugarTrabajo.TabIndex = 78;
+            this.txtLugarTrabajo.TabIndex = 12;
             // 
             // txtDireccion
             // 
@@ -268,7 +268,7 @@
             this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(285, 30);
-            this.txtDireccion.TabIndex = 79;
+            this.txtDireccion.TabIndex = 16;
             // 
             // txttel
             // 
@@ -279,7 +279,7 @@
             this.txttel.MaxLength = 8;
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(160, 30);
-            this.txttel.TabIndex = 80;
+            this.txttel.TabIndex = 17;
             this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
             // 
             // txtTelEmer
@@ -291,7 +291,7 @@
             this.txtTelEmer.MaxLength = 8;
             this.txtTelEmer.Name = "txtTelEmer";
             this.txtTelEmer.Size = new System.Drawing.Size(160, 30);
-            this.txtTelEmer.TabIndex = 81;
+            this.txtTelEmer.TabIndex = 18;
             this.txtTelEmer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelEmer_KeyPress);
             // 
             // label1
@@ -314,7 +314,7 @@
             this.txtnom1.MaxLength = 30;
             this.txtnom1.Name = "txtnom1";
             this.txtnom1.Size = new System.Drawing.Size(143, 30);
-            this.txtnom1.TabIndex = 32;
+            this.txtnom1.TabIndex = 1;
             this.txtnom1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom1_KeyPress);
             // 
             // label2
@@ -337,7 +337,7 @@
             this.txtnom2.MaxLength = 30;
             this.txtnom2.Name = "txtnom2";
             this.txtnom2.Size = new System.Drawing.Size(143, 30);
-            this.txtnom2.TabIndex = 34;
+            this.txtnom2.TabIndex = 2;
             this.txtnom2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom2_KeyPress);
             // 
             // label3
@@ -360,7 +360,7 @@
             this.txtape1.MaxLength = 30;
             this.txtape1.Name = "txtape1";
             this.txtape1.Size = new System.Drawing.Size(143, 30);
-            this.txtape1.TabIndex = 36;
+            this.txtape1.TabIndex = 3;
             this.txtape1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtape1_KeyPress);
             // 
             // label4
@@ -383,7 +383,7 @@
             this.txtape2.MaxLength = 30;
             this.txtape2.Name = "txtape2";
             this.txtape2.Size = new System.Drawing.Size(143, 30);
-            this.txtape2.TabIndex = 38;
+            this.txtape2.TabIndex = 4;
             this.txtape2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtape2_KeyPress);
             // 
             // label6
@@ -406,7 +406,7 @@
             this.txtlugar.MaxLength = 50;
             this.txtlugar.Name = "txtlugar";
             this.txtlugar.Size = new System.Drawing.Size(326, 30);
-            this.txtlugar.TabIndex = 40;
+            this.txtlugar.TabIndex = 11;
             // 
             // label7
             // 
@@ -450,7 +450,7 @@
             this.txtmadre.MaxLength = 30;
             this.txtmadre.Name = "txtmadre";
             this.txtmadre.Size = new System.Drawing.Size(326, 30);
-            this.txtmadre.TabIndex = 45;
+            this.txtmadre.TabIndex = 14;
             this.txtmadre.TextChanged += new System.EventHandler(this.txtmadre_TextChanged);
             this.txtmadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmadre_KeyPress);
             // 
@@ -463,7 +463,7 @@
             this.txtpadre.MaxLength = 30;
             this.txtpadre.Name = "txtpadre";
             this.txtpadre.Size = new System.Drawing.Size(326, 30);
-            this.txtpadre.TabIndex = 46;
+            this.txtpadre.TabIndex = 15;
             this.txtpadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpadre_KeyPress);
             // 
             // label10
@@ -486,7 +486,7 @@
             this.txtid.MaxLength = 13;
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(160, 30);
-            this.txtid.TabIndex = 48;
+            this.txtid.TabIndex = 9;
             this.txtid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtid_KeyPress);
             // 
             // rdm
@@ -524,7 +524,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(266, 57);
-            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
             // pictureBox2
@@ -624,7 +624,7 @@
             this.txtdia.MaxLength = 2;
             this.txtdia.Name = "txtdia";
             this.txtdia.Size = new System.Drawing.Size(38, 30);
-            this.txtdia.TabIndex = 66;
+            this.txtdia.TabIndex = 6;
             this.txtdia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdia_KeyPress);
             // 
             // txtmes
@@ -636,7 +636,7 @@
             this.txtmes.MaxLength = 2;
             this.txtmes.Name = "txtmes";
             this.txtmes.Size = new System.Drawing.Size(38, 30);
-            this.txtmes.TabIndex = 67;
+            this.txtmes.TabIndex = 7;
             this.txtmes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmes_KeyPress);
             // 
             // txtanio
@@ -648,7 +648,7 @@
             this.txtanio.MaxLength = 4;
             this.txtanio.Name = "txtanio";
             this.txtanio.Size = new System.Drawing.Size(65, 30);
-            this.txtanio.TabIndex = 68;
+            this.txtanio.TabIndex = 8;
             this.txtanio.TextChanged += new System.EventHandler(this.txtanio_TextChanged);
             this.txtanio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtanio_KeyPress);
             // 
@@ -705,7 +705,7 @@
             this.txtOcupacion.MaxLength = 50;
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(160, 30);
-            this.txtOcupacion.TabIndex = 77;
+            this.txtOcupacion.TabIndex = 10;
             // 
             // label20
             // 
