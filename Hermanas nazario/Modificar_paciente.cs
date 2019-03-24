@@ -521,5 +521,10 @@ namespace Hermanas_nazario
         {
             Validar.solonumeros(e);
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
