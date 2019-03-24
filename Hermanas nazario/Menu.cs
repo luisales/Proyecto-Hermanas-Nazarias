@@ -211,7 +211,7 @@ namespace Hermanas_nazario
 
         private void referenciaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
+           
             Referencia a = new Referencia();
             a.Show();
             Base_de_datos.paca = 0;
@@ -356,7 +356,7 @@ namespace Hermanas_nazario
 
         private void generarFacturaDeServiciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           
             Factura_servicios a = new Factura_servicios();
             a.Show();
             Base_de_datos.paca = 0;

@@ -43,22 +43,24 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(372, 19);
+            this.label5.Location = new System.Drawing.Point(558, 48);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(485, 37);
+            this.label5.Size = new System.Drawing.Size(376, 37);
             this.label5.TabIndex = 54;
-            this.label5.Text = "MODIFICACION DE SERVICIOS";
+            this.label5.Text = "Modificacion de Servicios";
             // 
             // pictureBox1
             // 
@@ -74,10 +76,10 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(38, 139);
+            this.label1.Location = new System.Drawing.Point(9, 120);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(322, 28);
@@ -93,7 +95,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 183);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 162);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -108,11 +110,11 @@
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(772, 275);
+            this.txtDescripcion.Location = new System.Drawing.Point(999, 162);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.MaxLength = 80;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(323, 106);
+            this.txtDescripcion.Size = new System.Drawing.Size(323, 172);
             this.txtDescripcion.TabIndex = 83;
             this.txtDescripcion.Text = "";
             // 
@@ -120,17 +122,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(504, 277);
+            this.label2.Location = new System.Drawing.Point(994, 123);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 25);
+            this.label2.Size = new System.Drawing.Size(222, 25);
             this.label2.TabIndex = 82;
-            this.label2.Text = "Descripcion de servicio:";
+            this.label2.Text = "Descripcion del servicio:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox2.Location = new System.Drawing.Point(744, 229);
+            this.pictureBox2.Location = new System.Drawing.Point(711, 259);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(13, 10);
@@ -142,11 +144,11 @@
             // 
             this.txtprecio.Enabled = false;
             this.txtprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecio.Location = new System.Drawing.Point(772, 219);
+            this.txtprecio.Location = new System.Drawing.Point(728, 248);
             this.txtprecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtprecio.MaxLength = 8;
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(77, 30);
+            this.txtprecio.Size = new System.Drawing.Size(143, 30);
             this.txtprecio.TabIndex = 80;
             this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecio_KeyPress);
             // 
@@ -154,7 +156,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(554, 224);
+            this.label3.Location = new System.Drawing.Point(492, 248);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 25);
@@ -165,7 +167,7 @@
             // 
             this.txtNombreServicio.Enabled = false;
             this.txtNombreServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreServicio.Location = new System.Drawing.Point(772, 163);
+            this.txtNombreServicio.Location = new System.Drawing.Point(728, 192);
             this.txtNombreServicio.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreServicio.MaxLength = 50;
             this.txtNombreServicio.Name = "txtNombreServicio";
@@ -176,7 +178,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(744, 173);
+            this.pictureBox5.Location = new System.Drawing.Point(711, 201);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(13, 10);
@@ -186,10 +188,10 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(536, 166);
+            this.label4.Location = new System.Drawing.Point(492, 194);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 28);
@@ -201,7 +203,7 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(710, 406);
+            this.btnModificar.Location = new System.Drawing.Point(1210, 372);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(112, 43);
@@ -212,10 +214,10 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(542, 116);
+            this.label6.Location = new System.Drawing.Point(492, 144);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(201, 28);
@@ -226,7 +228,7 @@
             // 
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(772, 113);
+            this.txtCodigo.Location = new System.Drawing.Point(728, 144);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.MaxLength = 50;
             this.txtCodigo.Name = "txtCodigo";
@@ -234,11 +236,23 @@
             this.txtCodigo.TabIndex = 86;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.logoo;
+            this.pictureBox8.Location = new System.Drawing.Point(1337, 19);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(86, 78);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 87;
+            this.pictureBox8.TabStop = false;
+            // 
             // Modificar_servcios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 492);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1457, 445);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnModificar);
@@ -254,6 +268,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Modificar_servcios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar_servcios";
@@ -262,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +300,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

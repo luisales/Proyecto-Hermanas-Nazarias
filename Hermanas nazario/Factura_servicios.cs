@@ -44,10 +44,16 @@ namespace Hermanas_nazario
         private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
+            if (txtnom.Text == " ")
+                txtdescripcion.Text = " ";
+
+
         }
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
+            if (txtnom.Text == " ")
+                txtdescripcion.Text = " ";
 
             if (radioSerNombre.Checked && txtnom.TextLength >= 1)
             {
@@ -158,6 +164,7 @@ namespace Hermanas_nazario
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtdescripcion.Text = Convert.ToString(selectedRow.Cells[1].Value);
