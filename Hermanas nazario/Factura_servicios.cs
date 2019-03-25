@@ -354,8 +354,6 @@ namespace Hermanas_nazario
                 txtCod.Clear();
                 txtnom.Clear();
                 this.Hide();
-                menu a = new menu();
-                a.Show();
             }
             
         }

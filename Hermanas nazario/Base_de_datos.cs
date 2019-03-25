@@ -66,10 +66,10 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=Clinica;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)

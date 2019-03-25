@@ -21,12 +21,16 @@ namespace Hermanas_nazario
             busc.BuscarMedNom("");
             dataGridView1.DataSource = busc.Mostrar_Resultados();
         }
+        public void hola()
+        {
+            txtcita.Text = Base_de_datos.cita;
 
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Base_de_datos.accesoci = 2;
             Busqueda_citas a = new Busqueda_citas();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void txtcita_TextChanged(object sender, EventArgs e)
@@ -38,8 +42,6 @@ namespace Hermanas_nazario
         {
             this.Hide();
             Base_de_datos.cita = "";
-            menu a = new menu();
-            a.Show();
         }
 
         
