@@ -60,13 +60,13 @@ namespace Hermanas_nazario
             else
             {
                 this.Hide();
-                menu a = new Hermanas_nazario.menu();
-                a.Show();
+                
             }       
         }
 
         private void txtcodigo_TextChanged(object sender, EventArgs e)
         {
+           
             if(txtcodigo.TextLength>=1)
             Base_de_datos.busqueda_citas(int.Parse(txtcodigo.Text), dgvcitas);
         }
@@ -74,6 +74,7 @@ namespace Hermanas_nazario
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtcodigo_Click(object sender, EventArgs e)

@@ -133,6 +133,7 @@ namespace Hermanas_nazario
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void btnGencita_Click(object sender, EventArgs e)
@@ -177,24 +178,14 @@ namespace Hermanas_nazario
 
         private void txtape_TextChanged_1(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
-            {
-                Base_de_datos busc = new Base_de_datos();
-                busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
-                dataGridView1.DataSource = busc.Mostrar_Resultados();
-            }
-            else
-            {
-                dataGridView1.DataSource = null;
-            }
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             Base_de_datos.accesoci = 0;
             this.Hide();
-            menu a = new menu();
-            a.Show();
+           
         }
 
         private void Busqueda_empleados_Load(object sender, EventArgs e)
@@ -204,18 +195,7 @@ namespace Hermanas_nazario
 
         private void txtId_TextChanged_1(object sender, EventArgs e)
         {
-            if (radioButton2.Checked && txtId.TextLength == 13)
-            {
 
-                Base_de_datos busc = new Base_de_datos();
-                busc.BuscarEE(txtId.Text);
-                dataGridView1.DataSource = busc.Mostrar_Resultados();
-
-            }
-            else
-            {
-                dataGridView1.DataSource = null;
-            }
         }
 
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
@@ -254,16 +234,7 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged_1(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
-            {
-                Base_de_datos busc = new Base_de_datos();
-                busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
-                dataGridView1.DataSource = busc.Mostrar_Resultados();
-            }
-            else
-            {
-                dataGridView1.DataSource = null;
-            }
+
         }
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)

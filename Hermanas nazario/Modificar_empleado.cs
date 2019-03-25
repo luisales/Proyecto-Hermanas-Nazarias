@@ -295,8 +295,7 @@ namespace Hermanas_nazario
             else
             {
                 this.Hide();
-                menu a = new menu();
-                a.Show();
+                
             }
 
         }

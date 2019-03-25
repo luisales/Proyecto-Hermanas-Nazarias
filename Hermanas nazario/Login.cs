@@ -74,5 +74,20 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
     }
 }

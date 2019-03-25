@@ -78,7 +78,7 @@ namespace Hermanas_nazario
         private void button2_Click(object sender, EventArgs e)
         {
             Base_de_datos.CodMed = lblCod.Text;
-            this.Close();
+            this.Hide();
             venc a = new venc();
             a.Show();
 

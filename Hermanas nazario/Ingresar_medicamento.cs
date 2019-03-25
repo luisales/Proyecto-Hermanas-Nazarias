@@ -88,8 +88,7 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menu a = new menu();
-            a.Show();
+            
         }
         string fecha;
         private void timer1_Tick(object sender, EventArgs e)

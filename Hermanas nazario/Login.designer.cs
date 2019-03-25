@@ -55,6 +55,8 @@
             resources.ApplyResources(this.txtusuario, "txtusuario");
             this.txtusuario.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtusuario.Name = "txtusuario";
+            this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // label1
             // 
@@ -76,6 +78,7 @@
             this.txtcontraseña.BackColor = System.Drawing.SystemColors.ButtonFace;
             resources.ApplyResources(this.txtcontraseña, "txtcontraseña");
             this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
             // 
             // btningresar
             // 

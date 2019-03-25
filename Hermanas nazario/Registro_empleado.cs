@@ -132,8 +132,7 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menu a = new menu();
-            a.Show();
+            
         }
 
         private void txtcorreo_TextChanged(object sender, EventArgs e)

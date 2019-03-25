@@ -96,5 +96,11 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+
+        }
     }
 }

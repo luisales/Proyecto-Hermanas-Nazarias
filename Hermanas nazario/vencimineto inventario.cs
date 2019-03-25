@@ -112,6 +112,7 @@ namespace Hermanas_nazario
         private void txtrem_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
 
         }
 

@@ -54,8 +54,7 @@ namespace Hermanas_nazario
         {
             Base_de_datos.accesoci = 0;
             this.Hide();
-            menu a = new menu();
-            a.Show();
+            
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -139,6 +138,7 @@ namespace Hermanas_nazario
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void btnGencita_Click(object sender, EventArgs e)

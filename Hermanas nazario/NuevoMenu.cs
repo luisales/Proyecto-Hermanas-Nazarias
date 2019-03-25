@@ -11,9 +11,9 @@ using System.Diagnostics;
 
 namespace Hermanas_nazario
 {
-    public partial class Form1 : Form
+    public partial class NuevoMenu : Form
     {
-        public Form1()
+        public NuevoMenu()
         {
             InitializeComponent();
             panel1.Visible = false;
