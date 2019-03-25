@@ -538,6 +538,7 @@ namespace Hermanas_nazario
         private void txtCita_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+
         }
 
         private void txtValorC_TextChanged(object sender, EventArgs e)
@@ -570,6 +571,7 @@ namespace Hermanas_nazario
         private void txtIngresar_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtCita_TextChanged(object sender, EventArgs e)
@@ -667,6 +669,11 @@ namespace Hermanas_nazario
             this.Hide();
             menu a = new menu();
             a.Show();
+        }
+
+        private void Generar_factura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
         }
     }
 }

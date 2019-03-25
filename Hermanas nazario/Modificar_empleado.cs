@@ -321,6 +321,11 @@ namespace Hermanas_nazario
             txtrol.Text = Convert.ToString(selectedRow.Cells[0].Value);
             dataGridView1.Visible = false;
         }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

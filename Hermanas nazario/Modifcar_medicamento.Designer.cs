@@ -41,9 +41,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.codigomed = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.codigomed = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +54,10 @@
             "Caja",
             "Unidad",
             "Frasco"});
-            this.txtUnidad.Location = new System.Drawing.Point(1166, 745);
-            this.txtUnidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnidad.Location = new System.Drawing.Point(577, 489);
+            this.txtUnidad.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtUnidad.Name = "txtUnidad";
-            this.txtUnidad.Size = new System.Drawing.Size(156, 28);
+            this.txtUnidad.Size = new System.Drawing.Size(105, 21);
             this.txtUnidad.TabIndex = 92;
             this.txtUnidad.Text = "Medida";
             this.txtUnidad.SelectedIndexChanged += new System.EventHandler(this.txtUnidad_SelectedIndexChanged);
@@ -66,9 +66,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(873, 739);
+            this.label8.Location = new System.Drawing.Point(382, 485);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(264, 36);
+            this.label8.Size = new System.Drawing.Size(176, 25);
             this.label8.TabIndex = 91;
             this.label8.Text = "Unidad de medida:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -77,10 +78,10 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(1065, 835);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(510, 548);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(168, 66);
+            this.btnBuscar.Size = new System.Drawing.Size(112, 43);
             this.btnBuscar.TabIndex = 88;
             this.btnBuscar.Text = "Ingresar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -89,81 +90,91 @@
             // txtprecio
             // 
             this.txtprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecio.Location = new System.Drawing.Point(1185, 641);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtprecio.Location = new System.Drawing.Point(590, 422);
+            this.txtprecio.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtprecio.MaxLength = 8;
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(113, 41);
+            this.txtprecio.Size = new System.Drawing.Size(77, 30);
             this.txtprecio.TabIndex = 87;
+            this.txtprecio.TextChanged += new System.EventHandler(this.txtprecio_TextChanged);
+            this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecio_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(827, 641);
+            this.label3.Location = new System.Drawing.Point(351, 422);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(340, 36);
+            this.label3.Size = new System.Drawing.Size(227, 25);
             this.label3.TabIndex = 86;
             this.label3.Text = "Precio de medicamento: ";
             // 
             // txtcant
             // 
             this.txtcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcant.Location = new System.Drawing.Point(1185, 558);
-            this.txtcant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcant.Location = new System.Drawing.Point(590, 368);
+            this.txtcant.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtcant.MaxLength = 8;
             this.txtcant.Name = "txtcant";
-            this.txtcant.Size = new System.Drawing.Size(113, 41);
+            this.txtcant.Size = new System.Drawing.Size(77, 30);
             this.txtcant.TabIndex = 85;
+            this.txtcant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcant_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(827, 558);
+            this.label2.Location = new System.Drawing.Point(351, 368);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 36);
+            this.label2.Size = new System.Drawing.Size(193, 25);
             this.label2.TabIndex = 84;
             this.label2.Text = "Cantidad a ingresar: ";
             // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(831, 392);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(354, 260);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.richTextBox1.MaxLength = 80;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(561, 119);
+            this.richTextBox1.Size = new System.Drawing.Size(375, 79);
             this.richTextBox1.TabIndex = 83;
             this.richTextBox1.Text = "";
+            this.richTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(827, 352);
+            this.label1.Location = new System.Drawing.Point(351, 234);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 36);
+            this.label1.Size = new System.Drawing.Size(269, 25);
             this.label1.TabIndex = 82;
             this.label1.Text = "Descripcion de medicamento:";
             // 
             // txtnom
             // 
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.Location = new System.Drawing.Point(1185, 260);
-            this.txtnom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtnom.Location = new System.Drawing.Point(590, 174);
+            this.txtnom.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(212, 41);
+            this.txtnom.Size = new System.Drawing.Size(143, 30);
             this.txtnom.TabIndex = 81;
+            this.txtnom.TextChanged += new System.EventHandler(this.txtnom_TextChanged);
+            this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(827, 260);
+            this.label11.Location = new System.Drawing.Point(351, 174);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(360, 36);
+            this.label11.Size = new System.Drawing.Size(241, 25);
             this.label11.TabIndex = 80;
             this.label11.Text = "Nombre de medicamento: ";
             // 
@@ -171,9 +182,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(824, 51);
+            this.label5.Location = new System.Drawing.Point(349, 38);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(666, 55);
+            this.label5.Size = new System.Drawing.Size(442, 37);
             this.label5.TabIndex = 79;
             this.label5.Text = "MODIFICAR MEDICAMENTO";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -181,34 +193,22 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1317, 152);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(678, 104);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 58);
+            this.button1.Size = new System.Drawing.Size(91, 38);
             this.button1.TabIndex = 95;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // codigomed
-            // 
-            this.codigomed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigomed.Location = new System.Drawing.Point(1185, 160);
-            this.codigomed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.codigomed.MaxLength = 8;
-            this.codigomed.Name = "codigomed";
-            this.codigomed.Size = new System.Drawing.Size(95, 41);
-            this.codigomed.TabIndex = 94;
-            this.codigomed.TextChanged += new System.EventHandler(this.codigomed_TextChanged);
-            this.codigomed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.codigomed_KeyPress);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(816, 169);
+            this.label9.Location = new System.Drawing.Point(344, 115);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(351, 36);
+            this.label9.Size = new System.Drawing.Size(235, 25);
             this.label9.TabIndex = 93;
             this.label9.Text = "Codigo de medicamento: ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -217,19 +217,32 @@
             // 
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
             this.pictureBox1.TabIndex = 96;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // codigomed
+            // 
+            this.codigomed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigomed.Location = new System.Drawing.Point(590, 109);
+            this.codigomed.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.codigomed.MaxLength = 8;
+            this.codigomed.Name = "codigomed";
+            this.codigomed.Size = new System.Drawing.Size(65, 30);
+            this.codigomed.TabIndex = 94;
+            this.codigomed.TextChanged += new System.EventHandler(this.codigomed_TextChanged);
+            this.codigomed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.codigomed_KeyPress);
+            // 
             // Modifcar_medicamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1479, 928);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1055, 603);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.codigomed);
@@ -246,10 +259,12 @@
             this.Controls.Add(this.txtnom);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Modifcar_medicamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modifcar_medicamento";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Modifcar_medicamento_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,8 +286,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox codigomed;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox codigomed;
     }
 }

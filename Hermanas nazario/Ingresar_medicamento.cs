@@ -107,6 +107,7 @@ namespace Hermanas_nazario
         private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
+            Validar.espacio(e);
         }
 
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -117,16 +118,35 @@ namespace Hermanas_nazario
         private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtprecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+        }
+
+        private void txtcant_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void txtprecio_TextChanged(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void txtUnidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

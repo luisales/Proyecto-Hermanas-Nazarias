@@ -136,6 +136,44 @@ namespace Hermanas_nazario
         private void codigomed_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
+        }
+
+        private void txtnom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Modifcar_medicamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+            Validar.espacio(e);
+        }
+
+        private void txtprecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtprecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+            Validar.espacio(e);
+        }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

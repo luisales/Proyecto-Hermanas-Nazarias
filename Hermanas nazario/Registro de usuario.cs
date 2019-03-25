@@ -112,6 +112,28 @@ namespace Hermanas_nazario
         private void txtprof_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = char.IsWhiteSpace(e.KeyChar);
+            Validar.espacio(e);
+            Validar.sololetras(e);
+        }
+
+        private void txtusu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtcontra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtconf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtconf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
         }
     }
 }

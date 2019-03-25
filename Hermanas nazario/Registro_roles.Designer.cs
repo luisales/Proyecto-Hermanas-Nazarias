@@ -91,6 +91,7 @@
             this.txtNombreRol.Name = "txtNombreRol";
             this.txtNombreRol.Size = new System.Drawing.Size(143, 30);
             this.txtNombreRol.TabIndex = 41;
+            this.txtNombreRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreRol_KeyPress);
             // 
             // pictureBox5
             // 
@@ -119,7 +120,7 @@
             // 
             this.chkMantenimientos.AutoSize = true;
             this.chkMantenimientos.Location = new System.Drawing.Point(488, 276);
-            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2);
             this.chkMantenimientos.Name = "chkMantenimientos";
             this.chkMantenimientos.Size = new System.Drawing.Size(100, 17);
             this.chkMantenimientos.TabIndex = 74;
@@ -142,7 +143,7 @@
             // 
             this.chkDocumentos.AutoSize = true;
             this.chkDocumentos.Location = new System.Drawing.Point(488, 257);
-            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2);
             this.chkDocumentos.Name = "chkDocumentos";
             this.chkDocumentos.Size = new System.Drawing.Size(86, 17);
             this.chkDocumentos.TabIndex = 72;
@@ -153,7 +154,7 @@
             // 
             this.chkInventario.AutoSize = true;
             this.chkInventario.Location = new System.Drawing.Point(488, 237);
-            this.chkInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkInventario.Margin = new System.Windows.Forms.Padding(2);
             this.chkInventario.Name = "chkInventario";
             this.chkInventario.Size = new System.Drawing.Size(73, 17);
             this.chkInventario.TabIndex = 71;
@@ -164,7 +165,7 @@
             // 
             this.chkFacturacion.AutoSize = true;
             this.chkFacturacion.Location = new System.Drawing.Point(488, 216);
-            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2);
             this.chkFacturacion.Name = "chkFacturacion";
             this.chkFacturacion.Size = new System.Drawing.Size(82, 17);
             this.chkFacturacion.TabIndex = 70;
@@ -175,7 +176,7 @@
             // 
             this.chkUsuarios.AutoSize = true;
             this.chkUsuarios.Location = new System.Drawing.Point(488, 196);
-            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.chkUsuarios.Name = "chkUsuarios";
             this.chkUsuarios.Size = new System.Drawing.Size(107, 17);
             this.chkUsuarios.TabIndex = 69;
@@ -186,7 +187,7 @@
             // 
             this.chkEmpleados.AutoSize = true;
             this.chkEmpleados.Location = new System.Drawing.Point(488, 176);
-            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.chkEmpleados.Name = "chkEmpleados";
             this.chkEmpleados.Size = new System.Drawing.Size(123, 17);
             this.chkEmpleados.TabIndex = 68;
@@ -197,7 +198,7 @@
             // 
             this.chkPacientes.AutoSize = true;
             this.chkPacientes.Location = new System.Drawing.Point(488, 156);
-            this.chkPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.chkPacientes.Name = "chkPacientes";
             this.chkPacientes.Size = new System.Drawing.Size(73, 17);
             this.chkPacientes.TabIndex = 67;
@@ -208,6 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(675, 319);
             this.Controls.Add(this.chkMantenimientos);
             this.Controls.Add(this.label2);
@@ -223,6 +225,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro_roles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_roles";

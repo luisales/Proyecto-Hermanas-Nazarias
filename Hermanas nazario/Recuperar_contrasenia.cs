@@ -45,5 +45,15 @@ namespace Hermanas_nazario
             Login a = new Login();
             a.Show();
         }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtprof_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
     }
 }

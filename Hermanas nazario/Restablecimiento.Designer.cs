@@ -52,7 +52,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(9, 10);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(601, 84);
             this.panel3.TabIndex = 12;
@@ -75,7 +75,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(9, 399);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(601, 67);
             this.panel2.TabIndex = 11;
@@ -116,7 +116,7 @@
             this.panel1.Controls.Add(this.btningresar);
             this.panel1.Controls.Add(this.txtconf);
             this.panel1.Location = new System.Drawing.Point(9, 89);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 312);
             this.panel1.TabIndex = 10;
@@ -125,7 +125,7 @@
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
             this.pictureBox2.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,6 +174,7 @@
             this.txtcontra.Size = new System.Drawing.Size(301, 20);
             this.txtcontra.TabIndex = 0;
             this.txtcontra.TextChanged += new System.EventHandler(this.txtcontra_TextChanged);
+            this.txtcontra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontra_KeyPress);
             // 
             // btningresar
             // 
@@ -201,6 +202,7 @@
             this.txtconf.Size = new System.Drawing.Size(301, 20);
             this.txtconf.TabIndex = 2;
             this.txtconf.TextChanged += new System.EventHandler(this.txtconf_TextChanged);
+            this.txtconf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtconf_KeyPress);
             // 
             // Restablecimiento
             // 
@@ -211,7 +213,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Restablecimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Restablecimiento";

@@ -86,6 +86,18 @@ namespace Hermanas_nazario
         private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
+        }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtprecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+            Validar.solonumeros(e);
         }
     }
 }

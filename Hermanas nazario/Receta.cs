@@ -144,7 +144,7 @@ namespace Hermanas_nazario
 
         private void Receta_Load(object sender, EventArgs e)
         {
-
+            this.txtnom.Focus();
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -177,6 +177,7 @@ namespace Hermanas_nazario
         private void txtCod_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtnom_TextChanged(object sender, EventArgs e)
@@ -187,11 +188,12 @@ namespace Hermanas_nazario
         private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.sololetras(e);
+            Validar.espacio(e);
         }
 
         private void txtCod_TextChanged(object sender, EventArgs e)
         {
-
+            
 
             if (radioButton2.Checked && txtCod.TextLength >= 1)
             {
@@ -207,6 +209,7 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged_1(object sender, EventArgs e)
         {
+            
             if (radioButton1.Checked && txtnom.TextLength >= 0)
             {
                 Base_de_datos busc = new Base_de_datos();
@@ -220,16 +223,19 @@ namespace Hermanas_nazario
         private void txtcita_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtmedicamento_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            Validar.espacio(e);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -302,6 +308,16 @@ namespace Hermanas_nazario
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtmedicamento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
         }
     }
 }

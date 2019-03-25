@@ -61,5 +61,15 @@ namespace Hermanas_nazario
             Recuperar_contrasenia a = new Recuperar_contrasenia();
             a.Show();
         }
+
+        private void txtcontra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtconf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
     }
 }
