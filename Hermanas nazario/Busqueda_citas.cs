@@ -51,6 +51,12 @@ namespace Hermanas_nazario
                 Busqueda_de_pacientes b = new Busqueda_de_pacientes();
                 b.Show();
             }
+            if (Base_de_datos.accesoci == 2)
+            {
+                this.Hide();
+                Busqueda_de_pacientes b = new Busqueda_de_pacientes();
+                b.Show();
+            }
             else
             {
                 this.Hide();
@@ -82,9 +88,10 @@ namespace Hermanas_nazario
                 {
                     int i = dgvcitas.CurrentRow.Index;
                     Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
-                    this.Hide();
                     Receta a = new Receta();
-                    a.Show();
+                    a.txtcita.Text = Base_de_datos.cita;
+                    this.Hide();
+
                 }
                 else if(Base_de_datos.decis == 2)
                 {

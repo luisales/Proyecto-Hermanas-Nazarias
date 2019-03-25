@@ -29,8 +29,6 @@ namespace Hermanas_nazario
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menu a = new menu();
-            a.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
