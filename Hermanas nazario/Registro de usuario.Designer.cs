@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_de_usuario));
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +49,13 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -56,15 +64,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(453, 51);
+            this.label5.Location = new System.Drawing.Point(338, 40);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(436, 54);
+            this.label5.Size = new System.Drawing.Size(355, 44);
             this.label5.TabIndex = 11;
             this.label5.Text = "Registro de Usuario";
             // 
@@ -74,10 +87,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(73, 256);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label2.Location = new System.Drawing.Point(133, 189);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 29);
+            this.label2.Size = new System.Drawing.Size(125, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Contraseña: ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -87,10 +100,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(73, 173);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label1.Location = new System.Drawing.Point(172, 141);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 34);
+            this.label1.Size = new System.Drawing.Size(86, 28);
             this.label1.TabIndex = 13;
             this.label1.Text = "Usuario:";
             // 
@@ -99,10 +112,9 @@
             this.btningresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btningresar.Location = new System.Drawing.Point(889, 312);
-            this.btningresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btningresar.Location = new System.Drawing.Point(450, 341);
             this.btningresar.Name = "btningresar";
-            this.btningresar.Size = new System.Drawing.Size(159, 55);
+            this.btningresar.Size = new System.Drawing.Size(119, 45);
             this.btningresar.TabIndex = 16;
             this.btningresar.Text = "Registrar";
             this.btningresar.UseVisualStyleBackColor = false;
@@ -111,23 +123,23 @@
             // txtusu
             // 
             this.txtusu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusu.Location = new System.Drawing.Point(377, 169);
-            this.txtusu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtusu.Location = new System.Drawing.Point(283, 137);
+            this.txtusu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtusu.MaxLength = 30;
             this.txtusu.Name = "txtusu";
-            this.txtusu.Size = new System.Drawing.Size(189, 36);
+            this.txtusu.Size = new System.Drawing.Size(143, 30);
             this.txtusu.TabIndex = 33;
             this.txtusu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusu_KeyPress);
             // 
             // txtcontra
             // 
             this.txtcontra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontra.Location = new System.Drawing.Point(377, 256);
-            this.txtcontra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcontra.Location = new System.Drawing.Point(283, 186);
+            this.txtcontra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcontra.MaxLength = 30;
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.PasswordChar = '*';
-            this.txtcontra.Size = new System.Drawing.Size(189, 36);
+            this.txtcontra.Size = new System.Drawing.Size(143, 30);
             this.txtcontra.TabIndex = 34;
             this.txtcontra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontra_KeyPress);
             // 
@@ -137,10 +149,10 @@
             this.label.BackColor = System.Drawing.Color.Transparent;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label.Location = new System.Drawing.Point(683, 238);
-            this.label.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label.Location = new System.Drawing.Point(593, 193);
+            this.label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(226, 29);
+            this.label.Size = new System.Drawing.Size(177, 25);
             this.label.TabIndex = 35;
             this.label.Text = "Codigo empleado: ";
             this.label.Click += new System.EventHandler(this.txtemp_Click);
@@ -149,11 +161,11 @@
             // 
             this.txtemp.Enabled = false;
             this.txtemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemp.Location = new System.Drawing.Point(1060, 234);
-            this.txtemp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtemp.Location = new System.Drawing.Point(795, 190);
+            this.txtemp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtemp.MaxLength = 8;
             this.txtemp.Name = "txtemp";
-            this.txtemp.Size = new System.Drawing.Size(87, 36);
+            this.txtemp.Size = new System.Drawing.Size(66, 30);
             this.txtemp.TabIndex = 36;
             this.txtemp.TextChanged += new System.EventHandler(this.txtemp_TextChanged);
             this.txtemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemp_KeyPress);
@@ -164,22 +176,22 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(73, 338);
-            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label3.Location = new System.Drawing.Point(57, 235);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(270, 29);
+            this.label3.Size = new System.Drawing.Size(210, 25);
             this.label3.TabIndex = 59;
             this.label3.Text = "Confirmar contraseña: ";
             // 
             // txtconf
             // 
             this.txtconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtconf.Location = new System.Drawing.Point(377, 332);
-            this.txtconf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtconf.Location = new System.Drawing.Point(283, 230);
+            this.txtconf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtconf.MaxLength = 30;
             this.txtconf.Name = "txtconf";
             this.txtconf.PasswordChar = '*';
-            this.txtconf.Size = new System.Drawing.Size(189, 36);
+            this.txtconf.Size = new System.Drawing.Size(143, 30);
             this.txtconf.TabIndex = 60;
             this.txtconf.TextChanged += new System.EventHandler(this.txtconf_TextChanged);
             this.txtconf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtconf_KeyPress);
@@ -187,10 +199,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox4.Location = new System.Drawing.Point(352, 347);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(264, 242);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox4.Size = new System.Drawing.Size(13, 10);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 61;
             this.pictureBox4.TabStop = false;
@@ -198,10 +210,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox3.Location = new System.Drawing.Point(1036, 254);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(777, 206);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox3.Size = new System.Drawing.Size(13, 10);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 58;
             this.pictureBox3.TabStop = false;
@@ -209,10 +221,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox2.Location = new System.Drawing.Point(353, 270);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(264, 196);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox2.Size = new System.Drawing.Size(13, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
@@ -220,22 +232,23 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(352, 182);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(264, 148);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox5.Size = new System.Drawing.Size(13, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 56;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -246,21 +259,21 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(678, 173);
-            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label4.Location = new System.Drawing.Point(512, 140);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(341, 29);
+            this.label4.Size = new System.Drawing.Size(263, 25);
             this.label4.TabIndex = 62;
             this.label4.Text = "Nombre de profesor favorito: ";
             // 
             // txtprof
             // 
             this.txtprof.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprof.Location = new System.Drawing.Point(1055, 170);
-            this.txtprof.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtprof.Location = new System.Drawing.Point(791, 138);
+            this.txtprof.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtprof.MaxLength = 50;
             this.txtprof.Name = "txtprof";
-            this.txtprof.Size = new System.Drawing.Size(189, 36);
+            this.txtprof.Size = new System.Drawing.Size(143, 30);
             this.txtprof.TabIndex = 63;
             this.txtprof.TextChanged += new System.EventHandler(this.txtprof_TextChanged);
             this.txtprof.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprof_KeyPress);
@@ -268,22 +281,23 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox6.Location = new System.Drawing.Point(1031, 186);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(773, 151);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox6.Size = new System.Drawing.Size(13, 10);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 64;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox7.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
-            this.pictureBox7.Location = new System.Drawing.Point(1153, 238);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(865, 193);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox7.Size = new System.Drawing.Size(22, 23);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 70;
             this.pictureBox7.TabStop = false;
@@ -298,48 +312,228 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(688, 295);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(517, 247);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(556, 91);
+            this.dataGridView1.Size = new System.Drawing.Size(417, 74);
             this.dataGridView1.TabIndex = 71;
             this.dataGridView1.Visible = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox9);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox7);
+            this.bunifuGradientPanel1.Controls.Add(this.panel7);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Controls.Add(this.label2);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox4);
+            this.bunifuGradientPanel1.Controls.Add(this.label4);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.txtconf);
+            this.bunifuGradientPanel1.Controls.Add(this.label5);
+            this.bunifuGradientPanel1.Controls.Add(this.label3);
+            this.bunifuGradientPanel1.Controls.Add(this.label);
+            this.bunifuGradientPanel1.Controls.Add(this.btningresar);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
+            this.bunifuGradientPanel1.Controls.Add(this.txtcontra);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DarkRed;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1034, 398);
+            this.bunifuGradientPanel1.TabIndex = 106;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = global::Hermanas_nazario.Properties.Resources.logoo;
+            this.pictureBox9.Location = new System.Drawing.Point(907, 12);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(76, 72);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 104;
+            this.pictureBox9.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.Window;
+            this.panel7.Controls.Add(this.bunifuFlatButton24);
+            this.panel7.Controls.Add(this.bunifuFlatButton26);
+            this.panel7.Controls.Add(this.bunifuFlatButton27);
+            this.panel7.Controls.Add(this.bunifuFlatButton28);
+            this.panel7.Location = new System.Drawing.Point(10, 704);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(257, 99);
+            this.panel7.TabIndex = 4;
+            // 
+            // bunifuFlatButton24
+            // 
+            this.bunifuFlatButton24.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton24.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton24.BorderRadius = 0;
+            this.bunifuFlatButton24.ButtonText = "Nivel economico";
+            this.bunifuFlatButton24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton24.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton24.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton24.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton24.Iconimage")));
+            this.bunifuFlatButton24.Iconimage_right = null;
+            this.bunifuFlatButton24.Iconimage_right_Selected = null;
+            this.bunifuFlatButton24.Iconimage_Selected = null;
+            this.bunifuFlatButton24.IconMarginLeft = 0;
+            this.bunifuFlatButton24.IconMarginRight = 0;
+            this.bunifuFlatButton24.IconRightVisible = true;
+            this.bunifuFlatButton24.IconRightZoom = 0D;
+            this.bunifuFlatButton24.IconVisible = true;
+            this.bunifuFlatButton24.IconZoom = 90D;
+            this.bunifuFlatButton24.IsTab = false;
+            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 73);
+            this.bunifuFlatButton24.Name = "bunifuFlatButton24";
+            this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton24.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton24.selected = true;
+            this.bunifuFlatButton24.Size = new System.Drawing.Size(257, 28);
+            this.bunifuFlatButton24.TabIndex = 8;
+            this.bunifuFlatButton24.Text = "Nivel economico";
+            this.bunifuFlatButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton24.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton24.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton26
+            // 
+            this.bunifuFlatButton26.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton26.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton26.BorderRadius = 0;
+            this.bunifuFlatButton26.ButtonText = "Rol";
+            this.bunifuFlatButton26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton26.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton26.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton26.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton26.Iconimage")));
+            this.bunifuFlatButton26.Iconimage_right = null;
+            this.bunifuFlatButton26.Iconimage_right_Selected = null;
+            this.bunifuFlatButton26.Iconimage_Selected = null;
+            this.bunifuFlatButton26.IconMarginLeft = 0;
+            this.bunifuFlatButton26.IconMarginRight = 0;
+            this.bunifuFlatButton26.IconRightVisible = true;
+            this.bunifuFlatButton26.IconRightZoom = 0D;
+            this.bunifuFlatButton26.IconVisible = true;
+            this.bunifuFlatButton26.IconZoom = 90D;
+            this.bunifuFlatButton26.IsTab = false;
+            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 24);
+            this.bunifuFlatButton26.Name = "bunifuFlatButton26";
+            this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton26.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton26.selected = true;
+            this.bunifuFlatButton26.Size = new System.Drawing.Size(257, 26);
+            this.bunifuFlatButton26.TabIndex = 6;
+            this.bunifuFlatButton26.Text = "Rol";
+            this.bunifuFlatButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton26.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton26.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton27
+            // 
+            this.bunifuFlatButton27.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton27.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton27.BorderRadius = 0;
+            this.bunifuFlatButton27.ButtonText = "Servicio";
+            this.bunifuFlatButton27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton27.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton27.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton27.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton27.Iconimage")));
+            this.bunifuFlatButton27.Iconimage_right = null;
+            this.bunifuFlatButton27.Iconimage_right_Selected = null;
+            this.bunifuFlatButton27.Iconimage_Selected = null;
+            this.bunifuFlatButton27.IconMarginLeft = 0;
+            this.bunifuFlatButton27.IconMarginRight = 0;
+            this.bunifuFlatButton27.IconRightVisible = true;
+            this.bunifuFlatButton27.IconRightZoom = 0D;
+            this.bunifuFlatButton27.IconVisible = true;
+            this.bunifuFlatButton27.IconZoom = 90D;
+            this.bunifuFlatButton27.IsTab = false;
+            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 49);
+            this.bunifuFlatButton27.Name = "bunifuFlatButton27";
+            this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton27.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton27.selected = true;
+            this.bunifuFlatButton27.Size = new System.Drawing.Size(257, 28);
+            this.bunifuFlatButton27.TabIndex = 7;
+            this.bunifuFlatButton27.Text = "Servicio";
+            this.bunifuFlatButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton27.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton27.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton28
+            // 
+            this.bunifuFlatButton28.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton28.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton28.BorderRadius = 0;
+            this.bunifuFlatButton28.ButtonText = "Medida";
+            this.bunifuFlatButton28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton28.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton28.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton28.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton28.Iconimage")));
+            this.bunifuFlatButton28.Iconimage_right = null;
+            this.bunifuFlatButton28.Iconimage_right_Selected = null;
+            this.bunifuFlatButton28.Iconimage_Selected = null;
+            this.bunifuFlatButton28.IconMarginLeft = 0;
+            this.bunifuFlatButton28.IconMarginRight = 0;
+            this.bunifuFlatButton28.IconRightVisible = true;
+            this.bunifuFlatButton28.IconRightZoom = 0D;
+            this.bunifuFlatButton28.IconVisible = true;
+            this.bunifuFlatButton28.IconZoom = 90D;
+            this.bunifuFlatButton28.IsTab = false;
+            this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton28.Name = "bunifuFlatButton28";
+            this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton28.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton28.selected = true;
+            this.bunifuFlatButton28.Size = new System.Drawing.Size(256, 25);
+            this.bunifuFlatButton28.TabIndex = 5;
+            this.bunifuFlatButton28.Text = "Medida";
+            this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // Registro_de_usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1340, 490);
+            this.ClientSize = new System.Drawing.Size(995, 398);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtprof);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.txtconf);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtemp);
-            this.Controls.Add(this.label);
-            this.Controls.Add(this.txtcontra);
             this.Controls.Add(this.txtusu);
-            this.Controls.Add(this.btningresar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Registro_de_usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_de_usuario";
+            this.Load += new System.EventHandler(this.Registro_de_usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -348,6 +542,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,5 +573,12 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel panel7;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton24;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
     }
 }
