@@ -42,15 +42,13 @@ namespace Hermanas_nazario
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Busqueda_citas a = new Busqueda_citas();
-            a.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Receta a = new Receta();
-            a.Show();
+
         }
     }
 }

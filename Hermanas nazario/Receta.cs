@@ -28,9 +28,15 @@ namespace Hermanas_nazario
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             Base_de_datos.accesoci = 2;
             Busqueda_citas a = new Busqueda_citas();
             a.ShowDialog();
+
+            if(a.DialogResult==DialogResult.OK)
+            {
+                txtcita.Text = Base_de_datos.cita;
+            }
         }
 
         private void txtcita_TextChanged(object sender, EventArgs e)

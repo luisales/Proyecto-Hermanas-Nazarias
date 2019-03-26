@@ -27,7 +27,7 @@ namespace Hermanas_nazario
             if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
-                busc.Buscar(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
+                busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
             else
@@ -43,7 +43,7 @@ namespace Hermanas_nazario
             if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
-                busc.BuscarE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
+                busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
             else
@@ -120,7 +120,7 @@ namespace Hermanas_nazario
             {
 
                 Base_de_datos busc = new Base_de_datos();
-                busc.BuscarE(txtId.Text);
+                busc.BuscarEE(txtId.Text);
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
 
             }
