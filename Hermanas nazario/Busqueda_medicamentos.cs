@@ -92,9 +92,8 @@ namespace Hermanas_nazario
             Base_de_datos.desc = txtUnidad.Text;
             Base_de_datos.unidad = label10.Text;
            
-            this.Close();
             Ingresar_medicamentoEx a = new Ingresar_medicamentoEx();
-            a.Show();
+            a.ShowDialog();
 
         }
 

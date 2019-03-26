@@ -354,6 +354,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Busqueda_de_pacientes a = new Busqueda_de_pacientes();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -363,6 +374,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton8_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Base_de_datos.decis = 3;
             Busqueda_citas a = new Busqueda_citas();
             a.ShowDialog();
@@ -373,6 +395,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton15_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Registro_empleado a = new Registro_empleado();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -382,6 +415,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton13_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Busqueda_empleados a = new Busqueda_empleados();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -391,6 +435,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton16_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Registro_de_usuario a = new Registro_de_usuario();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -400,12 +455,34 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Modifiar_usuario a = new Modifiar_usuario();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton19_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Receta a = new Receta();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -415,6 +492,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton17_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Busqueda_factura a = new Busqueda_factura();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -424,6 +512,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton22_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Ingresar_medicamento a = new Ingresar_medicamento();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -438,6 +537,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton20_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Busqueda_medicamentos a = new Busqueda_medicamentos();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -447,6 +557,17 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton25_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
 
             Referencia a = new Referencia();
             a.ShowDialog();
@@ -457,48 +578,136 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton30_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Ingresar_medida a = new Ingresar_medida();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton29_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Modificacion_medida a = new Modificacion_medida();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton36_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Ingresar_Servicio a = new Ingresar_Servicio();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton35_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Modificar_servcios a = new Modificar_servcios();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton31_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Modificar_Nivel a = new Modificar_Nivel();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton32_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Registro_Nivel a = new Registro_Nivel();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton34_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Registro_roles a = new Registro_roles();
             a.ShowDialog();
         }
 
         private void bunifuFlatButton33_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
             Modificacion_roles a = new Modificacion_roles();
             a.ShowDialog();
         }

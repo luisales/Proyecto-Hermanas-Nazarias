@@ -276,8 +276,6 @@ namespace Hermanas_nazario
             if (MessageBox.Show("Desea regresar al menu?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Hide();
-                menu a = new menu();
-                a.Show();
             }
         }
         int riesgo;

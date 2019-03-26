@@ -100,7 +100,7 @@
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btningresar.Location = new System.Drawing.Point(889, 312);
-            this.btningresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btningresar.Margin = new System.Windows.Forms.Padding(4);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(159, 55);
             this.btningresar.TabIndex = 16;
@@ -313,7 +313,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1340, 490);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox7);

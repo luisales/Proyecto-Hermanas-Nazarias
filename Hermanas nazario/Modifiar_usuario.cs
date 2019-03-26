@@ -103,5 +103,24 @@ namespace Hermanas_nazario
             Validar.espacio(e);
 
         }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton22_Click(object sender, EventArgs e)
+        {
+                    }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

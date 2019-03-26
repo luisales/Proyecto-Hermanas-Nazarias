@@ -66,10 +66,10 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=Clinica;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
             return con;
         }
         public static int Log(string txtusuario, string txtcontraseña)
@@ -78,7 +78,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Nombre_usuario, Contrasena_usuario from Usuarios WHERE Nombre_usuario LIKE @nom AND Contrasena_usuario LIKE @usu", con);
+            SqlCommand cmd = new SqlCommand("SELECT Nombre, Contrasena from Usuario WHERE Nombre LIKE @nom AND Contrasena LIKE @usu", con);
             cmd.Parameters.AddWithValue("nom", txtusuario);
             cmd.Parameters.AddWithValue("usu", txtcontraseña);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -94,7 +94,7 @@ namespace Hermanas_nazario
             }
             else
             {
-                MessageBox.Show("Usuario o contrasena incorrecta");
+                MessageBox.Show("Usuario o contraseña incorrecta");
                 con.Close();
                 return 0;
             }
@@ -106,7 +106,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Contrasena_usuario from Usuarios WHERE Contrasena_usuario LIKE @usu", con);
+            SqlCommand cmd = new SqlCommand("SELECT Contrasena from Usuario WHERE Contrasena LIKE @usu", con);
             cmd.Parameters.AddWithValue("usu", txtcontraseña);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -114,13 +114,13 @@ namespace Hermanas_nazario
 
             if (dt.Rows.Count == 1)
             {
-                
+
                 return 1;
             }
             else
             {
 
-                MessageBox.Show("contrasena incorrecta");
+                MessageBox.Show("Contraseña incorrecta");
                 return 0;
             }
         }
@@ -1128,7 +1128,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT a.Codigo_rol, b.Codigo_empleado from [dbo].[Empleados] a inner join [dbo].[Usuarios] b on a.Codigo_empleado=b.Codigo_empleado where b.Nombre_usuario = @id", con);
+            SqlCommand cmd = new SqlCommand("SELECT a.Codigo_rol, b.Codigo from [dbo].[Empleado] a inner join [dbo].[Usuario] b on a.Codigo=b.Codigo_empleado where b.Nombre = @id", con);
             cmd.Parameters.AddWithValue("@id", usu);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -1142,15 +1142,12 @@ namespace Hermanas_nazario
                 {
 
                     rol = int.Parse(registro["Codigo_rol"].ToString());
-                    cod_empleado = int.Parse(registro["Codigo_empleado"].ToString());
+                    cod_empleado = int.Parse(registro["Codigo"].ToString());
                     con.Close();
-
                 }
-
             }
             else
             {
-                
             }
         }
         public static string Referencia()
@@ -1786,12 +1783,12 @@ namespace Hermanas_nazario
             SqlConnection con;
             con = Conectar();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select b.Permisos_rol from [dbo].[Empleados] a inner join [dbo].[Roles] b on  a.Codigo_rol=b.Codigo_rol where b.Codigo_rol=@Rol", con);
+            SqlCommand cmd = new SqlCommand("select b.Permisos from [dbo].[Empleado] a inner join [dbo].[Rol] b on  a.Codigo_rol=b.Codigo where b.Codigo=@Rol", con);
             cmd.Parameters.AddWithValue("Rol", Rol);
             SqlDataReader Perm = cmd.ExecuteReader();
             if (Perm.Read())
             {
-                Permisos = Perm["Permisos_rol"].ToString();
+                Permisos = Perm["Permisos"].ToString();
                 con.Close();
             }
 

@@ -42,8 +42,10 @@
             this.chkUsuarios = new System.Windows.Forms.CheckBox();
             this.chkEmpleados = new System.Windows.Forms.CheckBox();
             this.chkPacientes = new System.Windows.Forms.CheckBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -74,7 +76,7 @@
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btningresar.Location = new System.Drawing.Point(397, 273);
-            this.btningresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btningresar.Margin = new System.Windows.Forms.Padding(4);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(159, 55);
             this.btningresar.TabIndex = 40;
@@ -205,12 +207,24 @@
             this.chkPacientes.Text = "Pacientes";
             this.chkPacientes.UseVisualStyleBackColor = true;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.logoo;
+            this.pictureBox8.Location = new System.Drawing.Point(790, 13);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(97, 83);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 104;
+            this.pictureBox8.TabStop = false;
+            // 
             // Registro_roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(900, 393);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.chkMantenimientos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chkDocumentos);
@@ -226,13 +240,14 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registro_roles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_roles";
             this.Load += new System.EventHandler(this.Registro_roles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +269,6 @@
         private System.Windows.Forms.CheckBox chkUsuarios;
         private System.Windows.Forms.CheckBox chkEmpleados;
         private System.Windows.Forms.CheckBox chkPacientes;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

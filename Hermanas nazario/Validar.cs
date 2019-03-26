@@ -15,7 +15,7 @@ namespace Hermanas_nazario
                 {
                     v.Handled = false;
                 }
-             if (char.IsWhiteSpace(v.KeyChar))
+             else if (char.IsWhiteSpace(v.KeyChar))
             {
                 v.Handled = true;
             }
@@ -42,7 +42,7 @@ namespace Hermanas_nazario
             {
                 v.Handled = false;
             }
-             if(char.IsWhiteSpace(v.KeyChar))
+            else if(char.IsWhiteSpace(v.KeyChar))
             {
                 v.Handled = true;
             }

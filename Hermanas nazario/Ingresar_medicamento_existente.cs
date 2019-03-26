@@ -74,8 +74,6 @@ namespace Hermanas_nazario
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             Close();
-            Busqueda_medicamentos a = new Busqueda_medicamentos();
-            a.Show();
         }
 
         private void txtcant_TextChanged(object sender, EventArgs e)
