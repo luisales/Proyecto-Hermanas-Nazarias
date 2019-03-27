@@ -324,8 +324,7 @@ namespace Hermanas_nazario
 
                 }
                 Hide();
-                menu b = new menu();
-                b.Show();
+               
             }
         }
 

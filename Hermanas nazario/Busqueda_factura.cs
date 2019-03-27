@@ -40,8 +40,7 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            menu a = new Hermanas_nazario.menu();
-            a.Show();
+           
         }
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)

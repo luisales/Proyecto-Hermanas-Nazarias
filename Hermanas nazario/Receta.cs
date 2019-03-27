@@ -306,9 +306,8 @@ namespace Hermanas_nazario
             }
             Base_de_datos.Actualizar_Riesgo(riesgo, txtcita.Text);
             Base_de_datos.cita = txtcita.Text;
-            this.Hide();
             Generar_factura a = new Generar_factura();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void label7_Click(object sender, EventArgs e)
