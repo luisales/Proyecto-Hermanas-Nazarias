@@ -87,5 +87,15 @@ namespace Hermanas_nazario
         {
             Validar.espacio(e); 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
