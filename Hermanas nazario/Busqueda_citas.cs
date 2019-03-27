@@ -89,10 +89,8 @@ namespace Hermanas_nazario
                 {
                     int i = dgvcitas.CurrentRow.Index;
                     Base_de_datos.cita = dgvcitas[0, i].Value.ToString();
-                    Receta a = new Receta();
-                    a.txtcita.Text = Base_de_datos.cita;
-                    this.Hide();
-
+                    DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else if(Base_de_datos.decis == 2)
                 {
@@ -110,16 +108,14 @@ namespace Hermanas_nazario
                     val = Base_de_datos.Validar_cita(Base_de_datos.cita);
                     if (val == 1)
                     {
-                        this.Hide();
                         Diagnostico c = new Diagnostico();
-                        c.Show();
+                        c.ShowDialog();
                     }
                     else
                     {
                         Base_de_datos.Extraer_diagnostico(Base_de_datos.cita);
-                        this.Hide();
                         Mostrar_Diagnostico d = new Mostrar_Diagnostico();
-                        d.Show();
+                        d.ShowDialog();
                     }
                     
                 }

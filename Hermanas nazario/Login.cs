@@ -42,6 +42,7 @@ namespace Hermanas_nazario
             x=Base_de_datos.Log(txtusuario.Text, contra);
             if (x == 1)
             {
+                Base_de_datos.CodUsuario(txtusuario.Text);
                 Base_de_datos.User=txtusuario.Text;
                 this.Hide();
                 
