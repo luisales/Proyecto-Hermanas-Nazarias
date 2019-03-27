@@ -183,8 +183,8 @@ namespace Hermanas_nazario
             panel10.Visible = false;
             panel11.Visible = false;
             Registro_pacientes a = new Registro_pacientes();
-            a.Left = 450;
-            a.Top = 100;
+            a.Left = 415;
+            a.Top = 90;
             a.ShowDialog();
             Base_de_datos.paca = 0;
             Base_de_datos.nombrePacientes.Clear();
