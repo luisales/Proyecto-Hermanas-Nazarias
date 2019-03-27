@@ -1699,7 +1699,7 @@ namespace Hermanas_nazario
             SqlConnection con;
             con = Base_de_datos.Conectar();
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT [Primer_nombre_empleado],[Segundo_nombre_empleado],[Primer_apellido_empleado],[Segundo_apellido_empleado],[Correo_empleado],[Numero_identidad_empleado],[Sexo_empleado],[Telefono_empleado],[Cargo_empleado], Codigo_rol FROM [dbo].[Empleados] WHERE [Codigo_empleado]=@id", con);
+            SqlCommand cmd = new SqlCommand("SELECT [Primer_nombre],[Segundo_nombre],[Primer_apellido],[Segundo_apellido],[Correo_empleado],[Numero_identidad],[Sexo],[Telefono],[Codigo_puesto], Codigo_rol FROM [dbo].[Empleado] WHERE [Codigo]=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -1709,15 +1709,15 @@ namespace Hermanas_nazario
                 SqlDataReader registro = cmd.ExecuteReader();
                 if (registro.Read())
                 {
-                    Base_de_datos.nombre1_empleado = registro["Primer_nombre_empleado"].ToString();
-                    Base_de_datos.nombre2_empleado = registro["Segundo_nombre_empleado"].ToString();
-                    Base_de_datos.apellido1_empleado = registro["Primer_apellido_empleado"].ToString();
-                    Base_de_datos.apellido2_empleado = registro["Segundo_apellido_empleado"].ToString();
+                    Base_de_datos.nombre1_empleado = registro["Primer_nombre"].ToString();
+                    Base_de_datos.nombre2_empleado = registro["Segundo_nombre"].ToString();
+                    Base_de_datos.apellido1_empleado = registro["Primer_apellido"].ToString();
+                    Base_de_datos.apellido2_empleado = registro["Segundo_apellido"].ToString();
                     Base_de_datos.correo_empleado = registro["Correo_empleado"].ToString();
-                    Base_de_datos.numero_identidad_empleado = registro["Numero_identidad_empleado"].ToString();
-                    Base_de_datos.sexo_empleado = registro["Sexo_empleado"].ToString();
-                    Base_de_datos.numero_telefono_empleado = registro["Telefono_empleado"].ToString();
-                    Base_de_datos.cargo_empleado = registro["Cargo_empleado"].ToString();
+                    Base_de_datos.numero_identidad_empleado = registro["Numero_identidad"].ToString();
+                    Base_de_datos.sexo_empleado = registro["Sexo"].ToString();
+                    Base_de_datos.numero_telefono_empleado = registro["Telefono"].ToString();
+                    Base_de_datos.cargo_empleado = registro["Codigo_puesto"].ToString();
                     Base_de_datos.codigo_rol = registro["Codigo_rol"].ToString();
                 }
                 con.Close();
@@ -1767,19 +1767,22 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("Actualizar_empleado", con);
+            SqlCommand cmd = new SqlCommand("mante_Empleado", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", codigo_empleado));
-            cmd.Parameters.Add(new SqlParameter("@Primer_nombre_empleado", nombre1));
-            cmd.Parameters.Add(new SqlParameter("@Segundo_nombre_empleado", nombre2));
-            cmd.Parameters.Add(new SqlParameter("@Primer_apellido_empleado", apellido1));
-            cmd.Parameters.Add(new SqlParameter("@Segundo_apellido_empleado", apellido2));
+            cmd.Parameters.Add(new SqlParameter("@Codigo", codigo_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Primer_nombre", nombre1));
+            cmd.Parameters.Add(new SqlParameter("@Segundo_nombre", nombre2));
+            cmd.Parameters.Add(new SqlParameter("@Primer_apellido", apellido1));
+            cmd.Parameters.Add(new SqlParameter("@Segundo_apellido", apellido2));
             cmd.Parameters.Add(new SqlParameter("@Correo_empleado", correo_empleado));
-            cmd.Parameters.Add(new SqlParameter("@Identidad_empleado", id_empleado));
-            cmd.Parameters.Add(new SqlParameter("@Sexo_empleado", sexo));
-            cmd.Parameters.Add(new SqlParameter("@Telefono_empleado", tel_empleado));
-            cmd.Parameters.Add(new SqlParameter("@Cargo_empleado", cargo));
-            cmd.Parameters.Add(new SqlParameter("@Codigo_rol", rol));
+            cmd.Parameters.Add(new SqlParameter("@Numero_identidad", id_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Sexo", sexo));
+            cmd.Parameters.Add(new SqlParameter("@Telefono", tel_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_puesto", 1));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_rol", codigo_rol));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+            cmd.Parameters.Add(new SqlParameter("@opc", 2));
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -2324,7 +2327,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -2334,7 +2337,6 @@ namespace Hermanas_nazario
             {
                 con.Close();
                 return 1;
-
             }
             else
             {

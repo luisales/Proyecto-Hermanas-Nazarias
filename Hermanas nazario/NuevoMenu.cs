@@ -54,11 +54,6 @@ namespace Hermanas_nazario
             {
                 panel1.Visible = true;
             }
-            bunifuFlatButton1.Location = new Point(10, 127);
-            if (panel1.Visible == false)
-            {
-                bunifuFlatButton1.Location = new Point(10, 127);
-            }
 
         }
 
@@ -82,11 +77,7 @@ namespace Hermanas_nazario
             {
                 panel2.Visible = true;
             }
-            bunifuFlatButton2.Location = new Point(10, 213);
-            if (panel2.Visible == false)
-            {
-                bunifuFlatButton2.Location = new Point(10, 213);
-            }
+
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
@@ -109,11 +100,7 @@ namespace Hermanas_nazario
             {
                 panel3.Visible = true;
             }
-            bunifuFlatButton3.Location = new Point(10, 300);
-            if (panel3.Visible == false)
-            {
-                bunifuFlatButton3.Location = new Point(10, 300);
-            }
+
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
@@ -196,6 +183,8 @@ namespace Hermanas_nazario
             panel10.Visible = false;
             panel11.Visible = false;
             Registro_pacientes a = new Registro_pacientes();
+            a.Left = 450;
+            a.Top = 100;
             a.ShowDialog();
             Base_de_datos.paca = 0;
             Base_de_datos.nombrePacientes.Clear();
