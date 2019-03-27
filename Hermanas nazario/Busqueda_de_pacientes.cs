@@ -222,6 +222,16 @@ namespace Hermanas_nazario
             Busqueda_citas a = new Busqueda_citas();
             a.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
         
 }
