@@ -549,5 +549,15 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void txtpadre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
