@@ -727,5 +727,11 @@ namespace Hermanas_nazario
             
 
         }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            Registro_Nivel a = new Registro_Nivel();
+            a.ShowDialog();
+        }
     }
 }
