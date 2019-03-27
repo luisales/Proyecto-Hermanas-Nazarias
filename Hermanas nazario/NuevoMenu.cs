@@ -663,7 +663,7 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
-            Registro_Nivel a = new Registro_Nivel();
+            Modificar_Nivel a = new Modificar_Nivel();
             a.ShowDialog();
         }
 
@@ -720,6 +720,12 @@ namespace Hermanas_nazario
             Process proceso = new Process();
             proceso.StartInfo.FileName = @"C:\ModuloAyuda\index.html";
             proceso.Start();
+        }
+
+        private void bunifuFlatButton32_Click_1(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

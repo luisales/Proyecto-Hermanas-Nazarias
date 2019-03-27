@@ -98,5 +98,15 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
