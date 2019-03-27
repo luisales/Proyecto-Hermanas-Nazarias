@@ -66,10 +66,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(371, 25);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(556, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(399, 44);
+            this.label5.Size = new System.Drawing.Size(586, 64);
             this.label5.TabIndex = 26;
             this.label5.Text = "Ingresar Medicamento";
             // 
@@ -78,10 +77,9 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(55, 113);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(82, 174);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(241, 25);
+            this.label11.Size = new System.Drawing.Size(360, 36);
             this.label11.TabIndex = 61;
             this.label11.Text = "Nombre de medicamento: ";
             // 
@@ -90,11 +88,10 @@
             this.txtnom.Enabled = false;
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom.HideSelection = false;
-            this.txtnom.Location = new System.Drawing.Point(316, 110);
-            this.txtnom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom.Location = new System.Drawing.Point(474, 169);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(143, 30);
+            this.txtnom.Size = new System.Drawing.Size(212, 41);
             this.txtnom.TabIndex = 62;
             this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
             // 
@@ -103,10 +100,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 155);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(36, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 25);
+            this.label1.Size = new System.Drawing.Size(404, 36);
             this.label1.TabIndex = 63;
             this.label1.Text = "Descripcion de medicamento:";
             // 
@@ -119,11 +115,10 @@
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.HideSelection = false;
-            this.richTextBox1.Location = new System.Drawing.Point(316, 155);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(474, 238);
             this.richTextBox1.MaxLength = 80;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(375, 79);
+            this.richTextBox1.Size = new System.Drawing.Size(560, 119);
             this.richTextBox1.TabIndex = 65;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -133,10 +128,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(743, 113);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(1114, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 25);
+            this.label2.Size = new System.Drawing.Size(290, 36);
             this.label2.TabIndex = 66;
             this.label2.Text = "Cantidad a ingresar: ";
             // 
@@ -144,11 +138,10 @@
             // 
             this.txtcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcant.HideSelection = false;
-            this.txtcant.Location = new System.Drawing.Point(940, 110);
-            this.txtcant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcant.Location = new System.Drawing.Point(1410, 169);
             this.txtcant.MaxLength = 7;
             this.txtcant.Name = "txtcant";
-            this.txtcant.Size = new System.Drawing.Size(77, 30);
+            this.txtcant.Size = new System.Drawing.Size(114, 41);
             this.txtcant.TabIndex = 67;
             this.txtcant.TextChanged += new System.EventHandler(this.txtcant_TextChanged);
             this.txtcant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcant_KeyPress);
@@ -158,10 +151,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(709, 152);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1064, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 25);
+            this.label3.Size = new System.Drawing.Size(340, 36);
             this.label3.TabIndex = 68;
             this.label3.Text = "Precio de medicamento: ";
             // 
@@ -170,11 +162,10 @@
             this.txtprecio.Enabled = false;
             this.txtprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprecio.HideSelection = false;
-            this.txtprecio.Location = new System.Drawing.Point(940, 152);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtprecio.Location = new System.Drawing.Point(1410, 234);
             this.txtprecio.MaxLength = 8;
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(77, 30);
+            this.txtprecio.Size = new System.Drawing.Size(114, 41);
             this.txtprecio.TabIndex = 69;
             this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecio_KeyPress);
             // 
@@ -182,10 +173,9 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(579, 278);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(868, 428);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 43);
+            this.btnBuscar.Size = new System.Drawing.Size(168, 66);
             this.btnBuscar.TabIndex = 70;
             this.btnBuscar.Text = "Ingresar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -196,29 +186,26 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(737, 193);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(1106, 297);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 25);
+            this.label6.Size = new System.Drawing.Size(291, 36);
             this.label6.TabIndex = 74;
             this.label6.Text = "Fecha de caducidad:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(940, 198);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1410, 305);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(224, 26);
             this.dateTimePicker1.TabIndex = 75;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(137, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(206, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 76;
             this.label7.Text = "label7";
             this.label7.Visible = false;
@@ -231,10 +218,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(106, 111);
             this.pictureBox1.TabIndex = 77;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -242,11 +228,11 @@
             // txtUnidad
             // 
             this.txtUnidad.AutoSize = true;
+            this.txtUnidad.BackColor = System.Drawing.Color.Transparent;
             this.txtUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnidad.Location = new System.Drawing.Point(942, 234);
-            this.txtUnidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtUnidad.Location = new System.Drawing.Point(1413, 360);
             this.txtUnidad.Name = "txtUnidad";
-            this.txtUnidad.Size = new System.Drawing.Size(61, 25);
+            this.txtUnidad.Size = new System.Drawing.Size(85, 36);
             this.txtUnidad.TabIndex = 79;
             this.txtUnidad.Text = "-------";
             // 
@@ -255,10 +241,9 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(755, 234);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1132, 360);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 25);
+            this.label4.Size = new System.Drawing.Size(266, 36);
             this.label4.TabIndex = 80;
             this.label4.Text = "Unidad de Medida:";
             // 
@@ -290,19 +275,19 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1137, 350);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1706, 538);
             this.bunifuGradientPanel1.TabIndex = 106;
             // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.logoo;
-            this.pictureBox8.Location = new System.Drawing.Point(1061, 3);
+            this.pictureBox8.Location = new System.Drawing.Point(1592, 5);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(76, 72);
+            this.pictureBox8.Size = new System.Drawing.Size(114, 111);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 104;
             this.pictureBox8.TabStop = false;
@@ -314,10 +299,9 @@
             this.panel7.Controls.Add(this.bunifuFlatButton26);
             this.panel7.Controls.Add(this.bunifuFlatButton27);
             this.panel7.Controls.Add(this.bunifuFlatButton28);
-            this.panel7.Location = new System.Drawing.Point(10, 704);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(15, 1083);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(257, 99);
+            this.panel7.Size = new System.Drawing.Size(386, 152);
             this.panel7.TabIndex = 4;
             // 
             // bunifuFlatButton24
@@ -341,13 +325,14 @@
             this.bunifuFlatButton24.IconVisible = true;
             this.bunifuFlatButton24.IconZoom = 90D;
             this.bunifuFlatButton24.IsTab = false;
-            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 73);
+            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 112);
+            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuFlatButton24.Name = "bunifuFlatButton24";
             this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton24.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton24.selected = true;
-            this.bunifuFlatButton24.Size = new System.Drawing.Size(257, 28);
+            this.bunifuFlatButton24.Size = new System.Drawing.Size(386, 43);
             this.bunifuFlatButton24.TabIndex = 8;
             this.bunifuFlatButton24.Text = "Nivel economico";
             this.bunifuFlatButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,13 +360,14 @@
             this.bunifuFlatButton26.IconVisible = true;
             this.bunifuFlatButton26.IconZoom = 90D;
             this.bunifuFlatButton26.IsTab = false;
-            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 24);
+            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 37);
+            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuFlatButton26.Name = "bunifuFlatButton26";
             this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton26.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton26.selected = true;
-            this.bunifuFlatButton26.Size = new System.Drawing.Size(257, 26);
+            this.bunifuFlatButton26.Size = new System.Drawing.Size(386, 40);
             this.bunifuFlatButton26.TabIndex = 6;
             this.bunifuFlatButton26.Text = "Rol";
             this.bunifuFlatButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,13 +395,14 @@
             this.bunifuFlatButton27.IconVisible = true;
             this.bunifuFlatButton27.IconZoom = 90D;
             this.bunifuFlatButton27.IsTab = false;
-            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 49);
+            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 75);
+            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuFlatButton27.Name = "bunifuFlatButton27";
             this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton27.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton27.selected = true;
-            this.bunifuFlatButton27.Size = new System.Drawing.Size(257, 28);
+            this.bunifuFlatButton27.Size = new System.Drawing.Size(386, 43);
             this.bunifuFlatButton27.TabIndex = 7;
             this.bunifuFlatButton27.Text = "Servicio";
             this.bunifuFlatButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -444,12 +431,13 @@
             this.bunifuFlatButton28.IconZoom = 90D;
             this.bunifuFlatButton28.IsTab = false;
             this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuFlatButton28.Name = "bunifuFlatButton28";
             this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton28.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton28.selected = true;
-            this.bunifuFlatButton28.Size = new System.Drawing.Size(256, 25);
+            this.bunifuFlatButton28.Size = new System.Drawing.Size(384, 38);
             this.bunifuFlatButton28.TabIndex = 5;
             this.bunifuFlatButton28.Text = "Medida";
             this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -458,13 +446,12 @@
             // 
             // Ingresar_medicamentoEx
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1137, 350);
+            this.ClientSize = new System.Drawing.Size(1706, 538);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Ingresar_medicamentoEx";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar_producto";
