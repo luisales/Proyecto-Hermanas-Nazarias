@@ -39,6 +39,8 @@
             this.btningresar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -139,7 +141,7 @@
             this.btningresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btningresar.Location = new System.Drawing.Point(445, 406);
+            this.btningresar.Location = new System.Drawing.Point(445, 427);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(119, 45);
             this.btningresar.TabIndex = 73;
@@ -170,11 +172,36 @@
             this.label2.Text = "Descripcion de servicio:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(323, 382);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 27);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "Estado:";
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(443, 388);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(121, 21);
+            this.cmbestado.TabIndex = 76;
+            // 
             // Ingresar_Servicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 484);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmbestado);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btningresar);
@@ -211,5 +238,7 @@
         private System.Windows.Forms.Button btningresar;
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbestado;
     }
 }

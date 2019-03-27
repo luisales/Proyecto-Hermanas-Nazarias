@@ -77,7 +77,20 @@ namespace Hermanas_nazario
                 {
                     Permisos = (Permisos + "G");
                 }
-                int x=Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos);
+
+
+                String estado;
+                if (cmbestado.Text == "Activo")
+                {
+                    estado = "ACT";
+                }
+
+                else
+                {
+                    estado = "DSC";
+                }
+
+                int x=Base_de_datos.Actualizar_Rol(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), Permisos, estado);
                 if (x == 1)
                 {
 

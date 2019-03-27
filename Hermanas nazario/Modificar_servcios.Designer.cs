@@ -51,6 +51,8 @@
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -264,6 +266,8 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.label7);
+            this.bunifuGradientPanel1.Controls.Add(this.cmbestado);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox8);
             this.bunifuGradientPanel1.Controls.Add(this.panel7);
             this.bunifuGradientPanel1.Controls.Add(this.label4);
@@ -434,12 +438,35 @@
             this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(599, 307);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 27);
+            this.label7.TabIndex = 89;
+            this.label7.Text = "Estado:";
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(719, 313);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(121, 21);
+            this.cmbestado.TabIndex = 88;
+            // 
             // Modificar_servcios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1457, 445);
+            this.ClientSize = new System.Drawing.Size(1386, 445);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtDescripcion);
@@ -491,5 +518,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbestado;
     }
 }

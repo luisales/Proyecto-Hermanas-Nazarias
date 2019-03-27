@@ -67,10 +67,10 @@ namespace Hermanas_nazario
         public static SqlConnection Conectar()
         {
             //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
             
         }
@@ -1340,7 +1340,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static int Registro_Rol(string nombreRol, string Permisos)
+        public static int Registro_Rol(string nombreRol, string Permisos, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1351,15 +1351,17 @@ namespace Hermanas_nazario
             }
             else
             {
-
-
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insertar_Rol", con);
+                    SqlCommand cmd = new SqlCommand("mante_Rol", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
-                    cmd.Parameters.Add(new SqlParameter("@Permisos_rol", Permisos));
+                    cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre", nombreRol));
+                    cmd.Parameters.Add(new SqlParameter("@Permisos", Permisos));
+                    cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                    cmd.Parameters.Add(new SqlParameter("@estado", estado));
+                    cmd.Parameters.Add(new SqlParameter("@opc", 1));
 
                     cmd.ExecuteNonQuery();
                 }
@@ -1369,7 +1371,6 @@ namespace Hermanas_nazario
                 finally
                 {
                     con.Close();
-
                 }
                 return 1;
             }
@@ -1378,8 +1379,6 @@ namespace Hermanas_nazario
 
         public void BuscarRoles()
         {
-
-
             SqlConnection con;
             con = Conectar();
             try
@@ -1409,7 +1408,7 @@ namespace Hermanas_nazario
             SqlConnection con;
             con = Conectar();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom ", con);
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Rol] where Nombre = @Nom ", con);
             cmd.Parameters.AddWithValue("Nom", Nom);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -1431,7 +1430,7 @@ namespace Hermanas_nazario
             SqlConnection con;
             con = Conectar();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from [dbo].[Roles] where Nombre_rol =@Nom and Codigo_rol != @Cod", con);
+            SqlCommand cmd = new SqlCommand("select * from [dbo].[Rol] where Nombre = @Nom and Codigo != @Cod", con);
             cmd.Parameters.AddWithValue("Nom", Nom);
             cmd.Parameters.AddWithValue("Cod", Cod);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -1449,7 +1448,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static int Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol)
+        public static int Actualizar_Rol(int CodigoRol, string nombreRol, string permisosRol, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1463,11 +1462,14 @@ namespace Hermanas_nazario
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Actualizar_Rol", con);
+                    SqlCommand cmd = new SqlCommand("mante_Rol", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@Codigo_rol", CodigoRol));
-                    cmd.Parameters.Add(new SqlParameter("@Nombre_rol", nombreRol));
-                    cmd.Parameters.Add(new SqlParameter("@Permisos_rol", permisosRol));
+                    cmd.Parameters.Add(new SqlParameter("@Codigo", CodigoRol));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre", nombreRol));
+                    cmd.Parameters.Add(new SqlParameter("@Permisos", permisosRol));
+                    cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                    cmd.Parameters.Add(new SqlParameter("@estado", estado));
+                    cmd.Parameters.Add(new SqlParameter("@opc", 2));
                     cmd.ExecuteNonQuery();
                 }
                 catch
@@ -1481,7 +1483,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Registro_Medida(string nombreMed)
+        public static void Registro_Medida(string nombreMed, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1491,8 +1493,10 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Mante_medida", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", 1));
-                cmd.Parameters.Add(new SqlParameter("@nombre", nombreMed));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Nombre", nombreMed));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 1));
                 cmd.ExecuteNonQuery();
             }
@@ -1505,7 +1509,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Actualizar_Medida(int Codigo, string nombre)
+        public static void Actualizar_Medida(int codigo, string nombre, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1515,8 +1519,10 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Mante_medida", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
-                cmd.Parameters.Add(new SqlParameter("@nombre", nombre));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", codigo));
+                cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 2));
                 cmd.ExecuteNonQuery();
             }
@@ -1557,14 +1563,12 @@ namespace Hermanas_nazario
 
         public void BuscarMedida()
         {
-
-
             SqlConnection con;
             con = Conectar();
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_Medida  'Codigo de medida', Nombre_medida 'Nombre de la medida' from [dbo].[Medida]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Codigo de medida', Nombre 'Nombre de la medida',Estado 'Estado' from [dbo].[Medida]", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1572,13 +1576,10 @@ namespace Hermanas_nazario
                 {
                     Resultado = dt;
                     con.Close();
-
                 }
-
             }
             catch
             {
-
             }
             finally
             {
@@ -1616,14 +1617,12 @@ namespace Hermanas_nazario
 
         public void BuscarNivel()
         {
-
-
             SqlConnection con;
             con = Conectar();
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_riesgo  'Codigo de Nivel', Nombre_riesgo 'Nombre de nivel' from Riesgo_Social", con);
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Codigo de Nivel', Nombre 'Nombre de nivel' from Nivel_Economico", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1631,13 +1630,10 @@ namespace Hermanas_nazario
                 {
                     Resultado = dt;
                     con.Close();
-
                 }
-
             }
             catch
             {
-
             }
             finally
             {
@@ -1822,7 +1818,7 @@ namespace Hermanas_nazario
 
         }
 
-        public static void Registro_Servicio(string nombreServicio, string descripcionServicio, string precioServicio)
+        public static void Registro_Servicio(string nombreServicio, string descripcionServicio, string precioServicio,string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1830,12 +1826,14 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Mante_servicios", con);
+                SqlCommand cmd = new SqlCommand("Mante_servicio", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", 1));
+                cmd.Parameters.Add(new SqlParameter("@codigo", 1));
                 cmd.Parameters.Add(new SqlParameter("@nombre", nombreServicio));
                 cmd.Parameters.Add(new SqlParameter("@descripcion", descripcionServicio));
                 cmd.Parameters.Add(new SqlParameter("@precio", precioServicio));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 1));
                 cmd.ExecuteNonQuery();
             }
@@ -1854,7 +1852,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Servicios WHERE Nombre_servicio=@Nombre_servicio", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Servicio WHERE Nombre=@Nombre_servicio", con);
             cmd.Parameters.AddWithValue("Nombre_servicio", nombre);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -1864,7 +1862,6 @@ namespace Hermanas_nazario
             {
                 con.Close();
                 return 1;
-
             }
             else
             {
@@ -1879,18 +1876,17 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Servicios WHERE Nombre_servicio=@Nombre_servicio and Codigo_servicio != @Codigo_servicio", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Servicio WHERE Nombre=@Nombre_servicio and Codigo != @Codigo_servicio", con);
             cmd.Parameters.AddWithValue("Nombre_servicio", nombre);
             cmd.Parameters.AddWithValue("Codigo_servicio", codigo);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-   
+
             if (dt.Rows.Count == 0)
             {
                 con.Close();
                 return 1;
-
             }
             else
             {
@@ -1901,14 +1897,12 @@ namespace Hermanas_nazario
 
         public void BuscarServicio()
         {
-
-
             SqlConnection con;
             con = Conectar();
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_servicio  'Codigo de servicio', Nombre_servicio 'Nombre del servicio' , Descripcion_servicio 'Descripcion del servicio' , Precio_servicio 'Precio del servicio' from [dbo].[servicios]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Codigo de servicio', Nombre 'Nombre del servicio' , Descripcion 'Descripcion del servicio' , Precio 'Precio del servicio', Estado from [dbo].[servicio]", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1916,13 +1910,10 @@ namespace Hermanas_nazario
                 {
                     Resultado = dt;
                     con.Close();
-
                 }
-
             }
             catch
             {
-
             }
             finally
             {
@@ -1930,7 +1921,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Actualizar_Servicio(int Codigo, string nombreServicio, string descripcionServicio, string precioServicio)
+        public static void Actualizar_Servicio(int Codigo, string nombreServicio, string descripcionServicio, string precioServicio, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1938,12 +1929,14 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Mante_servicios", con);
+                SqlCommand cmd = new SqlCommand("Mante_servicio", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@codigo", Codigo));
                 cmd.Parameters.Add(new SqlParameter("@nombre", nombreServicio));
                 cmd.Parameters.Add(new SqlParameter("@descripcion", descripcionServicio));
                 cmd.Parameters.Add(new SqlParameter("@precio", precioServicio));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 2));
                 cmd.ExecuteNonQuery();
             }
@@ -1954,7 +1947,6 @@ namespace Hermanas_nazario
             {
                 con.Close();
             }
-
 
         }
         public static void EmpleadoRol(int codigo1, int codigo2)
@@ -2321,7 +2313,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre=@id", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Medicamento WHERE Nombre=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -2345,7 +2337,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre_medida=@id and Codigo_medida != @nombre", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre=@id and Codigo != @nombre", con);
             cmd.Parameters.AddWithValue("id", id);
             cmd.Parameters.AddWithValue("nombre", nombre);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -2356,7 +2348,6 @@ namespace Hermanas_nazario
             {
                 con.Close();
                 return 1;
-
             }
             else
             {
@@ -2391,7 +2382,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Registro_Nivel(string nombreNiv, float por)
+        public static void Registro_Nivel(string nombreNiv, float por, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -2399,11 +2390,13 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Mante_Nivel", con);
+                SqlCommand cmd = new SqlCommand("mante_nivel_economico", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", 1));
+                cmd.Parameters.Add(new SqlParameter("@codigo", 1));
                 cmd.Parameters.Add(new SqlParameter("@nombre", nombreNiv));
-                cmd.Parameters.Add(new SqlParameter("@porcentaje", por));
+                cmd.Parameters.Add(new SqlParameter("@porcentaje_sugerido", por));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 1));
                 cmd.ExecuteNonQuery();
             }
@@ -2416,7 +2409,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Actualizar_Nivel(int Codigo, string nombreNiv, float por)
+        public static void Actualizar_Nivel(int Codigo, string nombreNiv, float por, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -2424,11 +2417,13 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Mante_Nivel", con);
+                SqlCommand cmd = new SqlCommand("mante_nivel_economico", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@codigo", Codigo));
                 cmd.Parameters.Add(new SqlParameter("@nombre", nombreNiv));
-                cmd.Parameters.Add(new SqlParameter("@porcentaje", por));
+                cmd.Parameters.Add(new SqlParameter("@porcentaje_sugerido", por));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 2));
                 cmd.ExecuteNonQuery();
             }
@@ -2449,7 +2444,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Riesgo_social WHERE Nombre_riesgo=@id", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Nivel_Economico WHERE Nombre=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -2493,7 +2488,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Riesgo_social WHERE Nombre_riesgo=@id and Codigo_riesgo != @nom", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Nivel_Economico WHERE Nombre=@id and Codigo != @nom", con);
             cmd.Parameters.AddWithValue("id", id);
             cmd.Parameters.AddWithValue("nom", nom);
             SqlDataAdapter da = new SqlDataAdapter(cmd);

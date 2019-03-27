@@ -35,7 +35,18 @@ namespace Hermanas_nazario
                     MessageBox.Show("Nivel ya existente");
                     return;
                 }
-                Base_de_datos.Registro_Nivel(txtNombreRol.Text, float.Parse(textBox1.Text));
+
+            String estado;
+            if (cmbestado.Text == "Activo")
+            {
+                estado = "ACT";
+            }
+
+            else
+            {
+                estado = "DSC";
+            }
+            Base_de_datos.Registro_Nivel(txtNombreRol.Text, float.Parse(textBox1.Text), estado);
                 MessageBox.Show("Registrado con exito");
 
                 this.Hide();

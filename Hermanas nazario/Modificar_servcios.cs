@@ -55,7 +55,18 @@ namespace Hermanas_nazario
 
             }
 
-            Base_de_datos.Actualizar_Servicio(int.Parse(txtCodigo.Text), txtNombreServicio.Text.ToUpper(), txtDescripcion.Text.ToUpper(), txtprecio.Text);
+            String estado;
+            if (cmbestado.Text == "Activo")
+            {
+                estado = "ACT";
+            }
+
+            else
+            {
+                estado = "DSC";
+            }
+
+            Base_de_datos.Actualizar_Servicio(int.Parse(txtCodigo.Text), txtNombreServicio.Text.ToUpper(), txtDescripcion.Text.ToUpper(), txtprecio.Text, estado);
             Base_de_datos busc = new Base_de_datos();
             busc.BuscarServicio();
             dataGridView1.DataSource = busc.Mostrar_Resultados();

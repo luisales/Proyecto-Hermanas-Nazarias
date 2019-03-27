@@ -49,7 +49,20 @@ namespace Hermanas_nazario
                 MessageBox.Show("Medida ya existente");
                 return;
             }
-            Base_de_datos.Actualizar_Medida(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper());
+
+            string estado;
+
+            if (cmbestado.Text == "Activo")
+            {
+                estado = "ACT";
+            }
+
+            else
+            {
+                estado = "DSC";
+            }
+
+            Base_de_datos.Actualizar_Medida(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(),estado);
 
             MessageBox.Show("Medida modificada.");
 

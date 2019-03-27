@@ -50,6 +50,8 @@
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -136,7 +138,7 @@
             this.chkMantenimientos.AutoSize = true;
             this.chkMantenimientos.BackColor = System.Drawing.Color.Transparent;
             this.chkMantenimientos.Location = new System.Drawing.Point(490, 274);
-            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2);
             this.chkMantenimientos.Name = "chkMantenimientos";
             this.chkMantenimientos.Size = new System.Drawing.Size(100, 17);
             this.chkMantenimientos.TabIndex = 74;
@@ -160,7 +162,7 @@
             this.chkDocumentos.AutoSize = true;
             this.chkDocumentos.BackColor = System.Drawing.Color.Transparent;
             this.chkDocumentos.Location = new System.Drawing.Point(490, 255);
-            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2);
             this.chkDocumentos.Name = "chkDocumentos";
             this.chkDocumentos.Size = new System.Drawing.Size(86, 17);
             this.chkDocumentos.TabIndex = 72;
@@ -172,7 +174,7 @@
             this.chkInventario.AutoSize = true;
             this.chkInventario.BackColor = System.Drawing.Color.Transparent;
             this.chkInventario.Location = new System.Drawing.Point(490, 235);
-            this.chkInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkInventario.Margin = new System.Windows.Forms.Padding(2);
             this.chkInventario.Name = "chkInventario";
             this.chkInventario.Size = new System.Drawing.Size(73, 17);
             this.chkInventario.TabIndex = 71;
@@ -184,7 +186,7 @@
             this.chkFacturacion.AutoSize = true;
             this.chkFacturacion.BackColor = System.Drawing.Color.Transparent;
             this.chkFacturacion.Location = new System.Drawing.Point(490, 214);
-            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2);
             this.chkFacturacion.Name = "chkFacturacion";
             this.chkFacturacion.Size = new System.Drawing.Size(82, 17);
             this.chkFacturacion.TabIndex = 70;
@@ -196,7 +198,7 @@
             this.chkUsuarios.AutoSize = true;
             this.chkUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.chkUsuarios.Location = new System.Drawing.Point(490, 194);
-            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.chkUsuarios.Name = "chkUsuarios";
             this.chkUsuarios.Size = new System.Drawing.Size(107, 17);
             this.chkUsuarios.TabIndex = 69;
@@ -208,7 +210,7 @@
             this.chkEmpleados.AutoSize = true;
             this.chkEmpleados.BackColor = System.Drawing.Color.Transparent;
             this.chkEmpleados.Location = new System.Drawing.Point(490, 174);
-            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.chkEmpleados.Name = "chkEmpleados";
             this.chkEmpleados.Size = new System.Drawing.Size(123, 17);
             this.chkEmpleados.TabIndex = 68;
@@ -220,7 +222,7 @@
             this.chkPacientes.AutoSize = true;
             this.chkPacientes.BackColor = System.Drawing.Color.Transparent;
             this.chkPacientes.Location = new System.Drawing.Point(490, 154);
-            this.chkPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.chkPacientes.Name = "chkPacientes";
             this.chkPacientes.Size = new System.Drawing.Size(73, 17);
             this.chkPacientes.TabIndex = 67;
@@ -231,6 +233,8 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.label7);
+            this.bunifuGradientPanel1.Controls.Add(this.cmbestado);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
             this.bunifuGradientPanel1.Controls.Add(this.chkMantenimientos);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox3);
@@ -418,6 +422,29 @@
             this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(176, 184);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 27);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "Estado:";
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(296, 190);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(121, 21);
+            this.cmbestado.TabIndex = 105;
+            // 
             // Registro_roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,5 +493,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbestado;
     }
 }
