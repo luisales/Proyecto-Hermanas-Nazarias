@@ -422,7 +422,6 @@
             this.label14.Size = new System.Drawing.Size(141, 29);
             this.label14.TabIndex = 19;
             this.label14.Text = "Ocupacion: ";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label3
             // 
@@ -445,7 +444,6 @@
             this.label15.Size = new System.Drawing.Size(200, 29);
             this.label15.TabIndex = 23;
             this.label15.Text = "Lugar de trabajo: ";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label2
             // 
@@ -909,7 +907,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1558, 788);
             this.bunifuGradientPanel1.TabIndex = 106;
-            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // Registro_pacientes
             // 
