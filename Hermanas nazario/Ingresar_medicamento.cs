@@ -147,6 +147,16 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
 

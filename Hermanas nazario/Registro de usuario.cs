@@ -133,5 +133,10 @@ namespace Hermanas_nazario
         {
             Validar.espacio(e);
         }
+
+        private void Registro_de_usuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

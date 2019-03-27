@@ -313,7 +313,7 @@
             this.rdf.Location = new System.Drawing.Point(184, 11);
             this.rdf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdf.Name = "rdf";
-            this.rdf.Size = new System.Drawing.Size(147, 33);
+            this.rdf.Size = new System.Drawing.Size(117, 29);
             this.rdf.TabIndex = 1;
             this.rdf.Text = "Femenino";
             this.rdf.UseVisualStyleBackColor = true;
@@ -422,6 +422,7 @@
             this.label14.Size = new System.Drawing.Size(141, 29);
             this.label14.TabIndex = 19;
             this.label14.Text = "Ocupacion: ";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label3
             // 
@@ -444,6 +445,7 @@
             this.label15.Size = new System.Drawing.Size(200, 29);
             this.label15.TabIndex = 23;
             this.label15.Text = "Lugar de trabajo: ";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label2
             // 
@@ -871,9 +873,47 @@
             this.pictureBox6.TabIndex = 109;
             this.pictureBox6.TabStop = false;
             // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox8);
+            this.bunifuGradientPanel1.Controls.Add(this.groupBox2);
+            this.bunifuGradientPanel1.Controls.Add(this.label19);
+            this.bunifuGradientPanel1.Controls.Add(this.groupBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Controls.Add(this.label2);
+            this.bunifuGradientPanel1.Controls.Add(this.label15);
+            this.bunifuGradientPanel1.Controls.Add(this.label3);
+            this.bunifuGradientPanel1.Controls.Add(this.label14);
+            this.bunifuGradientPanel1.Controls.Add(this.label4);
+            this.bunifuGradientPanel1.Controls.Add(this.label5);
+            this.bunifuGradientPanel1.Controls.Add(this.label6);
+            this.bunifuGradientPanel1.Controls.Add(this.label7);
+            this.bunifuGradientPanel1.Controls.Add(this.label8);
+            this.bunifuGradientPanel1.Controls.Add(this.label9);
+            this.bunifuGradientPanel1.Controls.Add(this.label10);
+            this.bunifuGradientPanel1.Controls.Add(this.label13);
+            this.bunifuGradientPanel1.Controls.Add(this.label11);
+            this.bunifuGradientPanel1.Controls.Add(this.label12);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DarkRed;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1558, 788);
+            this.bunifuGradientPanel1.TabIndex = 106;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
             // Registro_pacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
