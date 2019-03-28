@@ -78,5 +78,15 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreServicio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

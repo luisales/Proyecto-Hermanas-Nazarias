@@ -506,7 +506,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_expediente 'Expediente paciente',Primer_nombre 'Primer nombre',Segundo_nombre 'Segundo nombre',Primer_apellido 'Primer Apellido',Fecha_nacimiento 'Fecha de nacimiento',Numero_identidad 'Identidad de paciente', Sexo 'Sexo de paciente' from[dbo].[Paciente] where Numero_identidad LIKE " + "'" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo_expediente 'Expediente paciente',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Fecha_nacimiento 'Fecha de nacimiento',a.Numero_identidad 'Identidad de paciente', a.Sexo 'Sexo de paciente', b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso', c.Primer_nombre+c.Primer_apellido 'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion from[dbo].[Paciente] a inner join[dbo].[Empleado] b on a.Codigo_empleado_ingreso = b.Codigo inner join[dbo].[Empleado] c on a.Codigo_empleado_modificacion = c.Codigo where a.Numero_identidad like" + "'" + id + "'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -539,7 +539,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_expediente 'Expediente paciente',Primer_nombre 'Primer nombre',Segundo_nombre 'Segundo nombre',Primer_apellido 'Primer Apellido',Fecha_nacimiento 'Fecha de nacimiento',Numero_identidad 'Identidad de paciente', Sexo 'Sexo de paciente' from [dbo].[Paciente] where Primer_nombre LIKE " + "'" + nombre + "%'" + " AND Primer_apellido LIKE " + "'" + ape + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo_expediente 'Expediente paciente',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Fecha_nacimiento 'Fecha de nacimiento',a.Numero_identidad 'Identidad de paciente', a.Sexo 'Sexo de paciente', b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso', c.Primer_nombre+c.Primer_apellido 'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion from[dbo].[Paciente] a inner join[dbo].[Empleado] b on a.Codigo_empleado_ingreso = b.Codigo inner join[dbo].[Empleado] c on a.Codigo_empleado_modificacion = c.Codigo where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -788,7 +788,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha2));
-                cmd.Parameters.Add(new SqlParameter("@Tipo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Tipo", "ING"));
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -1596,7 +1596,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de Usuario', a.Nombre 'Nombre de Usuario', b.Primer_nombre 'Nombre Empleado', b.Primer_apellido 'Apellido Empleado', a.Contrasena 'Contraseña'  from [dbo].[Usuario] a inner join [dbo].[Empleado] b on a.[Codigo_empleado] = b.[Codigo]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo, a.[Nombre] ,b.Primer_nombre+ ' '+ b.Primer_apellido'Empleado' , +a.[Fecha_ingreso] 'Fecha ingreso' , a.[Estado] from [dbo].[Usuario] a inner join [dbo].[Empleado] b on a.[Codigo_empleado]=b.[Codigo]", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);

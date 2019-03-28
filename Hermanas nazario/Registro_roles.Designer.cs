@@ -44,14 +44,14 @@
             this.chkEmpleados = new System.Windows.Forms.CheckBox();
             this.chkPacientes = new System.Windows.Forms.CheckBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbestado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -64,7 +64,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(256, 32);
+            this.label5.Location = new System.Drawing.Point(188, 12);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(235, 37);
@@ -77,7 +77,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(104, 146);
+            this.label1.Location = new System.Drawing.Point(18, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 27);
@@ -89,7 +89,7 @@
             this.btningresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btningresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btningresar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btningresar.Location = new System.Drawing.Point(298, 222);
+            this.btningresar.Location = new System.Drawing.Point(212, 216);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(119, 45);
             this.btningresar.TabIndex = 40;
@@ -100,7 +100,7 @@
             // txtNombreRol
             // 
             this.txtNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRol.Location = new System.Drawing.Point(298, 143);
+            this.txtNombreRol.Location = new System.Drawing.Point(212, 103);
             this.txtNombreRol.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtNombreRol.MaxLength = 30;
             this.txtNombreRol.Name = "txtNombreRol";
@@ -112,7 +112,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(281, 154);
+            this.pictureBox5.Location = new System.Drawing.Point(195, 114);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(13, 10);
@@ -137,7 +137,7 @@
             // 
             this.chkMantenimientos.AutoSize = true;
             this.chkMantenimientos.BackColor = System.Drawing.Color.Transparent;
-            this.chkMantenimientos.Location = new System.Drawing.Point(490, 274);
+            this.chkMantenimientos.Location = new System.Drawing.Point(404, 234);
             this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2);
             this.chkMantenimientos.Name = "chkMantenimientos";
             this.chkMantenimientos.Size = new System.Drawing.Size(100, 17);
@@ -150,18 +150,19 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(497, 114);
+            this.label2.Location = new System.Drawing.Point(399, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 27);
             this.label2.TabIndex = 73;
             this.label2.Text = "Permisos";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // chkDocumentos
             // 
             this.chkDocumentos.AutoSize = true;
             this.chkDocumentos.BackColor = System.Drawing.Color.Transparent;
-            this.chkDocumentos.Location = new System.Drawing.Point(490, 255);
+            this.chkDocumentos.Location = new System.Drawing.Point(404, 215);
             this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2);
             this.chkDocumentos.Name = "chkDocumentos";
             this.chkDocumentos.Size = new System.Drawing.Size(86, 17);
@@ -173,7 +174,7 @@
             // 
             this.chkInventario.AutoSize = true;
             this.chkInventario.BackColor = System.Drawing.Color.Transparent;
-            this.chkInventario.Location = new System.Drawing.Point(490, 235);
+            this.chkInventario.Location = new System.Drawing.Point(404, 195);
             this.chkInventario.Margin = new System.Windows.Forms.Padding(2);
             this.chkInventario.Name = "chkInventario";
             this.chkInventario.Size = new System.Drawing.Size(73, 17);
@@ -185,7 +186,7 @@
             // 
             this.chkFacturacion.AutoSize = true;
             this.chkFacturacion.BackColor = System.Drawing.Color.Transparent;
-            this.chkFacturacion.Location = new System.Drawing.Point(490, 214);
+            this.chkFacturacion.Location = new System.Drawing.Point(404, 174);
             this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2);
             this.chkFacturacion.Name = "chkFacturacion";
             this.chkFacturacion.Size = new System.Drawing.Size(82, 17);
@@ -197,7 +198,7 @@
             // 
             this.chkUsuarios.AutoSize = true;
             this.chkUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.chkUsuarios.Location = new System.Drawing.Point(490, 194);
+            this.chkUsuarios.Location = new System.Drawing.Point(404, 154);
             this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.chkUsuarios.Name = "chkUsuarios";
             this.chkUsuarios.Size = new System.Drawing.Size(107, 17);
@@ -209,7 +210,7 @@
             // 
             this.chkEmpleados.AutoSize = true;
             this.chkEmpleados.BackColor = System.Drawing.Color.Transparent;
-            this.chkEmpleados.Location = new System.Drawing.Point(490, 174);
+            this.chkEmpleados.Location = new System.Drawing.Point(404, 134);
             this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.chkEmpleados.Name = "chkEmpleados";
             this.chkEmpleados.Size = new System.Drawing.Size(123, 17);
@@ -221,7 +222,7 @@
             // 
             this.chkPacientes.AutoSize = true;
             this.chkPacientes.BackColor = System.Drawing.Color.Transparent;
-            this.chkPacientes.Location = new System.Drawing.Point(490, 154);
+            this.chkPacientes.Location = new System.Drawing.Point(404, 114);
             this.chkPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.chkPacientes.Name = "chkPacientes";
             this.chkPacientes.Size = new System.Drawing.Size(73, 17);
@@ -233,6 +234,8 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.btningresar);
+            this.bunifuGradientPanel1.Controls.Add(this.txtNombreRol);
             this.bunifuGradientPanel1.Controls.Add(this.label7);
             this.bunifuGradientPanel1.Controls.Add(this.cmbestado);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
@@ -249,7 +252,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.chkFacturacion);
             this.bunifuGradientPanel1.Controls.Add(this.chkEmpleados);
             this.bunifuGradientPanel1.Controls.Add(this.chkUsuarios);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DarkRed;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.GradientActiveCaption;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
@@ -258,14 +261,38 @@
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(795, 327);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(580, 327);
             this.bunifuGradientPanel1.TabIndex = 106;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(95, 152);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 27);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "Estado:";
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(210, 150);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(121, 32);
+            this.cmbestado.TabIndex = 105;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.logoo;
-            this.pictureBox3.Location = new System.Drawing.Point(665, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(478, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(76, 72);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -422,41 +449,17 @@
             this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(176, 184);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 27);
-            this.label7.TabIndex = 106;
-            this.label7.Text = "Estado:";
-            // 
-            // cmbestado
-            // 
-            this.cmbestado.FormattingEnabled = true;
-            this.cmbestado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbestado.Location = new System.Drawing.Point(296, 190);
-            this.cmbestado.Name = "cmbestado";
-            this.cmbestado.Size = new System.Drawing.Size(121, 21);
-            this.cmbestado.TabIndex = 105;
-            // 
             // Registro_roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(753, 327);
-            this.Controls.Add(this.txtNombreRol);
-            this.Controls.Add(this.btningresar);
+            this.ClientSize = new System.Drawing.Size(580, 327);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(520, 200);
             this.Name = "Registro_roles";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registro_roles";
             this.Load += new System.EventHandler(this.Registro_roles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -466,7 +469,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
