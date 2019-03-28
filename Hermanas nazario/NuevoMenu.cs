@@ -31,7 +31,6 @@ namespace Hermanas_nazario
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -521,6 +520,22 @@ namespace Hermanas_nazario
 
         private void bunifuFlatButton21_Click(object sender, EventArgs e)
         {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel7.Visible = false;
+            panel8.Visible = false;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
+            Ingreso_ropa a = new Ingreso_ropa();
+            a.ShowDialog();
+            Base_de_datos.paca = 0;
+            Base_de_datos.nombrePacientes.Clear();
+            Base_de_datos.cantidadPacientes.Clear();
 
         }
 
@@ -741,6 +756,12 @@ namespace Hermanas_nazario
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void bunifuFlatButton23_Click(object sender, EventArgs e)
+        {
+            Busqueda_ropa a = new Busqueda_ropa();
+            a.ShowDialog();
         }
     }
 }
