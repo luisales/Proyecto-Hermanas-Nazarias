@@ -44,7 +44,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.txtprof = new System.Windows.Forms.TextBox();
+            this.txtemp = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,9 +56,6 @@
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtemp = new System.Windows.Forms.TextBox();
-            this.txtprof = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,10 +63,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -277,6 +277,26 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(849, 388);
             this.bunifuGradientPanel1.TabIndex = 106;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(413, 231);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(417, 74);
+            this.dataGridView1.TabIndex = 71;
+            this.dataGridView1.Visible = false;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
@@ -287,6 +307,31 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 104;
             this.pictureBox9.TabStop = false;
+            // 
+            // txtprof
+            // 
+            this.txtprof.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprof.Location = new System.Drawing.Point(670, 134);
+            this.txtprof.Margin = new System.Windows.Forms.Padding(2);
+            this.txtprof.MaxLength = 50;
+            this.txtprof.Name = "txtprof";
+            this.txtprof.Size = new System.Drawing.Size(143, 30);
+            this.txtprof.TabIndex = 63;
+            this.txtprof.TextChanged += new System.EventHandler(this.txtprof_TextChanged);
+            this.txtprof.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprof_KeyPress);
+            // 
+            // txtemp
+            // 
+            this.txtemp.Enabled = false;
+            this.txtemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemp.Location = new System.Drawing.Point(674, 180);
+            this.txtemp.Margin = new System.Windows.Forms.Padding(2);
+            this.txtemp.MaxLength = 8;
+            this.txtemp.Name = "txtemp";
+            this.txtemp.Size = new System.Drawing.Size(66, 30);
+            this.txtemp.TabIndex = 36;
+            this.txtemp.TextChanged += new System.EventHandler(this.txtemp_TextChanged);
+            this.txtemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemp_KeyPress);
             // 
             // pictureBox7
             // 
@@ -461,12 +506,12 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(389, 133);
+            this.label4.Location = new System.Drawing.Point(374, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(263, 25);
+            this.label4.Size = new System.Drawing.Size(280, 25);
             this.label4.TabIndex = 62;
-            this.label4.Text = "Nombre de profesor favorito: ";
+            this.label4.Text = "Nombre de su ultima mascota: ";
             // 
             // label
             // 
@@ -481,51 +526,6 @@
             this.label.TabIndex = 35;
             this.label.Text = "Codigo empleado: ";
             this.label.Click += new System.EventHandler(this.txtemp_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(413, 231);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 74);
-            this.dataGridView1.TabIndex = 71;
-            this.dataGridView1.Visible = false;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // txtemp
-            // 
-            this.txtemp.Enabled = false;
-            this.txtemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemp.Location = new System.Drawing.Point(674, 180);
-            this.txtemp.Margin = new System.Windows.Forms.Padding(2);
-            this.txtemp.MaxLength = 8;
-            this.txtemp.Name = "txtemp";
-            this.txtemp.Size = new System.Drawing.Size(66, 30);
-            this.txtemp.TabIndex = 36;
-            this.txtemp.TextChanged += new System.EventHandler(this.txtemp_TextChanged);
-            this.txtemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemp_KeyPress);
-            // 
-            // txtprof
-            // 
-            this.txtprof.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprof.Location = new System.Drawing.Point(670, 134);
-            this.txtprof.Margin = new System.Windows.Forms.Padding(2);
-            this.txtprof.MaxLength = 50;
-            this.txtprof.Name = "txtprof";
-            this.txtprof.Size = new System.Drawing.Size(143, 30);
-            this.txtprof.TabIndex = 63;
-            this.txtprof.TextChanged += new System.EventHandler(this.txtprof_TextChanged);
-            this.txtprof.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprof_KeyPress);
             // 
             // Registro_de_usuario
             // 
@@ -550,10 +550,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
