@@ -94,12 +94,12 @@ namespace Hermanas_nazario
 
         private void txtmadre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.sololetras(e);
+            Validar.sololetras1(e);
         }
 
         private void txtpadre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.sololetras(e);
+            Validar.sololetras1(e);
         }
 
         private void btnregistrar_Click(object sender, EventArgs e)
@@ -144,12 +144,12 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if(txtid.TextLength<13)
+            if (txtid.TextLength < 13)
             {
                 MessageBox.Show("El campo de identidad debe ser de 13 digitos");
                 return;
             }
-         
+
             if (int.Parse(txtmes.Text) == 2 && int.Parse(txtdia.Text) > 29)
             {
                 MessageBox.Show("Fecha invalida: no existe el dia");
@@ -160,7 +160,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Fecha invalida: no existe el dia");
                 return;
             }
-            if ((int.Parse(txtdia.Text))<=0 || (int.Parse(txtdia.Text))>31)
+            if ((int.Parse(txtdia.Text)) <= 0 || (int.Parse(txtdia.Text)) > 31)
             {
                 MessageBox.Show("El dia tiene que ser 1-31");
                 return;
@@ -171,10 +171,10 @@ namespace Hermanas_nazario
                 return;
             }
             DateTime fech = DateTime.Now;
-            
+
             if ((int.Parse(txtanio.Text)) < 1900 || (int.Parse(txtanio.Text)) > int.Parse(fech.Year.ToString()))
             {
-                MessageBox.Show("El año tiene que ser 1900-"+ fech.Year.ToString());
+                MessageBox.Show("El año tiene que ser 1900-" + fech.Year.ToString());
                 return;
             }
             DateTime actual = DateTime.Now;
@@ -195,9 +195,6 @@ namespace Hermanas_nazario
                 MessageBox.Show("El campo de telefono de emergencia debe ser de 8 digitos");
                 return;
             }
-
-
-
 
             int b = Base_de_datos.validarIDp(txtid.Text);
             if(b==0)
@@ -312,6 +309,20 @@ namespace Hermanas_nazario
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOcupacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOcupacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtlugar_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
