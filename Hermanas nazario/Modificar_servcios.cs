@@ -115,5 +115,10 @@ namespace Hermanas_nazario
                 btnModificar.Enabled = true;
             }
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

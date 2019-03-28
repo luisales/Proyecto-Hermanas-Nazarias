@@ -46,7 +46,7 @@ namespace Hermanas_nazario
             txtape.Enabled = false;
             txtape.Visible = false;
             label3.Visible = false;
-            pictureBox1.Visible = false;
+            
             label1.Text = "Identidad: ";
             txtId.Enabled = true;
             txtId.Visible = true;
@@ -64,7 +64,7 @@ namespace Hermanas_nazario
             txtape.Text = "";
             txtnom.Text = "";
             txtId.Text = "";
-            pictureBox1.Visible = true;
+            
             label1.Text = "Primer Nombre: ";
             txtId.Enabled = false;
             txtId.Visible = false;
@@ -283,6 +283,11 @@ namespace Hermanas_nazario
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
