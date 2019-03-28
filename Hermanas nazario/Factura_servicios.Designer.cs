@@ -114,12 +114,12 @@
             // txtdescripcion
             // 
             this.txtdescripcion.Enabled = false;
-            this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescripcion.Location = new System.Drawing.Point(312, 91);
             this.txtdescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtdescripcion.MaxLength = 30;
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(171, 30);
+            this.txtdescripcion.Size = new System.Drawing.Size(171, 24);
             this.txtdescripcion.TabIndex = 42;
             this.txtdescripcion.TextChanged += new System.EventHandler(this.txtCita_TextChanged);
             // 
@@ -142,12 +142,12 @@
             // txtCod
             // 
             this.txtCod.Enabled = false;
-            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCod.Location = new System.Drawing.Point(132, 122);
             this.txtCod.Margin = new System.Windows.Forms.Padding(2);
             this.txtCod.MaxLength = 13;
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(143, 30);
+            this.txtCod.Size = new System.Drawing.Size(143, 24);
             this.txtCod.TabIndex = 47;
             this.txtCod.Visible = false;
             this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
@@ -219,12 +219,12 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(426, 129);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.MaxLength = 5;
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(57, 30);
+            this.txtCantidad.Size = new System.Drawing.Size(57, 24);
             this.txtCantidad.TabIndex = 49;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 

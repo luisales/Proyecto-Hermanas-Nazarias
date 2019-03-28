@@ -29,7 +29,7 @@ namespace Hermanas_nazario
 
         private void txtcodigo_TextChanged(object sender, EventArgs e)
         {
-            if (txtcodigo.TextLength >= 1)
+            if(txtcodigo.TextLength >= 1)
                 Base_de_datos.busqueda_factura(int.Parse(txtcodigo.Text), dgvcitas);
         }
 
@@ -46,6 +46,12 @@ namespace Hermanas_nazario
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);
+            
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
