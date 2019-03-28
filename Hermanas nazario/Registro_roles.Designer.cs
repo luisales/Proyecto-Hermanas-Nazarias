@@ -269,7 +269,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(90, 144);
+            this.label7.Location = new System.Drawing.Point(95, 152);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 27);
@@ -278,13 +278,14 @@
             // 
             // cmbestado
             // 
+            this.cmbestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbestado.FormattingEnabled = true;
             this.cmbestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
             this.cmbestado.Location = new System.Drawing.Point(210, 150);
             this.cmbestado.Name = "cmbestado";
-            this.cmbestado.Size = new System.Drawing.Size(121, 21);
+            this.cmbestado.Size = new System.Drawing.Size(121, 32);
             this.cmbestado.TabIndex = 105;
             // 
             // pictureBox3
