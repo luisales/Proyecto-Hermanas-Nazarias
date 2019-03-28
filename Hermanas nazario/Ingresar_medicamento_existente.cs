@@ -92,5 +92,10 @@ namespace Hermanas_nazario
             Validar.espacio(e);
             Validar.solonumeros(e);
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

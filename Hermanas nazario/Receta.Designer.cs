@@ -60,7 +60,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.txtriesgo = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -84,7 +83,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(743, 90);
+            this.label11.Location = new System.Drawing.Point(733, 90);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 25);
@@ -108,7 +107,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(743, 155);
+            this.label2.Location = new System.Drawing.Point(733, 155);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(235, 25);
@@ -133,7 +132,7 @@
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
             this.pictureBox1.Location = new System.Drawing.Point(1043, 92);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -147,7 +146,7 @@
             this.pictureBox2.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
             this.pictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +159,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(743, 219);
+            this.label1.Location = new System.Drawing.Point(733, 219);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
@@ -190,8 +189,8 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView2.Location = new System.Drawing.Point(690, 333);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(641, 331);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -266,8 +265,8 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 299);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 212);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -280,8 +279,8 @@
             // 
             this.txtCod.Enabled = false;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(315, 195);
-            this.txtCod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCod.Location = new System.Drawing.Point(306, 108);
+            this.txtCod.Margin = new System.Windows.Forms.Padding(2);
             this.txtCod.MaxLength = 13;
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(143, 30);
@@ -295,10 +294,10 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(52, 181);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(43, 94);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(134, 65);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
@@ -309,7 +308,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.White;
             this.radioButton2.Location = new System.Drawing.Point(4, 37);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(58, 17);
             this.radioButton2.TabIndex = 1;
@@ -322,8 +321,8 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.White;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(4, 14);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Location = new System.Drawing.Point(4, 16);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(62, 17);
             this.radioButton1.TabIndex = 0;
@@ -336,8 +335,8 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(298, 202);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(289, 115);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(13, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -347,8 +346,8 @@
             // txtnom
             // 
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.Location = new System.Drawing.Point(315, 195);
-            this.txtnom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom.Location = new System.Drawing.Point(306, 108);
+            this.txtnom.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(143, 30);
@@ -361,7 +360,7 @@
             this.lblBusqueda.AutoSize = true;
             this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.Location = new System.Drawing.Point(207, 195);
+            this.lblBusqueda.Location = new System.Drawing.Point(198, 108);
             this.lblBusqueda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBusqueda.Name = "lblBusqueda";
             this.lblBusqueda.Size = new System.Drawing.Size(87, 25);
@@ -372,7 +371,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(16, 148);
+            this.label7.Location = new System.Drawing.Point(11, 81);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(620, 287);
@@ -408,7 +407,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(680, 538);
+            this.button4.Location = new System.Drawing.Point(406, 409);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(212, 68);
@@ -421,7 +420,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(439, 538);
+            this.button5.Location = new System.Drawing.Point(176, 409);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(212, 68);
@@ -434,7 +433,7 @@
             // 
             this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox8.Location = new System.Drawing.Point(748, 484);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(13, 10);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -450,7 +449,7 @@
             "Medio",
             "Bajo"});
             this.txtriesgo.Location = new System.Drawing.Point(775, 475);
-            this.txtriesgo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtriesgo.Margin = new System.Windows.Forms.Padding(2);
             this.txtriesgo.Name = "txtriesgo";
             this.txtriesgo.Size = new System.Drawing.Size(390, 33);
             this.txtriesgo.TabIndex = 89;
@@ -462,12 +461,14 @@
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.dataGridView1);
             this.bunifuGradientPanel1.Controls.Add(this.txtCod);
+            this.bunifuGradientPanel1.Controls.Add(this.button4);
+            this.bunifuGradientPanel1.Controls.Add(this.button5);
             this.bunifuGradientPanel1.Controls.Add(this.lblBusqueda);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
             this.bunifuGradientPanel1.Controls.Add(this.groupBox1);
             this.bunifuGradientPanel1.Controls.Add(this.label5);
-            this.bunifuGradientPanel1.Controls.Add(this.btnModificar);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox4);
+            this.bunifuGradientPanel1.Controls.Add(this.dataGridView2);
             this.bunifuGradientPanel1.Controls.Add(this.txtnom);
             this.bunifuGradientPanel1.Controls.Add(this.panel7);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
@@ -476,7 +477,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.label7);
             this.bunifuGradientPanel1.Controls.Add(this.label11);
             this.bunifuGradientPanel1.Controls.Add(this.label2);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DarkRed;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.GradientActiveCaption;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
@@ -485,27 +486,14 @@
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1263, 620);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1174, 518);
             this.bunifuGradientPanel1.TabIndex = 106;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnModificar.Enabled = false;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(770, 359);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(112, 43);
-            this.btnModificar.TabIndex = 68;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.logoo;
-            this.pictureBox4.Location = new System.Drawing.Point(1144, 10);
+            this.pictureBox4.Location = new System.Drawing.Point(1087, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(76, 72);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -667,24 +655,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1232, 620);
+            this.ClientSize = new System.Drawing.Size(1174, 518);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.txtriesgo);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtnombre);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.txtcantidad);
             this.Controls.Add(this.txtmedicamento);
             this.Controls.Add(this.txtcita);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Location = new System.Drawing.Point(150, 100);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Receta";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Receta";
             this.Load += new System.EventHandler(this.Receta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -737,7 +723,6 @@
         private System.Windows.Forms.ComboBox txtriesgo;
         public System.Windows.Forms.TextBox txtcita;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton24;
