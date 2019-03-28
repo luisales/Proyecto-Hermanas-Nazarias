@@ -50,7 +50,7 @@
             this.label1.Location = new System.Drawing.Point(38, 126);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(498, 36);
+            this.label1.Size = new System.Drawing.Size(426, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Numero de expediente del paciente: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -61,7 +61,7 @@
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcodigo.MaxLength = 8;
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(167, 35);
+            this.txtcodigo.Size = new System.Drawing.Size(167, 30);
             this.txtcodigo.TabIndex = 2;
             this.txtcodigo.Click += new System.EventHandler(this.txtcodigo_Click);
             this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
@@ -102,9 +102,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(183, 22);
+            this.label5.Location = new System.Drawing.Point(211, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(528, 55);
+            this.label5.Size = new System.Drawing.Size(441, 46);
             this.label5.TabIndex = 25;
             this.label5.Text = "BUSQUEDA DE CITAS";
             // 
@@ -137,12 +137,12 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(-2, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 15;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(862, 440);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(848, 440);
             this.bunifuGradientPanel1.TabIndex = 26;
             // 
             // Busqueda_citas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
