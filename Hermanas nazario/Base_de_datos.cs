@@ -1596,7 +1596,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de Usuario', a.Nombre 'Nombre de Usuario', b.Primer_nombre 'Nombre Empleado', b.Primer_apellido 'Apellido Empleado', a.Contrasena 'Contraseña'  from [dbo].[Usuario] a inner join [dbo].[Empleado] b on a.[Codigo_empleado] = b.[Codigo]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo, a.[Nombre] ,b.Primer_nombre+ ' '+ b.Primer_apellido'Empleado' , +a.[Fecha_ingreso] 'Fecha ingreso' , a.[Estado] from [dbo].[Usuario] a inner join [dbo].[Empleado] b on a.[Codigo_empleado]=b.[Codigo]", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
