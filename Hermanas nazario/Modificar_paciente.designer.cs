@@ -32,7 +32,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtExpediente = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label22 = new System.Windows.Forms.Label();
             this.cmbestado = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -123,6 +123,7 @@
             // 
             // txtExpediente
             // 
+            this.txtExpediente.Enabled = false;
             this.txtExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpediente.Location = new System.Drawing.Point(127, 46);
             this.txtExpediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -135,28 +136,15 @@
             this.txtExpediente.TextChanged += new System.EventHandler(this.txtExpediente_TextChanged);
             this.txtExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBuscar.Enabled = false;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(628, 19);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 43);
-            this.btnBuscar.TabIndex = 62;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(41, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -164,7 +152,6 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(332, 591);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -199,7 +186,6 @@
             // 
             // txtriesgo
             // 
-            this.txtriesgo.Enabled = false;
             this.txtriesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtriesgo.FormattingEnabled = true;
             this.txtriesgo.Items.AddRange(new object[] {
@@ -239,7 +225,6 @@
             // 
             // txtLugarTrabajo
             // 
-            this.txtLugarTrabajo.Enabled = false;
             this.txtLugarTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarTrabajo.Location = new System.Drawing.Point(267, 318);
             this.txtLugarTrabajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -250,7 +235,6 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Enabled = false;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(191, 25);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -261,7 +245,6 @@
             // 
             // txttel
             // 
-            this.txttel.Enabled = false;
             this.txttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttel.Location = new System.Drawing.Point(192, 51);
             this.txttel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -273,7 +256,6 @@
             // 
             // txtTelEmer
             // 
-            this.txtTelEmer.Enabled = false;
             this.txtTelEmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelEmer.Location = new System.Drawing.Point(192, 77);
             this.txtTelEmer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -297,7 +279,6 @@
             // 
             // txtnom1
             // 
-            this.txtnom1.Enabled = false;
             this.txtnom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom1.Location = new System.Drawing.Point(238, 82);
             this.txtnom1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -321,7 +302,6 @@
             // 
             // txtnom2
             // 
-            this.txtnom2.Enabled = false;
             this.txtnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom2.Location = new System.Drawing.Point(553, 83);
             this.txtnom2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -346,7 +326,6 @@
             // 
             // txtape1
             // 
-            this.txtape1.Enabled = false;
             this.txtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape1.Location = new System.Drawing.Point(239, 110);
             this.txtape1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -370,7 +349,6 @@
             // 
             // txtape2
             // 
-            this.txtape2.Enabled = false;
             this.txtape2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape2.Location = new System.Drawing.Point(553, 110);
             this.txtape2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -394,7 +372,6 @@
             // 
             // txtlugar
             // 
-            this.txtlugar.Enabled = false;
             this.txtlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlugar.Location = new System.Drawing.Point(266, 291);
             this.txtlugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -441,7 +418,6 @@
             // 
             // txtmadre
             // 
-            this.txtmadre.Enabled = false;
             this.txtmadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmadre.Location = new System.Drawing.Point(268, 488);
             this.txtmadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -454,7 +430,6 @@
             // 
             // txtpadre
             // 
-            this.txtpadre.Enabled = false;
             this.txtpadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpadre.Location = new System.Drawing.Point(268, 514);
             this.txtpadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -479,7 +454,6 @@
             // 
             // txtid
             // 
-            this.txtid.Enabled = false;
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(234, 235);
             this.txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -520,7 +494,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.rdf);
             this.groupBox1.Controls.Add(this.rdm);
-            this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(234, 136);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -576,7 +549,6 @@
             // 
             // txtdia
             // 
-            this.txtdia.Enabled = false;
             this.txtdia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdia.Location = new System.Drawing.Point(284, 206);
             this.txtdia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -588,7 +560,6 @@
             // 
             // txtmes
             // 
-            this.txtmes.Enabled = false;
             this.txtmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmes.Location = new System.Drawing.Point(358, 206);
             this.txtmes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -600,7 +571,6 @@
             // 
             // txtanio
             // 
-            this.txtanio.Enabled = false;
             this.txtanio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtanio.Location = new System.Drawing.Point(421, 206);
             this.txtanio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -625,7 +595,6 @@
             // 
             // txtOcupacion
             // 
-            this.txtOcupacion.Enabled = false;
             this.txtOcupacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOcupacion.Location = new System.Drawing.Point(234, 262);
             this.txtOcupacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -938,6 +907,21 @@
             this.cmbestado.Size = new System.Drawing.Size(121, 26);
             this.cmbestado.TabIndex = 115;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBuscar.Enabled = false;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(628, 19);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(112, 43);
+            this.btnBuscar.TabIndex = 62;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // ModifcacionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -946,8 +930,9 @@
             this.ClientSize = new System.Drawing.Size(796, 634);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(425, 75);
             this.Name = "ModifcacionPaciente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Modificacion de pacientes";
             this.Load += new System.EventHandler(this.ModifcacionPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -971,7 +956,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtExpediente;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
@@ -1024,6 +1008,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox cmbestado;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

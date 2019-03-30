@@ -15,7 +15,7 @@ namespace Hermanas_nazario
     {
         protected DataTable Resultado;
         public static string Nombre1, codempleado, empleadoAcc;
-        public static string Nombre2;
+        public static string Nombre2, estadoE;
         public static string Apellido1;
         public static int decis = 0, b, c, accesoci;
         public static string Apellid2;
@@ -43,6 +43,7 @@ namespace Hermanas_nazario
         public static string Cod = "";
         public static string nommedi;
         public static string cant;
+        public static string Fecha_vencimiento;
         public static string desc;
         public static string CodMed;
         public static int numero;
@@ -361,7 +362,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("select [Primer_nombre], [Segundo_nombre], [Primer_apellido], [Segundo_apellido],[Lugar_nacimiento], day([Fecha_nacimiento]) as dia, month([Fecha_nacimiento]) as mes,year([Fecha_nacimiento]) as anio,[Nombre_padre], [Nombre_madre], [Numero_identidad], [Sexo], [Codigo_nivel], [Ocupacion], [Lugar_trabajo], [Direccion], [Telefono], [Telefono_emergencia]  from Paciente WHERE Codigo_expediente=@id", con);
+            SqlCommand cmd = new SqlCommand("select [Primer_nombre], [Segundo_nombre], [Primer_apellido], [Segundo_apellido],[Lugar_nacimiento], day([Fecha_nacimiento]) as dia, month([Fecha_nacimiento]) as mes,year([Fecha_nacimiento]) as anio,[Nombre_padre], [Nombre_madre], [Numero_identidad], [Sexo], [Codigo_nivel], [Ocupacion], [Lugar_trabajo], [Direccion], [Telefono], [Telefono_emergencia], [Estado]  from Paciente WHERE Codigo_expediente=@id", con);
             cmd.Parameters.AddWithValue("@id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -391,6 +392,7 @@ namespace Hermanas_nazario
                     Base_de_datos.Direccion = registro["Direccion"].ToString();
                     Base_de_datos.tel = registro["Telefono"].ToString();
                     Base_de_datos.telE = registro["Telefono_emergencia"].ToString();
+                    Base_de_datos.estadoE = registro["Estado"].ToString();
 
                 }
                 con.Close();
@@ -668,7 +670,7 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("mante_medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", CodMed));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));
@@ -676,9 +678,9 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Codigo_medida", Buscar_codigo_medida(medida)));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Estado", estado));
-                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.Parameters.Add(new SqlParameter("@opc", opc));
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Medicamento ingresado con exito");
+                
             }
             catch
             {
@@ -775,7 +777,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Ingresar_medicamento(int cod, int cant, string fecha)
+        public static void Ingresar_medicamento(int cod, int cant, string fecha, int Opc, string Tipo)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -788,11 +790,13 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_medicamento", cod));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
-
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
+                if (fecha=="")
+                cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", DBNull.Value));
+                else
                 cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha));
-                cmd.Parameters.Add(new SqlParameter("@Tipo", "ING"));
-                cmd.Parameters.Add(new SqlParameter("@Opc", 1));
+                cmd.Parameters.Add(new SqlParameter("@Tipo", Tipo));
+                cmd.Parameters.Add(new SqlParameter("@Opc", Opc));
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -1763,7 +1767,7 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
-        public static void Actualizar_empleado(int codigo_empleado, string nombre1, string nombre2, string apellido1, string apellido2, string correo_empleado, string id_empleado, string sexo, string tel_empleado, string cargo, int rol)
+        public static void Actualizar_empleado(int codigo_empleado, string nombre1, string nombre2, string apellido1, string apellido2, string correo_empleado, string id_empleado, string sexo, string tel_empleado, int rol, int cargo)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1780,8 +1784,8 @@ namespace Hermanas_nazario
             cmd.Parameters.Add(new SqlParameter("@Numero_identidad", id_empleado));
             cmd.Parameters.Add(new SqlParameter("@Sexo", sexo));
             cmd.Parameters.Add(new SqlParameter("@Telefono", tel_empleado));
-            cmd.Parameters.Add(new SqlParameter("@Codigo_puesto", 1));
-            cmd.Parameters.Add(new SqlParameter("@Codigo_rol", codigo_rol));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_puesto", cargo));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_rol", rol));
             cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
             cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
             cmd.Parameters.Add(new SqlParameter("@opc", 2));
@@ -2178,7 +2182,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Numero_identidad LIKE " + "'" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Segundo_apellido 'Segundo Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Numero_identidad LIKE " + "'" + id + "'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2208,7 +2212,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Segundo_apellido 'Segundo Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado',e.Nombre 'Puesto', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo inner join Puesto e on e.Codigo=a.Codigo_puesto where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2535,7 +2539,6 @@ namespace Hermanas_nazario
 
         public static int Buscar_codigo_medida(string medida)
         {
-            int x;
             SqlConnection con;
             con = Conectar();
             con.Open();
@@ -2543,8 +2546,9 @@ namespace Hermanas_nazario
             SqlDataReader Perm = cmd.ExecuteReader();
             if (Perm.Read())
             {
-                return Convert.ToInt32(Perm["Codigo"]);
                 con.Close();
+                return Convert.ToInt32(Perm["Codigo"]);
+                
             }
             else
             {
@@ -2574,6 +2578,128 @@ namespace Hermanas_nazario
             catch
             {
 
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void BuscarPrenda()
+        {
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.[Codigo],a.[Descripcion],a.[Existencia],a.[Codigo_categoria] from [dbo].[Ropa] a ", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static void Registro_RopaEx(int cod, string desc, int cant, int cat)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_ropa", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", cod));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", desc));
+                cmd.Parameters.Add(new SqlParameter("@codigo_categoria", cat));
+                cmd.Parameters.Add(new SqlParameter("@existencia", cant));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public static int Buscar_codigo_puesto()
+        {
+            int x;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[Puesto] where Nombre='" + cargo_empleado + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                return Convert.ToInt32(Perm["Codigo"]);
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
+
+        public static int Buscar_codigo_rol()
+        {
+            int x;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[Rol] where Nombre='" + codigo_rol + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                return Convert.ToInt32(Perm["Codigo"]);
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
+
+        public static void movimientoRopaIng(int cod, string desc, int cant)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("mante_movimiento_ropa", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@codigo_ropa", cod));
+                cmd.Parameters.Add(new SqlParameter("@cantidad", cant));
+                cmd.Parameters.Add(new SqlParameter("@tipo", "ING"));
+                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
             }
             finally
             {

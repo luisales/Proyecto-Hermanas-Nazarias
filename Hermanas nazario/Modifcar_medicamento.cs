@@ -15,6 +15,11 @@ namespace Hermanas_nazario
         public Modifcar_medicamento()
         {
             InitializeComponent();
+            codigomed.Text = Base_de_datos.CodMed;
+            txtnom.Text = Base_de_datos.nommedi;
+            txtprecio.Text = Base_de_datos.Precio_medicamento(Base_de_datos.CodMed);
+            richTextBox1.Text = Base_de_datos.desc;
+            txtUnidad.Text = Base_de_datos.unidad;
         }
 
         private void label5_Click(object sender, EventArgs e)

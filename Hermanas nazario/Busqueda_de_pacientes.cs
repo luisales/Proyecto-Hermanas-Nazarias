@@ -203,14 +203,15 @@ namespace Hermanas_nazario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+
             Base_de_datos.accesoci = 1;
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             Base_de_datos.Cod = Convert.ToString(selectedRow.Cells[0].Value);
-
-            this.Hide();
+            txtape.Clear();
+            txtnom.Clear();
             ModifcacionPaciente a = new ModifcacionPaciente();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void txtir_Click(object sender, EventArgs e)
@@ -218,9 +219,8 @@ namespace Hermanas_nazario
             Base_de_datos.accesoci = 1;
             Base_de_datos.decis = 3;
             Base_de_datos.Cod = txtGencita.Text;
-            this.Hide();
             Busqueda_citas a = new Busqueda_citas();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)

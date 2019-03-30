@@ -61,10 +61,10 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,16 +75,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox5.Location = new System.Drawing.Point(195, 249);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(14, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -95,7 +95,7 @@
             // 
             this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox4.Location = new System.Drawing.Point(195, 195);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(14, 10);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             // 
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox3.Location = new System.Drawing.Point(195, 148);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(14, 10);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +117,7 @@
             // 
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
             this.pictureBox2.Location = new System.Drawing.Point(195, 106);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(14, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,7 +128,7 @@
             // 
             this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Location = new System.Drawing.Point(608, 369);
-            this.btnregistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnregistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Size = new System.Drawing.Size(112, 43);
             this.btnregistrar.TabIndex = 51;
@@ -143,9 +143,9 @@
             this.groupBox1.Controls.Add(this.rdm);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(213, 174);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(317, 44);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
@@ -155,7 +155,7 @@
             this.rdf.AutoSize = true;
             this.rdf.BackColor = System.Drawing.Color.Transparent;
             this.rdf.Location = new System.Drawing.Point(171, 15);
-            this.rdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdf.Margin = new System.Windows.Forms.Padding(2);
             this.rdf.Name = "rdf";
             this.rdf.Size = new System.Drawing.Size(117, 29);
             this.rdf.TabIndex = 1;
@@ -168,7 +168,7 @@
             this.rdm.AutoSize = true;
             this.rdm.BackColor = System.Drawing.Color.Transparent;
             this.rdm.Location = new System.Drawing.Point(24, 15);
-            this.rdm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdm.Margin = new System.Windows.Forms.Padding(2);
             this.rdm.Name = "rdm";
             this.rdm.Size = new System.Drawing.Size(119, 29);
             this.rdm.TabIndex = 0;
@@ -180,7 +180,7 @@
             // 
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(213, 240);
-            this.txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid.Margin = new System.Windows.Forms.Padding(2);
             this.txtid.MaxLength = 13;
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(160, 30);
@@ -204,7 +204,7 @@
             // 
             this.txtape2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape2.Location = new System.Drawing.Point(552, 132);
-            this.txtape2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtape2.Margin = new System.Windows.Forms.Padding(2);
             this.txtape2.MaxLength = 30;
             this.txtape2.Name = "txtape2";
             this.txtape2.Size = new System.Drawing.Size(143, 30);
@@ -227,7 +227,7 @@
             // 
             this.txtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape1.Location = new System.Drawing.Point(213, 135);
-            this.txtape1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtape1.Margin = new System.Windows.Forms.Padding(2);
             this.txtape1.MaxLength = 30;
             this.txtape1.Name = "txtape1";
             this.txtape1.Size = new System.Drawing.Size(143, 30);
@@ -250,7 +250,7 @@
             // 
             this.txtnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom2.Location = new System.Drawing.Point(552, 96);
-            this.txtnom2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom2.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom2.MaxLength = 30;
             this.txtnom2.Name = "txtnom2";
             this.txtnom2.Size = new System.Drawing.Size(143, 30);
@@ -273,7 +273,7 @@
             // 
             this.txtnom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom1.Location = new System.Drawing.Point(213, 96);
-            this.txtnom1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom1.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom1.MaxLength = 30;
             this.txtnom1.Name = "txtnom1";
             this.txtnom1.Size = new System.Drawing.Size(143, 30);
@@ -311,7 +311,7 @@
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
             this.pictureBox1.Location = new System.Drawing.Point(20, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 67);
             this.pictureBox1.TabIndex = 60;
@@ -334,7 +334,7 @@
             // 
             this.txtcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.Location = new System.Drawing.Point(213, 272);
-            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtcorreo.MaxLength = 30;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(160, 30);
@@ -358,7 +358,7 @@
             // 
             this.txttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttel.Location = new System.Drawing.Point(213, 305);
-            this.txttel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttel.Margin = new System.Windows.Forms.Padding(2);
             this.txttel.MaxLength = 8;
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(160, 30);
@@ -370,7 +370,7 @@
             this.txtcargo.Enabled = false;
             this.txtcargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcargo.Location = new System.Drawing.Point(269, 337);
-            this.txtcargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtcargo.MaxLength = 30;
             this.txtcargo.Name = "txtcargo";
             this.txtcargo.Size = new System.Drawing.Size(79, 30);
@@ -407,7 +407,7 @@
             this.txtrol.Enabled = false;
             this.txtrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrol.Location = new System.Drawing.Point(269, 376);
-            this.txtrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtrol.Margin = new System.Windows.Forms.Padding(2);
             this.txtrol.MaxLength = 8;
             this.txtrol.Name = "txtrol";
             this.txtrol.Size = new System.Drawing.Size(78, 30);
@@ -421,7 +421,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(376, 308);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -437,7 +437,7 @@
             this.pictureBox7.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox7.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
             this.pictureBox7.Location = new System.Drawing.Point(351, 379);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(22, 23);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -499,48 +499,11 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(753, 440);
             this.bunifuGradientPanel1.TabIndex = 105;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox6.Location = new System.Drawing.Point(195, 280);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(14, 10);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 63;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 188);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 25);
-            this.label11.TabIndex = 61;
-            this.label11.Text = "Sexo:";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
-            this.pictureBox9.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
-            this.pictureBox9.Location = new System.Drawing.Point(350, 339);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(22, 23);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 105;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // dataGridView2
             // 
@@ -559,6 +522,43 @@
             this.dataGridView2.Visible = false;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
+            this.pictureBox9.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
+            this.pictureBox9.Location = new System.Drawing.Point(350, 339);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(22, 23);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 105;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
+            this.pictureBox6.Location = new System.Drawing.Point(195, 280);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(14, 10);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 63;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 188);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 25);
+            this.label11.TabIndex = 61;
+            this.label11.Text = "Sexo:";
+            // 
             // Registro_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,8 +568,8 @@
             this.ClientSize = new System.Drawing.Size(753, 440);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(430, 150);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Location = new System.Drawing.Point(460, 150);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registro_empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registro_empleado";
@@ -587,9 +587,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }

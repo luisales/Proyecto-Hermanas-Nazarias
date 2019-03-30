@@ -144,6 +144,7 @@ namespace Hermanas_nazario
             }
             else
             MessageBox.Show("Servicio ya Ingresado");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
