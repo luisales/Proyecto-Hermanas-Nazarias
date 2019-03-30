@@ -66,11 +66,11 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
 
         }
@@ -669,7 +669,7 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("mante_medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", CodMed));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));
@@ -677,7 +677,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Codigo_medida", Buscar_codigo_medida(medida)));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Estado", estado));
-                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.Parameters.Add(new SqlParameter("@opc", opc));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Medicamento ingresado con exito");
             }
@@ -776,7 +776,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Ingresar_medicamento(int cod, int cant, string fecha)
+        public static void Ingresar_medicamento(int cod, int cant, string fecha, int Opc, string Tipo)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -792,8 +792,8 @@ namespace Hermanas_nazario
 
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha));
-                cmd.Parameters.Add(new SqlParameter("@Tipo", "ING"));
-                cmd.Parameters.Add(new SqlParameter("@Opc", 1));
+                cmd.Parameters.Add(new SqlParameter("@Tipo", Tipo));
+                cmd.Parameters.Add(new SqlParameter("@Opc", Opc));
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -2575,6 +2575,60 @@ namespace Hermanas_nazario
             catch
             {
 
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void BuscarPrenda()
+        {
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.[Codigo],a.[Descripcion],a.[Existencia],a.[Codigo_categoria] from [dbo].[Ropa] a ", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static void Registro_RopaEx(int cod, string desc, int cant, int cat)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_ropa", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", cod));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", desc));
+                cmd.Parameters.Add(new SqlParameter("@codigo_categoria", cat));
+                cmd.Parameters.Add(new SqlParameter("@existencia", cant));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
             }
             finally
             {

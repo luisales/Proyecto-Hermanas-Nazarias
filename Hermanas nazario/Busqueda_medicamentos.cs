@@ -91,10 +91,18 @@ namespace Hermanas_nazario
             Base_de_datos.cant = lblCan.Text;
             Base_de_datos.desc = txtUnidad.Text;
             Base_de_datos.unidad = label10.Text;
-           
+            dataGridView1.DataSource = null;
+            lblCan.Text = "*";
+            lblNom.Text = "*";
+            lblDes.Text = "*";
+            lblCod.Text = "*";
+            txtUnidad.Text = "*";
+            label10.Text = "*";
+            txtCod.Text = "";
+            txtnom.Text= "";
             Ingresar_medicamentoEx a = new Ingresar_medicamentoEx();
             a.ShowDialog();
-
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
