@@ -186,5 +186,16 @@ namespace Hermanas_nazario
         {
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Base_de_datos.CodMed = lblCod.Text;
+            Base_de_datos.nommedi = lblNom.Text;
+            Base_de_datos.cant = lblCan.Text;
+            Base_de_datos.desc = txtUnidad.Text;
+            Base_de_datos.unidad = label10.Text;
+            Modifcar_medicamento a = new Modifcar_medicamento();
+            a.ShowDialog();
+        }
     }
 }

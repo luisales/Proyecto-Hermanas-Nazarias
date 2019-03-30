@@ -369,7 +369,7 @@
             this.ClientSize = new System.Drawing.Size(740, 422);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(300, 150);
+            this.Location = new System.Drawing.Point(450, 160);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Diagnostico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

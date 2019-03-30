@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busqueda_de_pacientes));
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -137,14 +137,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(44, 158);
@@ -233,10 +233,10 @@
             this.btnGencita.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGencita.Enabled = false;
             this.btnGencita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGencita.Location = new System.Drawing.Point(586, 290);
+            this.btnGencita.Location = new System.Drawing.Point(563, 291);
             this.btnGencita.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnGencita.Name = "btnGencita";
-            this.btnGencita.Size = new System.Drawing.Size(128, 33);
+            this.btnGencita.Size = new System.Drawing.Size(148, 33);
             this.btnGencita.TabIndex = 34;
             this.btnGencita.Text = "Generar Cita";
             this.btnGencita.UseVisualStyleBackColor = false;
@@ -247,7 +247,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.Tan;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(585, 326);
+            this.btnModificar.Location = new System.Drawing.Point(584, 326);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(213, 33);
@@ -264,7 +264,7 @@
             this.txtir.Location = new System.Drawing.Point(718, 290);
             this.txtir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtir.Name = "txtir";
-            this.txtir.Size = new System.Drawing.Size(80, 33);
+            this.txtir.Size = new System.Drawing.Size(93, 33);
             this.txtir.TabIndex = 38;
             this.txtir.Text = "Ir a cita";
             this.txtir.UseVisualStyleBackColor = false;
@@ -309,7 +309,7 @@
             // 
             this.txtGencita.Enabled = false;
             this.txtGencita.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGencita.Location = new System.Drawing.Point(499, 297);
+            this.txtGencita.Location = new System.Drawing.Point(472, 296);
             this.txtGencita.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtGencita.Name = "txtGencita";
             this.txtGencita.Size = new System.Drawing.Size(84, 24);

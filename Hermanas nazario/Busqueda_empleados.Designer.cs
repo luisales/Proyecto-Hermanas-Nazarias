@@ -138,14 +138,15 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 204);
+            this.dataGridView1.Location = new System.Drawing.Point(174, 202);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(649, 116);
+            this.dataGridView1.Size = new System.Drawing.Size(626, 116);
             this.dataGridView1.TabIndex = 44;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // txtape
             // 
@@ -248,7 +249,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.Tan;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(561, 341);
+            this.btnModificar.Location = new System.Drawing.Point(648, 325);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(152, 64);
@@ -261,7 +262,7 @@
             // 
             this.txtGencita.Enabled = false;
             this.txtGencita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGencita.Location = new System.Drawing.Point(473, 359);
+            this.txtGencita.Location = new System.Drawing.Point(560, 325);
             this.txtGencita.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtGencita.Name = "txtGencita";
             this.txtGencita.Size = new System.Drawing.Size(84, 30);
