@@ -44,12 +44,13 @@ namespace Hermanas_nazario
                 return;
             }
 
-
-            //Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed),int.Parse(txtcant.Text),fecha, dateTimePicker1.Value.ToString("MM/dd/yyyy"), Base_de_datos.cod_empleado);
-            MessageBox.Show("Medicamentos ingresados correctamente");
-            this.Hide();
-            Busqueda_medicamentos a = new Busqueda_medicamentos();
-            a.Show();
+            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text) + int.Parse(Base_de_datos.cant), double.Parse(txtprecio.Text), txtUnidad.Text, "ACT", 2);
+            Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed),(int.Parse(txtcant.Text)), dateTimePicker1.Value.ToString("yyyy/MM/dd"), 1, "ING");
+        
+            Hide();
+            
+            
+            
 
 
         }
@@ -68,7 +69,8 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            Close();
+            
+            Hide();
         }
 
         private void txtcant_TextChanged(object sender, EventArgs e)
@@ -94,6 +96,11 @@ namespace Hermanas_nazario
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
