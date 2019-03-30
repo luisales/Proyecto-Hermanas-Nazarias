@@ -62,7 +62,14 @@ namespace Hermanas_nazario
                 return;
             }
 
+            if(int.Parse(txtcant.Text)<=0)
+            {
+                MessageBox.Show("La cantidad no pueder ser menor a 1");
+                return;
+            }
+
             Base_de_datos.Registro_RopaEx(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), cat);
+            Base_de_datos.movimientoRopaIng(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text));
 
             MessageBox.Show("Nivel modificada.");
 
@@ -83,6 +90,17 @@ namespace Hermanas_nazario
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtcant_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+            Validar.espacio(e);
         }
     }
 }
