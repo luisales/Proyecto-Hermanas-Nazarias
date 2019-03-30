@@ -75,7 +75,9 @@ namespace Hermanas_nazario
             txtNombreServicio.Clear();
             txtprecio.Clear();
             txtDescripcion.Clear();
+            
             btnModificar.Enabled = false;
+            this.Hide();
            
         }
 
@@ -92,6 +94,8 @@ namespace Hermanas_nazario
             txtNombreServicio.Text = Convert.ToString(selectedRow.Cells[1].Value);
             txtDescripcion.Text = Convert.ToString(selectedRow.Cells[2].Value);
             txtprecio.Text = Convert.ToString(selectedRow.Cells[3].Value);
+            cmbestado.Text = Convert.ToString(selectedRow.Cells[4].Value);
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

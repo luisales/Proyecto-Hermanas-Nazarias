@@ -12,6 +12,7 @@ namespace Hermanas_nazario
 {
     public partial class Modificacion_roles : Form
     {
+         
         public Modificacion_roles()
         {
             InitializeComponent();
@@ -103,8 +104,9 @@ namespace Hermanas_nazario
 
                     txtCodigoRol.Clear();
                     txtNombreRol.Clear();
+                    
                     btnModificar.Enabled = false;
-                    Hide();
+                    this.Hide();
                 }
                 else
                 {
@@ -136,10 +138,43 @@ namespace Hermanas_nazario
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string per;
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtCodigoRol.Text = Convert.ToString(selectedRow.Cells[0].Value);
             txtNombreRol.Text = Convert.ToString(selectedRow.Cells[1].Value);
+            cmbestado.Text = Convert.ToString(selectedRow.Cells[2].Value);
+            textBox1.Text = Convert.ToString(selectedRow.Cells[3].Value);
+            if (textBox1.Text.Contains('A') == true)
+            {
+                chkPacientes.Checked = true;
+            }
+            if (textBox1.Text.Contains('B') == true)
+            {
+                chkEmpleados.Checked = true;
+            }
+            if (textBox1.Text.Contains('C') == true)
+            {
+                chkUsuarios.Checked = true;
+            }
+            if (textBox1.Text.Contains('D') == true)
+            {
+                chkFacturacion.Checked = true;
+            }
+            if (textBox1.Text.Contains('E') == true)
+            {
+                chkInventario.Checked = true;
+            }
+            if (textBox1.Text.Contains('F') == true)
+            {
+                chkDocumentos.Checked = true;
+            }
+            if (textBox1.Text.Contains('G') == true)
+            {
+                chkMantenimientos.Checked = true;
+            }
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -189,6 +224,58 @@ namespace Hermanas_nazario
 
         private void chkEmpleados_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Contains('A') == true)
+            {
+                chkPacientes.Checked = true;
+            }
+            if (textBox1.Text.Contains('B') == true)
+            {
+                chkEmpleados.Checked = true;
+            }
+            if (textBox1.Text.Contains('C') == true)
+            {
+                chkUsuarios.Checked = true;
+            }
+            if (textBox1.Text.Contains('D') == true)
+            {
+                chkFacturacion.Checked = true;
+            }
+            if (textBox1.Text.Contains('E') == true)
+            {
+                chkInventario.Checked = true;
+            }
+            if (textBox1.Text.Contains('F') == true)
+            {
+                chkDocumentos.Checked = true;
+            }
+            if (textBox1.Text.Contains('G') == true)
+            {
+                chkMantenimientos.Checked = true;
+            }
+            
+
+            chkDocumentos.Checked = false;
+            chkEmpleados.Checked = false;
+            chkFacturacion.Checked = false;
+            chkInventario.Checked = false;
+            chkMantenimientos.Checked = false;
+            chkPacientes.Checked = false;
+            chkUsuarios.Checked = false;
 
         }
     }
