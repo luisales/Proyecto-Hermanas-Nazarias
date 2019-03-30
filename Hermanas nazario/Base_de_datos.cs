@@ -655,7 +655,7 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-        public static void registrar_medicamento(string nom, string desc, int cant, double precio, int unidad)
+        public static void registrar_medicamento(string nom, string desc, int cant, double precio,  int codigo_medida, string estado, int opc)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -665,16 +665,14 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("mante_medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));
                 cmd.Parameters.Add(new SqlParameter("@Precio", precio));
-                cmd.Parameters.Add(new SqlParameter("@Codigo_medida", unidad));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_medida", "1"));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
-                cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+                cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 1));
-
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Medicamento ingresado con exito");
             }
