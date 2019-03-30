@@ -188,5 +188,21 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Visible = true;
+            Base_de_datos a = new Base_de_datos();
+            a.BuscarPuesto();
+            dataGridView2.DataSource = a.Mostrar_Resultados();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedrowindex = dataGridView2.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView2.Rows[selectedrowindex];
+            txtcargo.Text = Convert.ToString(selectedRow.Cells[0].Value);
+            dataGridView2.Visible = false;
+        }
     }
 }

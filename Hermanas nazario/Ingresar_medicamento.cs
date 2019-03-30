@@ -75,9 +75,9 @@ namespace Hermanas_nazario
                 medida = 3;
             }
 
+           
 
-
-            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), medida);
+            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), medida,"ACT", 1);
             codigo = Base_de_datos.codigo_medicamento();
             Base_de_datos.Ingresar_medicamento(codigo, int.Parse(txtcant.Text), fecha, dateTimePicker1.Value.ToString("MM/dd/yyyy"), Base_de_datos.cod_empleado);
             this.Hide();
@@ -145,7 +145,7 @@ namespace Hermanas_nazario
 
         private void txtUnidad_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+                
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -156,6 +156,11 @@ namespace Hermanas_nazario
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

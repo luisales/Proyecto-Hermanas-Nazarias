@@ -273,8 +273,18 @@ namespace Hermanas_nazario
                 MessageBox.Show("El campo de telefono de emergencia debe ser de 8 digitos");
                 return;
             }
+            string estado;
+            if (cmbestado.Text == "Activo")
+            {
+                estado = "ACT";
+            }
 
-            Base_de_datos.Actualizar_P(int.Parse(txtExpediente.Text), txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtdia.Text + "/" + txtmes.Text + "/" + txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(), txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
+            else
+            {
+                estado = "INC";
+            }
+
+            Base_de_datos.Actualizar_P(int.Parse(txtExpediente.Text), txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtdia.Text + "/" + txtmes.Text + "/" + txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, riesgo, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(), txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper(), estado);
 
             MessageBox.Show("Expediente modificado.");
 

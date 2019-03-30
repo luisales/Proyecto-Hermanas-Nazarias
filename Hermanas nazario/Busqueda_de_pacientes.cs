@@ -20,13 +20,13 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
+            if (radioButton1.Checked && txtnom.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.Buscar(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
-            else
+            else if(txtape.TextLength == 0)
             {
                 dataGridView1.DataSource = null;
                 txtGencita.Text = "";
@@ -37,13 +37,13 @@ namespace Hermanas_nazario
         private void txtape_TextChanged(object sender, EventArgs e)
         {
 
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
+            if (radioButton1.Checked && txtape.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.Buscar(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
-            else
+            else if(txtnom.TextLength==0)
             {
                 dataGridView1.DataSource = null;
                 txtGencita.Text = "";
