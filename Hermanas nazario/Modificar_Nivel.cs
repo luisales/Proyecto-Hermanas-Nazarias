@@ -50,7 +50,7 @@ namespace Hermanas_nazario
 
             else
             {
-                estado = "DSC";
+                estado = "INC";
             }
 
             Base_de_datos.Actualizar_Nivel(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(), float.Parse(textBox1.Text), estado);

@@ -59,7 +59,7 @@ namespace Hermanas_nazario
 
             else
             {
-                estado = "DSC";
+                estado = "INC";
             }
 
             Base_de_datos.Actualizar_Medida(int.Parse(txtCodigoRol.Text), txtNombreRol.Text.ToUpper(),estado);

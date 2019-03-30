@@ -1384,7 +1384,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Código del Rol', Nombre 'Nombre del Rol',Estado, Permisos from[dbo].[Rol]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Código del Rol', a.Nombre 'Nombre del Rol',a.Estado, a.Permisos ,a.[Fecha_ingreso],b.Primer_nombre+' '+b.Primer_apellido'Empleado ingreso', a.Fecha_modificacion, c.Primer_nombre+' '+c.Primer_apellido'Empleado modifico' from Rol a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1568,7 +1568,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Codigo de medida', Nombre 'Nombre de la medida',Estado 'Estado' from [dbo].[Medida]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de medida', a.Nombre 'Nombre de la medida',a.Estado 'Estado',a.[Fecha_ingreso],b.Primer_nombre+' '+b.Primer_apellido'Empleado ingreso', a.Fecha_modificacion, c.Primer_nombre+' '+c.Primer_apellido'Empleado modifico' from [dbo].[Medida] a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1622,7 +1622,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Codigo de Nivel', Nombre 'Nombre de nivel',Porcentaje_sugerido 'Porcentaje Sugerido', Estado from Nivel_Economico", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de Nivel', a.Nombre 'Nombre de nivel',a.Porcentaje_sugerido 'Porcentaje Sugerido', a.Estado ,a.[Fecha_ingreso],b.Primer_nombre+' '+b.Primer_apellido'Empleado ingreso', a.Fecha_modificacion, c.Primer_nombre+' '+c.Primer_apellido'Empleado modifico' from [dbo].[Nivel_Economico] a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1902,7 +1902,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Codigo de servicio', Nombre 'Nombre del servicio' , Descripcion 'Descripcion del servicio' , Precio 'Precio del servicio', Estado from [dbo].[servicio]", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de servicio', a.Nombre 'Nombre del servicio' , a.Descripcion 'Descripcion del servicio' , a.Precio 'Precio del servicio', a.Estado ,a.[Fecha_ingreso],b.Primer_nombre+' '+b.Primer_apellido'Empleado ingreso', a.Fecha_modificacion, c.Primer_nombre+' '+c.Primer_apellido'Empleado modifico' from [dbo].[Servicio] a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
