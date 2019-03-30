@@ -2634,6 +2634,33 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
+
+        public static void movimientoRopaIng(int cod, string desc, int cant)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("mante_movimiento_ropa", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@codigo_ropa", cod));
+                cmd.Parameters.Add(new SqlParameter("@cantidad", cant));
+                cmd.Parameters.Add(new SqlParameter("@tipo", "ING"));
+                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }
 

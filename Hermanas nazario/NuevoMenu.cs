@@ -763,5 +763,11 @@ namespace Hermanas_nazario
             Busqueda_ropa a = new Busqueda_ropa();
             a.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ingresoPrendaExisntente a = new ingresoPrendaExisntente();
+            a.Show();
+        }
     }
 }

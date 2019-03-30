@@ -350,6 +350,8 @@
             this.txtcant.Name = "txtcant";
             this.txtcant.Size = new System.Drawing.Size(77, 24);
             this.txtcant.TabIndex = 67;
+            this.txtcant.TextChanged += new System.EventHandler(this.txtcant_TextChanged);
+            this.txtcant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcant_KeyPress);
             // 
             // label2
             // 
@@ -394,8 +396,9 @@
             this.ClientSize = new System.Drawing.Size(838, 370);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(400, 200);
             this.Name = "ingresoPrendaExisntente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ingresoPrendaExisntente";
             this.Load += new System.EventHandler(this.ingresoPrendaExisntente_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
