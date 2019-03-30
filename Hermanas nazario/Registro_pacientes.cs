@@ -326,5 +326,29 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void txtmadre_TextChanged(object sender, EventArgs e)
+        {
+            string c;
+            c = txtmadre.Text;
+            if (c.StartsWith(" "))
+            {
+                MessageBox.Show("No se puede ingresar con espacio");
+                txtmadre.Text = "";
+                return;
+            }
+        }
+
+        private void txtpadre_TextChanged(object sender, EventArgs e)
+        {
+            string c;
+            c = txtpadre.Text;
+            if (c.StartsWith(" "))
+            {
+                MessageBox.Show("No se puede ingresar con espacio");
+                txtpadre.Text = "";
+                return;
+            }
+        }
     }
 }
