@@ -82,22 +82,22 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(733, 90);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 25);
+            this.label11.Size = new System.Drawing.Size(141, 24);
             this.label11.TabIndex = 61;
             this.label11.Text = "Codigo de cita: ";
             // 
             // txtcita
             // 
             this.txtcita.Enabled = false;
-            this.txtcita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcita.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcita.Location = new System.Drawing.Point(974, 90);
             this.txtcita.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtcita.Name = "txtcita";
-            this.txtcita.Size = new System.Drawing.Size(64, 30);
+            this.txtcita.Size = new System.Drawing.Size(64, 24);
             this.txtcita.TabIndex = 64;
             this.txtcita.TextChanged += new System.EventHandler(this.txtcita_TextChanged);
             this.txtcita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcita_KeyPress);
@@ -106,22 +106,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(733, 155);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(734, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 25);
+            this.label2.Size = new System.Drawing.Size(228, 24);
             this.label2.TabIndex = 66;
             this.label2.Text = "Codigo de medicamento: ";
             // 
             // txtmedicamento
             // 
             this.txtmedicamento.Enabled = false;
-            this.txtmedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmedicamento.Location = new System.Drawing.Point(974, 155);
+            this.txtmedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmedicamento.Location = new System.Drawing.Point(974, 117);
             this.txtmedicamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtmedicamento.Name = "txtmedicamento";
-            this.txtmedicamento.Size = new System.Drawing.Size(64, 30);
+            this.txtmedicamento.Size = new System.Drawing.Size(64, 24);
             this.txtmedicamento.TabIndex = 67;
             this.txtmedicamento.TextChanged += new System.EventHandler(this.txtmedicamento_TextChanged);
             this.txtmedicamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmedicamento_KeyPress);
@@ -158,21 +158,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(733, 219);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(733, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
+            this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 72;
             this.label1.Text = "Cantidad: ";
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcantidad.Location = new System.Drawing.Point(974, 219);
+            this.txtcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcantidad.Location = new System.Drawing.Point(974, 144);
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(64, 30);
+            this.txtcantidad.Size = new System.Drawing.Size(64, 24);
             this.txtcantidad.TabIndex = 73;
             this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
@@ -220,11 +220,11 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombre.Location = new System.Drawing.Point(974, 278);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(64, 30);
+            this.txtnombre.Size = new System.Drawing.Size(64, 24);
             this.txtnombre.TabIndex = 75;
             this.txtnombre.Visible = false;
             this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
@@ -247,10 +247,10 @@
             this.button2.BackColor = System.Drawing.Color.Tomato;
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1062, 271);
+            this.button2.Location = new System.Drawing.Point(1062, 252);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 44);
+            this.button2.Size = new System.Drawing.Size(79, 37);
             this.button2.TabIndex = 77;
             this.button2.Text = "Quitar";
             this.button2.UseVisualStyleBackColor = false;
@@ -291,10 +291,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(43, 94);
+            this.groupBox1.Location = new System.Drawing.Point(40, 92);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -306,7 +306,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.White;
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Location = new System.Drawing.Point(4, 37);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
@@ -319,7 +319,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.White;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(4, 16);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
@@ -397,7 +397,7 @@
             this.button3.Location = new System.Drawing.Point(1062, 183);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 68);
+            this.button3.Size = new System.Drawing.Size(79, 61);
             this.button3.TabIndex = 86;
             this.button3.Text = "Nueva Receta";
             this.button3.UseVisualStyleBackColor = false;
@@ -410,7 +410,7 @@
             this.button4.Location = new System.Drawing.Point(406, 409);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(212, 68);
+            this.button4.Size = new System.Drawing.Size(101, 44);
             this.button4.TabIndex = 87;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
@@ -423,7 +423,7 @@
             this.button5.Location = new System.Drawing.Point(176, 409);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 68);
+            this.button5.Size = new System.Drawing.Size(164, 44);
             this.button5.TabIndex = 88;
             this.button5.Text = "Generar Factura";
             this.button5.UseVisualStyleBackColor = false;
@@ -462,8 +462,11 @@
             this.bunifuGradientPanel1.Controls.Add(this.dataGridView1);
             this.bunifuGradientPanel1.Controls.Add(this.txtCod);
             this.bunifuGradientPanel1.Controls.Add(this.button4);
+            this.bunifuGradientPanel1.Controls.Add(this.button2);
             this.bunifuGradientPanel1.Controls.Add(this.button5);
+            this.bunifuGradientPanel1.Controls.Add(this.txtcantidad);
             this.bunifuGradientPanel1.Controls.Add(this.lblBusqueda);
+            this.bunifuGradientPanel1.Controls.Add(this.txtmedicamento);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
             this.bunifuGradientPanel1.Controls.Add(this.groupBox1);
             this.bunifuGradientPanel1.Controls.Add(this.label5);
@@ -659,11 +662,8 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.txtriesgo);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtnombre);
-            this.Controls.Add(this.txtcantidad);
-            this.Controls.Add(this.txtmedicamento);
             this.Controls.Add(this.txtcita);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
