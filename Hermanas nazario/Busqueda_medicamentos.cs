@@ -137,8 +137,13 @@ namespace Hermanas_nazario
                 busc.BuscarMedNom(txtnom.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
-          
-           else if (radioButton2.Checked && txtCod.TextLength >= 1)
+            else if (radioButton2.Checked && txtCod.TextLength == 0)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarMedNom("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
+            else if (radioButton2.Checked && txtCod.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.BuscarMedCod(txtCod.Text);
@@ -151,6 +156,7 @@ namespace Hermanas_nazario
             lblDes.Text = "*";
             lblCod.Text = "*";
             txtUnidad.Text = "*";
+            label10.Text = "*";
             
             btnIng.Enabled = false;
             btnSac.Enabled = false;

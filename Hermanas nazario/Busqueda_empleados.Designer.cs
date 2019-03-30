@@ -290,6 +290,7 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1303, 716);
             this.bunifuGradientPanel1.TabIndex = 54;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // Busqueda_empleados
             // 

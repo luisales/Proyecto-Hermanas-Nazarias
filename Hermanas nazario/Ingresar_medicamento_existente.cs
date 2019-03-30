@@ -45,7 +45,7 @@ namespace Hermanas_nazario
             }
 
 
-            Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed),int.Parse(txtcant.Text),fecha, dateTimePicker1.Value.ToString("MM/dd/yyyy"), Base_de_datos.cod_empleado);
+            //Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed),int.Parse(txtcant.Text),fecha, dateTimePicker1.Value.ToString("MM/dd/yyyy"), Base_de_datos.cod_empleado);
             MessageBox.Show("Medicamentos ingresados correctamente");
             this.Hide();
             Busqueda_medicamentos a = new Busqueda_medicamentos();

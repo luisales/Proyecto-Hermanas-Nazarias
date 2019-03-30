@@ -362,6 +362,11 @@ namespace Hermanas_nazario
             this.Hide();
         }
 
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             int indice;

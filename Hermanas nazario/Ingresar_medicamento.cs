@@ -15,7 +15,18 @@ namespace Hermanas_nazario
         public Ingresar_medicamento()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
             timer1.Enabled = true;
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarMedida();
+            dataGridView1.DataSource= busc.Mostrar_Resultados(); 
+        
+         
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                txtUnidad.Items.Add(row.Cells[1].Value.ToString());
+
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -25,7 +36,7 @@ namespace Hermanas_nazario
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int codigo, medida=0;
+            int codigo;
             if (!string.IsNullOrEmpty(txtnom.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -52,37 +63,17 @@ namespace Hermanas_nazario
                 MessageBox.Show("Medicamento ya existente");
                 return;
             }
-            if (txtUnidad.Text != "Frasco" && txtUnidad.Text != "Unidad" && txtUnidad.Text != "Caja")
-            {
-                MessageBox.Show("Llene todos los campos obligatorios");
-                return;
-            }
+         
             if (int.Parse(txtcant.Text) == 0)
             {
                 MessageBox.Show("Imposible ingresar 0");
                 return;
             }
-            if (txtUnidad.Text == "Caja")
-            {
-                medida = 1;
-            }
-            if (txtUnidad.Text == "Unidad")
-            {
-                medida = 2;
-            }
-            if (txtUnidad.Text == "Frasco")
-            {
-                medida = 3;
-            }
-
            
-
-            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), medida,"ACT", 1);
+            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), txtUnidad.SelectedItem.ToString(),"ACT", 1);
             codigo = Base_de_datos.codigo_medicamento();
-            Base_de_datos.Ingresar_medicamento(codigo, int.Parse(txtcant.Text), fecha, dateTimePicker1.Value.ToString("MM/dd/yyyy"), Base_de_datos.cod_empleado);
+            Base_de_datos.Ingresar_medicamento(codigo, int.Parse(txtcant.Text),  dateTimePicker1.Value.ToString("yyyy/MM/dd"));
             this.Hide();
-            menu men = new menu();
-            men.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

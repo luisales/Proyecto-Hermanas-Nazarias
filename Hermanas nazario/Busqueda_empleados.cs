@@ -258,6 +258,11 @@ namespace Hermanas_nazario
             Modificar_empleado a = new Modificar_empleado();
             a.Show();
         }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

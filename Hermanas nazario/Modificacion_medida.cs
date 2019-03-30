@@ -127,5 +127,10 @@ namespace Hermanas_nazario
             Validar.espacio(e);
 
         }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
