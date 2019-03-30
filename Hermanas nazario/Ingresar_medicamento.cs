@@ -71,8 +71,8 @@ namespace Hermanas_nazario
             }
            
             Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), txtUnidad.SelectedItem.ToString(),"ACT", 1);
-            codigo = Base_de_datos.codigo_medicamento();
-            Base_de_datos.Ingresar_medicamento(codigo, int.Parse(txtcant.Text),  dateTimePicker1.Value.ToString("yyyy/MM/dd"));
+            Base_de_datos.Ingresar_medicamento(Base_de_datos.codigo_medicamento(), int.Parse(txtcant.Text),  dateTimePicker1.Value.ToString("yyyy/MM/dd"), 1, "ING");
+
             this.Hide();
         }
 

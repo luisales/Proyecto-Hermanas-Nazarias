@@ -668,7 +668,7 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("mante_medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", CodMed));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));
@@ -676,7 +676,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Codigo_medida", Buscar_codigo_medida(medida)));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Estado", estado));
-                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.Parameters.Add(new SqlParameter("@opc", opc));
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Medicamento ingresado con exito");
             }
@@ -775,7 +775,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Ingresar_medicamento(int cod, int cant, string fecha)
+        public static void Ingresar_medicamento(int cod, int cant, string fecha, int Opc, string Tipo)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -791,8 +791,8 @@ namespace Hermanas_nazario
 
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha));
-                cmd.Parameters.Add(new SqlParameter("@Tipo", "ING"));
-                cmd.Parameters.Add(new SqlParameter("@Opc", 1));
+                cmd.Parameters.Add(new SqlParameter("@Tipo", Tipo));
+                cmd.Parameters.Add(new SqlParameter("@Opc", Opc));
                 cmd.ExecuteNonQuery();
             }
             catch
