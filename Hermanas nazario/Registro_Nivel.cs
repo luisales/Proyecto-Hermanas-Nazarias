@@ -36,17 +36,8 @@ namespace Hermanas_nazario
                     return;
                 }
 
-            String estado;
-            if (cmbestado.Text == "Activo")
-            {
-                estado = "ACT";
-            }
-
-            else
-            {
-                estado = "DSC";
-            }
-            Base_de_datos.Registro_Nivel(txtNombreRol.Text, float.Parse(textBox1.Text), estado);
+            
+            Base_de_datos.Registro_Nivel(txtNombreRol.Text, float.Parse(textBox1.Text));
                 MessageBox.Show("Registrado con exito");
 
                 this.Hide();
@@ -81,6 +72,11 @@ namespace Hermanas_nazario
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void Registro_Nivel_Load(object sender, EventArgs e)
+        {
+            txtNombreRol.Focus();
         }
     }
     }

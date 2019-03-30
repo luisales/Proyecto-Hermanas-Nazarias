@@ -64,7 +64,9 @@ namespace Hermanas_nazario
             txtCodigoRol.Clear();
             txtNombreRol.Clear();
             textBox1.Clear();
+           
             btnModificar.Enabled = false;
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,6 +87,8 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtCodigoRol.Text = Convert.ToString(selectedRow.Cells[0].Value);
             txtNombreRol.Text = Convert.ToString(selectedRow.Cells[1].Value);
+            textBox1.Text = Convert.ToString(selectedRow.Cells[2].Value);
+            cmbestado.Text = Convert.ToString(selectedRow.Cells[3].Value);
         }
 
         private void txtCodigoRol_TextChanged(object sender, EventArgs e)

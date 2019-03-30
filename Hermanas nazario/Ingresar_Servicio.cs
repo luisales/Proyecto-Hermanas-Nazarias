@@ -38,18 +38,9 @@ namespace Hermanas_nazario
 
             }
 
-            String estado;
-            if (cmbestado.Text == "Activo")
-            {
-                estado = "ACT";
-            }
+            
 
-            else
-            {
-                estado = "DSC";
-            }
-
-            Base_de_datos.Registro_Servicio(txtNombreServicio.Text.ToUpper(), txtDescripcion.Text.ToUpper(), txtprecio.Text.ToUpper(),estado);
+            Base_de_datos.Registro_Servicio(txtNombreServicio.Text.ToUpper(), txtDescripcion.Text.ToUpper(), txtprecio.Text.ToUpper());
             MessageBox.Show("Registrado con exito");
             this.Hide();
         }

@@ -30,18 +30,9 @@ namespace Hermanas_nazario
                 MessageBox.Show("Medida ya existente");
                 return;
             }
-            String estado;
-            if(cmbestado.Text=="Activo")
-            {
-                estado = "ACT";
-            }
+            
 
-            else
-            {
-                estado = "DSC";
-            }
-
-            Base_de_datos.Registro_Medida(txtNombreRol.Text.ToUpper(), estado);
+            Base_de_datos.Registro_Medida(txtNombreRol.Text.ToUpper());
             MessageBox.Show("Registrado con exito");
 
             this.Hide();
@@ -54,7 +45,7 @@ namespace Hermanas_nazario
 
         private void Ingresar_medida_Load(object sender, EventArgs e)
         {
-
+            txtNombreRol.Focus();
         }
 
         private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)

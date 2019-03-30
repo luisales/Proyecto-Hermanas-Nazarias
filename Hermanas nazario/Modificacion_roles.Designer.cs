@@ -50,6 +50,7 @@
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -88,6 +89,8 @@
             this.dataGridView1.TabIndex = 41;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
             // label1
             // 
@@ -306,6 +309,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.textBox1);
             this.bunifuGradientPanel1.Controls.Add(this.btnModificar);
             this.bunifuGradientPanel1.Controls.Add(this.cmbestado);
             this.bunifuGradientPanel1.Controls.Add(this.label7);
@@ -351,6 +355,15 @@
             this.pictureBox8.TabIndex = 70;
             this.pictureBox8.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(100, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 117;
+            this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Modificacion_roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,5 +408,6 @@
         private System.Windows.Forms.ComboBox cmbestado;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
