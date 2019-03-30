@@ -658,7 +658,7 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-        public static void registrar_medicamento(string nom, string desc, int cant, double precio, int unidad)
+        public static void registrar_medicamento(string nom, string desc, int cant, double precio,  int codigo_medida, string estado, int opc)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -668,16 +668,14 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("mante_medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));
                 cmd.Parameters.Add(new SqlParameter("@Precio", precio));
-                cmd.Parameters.Add(new SqlParameter("@Codigo_medida", unidad));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_medida", "1"));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
-                cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+                cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", 1));
-
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Medicamento ingresado con exito");
             }
@@ -2177,7 +2175,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', c.Nombre nombre_rol from[dbo].[Empleado] a inner join[dbo].[Rol] c on a.Codigo_rol = c.Codigo where a.Numero_identidad LIKE " + "'" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Numero_identidad LIKE " + "'" + id + "'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2207,7 +2205,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado',c.nombre Nombre_rol from[dbo].[Empleado] a inner join[dbo].[Rol] c on a.Codigo_rol = c.Codigo where Primer_nombre LIKE " + "'" + nombre + "%'" + " AND Primer_apellido LIKE " + "'" + ape + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
