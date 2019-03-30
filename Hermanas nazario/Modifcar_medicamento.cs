@@ -175,5 +175,10 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
+            if (radioButton1.Checked && (txtnom.TextLength >= 1 || txtape.TextLength >= 1))
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
@@ -40,7 +40,7 @@ namespace Hermanas_nazario
         private void txtape_TextChanged(object sender, EventArgs e)
         {
 
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
+            if (radioButton1.Checked && (txtnom.TextLength >= 1 || txtape.TextLength >= 1))
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.BuscarEE(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
