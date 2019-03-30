@@ -79,11 +79,20 @@ namespace Hermanas_nazario
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string est;
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtCodigoRol.Text = Convert.ToString(selectedRow.Cells[0].Value);
             txtNombreRol.Text = Convert.ToString(selectedRow.Cells[1].Value);
-            cmbestado.Text= Convert.ToString(selectedRow.Cells[2].Value);
+            est= Convert.ToString(selectedRow.Cells[2].Value);
+            if (est == "ACT")
+            {
+                cmbestado.Text = "Activo";
+            }
+            else
+            {
+                cmbestado.Text = "Inactivo";
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
