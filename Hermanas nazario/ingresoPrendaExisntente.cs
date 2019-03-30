@@ -41,7 +41,6 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtcod.Text = Convert.ToString(selectedRow.Cells[0].Value);
             richTextBox1.Text = Convert.ToString(selectedRow.Cells[1].Value);
-            txtcant.Text = Convert.ToString(selectedRow.Cells[2].Value);
             cat = int.Parse(Convert.ToString(selectedRow.Cells[3].Value));
         }
 
@@ -79,6 +78,11 @@ namespace Hermanas_nazario
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
