@@ -66,11 +66,11 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
             
         }
@@ -263,7 +263,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Numero_identidad", id));
                 cmd.Parameters.Add(new SqlParameter("@Sexo", sexo));
                 cmd.Parameters.Add(new SqlParameter("@Telefono", tel));
-                cmd.Parameters.Add(new SqlParameter("@Codigo_puesto", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_puesto", cargo));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_rol", rol));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
@@ -361,8 +361,8 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("select [Primer_nombre], [Segundo_nombre], [Primer_apellido], [Segundo_apellido],[Lugar_nacimiento], day([Fecha_nacimiento]) as dia, month([Fecha_nacimiento]) as mes,year([Fecha_nacimiento]) as anio,[Nombre_padre], [Nombre_madre], [Numero_identidad], [Sexo], [Codigo_riesgo], [Ocupacion], [Lugar_trabajo], [Direccion], [Telefono], [Telefono_emergencia]   from Paciente WHERE Codigo_expediente=@id", con);
-            cmd.Parameters.AddWithValue("id", id);
+            SqlCommand cmd = new SqlCommand("select [Primer_nombre], [Segundo_nombre], [Primer_apellido], [Segundo_apellido],[Lugar_nacimiento], day([Fecha_nacimiento]) as dia, month([Fecha_nacimiento]) as mes,year([Fecha_nacimiento]) as anio,[Nombre_padre], [Nombre_madre], [Numero_identidad], [Sexo], [Codigo_nivel], [Ocupacion], [Lugar_trabajo], [Direccion], [Telefono], [Telefono_emergencia]  from Paciente WHERE Codigo_expediente=@id", con);
+            cmd.Parameters.AddWithValue("@id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -385,7 +385,7 @@ namespace Hermanas_nazario
                     Base_de_datos.NombreM = registro["Nombre_madre"].ToString();
                     Base_de_datos.Identidad = registro["Numero_identidad"].ToString();
                     Base_de_datos.Sexo = registro["Sexo"].ToString();
-                    Base_de_datos.Riesgo = registro["Codigo_riesgo"].ToString();
+                    Base_de_datos.Riesgo = registro["Codigo_nivel"].ToString();
                     Base_de_datos.Ocupacion = registro["Ocupacion"].ToString();
                     Base_de_datos.LugarT = registro["Lugar_trabajo"].ToString();
                     Base_de_datos.Direccion = registro["Direccion"].ToString();
@@ -430,7 +430,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Actualizar_P(int expediente, string nom1, string nom2, string ape1, string ape2, string lugar, string fecha, string padre, string madre, string identidad, string sexo, int riesgo, string Ocupacion, string LugarT, string Direccion, string tel, string telE)
+        public static void Actualizar_P(int expediente, string nom1, string nom2, string ape1, string ape2, string lugar, string fecha, string padre, string madre, string identidad, string sexo, int riesgo, string Ocupacion, string LugarT, string Direccion, string tel, string telE, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -440,7 +440,7 @@ namespace Hermanas_nazario
                 con.Open();
                 SqlCommand cmd = new SqlCommand("mante_paciente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Codigo_expediente", expediente));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", expediente));
                 cmd.Parameters.Add(new SqlParameter("@Primer_nombre", nom1));
                 cmd.Parameters.Add(new SqlParameter("@Segundo_nombre", nom2));
                 cmd.Parameters.Add(new SqlParameter("@Primer_apellido", ape1));
@@ -451,12 +451,15 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Nombre_madre", madre));
                 cmd.Parameters.Add(new SqlParameter("@Numero_identidad", identidad));
                 cmd.Parameters.Add(new SqlParameter("@Sexo", sexo));
-                cmd.Parameters.Add(new SqlParameter("@Codigo_riesgo", riesgo));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_nivel", riesgo));
                 cmd.Parameters.Add(new SqlParameter("@Ocupacion", Ocupacion));
                 cmd.Parameters.Add(new SqlParameter("@Lugar_trabajo", LugarT));
                 cmd.Parameters.Add(new SqlParameter("@Direccion", Direccion));
                 cmd.Parameters.Add(new SqlParameter("@Telefono", tel));
                 cmd.Parameters.Add(new SqlParameter("@Telefono_emergencia", telE));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
                 cmd.ExecuteNonQuery();
             }
             catch
@@ -506,7 +509,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo_expediente 'Expediente paciente',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Fecha_nacimiento 'Fecha de nacimiento',a.Numero_identidad 'Identidad de paciente', a.Sexo 'Sexo de paciente', b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso', c.Primer_nombre+c.Primer_apellido 'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion from[dbo].[Paciente] a inner join[dbo].[Empleado] b on a.Codigo_empleado_ingreso = b.Codigo inner join[dbo].[Empleado] c on a.Codigo_empleado_modificacion = c.Codigo where a.Numero_identidad like" + "'" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo_expediente 'Expediente paciente',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Fecha_nacimiento 'Fecha de nacimiento',a.Numero_identidad 'Identidad de paciente', a.Sexo 'Sexo de paciente', b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso', c.Primer_nombre+c.Primer_apellido 'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion, a.Estado from[dbo].[Paciente] a inner join[dbo].[Empleado] b on a.Codigo_empleado_ingreso = b.Codigo inner join[dbo].[Empleado] c on a.Codigo_empleado_modificacion = c.Codigo where a.Numero_identidad like" + "'" + id + "'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -539,7 +542,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo_expediente 'Expediente paciente',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Fecha_nacimiento 'Fecha de nacimiento',a.Numero_identidad 'Identidad de paciente', a.Sexo 'Sexo de paciente', b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso', c.Primer_nombre+c.Primer_apellido 'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion from[dbo].[Paciente] a inner join[dbo].[Empleado] b on a.Codigo_empleado_ingreso = b.Codigo inner join[dbo].[Empleado] c on a.Codigo_empleado_modificacion = c.Codigo where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo_expediente 'Expediente paciente',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Fecha_nacimiento 'Fecha de nacimiento',a.Numero_identidad 'Identidad de paciente', a.Sexo 'Sexo de paciente', b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso', c.Primer_nombre+c.Primer_apellido 'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion, a.Estado from[dbo].[Paciente] a inner join[dbo].[Empleado] b on a.Codigo_empleado_ingreso = b.Codigo inner join[dbo].[Empleado] c on a.Codigo_empleado_modificacion = c.Codigo where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2526,6 +2529,33 @@ namespace Hermanas_nazario
             else
             {
                 return false;
+            }
+        }
+
+        public void BuscarPuesto()
+        {
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("Select a.Codigo, a.Nombre, b.Primer_nombre+' '+b.Primer_apellido, c.Primer_nombre+' '+c.Primer_apellido, a.Fecha_ingreso, a.Fecha_modificacion, a.Estado from  Puesto a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }
