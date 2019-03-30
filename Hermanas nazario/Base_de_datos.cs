@@ -70,7 +70,7 @@ namespace Hermanas_nazario
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-SME0UMA;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
             
         }
@@ -2172,7 +2172,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', c.Nombre nombre_rol from[dbo].[Empleado] a inner join[dbo].[Rol] c on a.Codigo_rol = c.Codigo where a.Numero_identidad LIKE " + "'" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Numero_identidad LIKE " + "'" + id + "'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2202,7 +2202,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado',a.Primer_nombre 'Primer nombre',a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado',c.nombre Nombre_rol from[dbo].[Empleado] a inner join[dbo].[Rol] c on a.Codigo_rol = c.Codigo where Primer_nombre LIKE " + "'" + nombre + "%'" + " AND Primer_apellido LIKE " + "'" + ape + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
