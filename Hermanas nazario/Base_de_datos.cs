@@ -71,7 +71,7 @@ namespace Hermanas_nazario
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
 
         }
@@ -660,7 +660,7 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-        public static void registrar_medicamento(string nom, string desc, int cant, double precio, string medida, string estado, int opc)
+        public static void registrar_medicamento(string nom, string desc, int cant, double precio, string medida, string estado, int opc )
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -668,17 +668,19 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("mante_medicamento", con);
+                SqlCommand cmd = new SqlCommand("mante_Medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+            
                 cmd.Parameters.Add(new SqlParameter("@Codigo", CodMed));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));
                 cmd.Parameters.Add(new SqlParameter("@Precio", precio));
-                cmd.Parameters.Add(new SqlParameter("@Codigo_medida", Buscar_codigo_medida(medida)));
+                
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                 cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", opc));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_medida", Buscar_codigo_medida(medida)));
                 cmd.ExecuteNonQuery();
 
             }
@@ -2546,8 +2548,9 @@ namespace Hermanas_nazario
             SqlDataReader Perm = cmd.ExecuteReader();
             if (Perm.Read())
             {
-                con.Close();
-                return Convert.ToInt32(Perm["Codigo"]);
+                
+                return int.Parse(Perm["Codigo"].ToString());
+               
 
             }
             else

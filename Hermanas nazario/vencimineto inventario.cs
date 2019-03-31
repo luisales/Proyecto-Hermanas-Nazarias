@@ -71,10 +71,13 @@ namespace Hermanas_nazario
 
             if (int.Parse(txtcant.Text)> int.Parse(txtrem.Text))
             {
-                Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), txtdesc.Text.ToUpper(), (int.Parse(Base_de_datos.cant) - int.Parse(txtcant.Text)), double.Parse(Base_de_datos.Precio_medicamento(Base_de_datos.CodMed)), txtUnidad.Text, "ACT", 2);
+                int x, y;
+                x = int.Parse(Base_de_datos.cant);
+                y = int.Parse(txtrem.Text);
+                Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), txtdesc.Text.ToUpper(),x-y, double.Parse(Base_de_datos.Precio_medicamento(Base_de_datos.CodMed)), txtUnidad.Text, "ACT", 2);
                 Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed), (int.Parse(txtrem.Text)), "", 1, "EGR");
-                MessageBox.Show("Cantidad Modificada Correctamente");
-                txtrem.Enabled = false;
+
+               txtrem.Enabled = false;
                 txtcod.Enabled = true;
 
                 txtcod.Clear();
@@ -128,6 +131,11 @@ namespace Hermanas_nazario
         {
             Hide();
             
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

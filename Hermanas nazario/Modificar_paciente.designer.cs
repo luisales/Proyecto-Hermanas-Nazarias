@@ -63,7 +63,6 @@
             this.rdm = new System.Windows.Forms.RadioButton();
             this.rdf = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,23 +76,36 @@
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label22 = new System.Windows.Forms.Label();
-            this.cmbestado = new System.Windows.Forms.ComboBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -126,7 +138,7 @@
             this.txtExpediente.Enabled = false;
             this.txtExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpediente.Location = new System.Drawing.Point(127, 46);
-            this.txtExpediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExpediente.Margin = new System.Windows.Forms.Padding(2);
             this.txtExpediente.MaxLength = 8;
             this.txtExpediente.Name = "txtExpediente";
             this.txtExpediente.Size = new System.Drawing.Size(47, 24);
@@ -141,7 +153,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
             this.pictureBox1.Location = new System.Drawing.Point(5, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +166,7 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(332, 591);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(106, 32);
             this.btnModificar.TabIndex = 19;
@@ -192,8 +204,8 @@
             "Alto",
             "Medio",
             "Bajo"});
-            this.txtriesgo.Location = new System.Drawing.Point(266, 344);
-            this.txtriesgo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtriesgo.Location = new System.Drawing.Point(273, 344);
+            this.txtriesgo.Margin = new System.Windows.Forms.Padding(2);
             this.txtriesgo.Name = "txtriesgo";
             this.txtriesgo.Size = new System.Drawing.Size(326, 26);
             this.txtriesgo.TabIndex = 13;
@@ -226,8 +238,8 @@
             // txtLugarTrabajo
             // 
             this.txtLugarTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLugarTrabajo.Location = new System.Drawing.Point(267, 318);
-            this.txtLugarTrabajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLugarTrabajo.Location = new System.Drawing.Point(274, 318);
+            this.txtLugarTrabajo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLugarTrabajo.MaxLength = 50;
             this.txtLugarTrabajo.Name = "txtLugarTrabajo";
             this.txtLugarTrabajo.Size = new System.Drawing.Size(326, 24);
@@ -237,7 +249,7 @@
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(191, 25);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(326, 24);
@@ -247,7 +259,7 @@
             // 
             this.txttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttel.Location = new System.Drawing.Point(192, 51);
-            this.txttel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttel.Margin = new System.Windows.Forms.Padding(2);
             this.txttel.MaxLength = 8;
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(160, 24);
@@ -258,7 +270,7 @@
             // 
             this.txtTelEmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelEmer.Location = new System.Drawing.Point(192, 77);
-            this.txtTelEmer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelEmer.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelEmer.MaxLength = 8;
             this.txtTelEmer.Name = "txtTelEmer";
             this.txtTelEmer.Size = new System.Drawing.Size(160, 24);
@@ -281,7 +293,7 @@
             // 
             this.txtnom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom1.Location = new System.Drawing.Point(238, 82);
-            this.txtnom1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom1.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom1.MaxLength = 30;
             this.txtnom1.Name = "txtnom1";
             this.txtnom1.Size = new System.Drawing.Size(143, 24);
@@ -304,7 +316,7 @@
             // 
             this.txtnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnom2.Location = new System.Drawing.Point(553, 83);
-            this.txtnom2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnom2.Margin = new System.Windows.Forms.Padding(2);
             this.txtnom2.MaxLength = 30;
             this.txtnom2.Name = "txtnom2";
             this.txtnom2.Size = new System.Drawing.Size(143, 24);
@@ -328,7 +340,7 @@
             // 
             this.txtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape1.Location = new System.Drawing.Point(239, 110);
-            this.txtape1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtape1.Margin = new System.Windows.Forms.Padding(2);
             this.txtape1.MaxLength = 30;
             this.txtape1.Name = "txtape1";
             this.txtape1.Size = new System.Drawing.Size(143, 24);
@@ -351,7 +363,7 @@
             // 
             this.txtape2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtape2.Location = new System.Drawing.Point(553, 110);
-            this.txtape2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtape2.Margin = new System.Windows.Forms.Padding(2);
             this.txtape2.MaxLength = 30;
             this.txtape2.Name = "txtape2";
             this.txtape2.Size = new System.Drawing.Size(143, 24);
@@ -373,8 +385,8 @@
             // txtlugar
             // 
             this.txtlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlugar.Location = new System.Drawing.Point(266, 291);
-            this.txtlugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtlugar.Location = new System.Drawing.Point(273, 291);
+            this.txtlugar.Margin = new System.Windows.Forms.Padding(2);
             this.txtlugar.MaxLength = 50;
             this.txtlugar.Name = "txtlugar";
             this.txtlugar.Size = new System.Drawing.Size(326, 24);
@@ -420,7 +432,7 @@
             // 
             this.txtmadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmadre.Location = new System.Drawing.Point(268, 488);
-            this.txtmadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmadre.Margin = new System.Windows.Forms.Padding(2);
             this.txtmadre.MaxLength = 30;
             this.txtmadre.Name = "txtmadre";
             this.txtmadre.Size = new System.Drawing.Size(326, 24);
@@ -432,7 +444,7 @@
             // 
             this.txtpadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpadre.Location = new System.Drawing.Point(268, 514);
-            this.txtpadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpadre.Margin = new System.Windows.Forms.Padding(2);
             this.txtpadre.MaxLength = 30;
             this.txtpadre.Name = "txtpadre";
             this.txtpadre.Size = new System.Drawing.Size(326, 24);
@@ -456,7 +468,7 @@
             // 
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(234, 235);
-            this.txtid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid.Margin = new System.Windows.Forms.Padding(2);
             this.txtid.MaxLength = 13;
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(160, 24);
@@ -468,7 +480,7 @@
             this.rdm.AutoSize = true;
             this.rdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdm.Location = new System.Drawing.Point(20, 16);
-            this.rdm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdm.Margin = new System.Windows.Forms.Padding(2);
             this.rdm.Name = "rdm";
             this.rdm.Size = new System.Drawing.Size(114, 28);
             this.rdm.TabIndex = 0;
@@ -481,7 +493,7 @@
             this.rdf.AutoSize = true;
             this.rdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdf.Location = new System.Drawing.Point(143, 15);
-            this.rdf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdf.Margin = new System.Windows.Forms.Padding(2);
             this.rdf.Name = "rdf";
             this.rdf.Size = new System.Drawing.Size(115, 28);
             this.rdf.TabIndex = 1;
@@ -496,23 +508,12 @@
             this.groupBox1.Controls.Add(this.rdm);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(234, 136);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(258, 46);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(219, 89);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(13, 10);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 54;
-            this.pictureBox4.TabStop = false;
             // 
             // label14
             // 
@@ -551,7 +552,7 @@
             // 
             this.txtdia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdia.Location = new System.Drawing.Point(284, 206);
-            this.txtdia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdia.Margin = new System.Windows.Forms.Padding(2);
             this.txtdia.MaxLength = 2;
             this.txtdia.Name = "txtdia";
             this.txtdia.Size = new System.Drawing.Size(38, 24);
@@ -562,7 +563,7 @@
             // 
             this.txtmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmes.Location = new System.Drawing.Point(358, 206);
-            this.txtmes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmes.Margin = new System.Windows.Forms.Padding(2);
             this.txtmes.MaxLength = 2;
             this.txtmes.Name = "txtmes";
             this.txtmes.Size = new System.Drawing.Size(38, 24);
@@ -573,7 +574,7 @@
             // 
             this.txtanio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtanio.Location = new System.Drawing.Point(421, 206);
-            this.txtanio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtanio.Margin = new System.Windows.Forms.Padding(2);
             this.txtanio.MaxLength = 4;
             this.txtanio.Name = "txtanio";
             this.txtanio.Size = new System.Drawing.Size(65, 24);
@@ -597,7 +598,7 @@
             // 
             this.txtOcupacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOcupacion.Location = new System.Drawing.Point(234, 262);
-            this.txtOcupacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOcupacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtOcupacion.MaxLength = 50;
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(160, 24);
@@ -662,9 +663,16 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox9);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox8);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox7);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox6);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox4);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox3);
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.label22);
             this.bunifuGradientPanel1.Controls.Add(this.cmbestado);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.btnModificar);
             this.bunifuGradientPanel1.Controls.Add(this.btnBuscar);
             this.bunifuGradientPanel1.Controls.Add(this.txtpadre);
@@ -691,7 +699,6 @@
             this.bunifuGradientPanel1.Controls.Add(this.label12);
             this.bunifuGradientPanel1.Controls.Add(this.label15);
             this.bunifuGradientPanel1.Controls.Add(this.label14);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox4);
             this.bunifuGradientPanel1.Controls.Add(this.label4);
             this.bunifuGradientPanel1.Controls.Add(this.label19);
             this.bunifuGradientPanel1.Controls.Add(this.label6);
@@ -712,176 +719,12 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(796, 634);
             this.bunifuGradientPanel1.TabIndex = 107;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(219, 119);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(14, 10);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 86;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.Window;
-            this.panel7.Controls.Add(this.bunifuFlatButton24);
-            this.panel7.Controls.Add(this.bunifuFlatButton26);
-            this.panel7.Controls.Add(this.bunifuFlatButton27);
-            this.panel7.Controls.Add(this.bunifuFlatButton28);
-            this.panel7.Location = new System.Drawing.Point(10, 704);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(257, 99);
-            this.panel7.TabIndex = 4;
-            // 
-            // bunifuFlatButton24
-            // 
-            this.bunifuFlatButton24.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton24.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton24.BorderRadius = 0;
-            this.bunifuFlatButton24.ButtonText = "Nivel economico";
-            this.bunifuFlatButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton24.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton24.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton24.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton24.Iconimage")));
-            this.bunifuFlatButton24.Iconimage_right = null;
-            this.bunifuFlatButton24.Iconimage_right_Selected = null;
-            this.bunifuFlatButton24.Iconimage_Selected = null;
-            this.bunifuFlatButton24.IconMarginLeft = 0;
-            this.bunifuFlatButton24.IconMarginRight = 0;
-            this.bunifuFlatButton24.IconRightVisible = true;
-            this.bunifuFlatButton24.IconRightZoom = 0D;
-            this.bunifuFlatButton24.IconVisible = true;
-            this.bunifuFlatButton24.IconZoom = 90D;
-            this.bunifuFlatButton24.IsTab = false;
-            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 73);
-            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton24.Name = "bunifuFlatButton24";
-            this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton24.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton24.selected = true;
-            this.bunifuFlatButton24.Size = new System.Drawing.Size(257, 28);
-            this.bunifuFlatButton24.TabIndex = 8;
-            this.bunifuFlatButton24.Text = "Nivel economico";
-            this.bunifuFlatButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton24.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton24.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton26
-            // 
-            this.bunifuFlatButton26.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton26.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton26.BorderRadius = 0;
-            this.bunifuFlatButton26.ButtonText = "Rol";
-            this.bunifuFlatButton26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton26.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton26.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton26.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton26.Iconimage")));
-            this.bunifuFlatButton26.Iconimage_right = null;
-            this.bunifuFlatButton26.Iconimage_right_Selected = null;
-            this.bunifuFlatButton26.Iconimage_Selected = null;
-            this.bunifuFlatButton26.IconMarginLeft = 0;
-            this.bunifuFlatButton26.IconMarginRight = 0;
-            this.bunifuFlatButton26.IconRightVisible = true;
-            this.bunifuFlatButton26.IconRightZoom = 0D;
-            this.bunifuFlatButton26.IconVisible = true;
-            this.bunifuFlatButton26.IconZoom = 90D;
-            this.bunifuFlatButton26.IsTab = false;
-            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 24);
-            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton26.Name = "bunifuFlatButton26";
-            this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton26.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton26.selected = true;
-            this.bunifuFlatButton26.Size = new System.Drawing.Size(257, 26);
-            this.bunifuFlatButton26.TabIndex = 6;
-            this.bunifuFlatButton26.Text = "Rol";
-            this.bunifuFlatButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton26.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton26.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton27
-            // 
-            this.bunifuFlatButton27.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton27.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton27.BorderRadius = 0;
-            this.bunifuFlatButton27.ButtonText = "Servicio";
-            this.bunifuFlatButton27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton27.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton27.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton27.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton27.Iconimage")));
-            this.bunifuFlatButton27.Iconimage_right = null;
-            this.bunifuFlatButton27.Iconimage_right_Selected = null;
-            this.bunifuFlatButton27.Iconimage_Selected = null;
-            this.bunifuFlatButton27.IconMarginLeft = 0;
-            this.bunifuFlatButton27.IconMarginRight = 0;
-            this.bunifuFlatButton27.IconRightVisible = true;
-            this.bunifuFlatButton27.IconRightZoom = 0D;
-            this.bunifuFlatButton27.IconVisible = true;
-            this.bunifuFlatButton27.IconZoom = 90D;
-            this.bunifuFlatButton27.IsTab = false;
-            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 49);
-            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton27.Name = "bunifuFlatButton27";
-            this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton27.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton27.selected = true;
-            this.bunifuFlatButton27.Size = new System.Drawing.Size(257, 28);
-            this.bunifuFlatButton27.TabIndex = 7;
-            this.bunifuFlatButton27.Text = "Servicio";
-            this.bunifuFlatButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton27.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton27.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton28
-            // 
-            this.bunifuFlatButton28.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton28.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton28.BorderRadius = 0;
-            this.bunifuFlatButton28.ButtonText = "Medida";
-            this.bunifuFlatButton28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton28.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton28.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton28.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton28.Iconimage")));
-            this.bunifuFlatButton28.Iconimage_right = null;
-            this.bunifuFlatButton28.Iconimage_right_Selected = null;
-            this.bunifuFlatButton28.Iconimage_Selected = null;
-            this.bunifuFlatButton28.IconMarginLeft = 0;
-            this.bunifuFlatButton28.IconMarginRight = 0;
-            this.bunifuFlatButton28.IconRightVisible = true;
-            this.bunifuFlatButton28.IconRightZoom = 0D;
-            this.bunifuFlatButton28.IconVisible = true;
-            this.bunifuFlatButton28.IconZoom = 90D;
-            this.bunifuFlatButton28.IsTab = false;
-            this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton28.Name = "bunifuFlatButton28";
-            this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton28.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton28.selected = true;
-            this.bunifuFlatButton28.Size = new System.Drawing.Size(256, 25);
-            this.bunifuFlatButton28.TabIndex = 5;
-            this.bunifuFlatButton28.Text = "Medida";
-            this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label22
             // 
@@ -922,6 +765,255 @@
             this.btnBuscar.Visible = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.Window;
+            this.panel7.Controls.Add(this.bunifuFlatButton24);
+            this.panel7.Controls.Add(this.bunifuFlatButton26);
+            this.panel7.Controls.Add(this.bunifuFlatButton27);
+            this.panel7.Controls.Add(this.bunifuFlatButton28);
+            this.panel7.Location = new System.Drawing.Point(10, 704);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(257, 99);
+            this.panel7.TabIndex = 4;
+            // 
+            // bunifuFlatButton24
+            // 
+            this.bunifuFlatButton24.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton24.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton24.BorderRadius = 0;
+            this.bunifuFlatButton24.ButtonText = "Nivel economico";
+            this.bunifuFlatButton24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton24.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton24.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton24.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton24.Iconimage")));
+            this.bunifuFlatButton24.Iconimage_right = null;
+            this.bunifuFlatButton24.Iconimage_right_Selected = null;
+            this.bunifuFlatButton24.Iconimage_Selected = null;
+            this.bunifuFlatButton24.IconMarginLeft = 0;
+            this.bunifuFlatButton24.IconMarginRight = 0;
+            this.bunifuFlatButton24.IconRightVisible = true;
+            this.bunifuFlatButton24.IconRightZoom = 0D;
+            this.bunifuFlatButton24.IconVisible = true;
+            this.bunifuFlatButton24.IconZoom = 90D;
+            this.bunifuFlatButton24.IsTab = false;
+            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 73);
+            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton24.Name = "bunifuFlatButton24";
+            this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton24.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton24.selected = true;
+            this.bunifuFlatButton24.Size = new System.Drawing.Size(257, 28);
+            this.bunifuFlatButton24.TabIndex = 8;
+            this.bunifuFlatButton24.Text = "Nivel economico";
+            this.bunifuFlatButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton24.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton24.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton26
+            // 
+            this.bunifuFlatButton26.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton26.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton26.BorderRadius = 0;
+            this.bunifuFlatButton26.ButtonText = "Rol";
+            this.bunifuFlatButton26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton26.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton26.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton26.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton26.Iconimage")));
+            this.bunifuFlatButton26.Iconimage_right = null;
+            this.bunifuFlatButton26.Iconimage_right_Selected = null;
+            this.bunifuFlatButton26.Iconimage_Selected = null;
+            this.bunifuFlatButton26.IconMarginLeft = 0;
+            this.bunifuFlatButton26.IconMarginRight = 0;
+            this.bunifuFlatButton26.IconRightVisible = true;
+            this.bunifuFlatButton26.IconRightZoom = 0D;
+            this.bunifuFlatButton26.IconVisible = true;
+            this.bunifuFlatButton26.IconZoom = 90D;
+            this.bunifuFlatButton26.IsTab = false;
+            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 24);
+            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton26.Name = "bunifuFlatButton26";
+            this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton26.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton26.selected = true;
+            this.bunifuFlatButton26.Size = new System.Drawing.Size(257, 26);
+            this.bunifuFlatButton26.TabIndex = 6;
+            this.bunifuFlatButton26.Text = "Rol";
+            this.bunifuFlatButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton26.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton26.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton27
+            // 
+            this.bunifuFlatButton27.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton27.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton27.BorderRadius = 0;
+            this.bunifuFlatButton27.ButtonText = "Servicio";
+            this.bunifuFlatButton27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton27.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton27.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton27.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton27.Iconimage")));
+            this.bunifuFlatButton27.Iconimage_right = null;
+            this.bunifuFlatButton27.Iconimage_right_Selected = null;
+            this.bunifuFlatButton27.Iconimage_Selected = null;
+            this.bunifuFlatButton27.IconMarginLeft = 0;
+            this.bunifuFlatButton27.IconMarginRight = 0;
+            this.bunifuFlatButton27.IconRightVisible = true;
+            this.bunifuFlatButton27.IconRightZoom = 0D;
+            this.bunifuFlatButton27.IconVisible = true;
+            this.bunifuFlatButton27.IconZoom = 90D;
+            this.bunifuFlatButton27.IsTab = false;
+            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 49);
+            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton27.Name = "bunifuFlatButton27";
+            this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton27.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton27.selected = true;
+            this.bunifuFlatButton27.Size = new System.Drawing.Size(257, 28);
+            this.bunifuFlatButton27.TabIndex = 7;
+            this.bunifuFlatButton27.Text = "Servicio";
+            this.bunifuFlatButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton27.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton27.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton28
+            // 
+            this.bunifuFlatButton28.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton28.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton28.BorderRadius = 0;
+            this.bunifuFlatButton28.ButtonText = "Medida";
+            this.bunifuFlatButton28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton28.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton28.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton28.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton28.Iconimage")));
+            this.bunifuFlatButton28.Iconimage_right = null;
+            this.bunifuFlatButton28.Iconimage_right_Selected = null;
+            this.bunifuFlatButton28.Iconimage_Selected = null;
+            this.bunifuFlatButton28.IconMarginLeft = 0;
+            this.bunifuFlatButton28.IconMarginRight = 0;
+            this.bunifuFlatButton28.IconRightVisible = true;
+            this.bunifuFlatButton28.IconRightZoom = 0D;
+            this.bunifuFlatButton28.IconVisible = true;
+            this.bunifuFlatButton28.IconZoom = 90D;
+            this.bunifuFlatButton28.IsTab = false;
+            this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton28.Name = "bunifuFlatButton28";
+            this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton28.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton28.selected = true;
+            this.bunifuFlatButton28.Size = new System.Drawing.Size(256, 25);
+            this.bunifuFlatButton28.TabIndex = 5;
+            this.bunifuFlatButton28.Text = "Medida";
+            this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox2.Location = new System.Drawing.Point(222, 88);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 117;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox3.Location = new System.Drawing.Point(222, 116);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 118;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox4.Location = new System.Drawing.Point(269, 212);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 119;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox5.Location = new System.Drawing.Point(340, 212);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 120;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox6.Location = new System.Drawing.Point(403, 212);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 121;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox7.Location = new System.Drawing.Point(217, 242);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 122;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox8.Location = new System.Drawing.Point(260, 299);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 123;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox9.Location = new System.Drawing.Point(260, 352);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 124;
+            this.pictureBox9.TabStop = false;
+            // 
             // ModifcacionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -938,14 +1030,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -986,7 +1084,6 @@
         private System.Windows.Forms.RadioButton rdm;
         private System.Windows.Forms.RadioButton rdf;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -1005,10 +1102,17 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 

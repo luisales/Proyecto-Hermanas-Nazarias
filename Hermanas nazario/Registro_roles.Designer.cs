@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btningresar = new System.Windows.Forms.Button();
             this.txtNombreRol = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chkMantenimientos = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,11 +49,12 @@
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -105,18 +105,6 @@
             this.txtNombreRol.Size = new System.Drawing.Size(143, 30);
             this.txtNombreRol.TabIndex = 41;
             this.txtNombreRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreRol_KeyPress);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(195, 114);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(13, 10);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 57;
-            this.pictureBox5.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -232,9 +220,9 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.btningresar);
             this.bunifuGradientPanel1.Controls.Add(this.txtNombreRol);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
             this.bunifuGradientPanel1.Controls.Add(this.chkMantenimientos);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox3);
             this.bunifuGradientPanel1.Controls.Add(this.label2);
@@ -421,6 +409,18 @@
             this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox2.Location = new System.Drawing.Point(195, 112);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(13, 10);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 105;
+            this.pictureBox2.TabStop = false;
+            // 
             // Registro_roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,12 +434,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registro_roles";
             this.Load += new System.EventHandler(this.Registro_roles_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,7 +451,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btningresar;
         private System.Windows.Forms.TextBox txtNombreRol;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.CheckBox chkMantenimientos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkDocumentos;
@@ -467,5 +466,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
