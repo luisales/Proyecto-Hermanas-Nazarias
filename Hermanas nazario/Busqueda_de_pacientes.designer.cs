@@ -46,7 +46,6 @@
             this.btnGencita = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtir = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtGencita = new System.Windows.Forms.TextBox();
@@ -57,14 +56,15 @@
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -270,24 +270,13 @@
             this.txtir.UseVisualStyleBackColor = false;
             this.txtir.Click += new System.EventHandler(this.txtir_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox2.Location = new System.Drawing.Point(649, 133);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 12);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.punto_rojo;
-            this.pictureBox5.Location = new System.Drawing.Point(334, 133);
+            this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox5.Location = new System.Drawing.Point(341, 130);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox5.Size = new System.Drawing.Size(13, 14);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 28;
             this.pictureBox5.TabStop = false;
@@ -322,7 +311,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.logoo;
             this.pictureBox8.Location = new System.Drawing.Point(777, 4);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(58, 53);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -333,6 +322,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.btnModificar);
             this.bunifuGradientPanel1.Controls.Add(this.txtnom);
             this.bunifuGradientPanel1.Controls.Add(this.txtir);
@@ -347,7 +337,6 @@
             this.bunifuGradientPanel1.Controls.Add(this.dataGridView1);
             this.bunifuGradientPanel1.Controls.Add(this.label3);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox5);
             this.bunifuGradientPanel1.Controls.Add(this.groupBox1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -398,7 +387,7 @@
             this.bunifuFlatButton24.IconZoom = 90D;
             this.bunifuFlatButton24.IsTab = false;
             this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 73);
-            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton24.Name = "bunifuFlatButton24";
             this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -433,7 +422,7 @@
             this.bunifuFlatButton26.IconZoom = 90D;
             this.bunifuFlatButton26.IsTab = false;
             this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 25);
-            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton26.Name = "bunifuFlatButton26";
             this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -468,7 +457,7 @@
             this.bunifuFlatButton27.IconZoom = 90D;
             this.bunifuFlatButton27.IsTab = false;
             this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 49);
-            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton27.Name = "bunifuFlatButton27";
             this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -503,7 +492,7 @@
             this.bunifuFlatButton28.IconZoom = 90D;
             this.bunifuFlatButton28.IsTab = false;
             this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton28.Name = "bunifuFlatButton28";
             this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -515,6 +504,17 @@
             this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox2.Location = new System.Drawing.Point(654, 130);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(13, 14);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 71;
+            this.pictureBox2.TabStop = false;
             // 
             // Busqueda_de_pacientes
             // 
@@ -535,13 +535,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,7 +557,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -575,5 +574,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
