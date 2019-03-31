@@ -390,15 +390,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
-            this.pictureBox3.Location = new System.Drawing.Point(536, 253);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(13, 10);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 109;
-            this.pictureBox3.TabStop = false;
             // 
             // ingresoPrendaExisntente
             // 
