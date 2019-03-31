@@ -43,6 +43,7 @@ namespace Hermanas_nazario
         public static string Cod = "";
         public static string nommedi;
         public static string cant;
+        public static string Fecha_vencimiento;
         public static string desc;
         public static string CodMed;
         public static int numero;
@@ -678,7 +679,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", opc));
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Medicamento ingresado con exito");
+                
             }
             catch
             {
@@ -788,8 +789,10 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_medicamento", cod));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
-
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
+                if (fecha=="")
+                cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", DBNull.Value));
+                else
                 cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha));
                 cmd.Parameters.Add(new SqlParameter("@Tipo", Tipo));
                 cmd.Parameters.Add(new SqlParameter("@Opc", Opc));
@@ -2535,7 +2538,6 @@ namespace Hermanas_nazario
 
         public static int Buscar_codigo_medida(string medida)
         {
-            int x;
             SqlConnection con;
             con = Conectar();
             con.Open();
@@ -2543,8 +2545,9 @@ namespace Hermanas_nazario
             SqlDataReader Perm = cmd.ExecuteReader();
             if (Perm.Read())
             {
-                return Convert.ToInt32(Perm["Codigo"]);
                 con.Close();
+                return Convert.ToInt32(Perm["Codigo"]);
+                
             }
             else
             {

@@ -69,12 +69,14 @@ namespace Hermanas_nazario
                 return;
             }
 
-            if (int.Parse(Base_de_datos.cant)> int.Parse(txtrem.Text))
+            if (int.Parse(txtcant.Text)> int.Parse(txtrem.Text))
             {
-                canti = (int.Parse(Base_de_datos.cant)) - (int.Parse(txtrem.Text));
-                Base_de_datos.vencemedi(int.Parse(txtcod.Text), canti);
+                Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), txtdesc.Text.ToUpper(), (int.Parse(Base_de_datos.cant) - int.Parse(txtcant.Text)), double.Parse(Base_de_datos.Precio_medicamento(Base_de_datos.CodMed)), txtUnidad.Text, "ACT", 2);
+                Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed), (int.Parse(txtrem.Text)), "", 1, "EGR");
+                MessageBox.Show("Cantidad Modificada Correctamente");
                 txtrem.Enabled = false;
                 txtcod.Enabled = true;
+
                 txtcod.Clear();
                 txtcant.Clear();
                 txtnom.Clear();
@@ -82,17 +84,17 @@ namespace Hermanas_nazario
                 txtrem.Clear();
 
                 txtcod.Focus();
+                
+                Hide();
+                
+               
 
-                this.Hide();
-                MessageBox.Show("Cantidad Modificada Correctamente");
-                Busqueda_medicamentos a = new Busqueda_medicamentos();
-                a.Show();
 
             }
             else
             {
 
-                MessageBox.Show("Valor invalido");
+                MessageBox.Show("Valor invalido cantidad no disponible");
                 txtrem.Focus();
             }
 
@@ -124,9 +126,8 @@ namespace Hermanas_nazario
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            Busqueda_medicamentos a = new Busqueda_medicamentos();
-            a.Show();
+            Hide();
+            
 
         }
     }
