@@ -40,7 +40,7 @@ namespace Hermanas_nazario
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtcod.Text = Convert.ToString(selectedRow.Cells[0].Value);
-            richTextBox1.Text = Convert.ToString(selectedRow.Cells[1].Value);
+            textBox1.Text = Convert.ToString(selectedRow.Cells[1].Value);
             cant = int.Parse(Convert.ToString(selectedRow.Cells[2].Value));
             cat = int.Parse(Convert.ToString(selectedRow.Cells[3].Value));
         }
@@ -69,8 +69,8 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Registro_RopaEx(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), (int.Parse(txtcant.Text)+cant), cat);
-            Base_de_datos.movimientoRopaIng(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text));
+            Base_de_datos.Registro_RopaEx(int.Parse(txtcod.Text), textBox1.Text.ToUpper(), (int.Parse(txtcant.Text)+cant), cat);
+            Base_de_datos.movimientoRopaIng(int.Parse(txtcod.Text), textBox1.Text.ToUpper(), int.Parse(txtcant.Text));
 
             MessageBox.Show("Prenda Ingresada.");
 
@@ -78,7 +78,7 @@ namespace Hermanas_nazario
             busc.BuscarPrenda();
             dataGridView1.DataSource = busc.Mostrar_Resultados();
             txtcod.Clear();
-            richTextBox1.Clear();
+            textBox1.Clear();
             txtcant.Clear();
 
         }
@@ -96,6 +96,11 @@ namespace Hermanas_nazario
         private void txtcant_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void txtcant_KeyPress(object sender, KeyPressEventArgs e)

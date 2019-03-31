@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modificar_ropa));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtestado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,23 +44,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtcant = new System.Windows.Forms.TextBox();
             this.txtnom = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtcod = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.txtestado);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Controls.Add(this.txtcod);
+            this.bunifuGradientPanel1.Controls.Add(this.cmbestado);
+            this.bunifuGradientPanel1.Controls.Add(this.dataGridView1);
             this.bunifuGradientPanel1.Controls.Add(this.label4);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.Controls.Add(this.label5);
@@ -72,39 +75,26 @@
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
             this.bunifuGradientPanel1.Controls.Add(this.btnBuscar);
             this.bunifuGradientPanel1.Controls.Add(this.label11);
-            this.bunifuGradientPanel1.Controls.Add(this.txtcant);
             this.bunifuGradientPanel1.Controls.Add(this.txtnom);
-            this.bunifuGradientPanel1.Controls.Add(this.label2);
-            this.bunifuGradientPanel1.Controls.Add(this.label1);
-            this.bunifuGradientPanel1.Controls.Add(this.richTextBox1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DarkRed;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.GradientActiveCaption;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(522, 419);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(522, 288);
             this.bunifuGradientPanel1.TabIndex = 108;
-            // 
-            // txtestado
-            // 
-            this.txtestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtestado.Location = new System.Drawing.Point(176, 271);
-            this.txtestado.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtestado.MaxLength = 8;
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(77, 24);
-            this.txtestado.TabIndex = 107;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 266);
+            this.label4.Location = new System.Drawing.Point(43, 183);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 25);
@@ -116,7 +106,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.logoo;
             this.pictureBox2.Location = new System.Drawing.Point(450, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 53);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +132,7 @@
             "Caja",
             "Unidad",
             "Frasco"});
-            this.txtUnidad.Location = new System.Drawing.Point(176, 245);
+            this.txtUnidad.Location = new System.Drawing.Point(168, 154);
             this.txtUnidad.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtUnidad.Name = "txtUnidad";
             this.txtUnidad.Size = new System.Drawing.Size(105, 21);
@@ -165,7 +155,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(50, 239);
+            this.label8.Location = new System.Drawing.Point(41, 152);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 25);
@@ -180,7 +170,7 @@
             this.panel7.Controls.Add(this.bunifuFlatButton27);
             this.panel7.Controls.Add(this.bunifuFlatButton28);
             this.panel7.Location = new System.Drawing.Point(10, 704);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(257, 99);
             this.panel7.TabIndex = 4;
@@ -207,7 +197,7 @@
             this.bunifuFlatButton24.IconZoom = 90D;
             this.bunifuFlatButton24.IsTab = false;
             this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 73);
-            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton24.Name = "bunifuFlatButton24";
             this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -242,7 +232,7 @@
             this.bunifuFlatButton26.IconZoom = 90D;
             this.bunifuFlatButton26.IsTab = false;
             this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 24);
-            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton26.Name = "bunifuFlatButton26";
             this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -277,7 +267,7 @@
             this.bunifuFlatButton27.IconZoom = 90D;
             this.bunifuFlatButton27.IsTab = false;
             this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 49);
-            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton27.Name = "bunifuFlatButton27";
             this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -312,7 +302,7 @@
             this.bunifuFlatButton28.IconZoom = 90D;
             this.bunifuFlatButton28.IsTab = false;
             this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton28.Name = "bunifuFlatButton28";
             this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -342,7 +332,7 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(207, 327);
+            this.btnBuscar.Location = new System.Drawing.Point(188, 219);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 43);
@@ -356,77 +346,76 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(50, 97);
+            this.label11.Location = new System.Drawing.Point(42, 120);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 25);
             this.label11.TabIndex = 61;
             this.label11.Text = "Nombre: ";
             // 
-            // txtcant
-            // 
-            this.txtcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcant.Location = new System.Drawing.Point(177, 217);
-            this.txtcant.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtcant.MaxLength = 8;
-            this.txtcant.Name = "txtcant";
-            this.txtcant.Size = new System.Drawing.Size(77, 24);
-            this.txtcant.TabIndex = 67;
-            // 
             // txtnom
             // 
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.Location = new System.Drawing.Point(177, 97);
+            this.txtnom.Location = new System.Drawing.Point(168, 123);
             this.txtnom.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(143, 24);
             this.txtnom.TabIndex = 62;
             // 
-            // label2
+            // dataGridView1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 214);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 66;
-            this.label2.Text = "Cantidad: ";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(348, 128);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(160, 97);
+            this.dataGridView1.TabIndex = 108;
+            this.dataGridView1.Visible = false;
+            // 
+            // cmbestado
+            // 
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbestado.Location = new System.Drawing.Point(168, 185);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(121, 21);
+            this.cmbestado.TabIndex = 109;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 124);
+            this.label1.Location = new System.Drawing.Point(42, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Descripcion:";
+            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.TabIndex = 110;
+            this.label1.Text = "Codigo:";
             // 
-            // richTextBox1
+            // txtcod
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(176, 130);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.richTextBox1.MaxLength = 80;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(270, 79);
-            this.richTextBox1.TabIndex = 65;
-            this.richTextBox1.Text = "";
+            this.txtcod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcod.Location = new System.Drawing.Point(168, 88);
+            this.txtcod.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtcod.MaxLength = 30;
+            this.txtcod.Name = "txtcod";
+            this.txtcod.Size = new System.Drawing.Size(143, 24);
+            this.txtcod.TabIndex = 111;
             // 
             // Modificar_ropa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 419);
+            this.ClientSize = new System.Drawing.Size(522, 288);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(550, 195);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Modificar_ropa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Modificar_ropa";
@@ -436,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,12 +446,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtcant;
         private System.Windows.Forms.TextBox txtnom;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbestado;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtcod;
     }
 }

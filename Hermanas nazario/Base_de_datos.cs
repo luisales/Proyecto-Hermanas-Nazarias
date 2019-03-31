@@ -15,7 +15,7 @@ namespace Hermanas_nazario
     {
         protected DataTable Resultado;
         public static string Nombre1, codempleado, empleadoAcc;
-        public static string Nombre2, estadoE;
+        public static string Nombre2, estadoE, cate;
         public static string Apellido1;
         public static int decis = 0, b, c, accesoci;
         public static string Apellid2;
@@ -680,7 +680,7 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Estado", estado));
                 cmd.Parameters.Add(new SqlParameter("@opc", opc));
                 cmd.ExecuteNonQuery();
-                
+
             }
             catch
             {
@@ -791,10 +791,10 @@ namespace Hermanas_nazario
                 cmd.Parameters.Add(new SqlParameter("@Codigo_medicamento", cod));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
-                if (fecha=="")
-                cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", DBNull.Value));
+                if (fecha == "")
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", DBNull.Value));
                 else
-                cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_vencimiento", fecha));
                 cmd.Parameters.Add(new SqlParameter("@Tipo", Tipo));
                 cmd.Parameters.Add(new SqlParameter("@Opc", Opc));
                 cmd.ExecuteNonQuery();
@@ -2535,20 +2535,20 @@ namespace Hermanas_nazario
             {
                 return false;
             }
-        } 
+        }
 
         public static int Buscar_codigo_medida(string medida)
         {
             SqlConnection con;
             con = Conectar();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[Medida] where Nombre='"+medida+"'", con);
+            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[Medida] where Nombre='" + medida + "'", con);
             SqlDataReader Perm = cmd.ExecuteReader();
             if (Perm.Read())
             {
                 con.Close();
                 return Convert.ToInt32(Perm["Codigo"]);
-                
+
             }
             else
             {
@@ -2864,7 +2864,140 @@ namespace Hermanas_nazario
             cmd.ExecuteNonQuery();
 
         }
-    }
+
+        public void BuscarRopaNom1(string Nom)
+        {
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Código Prenda', a.descripcion  'Nombre Prenda', a.Existencia, b.Primer_nombre+' '+b.Segundo_nombre 'Empleado ingreso', c.Primer_nombre+' '+c.Segundo_nombre 'Empleado Modificacion', a.Fecha_ingreso, a.Fecha_modificacion, d.Nombre 'Categoria', a.Estado from [dbo].[Ropa] a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Categoria] d on a.Codigo_categoria=d.Codigo where a.Descripcion LIKE " + "'" + Nom + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+
+            }
+        }
+
+        public void BuscarCategoriaNom(string Nom)
+        {
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo, Nombre from Categoria where Nombre LIKE " + "'" + Nom + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+
+            }
+        }
+
+        public static void Registro_Ropa(int cod, string desc, int cant, string cat)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_ropa", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", desc));
+                cmd.Parameters.Add(new SqlParameter("@codigo_categoria", Buscar_codigo_categoria(cat)));
+                cmd.Parameters.Add(new SqlParameter("@existencia", cant));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+                cmd.Parameters.Add(new SqlParameter("@opc", 1));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        public static int Buscar_codigo_categoria(string cate)
+        {
+            int x;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[Categoria] where Nombre='" + cate + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                return Convert.ToInt32(Perm["Codigo"]);
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
+        public static void actualizar_ropa(int cod, string desc, int cant, string cat, string estado)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Mante_ropa", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", cod));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", desc));
+                cmd.Parameters.Add(new SqlParameter("@codigo_categoria", Buscar_codigo_categoria(cat)));
+                cmd.Parameters.Add(new SqlParameter("@existencia", cant));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                cmd.Parameters.Add(new SqlParameter("@Estado", estado));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+    } 
 }
 
 

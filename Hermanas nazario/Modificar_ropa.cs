@@ -14,7 +14,31 @@ namespace Hermanas_nazario
     {
         public Modificar_ropa()
         {
+
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarCategoriaNom("");
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
+
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                txtUnidad.Items.Add(row.Cells[1].Value.ToString());
+
+            }
+
+            txtcod.Text = Base_de_datos.CodMed;
+            txtnom.Text = Base_de_datos.nommedi;
+            txtUnidad.Text = Base_de_datos.cate;
+            if (Base_de_datos.estadoE == "ACT")
+            {
+                cmbestado.Text = "Activo";
+            }
+            else
+            {
+                cmbestado.Text = "Inactivo";
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -23,6 +47,21 @@ namespace Hermanas_nazario
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            String estado;
+            if (cmbestado.Text == "Activo")
+            {
+                estado = "ACT";
+            }
+
+            else
+            {
+                estado = "INC";
+            }
+            Base_de_datos.actualizar_ropa(int.Parse(txtcod.Text), txtnom.Text, int.Parse(Base_de_datos.cant), txtUnidad.SelectedItem.ToString(), estado);
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
