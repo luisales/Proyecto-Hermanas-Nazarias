@@ -12,7 +12,7 @@ namespace Hermanas_nazario
 {
     public partial class ingresoPrendaExisntente : Form
     {
-        public int cat;
+        public int cat, cant;
         public ingresoPrendaExisntente()
         {
             InitializeComponent();
@@ -41,6 +41,7 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtcod.Text = Convert.ToString(selectedRow.Cells[0].Value);
             richTextBox1.Text = Convert.ToString(selectedRow.Cells[1].Value);
+            cant = int.Parse(Convert.ToString(selectedRow.Cells[2].Value));
             cat = int.Parse(Convert.ToString(selectedRow.Cells[3].Value));
         }
 
@@ -68,10 +69,10 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Registro_RopaEx(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), cat);
+            Base_de_datos.Registro_RopaEx(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), (int.Parse(txtcant.Text)+cant), cat);
             Base_de_datos.movimientoRopaIng(int.Parse(txtcod.Text), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text));
 
-            MessageBox.Show("Nivel modificada.");
+            MessageBox.Show("Prenda Ingresada.");
 
             Base_de_datos busc = new Base_de_datos();
             busc.BuscarPrenda();
