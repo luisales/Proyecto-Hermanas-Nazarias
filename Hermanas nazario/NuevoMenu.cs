@@ -766,8 +766,9 @@ namespace Hermanas_nazario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ingresoPrendaExisntente a = new ingresoPrendaExisntente();
-            a.Show();
+            Factura_ropa a = new Factura_ropa();
+            a.ShowDialog();
+
         }
     }
 }

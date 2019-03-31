@@ -2709,8 +2709,168 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
+
+        public void BuscarRopaNom(string Nom)
+        {
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Código Prenda', descripcion  'Nombre Prenda', Existencia from [dbo].[Ropa] where Descripcion LIKE " + "'" + Nom + "%'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+
+            }
+        }
+        public void BuscarRopaCod(string Cod)
+        {
+
+
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Código Prenda', descripcion  'Nombre Prenda', Existencia from [dbo].[Ropa] where codigo LIKE " + "'" + Cod + "'", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static void Egreso_ropa_mov(int Codigo, string desc, int Cantidad)
+        {
+
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("mante_movimiento_ropa", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+            cmd.Parameters.Add(new SqlParameter("@codigo_ropa", Codigo));
+            cmd.Parameters.Add(new SqlParameter("@cantidad", Cantidad));
+            cmd.Parameters.Add(new SqlParameter("@tipo", "EGR"));
+            cmd.Parameters.Add(new SqlParameter("@opc", 1));
+            cmd.ExecuteNonQuery();
+
+        }
+        public static int Buscar_cantidad_ropa(string medida)
+        {
+            int x;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Existencia from [dbo].[ropa] where Descripcion='" + medida + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                return Convert.ToInt32(Perm["Existencia"]);
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
+
+        public static int Buscar_codigo_ropa(string medida)
+        {
+            int x;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[ropa] where Descripcion='" + medida + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                return Convert.ToInt32(Perm["Codigo"]);
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
+
+        public static int Buscar_categoria_ropa(string medida)
+        {
+            int x;
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Codigo_categoria from [dbo].[ropa] where Descripcion='" + medida + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                return Convert.ToInt32(Perm["Codigo_categoria"]);
+                con.Close();
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
+
+
+        public static void Egreso_ropa(int Codigo, string desc, int Cantidad, int categoria)
+        {
+
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("mante_ropa", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@codigo", Codigo));
+            cmd.Parameters.Add(new SqlParameter("@descripcion", desc));
+            cmd.Parameters.Add(new SqlParameter("@codigo_categoria", categoria));
+            cmd.Parameters.Add(new SqlParameter("@existencia", Cantidad));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+            cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+            cmd.Parameters.Add(new SqlParameter("@opc", 2));
+            cmd.ExecuteNonQuery();
+
+        }
     }
 }
+
+
 
 
 
