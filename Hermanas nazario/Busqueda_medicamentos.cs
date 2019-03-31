@@ -77,10 +77,25 @@ namespace Hermanas_nazario
 
         private void button2_Click(object sender, EventArgs e)
         {
+          
             Base_de_datos.CodMed = lblCod.Text;
-            this.Hide();
+            Base_de_datos.nommedi = lblNom.Text;
+            Base_de_datos.cant = lblCan.Text;
+            Base_de_datos.desc = txtUnidad.Text;
+            Base_de_datos.unidad = label10.Text;
+            btnIng.Enabled = false;
+            btnSac.Enabled = false;
+            lblCan.Text = "*";
+            lblNom.Text = "*";
+            lblDes.Text = "*";
+            lblCod.Text = "*";
+            txtUnidad.Text = "*";
+            label10.Text = "*";
+            txtCod.Text = "";
+            txtnom.Text = "";
+            dataGridView1.DataSource = null;
             venc a = new venc();
-            a.Show();
+            a.ShowDialog();
 
         }
 
@@ -100,6 +115,8 @@ namespace Hermanas_nazario
             label10.Text = "*";
             txtCod.Text = "";
             txtnom.Text= "";
+            btnIng.Enabled = false;
+            btnSac.Enabled = false;
             Ingresar_medicamentoEx a = new Ingresar_medicamentoEx();
             a.ShowDialog();
             
@@ -193,6 +210,17 @@ namespace Hermanas_nazario
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Base_de_datos.CodMed = lblCod.Text;
+            Base_de_datos.nommedi = lblNom.Text;
+            Base_de_datos.cant = lblCan.Text;
+            Base_de_datos.desc = txtUnidad.Text;
+            Base_de_datos.unidad = label10.Text;
+            Modifcar_medicamento a = new Modifcar_medicamento();
+            a.ShowDialog();
         }
     }
 }

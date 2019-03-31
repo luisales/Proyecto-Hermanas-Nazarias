@@ -15,8 +15,58 @@ namespace Hermanas_nazario
     {
         public ModifcacionPaciente()
         {
+            int x = 0;
             InitializeComponent();
             txtExpediente.Text = Base_de_datos.Cod;
+            x = Base_de_datos.ValidarExp(txtExpediente.Text);
+            txtnom1.Text = Base_de_datos.Nombre1;
+            txtnom2.Text = Base_de_datos.Nombre2;
+            txtape1.Text = Base_de_datos.Apellido1;
+            txtape2.Text = Base_de_datos.Apellid2;
+            txtid.Text = Base_de_datos.Identidad;
+            txtlugar.Text = Base_de_datos.Lugar;
+            txtmadre.Text = Base_de_datos.NombreM;
+            txtpadre.Text = Base_de_datos.NombreP;
+            txtdia.Text = Base_de_datos.dia;
+            txtmes.Text = Base_de_datos.mes;
+            txtanio.Text = Base_de_datos.anio;
+            txtOcupacion.Text = Base_de_datos.Ocupacion;
+            txtLugarTrabajo.Text = Base_de_datos.LugarT;
+            txtDireccion.Text = Base_de_datos.Direccion;
+            txttel.Text = Base_de_datos.tel;
+            txtTelEmer.Text = Base_de_datos.telE;
+            if (Base_de_datos.Sexo == "M")
+            {
+                rdm.Select();
+            }
+
+            if (Base_de_datos.Sexo == "F")
+            {
+                rdf.Select();
+            }
+
+            if(Base_de_datos.estadoE=="ACT")
+            {
+                cmbestado.Text = "ACTIVO";
+            }
+            if (Base_de_datos.estadoE == "INC")
+            {
+                cmbestado.Text = "INACTIVO";
+            }
+
+
+            if (int.Parse(Base_de_datos.Riesgo) == 1)
+            {
+                txtriesgo.Text = "Alto";
+            }
+            if (int.Parse(Base_de_datos.Riesgo) == 2)
+            {
+                txtriesgo.Text = "Medio";
+            }
+            if (int.Parse(Base_de_datos.Riesgo) == 3)
+            {
+                txtriesgo.Text = "Bajo";
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -327,8 +377,8 @@ namespace Hermanas_nazario
             txtTelEmer.Clear();
             txtlugar.Clear();
             txtLugarTrabajo.Clear();
-            
 
+            this.Hide();
 
 
 
@@ -395,15 +445,12 @@ namespace Hermanas_nazario
             {
                 this.Hide();
                 Base_de_datos.Cod = "";
-                Busqueda_de_pacientes b = new Busqueda_de_pacientes();
-                b.Show();
             }
             else
             {
                 this.Hide();
                 Base_de_datos.Cod = "";
-                menu a = new menu();
-                a.Show();
+
             }
 
         }
@@ -472,54 +519,7 @@ namespace Hermanas_nazario
 
         private void txtExpediente_TextChanged(object sender, EventArgs e)
         {
-            
 
-            
-                btnBuscar.Enabled = false;
-                txtnom1.Enabled = false;
-                txtnom2.Enabled = false;
-                txtape1.Enabled = false;
-                txtape2.Enabled = false;
-                groupBox1.Enabled = false;
-                txtid.Enabled = false;
-                txtlugar.Enabled = false;
-                txtdia.Enabled = false;
-                txtmes.Enabled = false;
-                txtanio.Enabled = false;
-                txtmadre.Enabled = false;
-                txtpadre.Enabled = false;
-                txtriesgo.Enabled = false;
-                txtOcupacion.Enabled = false;
-                txtDireccion.Enabled = false;
-                txttel.Enabled = false;
-                txtTelEmer.Enabled = false;
-                txtlugar.Enabled = false;
-                txtLugarTrabajo.Enabled = false;
-
-            btnModificar.Enabled = false;
-
-                txtnom1.Clear();
-                txtnom2.Clear();
-                txtape1.Clear();
-                txtape2.Clear();
-                txtid.Clear();
-                txtlugar.Clear();
-                txtdia.Clear();
-                txtmes.Clear();
-                txtanio.Clear();
-                txtmadre.Clear();
-                txtpadre.Clear();
-                txtOcupacion.Clear();
-                txtDireccion.Clear();
-                txttel.Clear();
-                txtTelEmer.Clear();
-                txtlugar.Clear();
-                txtLugarTrabajo.Clear();
-      
-
-            if ((!string.IsNullOrEmpty(txtExpediente.Text)))
-
-                btnBuscar.Enabled = true;
            
                 
         }
