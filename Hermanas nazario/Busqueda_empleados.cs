@@ -253,13 +253,28 @@ namespace Hermanas_nazario
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             Base_de_datos.Cod = Convert.ToString(selectedRow.Cells[0].Value);
-
-            this.Hide();
+            Base_de_datos.nombre1_empleado = Convert.ToString(selectedRow.Cells[1].Value);
+            Base_de_datos.nombre2_empleado = Convert.ToString(selectedRow.Cells[2].Value);
+            Base_de_datos.apellido1_empleado = Convert.ToString(selectedRow.Cells[3].Value);
+            Base_de_datos.apellido2_empleado = Convert.ToString(selectedRow.Cells[4].Value);
+            Base_de_datos.numero_identidad_empleado = Convert.ToString(selectedRow.Cells[5].Value);
+            Base_de_datos.Sexo = Convert.ToString(selectedRow.Cells[6].Value);
+            Base_de_datos.correo_empleado = Convert.ToString(selectedRow.Cells[7].Value);
+            Base_de_datos.numero_telefono_empleado = Convert.ToString(selectedRow.Cells[8].Value);
+            Base_de_datos.cargo_empleado = Convert.ToString(selectedRow.Cells[9].Value);
+            Base_de_datos.codigo_rol = Convert.ToString(selectedRow.Cells[10].Value);
+            txtape.Clear();
+            txtnom.Clear();
             Modificar_empleado a = new Modificar_empleado();
-            a.Show();
+            a.ShowDialog();
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

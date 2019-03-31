@@ -17,6 +17,24 @@ namespace Hermanas_nazario
         {
             InitializeComponent();
             txtcodigo_empleado.Text = Base_de_datos.Cod;
+            txtnom1.Text = Base_de_datos.nombre1_empleado;
+            txtnom2.Text = Base_de_datos.nombre2_empleado;
+            txtape1.Text = Base_de_datos.apellido1_empleado;
+            txtape2.Text = Base_de_datos.apellido2_empleado;
+            txtid.Text = Base_de_datos.numero_identidad_empleado;
+            txtcorreo.Text = Base_de_datos.correo_empleado;
+            txttel.Text = Base_de_datos.numero_telefono_empleado;
+            txtcargo.Text = Base_de_datos.Buscar_codigo_puesto().ToString();
+            txtrol.Text = Base_de_datos.Buscar_codigo_rol().ToString();
+            if (Base_de_datos.Sexo == "M")
+            {
+                rdm.Select();
+            }
+
+            if (Base_de_datos.Sexo == "F")
+            {
+                rdf.Select();
+            }
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -162,7 +180,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Actualizar_empleado(int.Parse(txtcodigo_empleado.Text),txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo.ToUpper(), txttel.Text, txtcargo.Text.ToUpper(), int.Parse(txtrol.Text));
+            Base_de_datos.Actualizar_empleado(int.Parse(txtcodigo_empleado.Text),txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo.ToUpper(), txttel.Text, int.Parse(txtrol.Text), int.Parse(txtcargo.Text));
             MessageBox.Show("Empleado guardado con exito");
 
             txtcodigo_empleado.Clear();
@@ -189,6 +207,7 @@ namespace Hermanas_nazario
             txtcorreo.Clear();
             txttel.Clear();
             txtcargo.Clear();
+            this.Hide();
         }
 
 
@@ -205,29 +224,7 @@ namespace Hermanas_nazario
 
         private void txtcodigo_empleado_TextChanged(object sender, EventArgs e)
         {
-            
-            txtnom1.Enabled = false;
-            txtnom2.Enabled = false;
-            txtape1.Enabled = false;
-            txtape2.Enabled = false;
-            groupBox1.Enabled = false;
-            txtid.Enabled = false;
-            txtcorreo.Enabled = false;
-            txttel.Enabled = false;
-            txtcargo.Enabled = false;
-            button1.Enabled = false;
-
-
-            txtnom1.Clear();
-            txtnom2.Clear();
-            txtape1.Clear();
-            txtape2.Clear();
-            rdf.Checked = false;
-            rdm.Checked = false;
-            txtid.Clear();
-            txtcorreo.Clear();
-            txttel.Clear();
-            txtcargo.Clear();
+           
 
             if ((!string.IsNullOrEmpty(txtcodigo_empleado.Text)))
 
@@ -289,8 +286,6 @@ namespace Hermanas_nazario
             if(Base_de_datos.accesoci==1)
             {
                 this.Hide();
-                Busqueda_empleados b = new Busqueda_empleados();
-                b.Show();
             }
             else
             {
@@ -324,6 +319,29 @@ namespace Hermanas_nazario
         private void txtcorreo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Visible = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedrowindex = dataGridView2.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView2.Rows[selectedrowindex];
+            txtcargo.Text = Convert.ToString(selectedRow.Cells[0].Value);
+            dataGridView2.Visible = false;
         }
     }
     }

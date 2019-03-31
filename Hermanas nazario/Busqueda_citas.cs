@@ -48,14 +48,10 @@ namespace Hermanas_nazario
             if(Base_de_datos.accesoci==1)
             {
                 this.Hide();
-                Busqueda_de_pacientes b = new Busqueda_de_pacientes();
-                b.Show();
             }
             if (Base_de_datos.accesoci == 2)
             {
                 this.Hide();
-                Busqueda_de_pacientes b = new Busqueda_de_pacientes();
-                b.Show();
             }
             else
             {
@@ -136,6 +132,11 @@ namespace Hermanas_nazario
         }
 
         private void Busqueda_citas_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
