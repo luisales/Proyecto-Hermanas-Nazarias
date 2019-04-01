@@ -74,8 +74,6 @@ namespace Hermanas_nazario
 
             Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper(), int.Parse(txtrol.Text));
             this.Close();
-            menu a = new menu();
-            a.Show();
         }
         string sexo;
         private void rdm_CheckedChanged(object sender, EventArgs e)

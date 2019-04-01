@@ -62,8 +62,6 @@ namespace Hermanas_nazario
             prof= Encriptar.EncriptarContra(txtprof.Text.ToUpper());
             Base_de_datos.registrar_usuario(txtusu.Text, contra, int.Parse(txtemp.Text), prof.ToUpper());
             this.Close();
-            menu a = new menu();
-            a.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

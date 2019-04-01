@@ -286,5 +286,17 @@ namespace Hermanas_nazario
             chkUsuarios.Checked = false;
 
         }
+
+        private void txtNombreRol_TextChanged(object sender, EventArgs e)
+        {
+            string c;
+            c = txtNombreRol.Text;
+            if (c.StartsWith(" "))
+            {
+                MessageBox.Show("No se puede ingresar con espacio");
+                txtNombreRol.Text = "";
+                return;
+            }
+        }
     }
 }

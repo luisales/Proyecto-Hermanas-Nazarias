@@ -49,16 +49,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cmbestado = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -66,10 +66,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(286, 20);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(381, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(379, 37);
+            this.label5.Size = new System.Drawing.Size(472, 46);
             this.label5.TabIndex = 11;
             this.label5.Text = "MODIFICACION DE ROL";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -81,13 +80,13 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 136);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 167);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(352, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 212);
             this.dataGridView1.TabIndex = 41;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -99,10 +98,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(14, 95);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(19, 117);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 27);
+            this.label1.Size = new System.Drawing.Size(373, 33);
             this.label1.TabIndex = 42;
             this.label1.Text = "Seleccione el rol a modificar:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -112,10 +111,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(370, 179);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(493, 220);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 27);
+            this.label2.Size = new System.Drawing.Size(209, 33);
             this.label2.TabIndex = 43;
             this.label2.Text = "Nombre del Rol:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -125,10 +124,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(384, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(512, 160);
+            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 27);
+            this.label3.Size = new System.Drawing.Size(209, 33);
             this.label3.TabIndex = 45;
             this.label3.Text = "Codigo del Rol:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -137,22 +136,23 @@
             // 
             this.txtNombreRol.Enabled = false;
             this.txtNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRol.Location = new System.Drawing.Point(535, 177);
-            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtNombreRol.Location = new System.Drawing.Point(713, 218);
+            this.txtNombreRol.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtNombreRol.MaxLength = 30;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(186, 30);
+            this.txtNombreRol.Size = new System.Drawing.Size(247, 36);
             this.txtNombreRol.TabIndex = 46;
+            this.txtNombreRol.TextChanged += new System.EventHandler(this.txtNombreRol_TextChanged);
             // 
             // txtCodigoRol
             // 
             this.txtCodigoRol.Enabled = false;
             this.txtCodigoRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoRol.Location = new System.Drawing.Point(535, 130);
-            this.txtCodigoRol.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtCodigoRol.Location = new System.Drawing.Point(713, 160);
+            this.txtCodigoRol.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtCodigoRol.MaxLength = 8;
             this.txtCodigoRol.Name = "txtCodigoRol";
-            this.txtCodigoRol.Size = new System.Drawing.Size(63, 30);
+            this.txtCodigoRol.Size = new System.Drawing.Size(83, 36);
             this.txtCodigoRol.TabIndex = 47;
             this.txtCodigoRol.TextChanged += new System.EventHandler(this.txtCodigoRol_TextChanged);
             // 
@@ -161,10 +161,10 @@
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(544, 295);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnModificar.Location = new System.Drawing.Point(725, 363);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(112, 43);
+            this.btnModificar.Size = new System.Drawing.Size(149, 53);
             this.btnModificar.TabIndex = 52;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -175,10 +175,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(96, 81);
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -187,10 +187,10 @@
             // 
             this.chkMantenimientos.AutoSize = true;
             this.chkMantenimientos.BackColor = System.Drawing.Color.Transparent;
-            this.chkMantenimientos.Location = new System.Drawing.Point(730, 260);
-            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(2);
+            this.chkMantenimientos.Location = new System.Drawing.Point(973, 320);
+            this.chkMantenimientos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkMantenimientos.Name = "chkMantenimientos";
-            this.chkMantenimientos.Size = new System.Drawing.Size(100, 17);
+            this.chkMantenimientos.Size = new System.Drawing.Size(129, 21);
             this.chkMantenimientos.TabIndex = 74;
             this.chkMantenimientos.Text = "Mantenimientos";
             this.chkMantenimientos.UseVisualStyleBackColor = false;
@@ -200,10 +200,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(742, 95);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Location = new System.Drawing.Point(989, 117);
+            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 27);
+            this.label4.Size = new System.Drawing.Size(209, 33);
             this.label4.TabIndex = 73;
             this.label4.Text = "Permisos";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -212,10 +212,10 @@
             // 
             this.chkDocumentos.AutoSize = true;
             this.chkDocumentos.BackColor = System.Drawing.Color.Transparent;
-            this.chkDocumentos.Location = new System.Drawing.Point(730, 240);
-            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(2);
+            this.chkDocumentos.Location = new System.Drawing.Point(973, 295);
+            this.chkDocumentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkDocumentos.Name = "chkDocumentos";
-            this.chkDocumentos.Size = new System.Drawing.Size(86, 17);
+            this.chkDocumentos.Size = new System.Drawing.Size(109, 21);
             this.chkDocumentos.TabIndex = 72;
             this.chkDocumentos.Text = "Documentos";
             this.chkDocumentos.UseVisualStyleBackColor = false;
@@ -224,10 +224,10 @@
             // 
             this.chkInventario.AutoSize = true;
             this.chkInventario.BackColor = System.Drawing.Color.Transparent;
-            this.chkInventario.Location = new System.Drawing.Point(730, 220);
-            this.chkInventario.Margin = new System.Windows.Forms.Padding(2);
+            this.chkInventario.Location = new System.Drawing.Point(973, 271);
+            this.chkInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkInventario.Name = "chkInventario";
-            this.chkInventario.Size = new System.Drawing.Size(73, 17);
+            this.chkInventario.Size = new System.Drawing.Size(92, 21);
             this.chkInventario.TabIndex = 71;
             this.chkInventario.Text = "Inventario";
             this.chkInventario.UseVisualStyleBackColor = false;
@@ -236,10 +236,10 @@
             // 
             this.chkFacturacion.AutoSize = true;
             this.chkFacturacion.BackColor = System.Drawing.Color.Transparent;
-            this.chkFacturacion.Location = new System.Drawing.Point(730, 200);
-            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(2);
+            this.chkFacturacion.Location = new System.Drawing.Point(973, 246);
+            this.chkFacturacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkFacturacion.Name = "chkFacturacion";
-            this.chkFacturacion.Size = new System.Drawing.Size(82, 17);
+            this.chkFacturacion.Size = new System.Drawing.Size(104, 21);
             this.chkFacturacion.TabIndex = 70;
             this.chkFacturacion.Text = "Facturación";
             this.chkFacturacion.UseVisualStyleBackColor = false;
@@ -248,10 +248,10 @@
             // 
             this.chkUsuarios.AutoSize = true;
             this.chkUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.chkUsuarios.Location = new System.Drawing.Point(730, 179);
-            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.chkUsuarios.Location = new System.Drawing.Point(973, 220);
+            this.chkUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkUsuarios.Name = "chkUsuarios";
-            this.chkUsuarios.Size = new System.Drawing.Size(107, 17);
+            this.chkUsuarios.Size = new System.Drawing.Size(141, 21);
             this.chkUsuarios.TabIndex = 69;
             this.chkUsuarios.Text = "Registrar Usuario";
             this.chkUsuarios.UseVisualStyleBackColor = false;
@@ -260,10 +260,10 @@
             // 
             this.chkEmpleados.AutoSize = true;
             this.chkEmpleados.BackColor = System.Drawing.Color.Transparent;
-            this.chkEmpleados.Location = new System.Drawing.Point(730, 160);
-            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(2);
+            this.chkEmpleados.Location = new System.Drawing.Point(973, 197);
+            this.chkEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkEmpleados.Name = "chkEmpleados";
-            this.chkEmpleados.Size = new System.Drawing.Size(123, 17);
+            this.chkEmpleados.Size = new System.Drawing.Size(162, 21);
             this.chkEmpleados.TabIndex = 68;
             this.chkEmpleados.Text = "Registrar Empleados";
             this.chkEmpleados.UseVisualStyleBackColor = false;
@@ -273,10 +273,10 @@
             // 
             this.chkPacientes.AutoSize = true;
             this.chkPacientes.BackColor = System.Drawing.Color.Transparent;
-            this.chkPacientes.Location = new System.Drawing.Point(730, 140);
-            this.chkPacientes.Margin = new System.Windows.Forms.Padding(2);
+            this.chkPacientes.Location = new System.Drawing.Point(973, 172);
+            this.chkPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkPacientes.Name = "chkPacientes";
-            this.chkPacientes.Size = new System.Drawing.Size(73, 17);
+            this.chkPacientes.Size = new System.Drawing.Size(92, 21);
             this.chkPacientes.TabIndex = 67;
             this.chkPacientes.Text = "Pacientes";
             this.chkPacientes.UseVisualStyleBackColor = false;
@@ -287,10 +287,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(442, 224);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Location = new System.Drawing.Point(589, 276);
+            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 27);
+            this.label7.Size = new System.Drawing.Size(107, 33);
             this.label7.TabIndex = 116;
             this.label7.Text = "Estado:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -302,9 +302,10 @@
             this.cmbestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbestado.Location = new System.Drawing.Point(535, 224);
+            this.cmbestado.Location = new System.Drawing.Point(713, 276);
+            this.cmbestado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbestado.Name = "cmbestado";
-            this.cmbestado.Size = new System.Drawing.Size(121, 32);
+            this.cmbestado.Size = new System.Drawing.Size(160, 37);
             this.cmbestado.TabIndex = 115;
             // 
             // bunifuGradientPanel1
@@ -340,18 +341,43 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(911, 353);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1215, 434);
             this.bunifuGradientPanel1.TabIndex = 117;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox3.Location = new System.Drawing.Point(693, 288);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 119;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
+            this.pictureBox2.Location = new System.Drawing.Point(693, 230);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(17, 12);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 118;
+            this.pictureBox2.TabStop = false;
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 12);
+            this.textBox1.Location = new System.Drawing.Point(133, 15);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 117;
             this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -360,46 +386,23 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.logoo;
-            this.pictureBox8.Location = new System.Drawing.Point(841, 10);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(1121, 12);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(58, 53);
+            this.pictureBox8.Size = new System.Drawing.Size(77, 65);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 70;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
-            this.pictureBox2.Location = new System.Drawing.Point(520, 187);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(13, 10);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 118;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
-            this.pictureBox3.Location = new System.Drawing.Point(520, 234);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(13, 10);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 119;
-            this.pictureBox3.TabStop = false;
-            // 
             // Modificacion_roles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 353);
+            this.ClientSize = new System.Drawing.Size(1215, 434);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(360, 200);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Modificacion_roles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Modificacion_roles";
@@ -408,9 +411,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }

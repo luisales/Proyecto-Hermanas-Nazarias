@@ -61,7 +61,6 @@ namespace Hermanas_nazario
 
         private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.espacio(e);
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -77,6 +76,18 @@ namespace Hermanas_nazario
         private void Registro_Nivel_Load(object sender, EventArgs e)
         {
             txtNombreRol.Focus();
+        }
+
+        private void txtNombreRol_TextChanged(object sender, EventArgs e)
+        {
+            string c;
+            c = txtNombreRol.Text;
+            if (c.StartsWith(" "))
+            {
+                MessageBox.Show("No se puede ingresar con espacio");
+                txtNombreRol.Text = "";
+                return;
+            }
         }
     }
     }

@@ -770,5 +770,11 @@ namespace Hermanas_nazario
             a.ShowDialog();
 
         }
+
+        private void bunifuFlatButton10_Click(object sender, EventArgs e)
+        {
+            Factura_ropa a = new Factura_ropa();
+            a.ShowDialog();
+        }
     }
 }

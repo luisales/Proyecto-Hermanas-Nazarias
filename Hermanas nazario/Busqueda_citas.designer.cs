@@ -52,7 +52,7 @@
             this.label1.Location = new System.Drawing.Point(31, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 25);
+            this.label1.Size = new System.Drawing.Size(426, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Numero de expediente del paciente: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -63,7 +63,7 @@
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcodigo.MaxLength = 8;
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(66, 26);
+            this.txtcodigo.Size = new System.Drawing.Size(66, 30);
             this.txtcodigo.TabIndex = 2;
             this.txtcodigo.Click += new System.EventHandler(this.txtcodigo_Click);
             this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
@@ -106,7 +106,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(66, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(339, 44);
+            this.label5.Size = new System.Drawing.Size(417, 54);
             this.label5.TabIndex = 25;
             this.label5.Text = "Busqueda de Citas";
             // 
@@ -159,7 +159,7 @@
             // 
             // Busqueda_citas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;

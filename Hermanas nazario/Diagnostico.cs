@@ -47,7 +47,8 @@ namespace Hermanas_nazario
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Receta a = new Receta();
+            a.ShowDialog();
 
         }
 

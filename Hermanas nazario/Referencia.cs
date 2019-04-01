@@ -219,8 +219,6 @@ namespace Hermanas_nazario
                 doc.Close();
                 MessageBox.Show("Guardado con exito");
                 this.Hide();
-                menu a = new menu();
-                a.Show();
             }
             catch (Exception ex)
             {

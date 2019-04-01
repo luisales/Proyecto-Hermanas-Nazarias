@@ -207,8 +207,6 @@ namespace Hermanas_nazario
 
             Base_de_datos.expediente(txtid.Text);
             this.Close();
-            menu a = new menu();
-            a.Show();
 
 
 

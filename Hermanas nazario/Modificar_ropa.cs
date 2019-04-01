@@ -59,6 +59,8 @@ namespace Hermanas_nazario
                 estado = "INC";
             }
             Base_de_datos.actualizar_ropa(int.Parse(txtcod.Text), txtnom.Text, int.Parse(Base_de_datos.cant), txtUnidad.SelectedItem.ToString(), estado);
+            MessageBox.Show("Ropa modificado.");
+            this.Hide();
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)

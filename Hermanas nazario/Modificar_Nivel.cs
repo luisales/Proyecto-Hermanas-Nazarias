@@ -116,7 +116,6 @@ namespace Hermanas_nazario
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validar.solonumeros(e);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -132,6 +131,18 @@ namespace Hermanas_nazario
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtNombreRol_TextChanged(object sender, EventArgs e)
+        {
+            string c;
+            c = txtNombreRol.Text;
+            if (c.StartsWith(" "))
+            {
+                MessageBox.Show("No se puede ingresar con espacio");
+                txtNombreRol.Text = "";
+                return;
+            }
         }
     }
 }
