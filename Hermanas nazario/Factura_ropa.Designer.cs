@@ -148,7 +148,7 @@
             // 
             this.txtCod.Enabled = false;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(225, 177);
+            this.txtCod.Location = new System.Drawing.Point(225, 161);
             this.txtCod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCod.MaxLength = 13;
             this.txtCod.Name = "txtCod";
@@ -156,6 +156,7 @@
             this.txtCod.TabIndex = 95;
             this.txtCod.Visible = false;
             this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
+            this.txtCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCod_KeyPress);
             // 
             // txtnom
             // 
@@ -167,6 +168,7 @@
             this.txtnom.Size = new System.Drawing.Size(189, 36);
             this.txtnom.TabIndex = 96;
             this.txtnom.TextChanged += new System.EventHandler(this.txtnom_TextChanged);
+            this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
             // 
             // dataGridView1
             // 
@@ -362,6 +364,7 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1135, 505);
             this.bunifuGradientPanel1.TabIndex = 114;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // panel7
             // 

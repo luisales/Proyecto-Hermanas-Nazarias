@@ -2214,7 +2214,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Segundo_apellido 'Segundo Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado',e.Nombre 'Puesto', d.Nombre 'Rol', a.Estado, b.Fecha_modificacion 'Fecha ingreso',b.Primer_nombre+' '+b.Primer_apellido 'Empleado ingreso',c.Fecha_modificacion 'Fecha modificacion', c.Primer_nombre+' '+c.Primer_apellido 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo inner join Puesto e on e.Codigo=a.Codigo_puesto where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo 'Codigo empleado', a.Primer_nombre 'Primer nombre', a.Segundo_nombre 'Segundo nombre',a.Primer_apellido 'Primer Apellido',a.Segundo_apellido 'Segundo Apellido', a.Numero_identidad 'Identidad de empleado', a.Sexo 'Sexo de empleado', a.Correo_empleado 'Correo de empleado', a.Telefono 'Telefono de empleado',e.Nombre 'Puesto', d.Nombre 'Rol', a.Estado, a.Fecha_modificacion 'Fecha ingreso',[dbo].[busqueda](a.Codigo_empleado_ingreso) 'Empleado ingreso',a.Fecha_modificacion 'Fecha modificacion', [dbo].[busqueda](a.Codigo_empleado_modificacion) 'Empleado modificacion' from [dbo].Empleado a inner join [dbo].[Rol] d on a.Codigo_rol = d.Codigo inner join Puesto e on e.Codigo=a.Codigo_puesto where a.Primer_nombre LIKE " + "'" + nombre + "%'" + " AND a.Primer_apellido LIKE " + "'" + ape + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2876,7 +2876,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Código Prenda', a.descripcion  'Nombre Prenda', a.Existencia, b.Primer_nombre+' '+b.Segundo_nombre 'Empleado ingreso', c.Primer_nombre+' '+c.Segundo_nombre 'Empleado Modificacion', a.Fecha_ingreso, a.Fecha_modificacion, d.Nombre 'Categoria', a.Estado from [dbo].[Ropa] a inner join [dbo].[Empleado] b on a.Codigo_empleado_ingreso=b.Codigo inner join [dbo].[Empleado] c on a.Codigo_empleado_modificacion=c.Codigo inner join [dbo].[Categoria] d on a.Codigo_categoria=d.Codigo where a.Descripcion LIKE " + "'" + Nom + "%'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Código Prenda', a.descripcion  'Nombre Prenda', a.Existencia, [dbo].[busqueda](a.Codigo_empleado_ingreso) 'Empleado ingreso', [dbo].[busqueda](a.Codigo_empleado_modificacion) 'Empleado Modificacion', a.Fecha_ingreso, a.Fecha_modificacion, d.Nombre 'Categoria', a.Estado from [dbo].[Ropa] a inner join [dbo].[Categoria] d on a.Codigo_categoria=d.Codigo where a.Descripcion LIKE " + "'" + Nom + "%'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);

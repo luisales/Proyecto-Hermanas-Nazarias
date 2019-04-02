@@ -164,6 +164,21 @@ namespace Hermanas_nazario
             this.Close();
         }
 
+        private void txtCod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.solonumeros(e);
+        }
+
+        private void txtnom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.sololetras(e);
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;

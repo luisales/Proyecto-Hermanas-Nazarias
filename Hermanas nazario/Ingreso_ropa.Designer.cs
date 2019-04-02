@@ -122,13 +122,13 @@
             // 
             // txtUnidad
             // 
+            this.txtUnidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtUnidad.FormattingEnabled = true;
             this.txtUnidad.Location = new System.Drawing.Point(241, 197);
             this.txtUnidad.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.txtUnidad.Name = "txtUnidad";
             this.txtUnidad.Size = new System.Drawing.Size(139, 24);
             this.txtUnidad.TabIndex = 78;
-            this.txtUnidad.Text = "Categoria";
             // 
             // pictureBox8
             // 

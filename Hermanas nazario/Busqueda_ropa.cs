@@ -41,19 +41,19 @@ namespace Hermanas_nazario
             if (radioButton1.Checked && txtnom.TextLength >= 0)
             {
                 Base_de_datos busc = new Base_de_datos();
-                busc.BuscarMedNom(txtnom.Text.ToUpper());
+                busc.BuscarRopaNom1(txtnom.Text.ToUpper());
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
             else if (radioButton2.Checked && txtCod.TextLength == 0)
             {
                 Base_de_datos busc = new Base_de_datos();
-                busc.BuscarMedNom("");
+                busc.BuscarRopaNom1("");
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
             else if (radioButton2.Checked && txtCod.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
-                busc.BuscarMedCod(txtCod.Text);
+                busc.BuscarRopaNom1(txtCod.Text);
                 dataGridView1.DataSource = busc.Mostrar_Resultados();
             }
             else
@@ -114,6 +114,38 @@ namespace Hermanas_nazario
             btnSac.Enabled = false;
             ingresoPrendaExisntente a = new ingresoPrendaExisntente();
             a.ShowDialog();
+        }
+
+        private void txtnom_TextChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked && txtnom.TextLength >= 0)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarRopaNom1(txtnom.Text.ToUpper());
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
+            else if (radioButton2.Checked && txtCod.TextLength == 0)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarRopaNom1("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
+            else if (radioButton2.Checked && txtCod.TextLength >= 1)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarRopaNom1(txtCod.Text);
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
+            else
+                dataGridView1.DataSource = null;
+            lblCan.Text = "*";
+            lblNom.Text = "*";
+            lblDes.Text = "*";
+            lblCod.Text = "*";
+            label10.Text = "*";
+
+            btnIng.Enabled = false;
+            btnSac.Enabled = false;
         }
     }
 }
