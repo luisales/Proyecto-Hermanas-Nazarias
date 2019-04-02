@@ -48,6 +48,22 @@ namespace Hermanas_nazario
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(txtnom.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            if (!string.IsNullOrEmpty(txtUnidad.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+            int ver = Base_de_datos.validarNomRopa(txtnom.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Prenda ya existente");
+                return;
+            }
             String estado;
             if (cmbestado.Text == "Activo")
             {
@@ -58,8 +74,9 @@ namespace Hermanas_nazario
             {
                 estado = "INC";
             }
+
             Base_de_datos.actualizar_ropa(int.Parse(txtcod.Text), txtnom.Text, int.Parse(Base_de_datos.cant), txtUnidad.SelectedItem.ToString(), estado);
-            MessageBox.Show("Ropa modificado.");
+            MessageBox.Show("Prenda modificada.");
             this.Hide();
         }
 

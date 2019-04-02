@@ -64,7 +64,16 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
+            int ver = Base_de_datos.validarNomRopa(txtnom.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Prenda ya existente");
+                return;
+            }
             Base_de_datos.Registro_Ropa(1, txtnom.Text, int.Parse(txtcant.Text), txtUnidad.SelectedItem.ToString());
+            MessageBox.Show("Prenda Ingresada con exito");
+            this.Hide();
+
         }
 
         private void txtnom_TextChanged(object sender, EventArgs e)

@@ -1162,6 +1162,29 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
+        public static int validarNomRopa(string id)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Ropa WHERE Descripcion=@id", con);
+            cmd.Parameters.AddWithValue("id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+        }
 
         public static void acceso(string usu)
         {
