@@ -19,6 +19,17 @@ namespace Hermanas_nazario
             txtnom.Text = Base_de_datos.nommedi;
             txtprecio.Text = Base_de_datos.Precio_medicamento(Base_de_datos.CodMed);
             richTextBox1.Text = Base_de_datos.desc;
+            dataGridView1.AllowUserToAddRows = false;
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarMedida();
+            dataGridView1.DataSource = busc.Mostrar_Resultados();
+            txtcant.Text = Base_de_datos.vcant;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                txtUnidad.Items.Add(row.Cells[1].Value.ToString());
+
+            }
             txtUnidad.Text = Base_de_datos.unidad;
         }
 
@@ -84,19 +95,7 @@ namespace Hermanas_nazario
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtUnidad.Text == "Caja")
-            {
-                Base_de_datos.vmedida = 1.ToString();
-            }
-            if (txtUnidad.Text == "Unidad")
-            {
-                Base_de_datos.vmedida = 2.ToString(); ;
-            }
-            if (txtUnidad.Text == "Frasco")
-            {
-                Base_de_datos.vmedida = 3.ToString(); ;
-            }
-            Base_de_datos.Actualizar_Medicamento(int.Parse(Base_de_datos.vcodmed), txtnom.Text.ToUpper(), txtcant.Text.ToUpper(), richTextBox1.Text.ToUpper(), txtprecio.Text.ToUpper(), Base_de_datos.vmedida);
+            Base_de_datos.Actualizar_Medicamento(int.Parse(codigomed.Text), txtnom.Text.ToUpper(), txtcant.Text.ToUpper(), richTextBox1.Text.ToUpper(), txtprecio.Text.ToUpper(), txtUnidad.SelectedItem.ToString());
             MessageBox.Show("Medicamento guardado con exito");
 
             codigomed.Clear();
@@ -180,6 +179,11 @@ namespace Hermanas_nazario
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -1824,14 +1824,17 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("Actualizar_Medicamento", con);
+            SqlCommand cmd = new SqlCommand("Mante_medicamento", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@Codigo", codigo));
             cmd.Parameters.Add(new SqlParameter("@Nombre", nombre));
             cmd.Parameters.Add(new SqlParameter("@Cantidad", cant2));
             cmd.Parameters.Add(new SqlParameter("@Descripcion", desc2));
             cmd.Parameters.Add(new SqlParameter("@Precio", precio));
-            cmd.Parameters.Add(new SqlParameter("@Codigo_medida", medida));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_medida", Buscar_codigo_medida(medida)));
+            cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
+            cmd.Parameters.Add(new SqlParameter("@Estado", "ACT"));
+            cmd.Parameters.Add(new SqlParameter("@opc", 2));
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -2395,7 +2398,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Usuarios WHERE Nombre_Usuario=@id and Codigo_Usuario != @nombre", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Usuario WHERE Nombre=@id and Codigo != @nombre", con);
             cmd.Parameters.AddWithValue("id", id);
             cmd.Parameters.AddWithValue("nombre", nombre);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
