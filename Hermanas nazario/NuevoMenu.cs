@@ -27,6 +27,63 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            Base_de_datos.BuscarPermisos(Base_de_datos.rol.ToString());
+            if (Base_de_datos.paca == 1)
+            {
+                pictureBox2.Visible = true;
+
+
+
+            }
+            if (Base_de_datos.Permisos.Contains("A"))
+            {
+                bunifuFlatButton1.Enabled = true;
+            }
+            else
+                bunifuFlatButton1.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("B"))
+            {
+                bunifuFlatButton2.Enabled = true;
+            }
+            else
+                bunifuFlatButton2.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("C"))
+            {
+                bunifuFlatButton3.Enabled = true;
+            }
+            else
+                bunifuFlatButton3.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("D"))
+            {
+                bunifuFlatButton4.Enabled = true;
+            }
+            else
+                bunifuFlatButton4.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("E"))
+            {
+                bunifuFlatButton5.Enabled = true;
+            }
+            else
+                bunifuFlatButton5.Enabled = false;
+
+            if (Base_de_datos.Permisos.Contains("F"))
+            {
+                bunifuFlatButton6.Enabled = true;
+            }
+            else
+                bunifuFlatButton6.Enabled = false;
+
+
+            if (Base_de_datos.Permisos.Contains("G"))
+            {
+                bunifuFlatButton7.Enabled = true;
+            }
+            else
+                bunifuFlatButton7.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)

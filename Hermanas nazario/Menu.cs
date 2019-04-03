@@ -16,69 +16,7 @@ namespace Hermanas_nazario
         public menu()
         {
             InitializeComponent();
-            Base_de_datos.BuscarPermisos(Base_de_datos.rol.ToString());
-            if(Base_de_datos.paca==1)
-            {
-                pictureBox2.Visible = true;
-                chart2.Visible = true;
-                label1.Visible = true;
-                Base_de_datos.esta2();
-                    chart2.Series[0].Points.DataBindXY(Base_de_datos.nombrePacientes, Base_de_datos.cantidadPacientes);
-                    pictureBox2.Visible = true;
-                    chart2.Visible = true;
-                    Base_de_datos.c = 1;
-
-
-            }
-            if (Base_de_datos.Permisos.Contains("A"))
-            {
-                pacientesToolStripMenuItem.Enabled = true;
-            }
-            else
-                pacientesToolStripMenuItem.Enabled = false;
-
-            if (Base_de_datos.Permisos.Contains("B"))
-            {
-                registarEmpleadoToolStripMenuItem.Enabled = true;
-            }
-            else
-                registarEmpleadoToolStripMenuItem.Enabled = false;
-
-            if (Base_de_datos.Permisos.Contains("C"))
-            {
-                registrarUsuarioToolStripMenuItem.Enabled = true;
-            }
-            else
-                registrarUsuarioToolStripMenuItem.Enabled = false;
-
-            if (Base_de_datos.Permisos.Contains("D"))
-            {
-                facturacionToolStripMenuItem.Enabled = true;
-            }
-            else
-                facturacionToolStripMenuItem.Enabled = false;
-
-            if (Base_de_datos.Permisos.Contains("E"))
-            {
-                inventarioToolStripMenuItem.Enabled = true;
-            }
-            else
-                inventarioToolStripMenuItem.Enabled = false;
-
-            if (Base_de_datos.Permisos.Contains("F"))
-            {
-                documentosMedicosToolStripMenuItem.Enabled = true;
-            }
-            else
-                documentosMedicosToolStripMenuItem.Enabled = false;
-
-
-            if (Base_de_datos.Permisos.Contains("G"))
-            {
-                mantenimientosToolStripMenuItem.Enabled = true;
-            }
-            else
-                mantenimientosToolStripMenuItem.Enabled = false;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
