@@ -58,6 +58,7 @@
             this.bunifuFlatButton21 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton22 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton17 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton18 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton19 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -79,7 +80,6 @@
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -131,7 +131,7 @@
             this.bunifuFlatButton29.IconZoom = 90D;
             this.bunifuFlatButton29.IsTab = false;
             this.bunifuFlatButton29.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton29.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton29.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton29.Name = "bunifuFlatButton29";
             this.bunifuFlatButton29.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton29.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -167,7 +167,7 @@
             this.bunifuFlatButton30.IconZoom = 90D;
             this.bunifuFlatButton30.IsTab = false;
             this.bunifuFlatButton30.Location = new System.Drawing.Point(0, 4);
-            this.bunifuFlatButton30.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton30.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton30.Name = "bunifuFlatButton30";
             this.bunifuFlatButton30.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton30.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -214,7 +214,7 @@
             this.bunifuFlatButton9.IconZoom = 90D;
             this.bunifuFlatButton9.IsTab = false;
             this.bunifuFlatButton9.Location = new System.Drawing.Point(3, 1);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton9.Name = "bunifuFlatButton9";
             this.bunifuFlatButton9.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton9.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -250,7 +250,7 @@
             this.bunifuFlatButton31.IconZoom = 90D;
             this.bunifuFlatButton31.IsTab = false;
             this.bunifuFlatButton31.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton31.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton31.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton31.Name = "bunifuFlatButton31";
             this.bunifuFlatButton31.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton31.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -297,7 +297,7 @@
             this.bunifuFlatButton33.IconZoom = 90D;
             this.bunifuFlatButton33.IsTab = false;
             this.bunifuFlatButton33.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton33.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton33.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton33.Name = "bunifuFlatButton33";
             this.bunifuFlatButton33.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton33.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -333,7 +333,7 @@
             this.bunifuFlatButton34.IconZoom = 90D;
             this.bunifuFlatButton34.IsTab = false;
             this.bunifuFlatButton34.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton34.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton34.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton34.Name = "bunifuFlatButton34";
             this.bunifuFlatButton34.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton34.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -380,7 +380,7 @@
             this.bunifuFlatButton35.IconZoom = 90D;
             this.bunifuFlatButton35.IsTab = false;
             this.bunifuFlatButton35.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton35.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton35.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton35.Name = "bunifuFlatButton35";
             this.bunifuFlatButton35.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton35.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -416,7 +416,7 @@
             this.bunifuFlatButton36.IconZoom = 90D;
             this.bunifuFlatButton36.IsTab = false;
             this.bunifuFlatButton36.Location = new System.Drawing.Point(0, 4);
-            this.bunifuFlatButton36.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton36.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton36.Name = "bunifuFlatButton36";
             this.bunifuFlatButton36.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton36.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -436,7 +436,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.atude;
             this.pictureBox3.Location = new System.Drawing.Point(981, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 54);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -450,7 +450,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.cerrar1;
             this.pictureBox2.Location = new System.Drawing.Point(1144, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(56, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -464,7 +464,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.cerrar;
             this.pictureBox1.Location = new System.Drawing.Point(1061, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -539,7 +539,7 @@
             this.bunifuFlatButton24.IconZoom = 90D;
             this.bunifuFlatButton24.IsTab = false;
             this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 90);
-            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton24.Name = "bunifuFlatButton24";
             this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -575,7 +575,7 @@
             this.bunifuFlatButton26.IconZoom = 90D;
             this.bunifuFlatButton26.IsTab = false;
             this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton26.Name = "bunifuFlatButton26";
             this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -611,7 +611,7 @@
             this.bunifuFlatButton27.IconZoom = 90D;
             this.bunifuFlatButton27.IsTab = false;
             this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 60);
-            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton27.Name = "bunifuFlatButton27";
             this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -647,7 +647,7 @@
             this.bunifuFlatButton28.IconZoom = 90D;
             this.bunifuFlatButton28.IsTab = false;
             this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton28.Name = "bunifuFlatButton28";
             this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -693,7 +693,7 @@
             this.bunifuFlatButton25.IconZoom = 90D;
             this.bunifuFlatButton25.IsTab = false;
             this.bunifuFlatButton25.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton25.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton25.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton25.Name = "bunifuFlatButton25";
             this.bunifuFlatButton25.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton25.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -742,7 +742,7 @@
             this.bunifuFlatButton23.IconZoom = 90D;
             this.bunifuFlatButton23.IsTab = false;
             this.bunifuFlatButton23.Location = new System.Drawing.Point(0, 90);
-            this.bunifuFlatButton23.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton23.Name = "bunifuFlatButton23";
             this.bunifuFlatButton23.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton23.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -778,7 +778,7 @@
             this.bunifuFlatButton20.IconZoom = 90D;
             this.bunifuFlatButton20.IsTab = false;
             this.bunifuFlatButton20.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton20.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton20.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton20.Name = "bunifuFlatButton20";
             this.bunifuFlatButton20.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton20.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -814,7 +814,7 @@
             this.bunifuFlatButton21.IconZoom = 90D;
             this.bunifuFlatButton21.IsTab = false;
             this.bunifuFlatButton21.Location = new System.Drawing.Point(0, 60);
-            this.bunifuFlatButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton21.Name = "bunifuFlatButton21";
             this.bunifuFlatButton21.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton21.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -850,7 +850,7 @@
             this.bunifuFlatButton22.IconZoom = 90D;
             this.bunifuFlatButton22.IsTab = false;
             this.bunifuFlatButton22.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton22.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton22.Name = "bunifuFlatButton22";
             this.bunifuFlatButton22.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton22.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -877,6 +877,42 @@
             this.panel4.Size = new System.Drawing.Size(343, 126);
             this.panel4.TabIndex = 2;
             // 
+            // bunifuFlatButton10
+            // 
+            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton10.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton10.BorderRadius = 0;
+            this.bunifuFlatButton10.ButtonText = "Generar factura de ropa";
+            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton10.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage")));
+            this.bunifuFlatButton10.Iconimage_right = null;
+            this.bunifuFlatButton10.Iconimage_right_Selected = null;
+            this.bunifuFlatButton10.Iconimage_Selected = null;
+            this.bunifuFlatButton10.IconMarginLeft = 0;
+            this.bunifuFlatButton10.IconMarginRight = 0;
+            this.bunifuFlatButton10.IconRightVisible = true;
+            this.bunifuFlatButton10.IconRightZoom = 0D;
+            this.bunifuFlatButton10.IconVisible = true;
+            this.bunifuFlatButton10.IconZoom = 90D;
+            this.bunifuFlatButton10.IsTab = false;
+            this.bunifuFlatButton10.Location = new System.Drawing.Point(5, 92);
+            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
+            this.bunifuFlatButton10.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton10.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton10.selected = true;
+            this.bunifuFlatButton10.Size = new System.Drawing.Size(333, 34);
+            this.bunifuFlatButton10.TabIndex = 8;
+            this.bunifuFlatButton10.Text = "Generar factura de ropa";
+            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton10.Click += new System.EventHandler(this.bunifuFlatButton10_Click);
+            // 
             // bunifuFlatButton17
             // 
             this.bunifuFlatButton17.Activecolor = System.Drawing.Color.Turquoise;
@@ -899,7 +935,7 @@
             this.bunifuFlatButton17.IconZoom = 90D;
             this.bunifuFlatButton17.IsTab = false;
             this.bunifuFlatButton17.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton17.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton17.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton17.Name = "bunifuFlatButton17";
             this.bunifuFlatButton17.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton17.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -935,7 +971,7 @@
             this.bunifuFlatButton18.IconZoom = 90D;
             this.bunifuFlatButton18.IsTab = false;
             this.bunifuFlatButton18.Location = new System.Drawing.Point(0, 60);
-            this.bunifuFlatButton18.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton18.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton18.Name = "bunifuFlatButton18";
             this.bunifuFlatButton18.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton18.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -971,7 +1007,7 @@
             this.bunifuFlatButton19.IconZoom = 90D;
             this.bunifuFlatButton19.IsTab = false;
             this.bunifuFlatButton19.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton19.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton19.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton19.Name = "bunifuFlatButton19";
             this.bunifuFlatButton19.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton19.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1018,7 +1054,7 @@
             this.bunifuFlatButton14.IconZoom = 90D;
             this.bunifuFlatButton14.IsTab = false;
             this.bunifuFlatButton14.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton14.Name = "bunifuFlatButton14";
             this.bunifuFlatButton14.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton14.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1054,7 +1090,7 @@
             this.bunifuFlatButton16.IconZoom = 90D;
             this.bunifuFlatButton16.IsTab = false;
             this.bunifuFlatButton16.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton16.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton16.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton16.Name = "bunifuFlatButton16";
             this.bunifuFlatButton16.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton16.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1101,7 +1137,7 @@
             this.bunifuFlatButton13.IconZoom = 90D;
             this.bunifuFlatButton13.IsTab = false;
             this.bunifuFlatButton13.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton13.Name = "bunifuFlatButton13";
             this.bunifuFlatButton13.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton13.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1137,7 +1173,7 @@
             this.bunifuFlatButton15.IconZoom = 90D;
             this.bunifuFlatButton15.IsTab = false;
             this.bunifuFlatButton15.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton15.Name = "bunifuFlatButton15";
             this.bunifuFlatButton15.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton15.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1185,7 +1221,7 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1221,7 +1257,7 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(0, 60);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1257,7 +1293,7 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
@@ -1350,7 +1386,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::Hermanas_nazario.Properties.Resources.logoo;
             this.pictureBox8.Location = new System.Drawing.Point(135, 14);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(115, 96);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1544,42 +1580,6 @@
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             this.bunifuFlatButton1.MouseHover += new System.EventHandler(this.bunifuFlatButton1_MouseHover);
             this.bunifuFlatButton1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bunifuFlatButton1_MouseMove);
-            // 
-            // bunifuFlatButton10
-            // 
-            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton10.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton10.BorderRadius = 0;
-            this.bunifuFlatButton10.ButtonText = "Generar factura de ropa";
-            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage")));
-            this.bunifuFlatButton10.Iconimage_right = null;
-            this.bunifuFlatButton10.Iconimage_right_Selected = null;
-            this.bunifuFlatButton10.Iconimage_Selected = null;
-            this.bunifuFlatButton10.IconMarginLeft = 0;
-            this.bunifuFlatButton10.IconMarginRight = 0;
-            this.bunifuFlatButton10.IconRightVisible = true;
-            this.bunifuFlatButton10.IconRightZoom = 0D;
-            this.bunifuFlatButton10.IconVisible = true;
-            this.bunifuFlatButton10.IconZoom = 90D;
-            this.bunifuFlatButton10.IsTab = false;
-            this.bunifuFlatButton10.Location = new System.Drawing.Point(5, 92);
-            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
-            this.bunifuFlatButton10.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton10.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton10.selected = true;
-            this.bunifuFlatButton10.Size = new System.Drawing.Size(333, 34);
-            this.bunifuFlatButton10.TabIndex = 8;
-            this.bunifuFlatButton10.Text = "Generar factura de ropa";
-            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton10.Click += new System.EventHandler(this.bunifuFlatButton10_Click);
             // 
             // NuevoMenu
             // 
