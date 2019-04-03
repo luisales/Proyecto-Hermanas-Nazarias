@@ -72,6 +72,10 @@ namespace Hermanas_nazario
             }
             Base_de_datos.Registro_Ropa(1, txtnom.Text, int.Parse(txtcant.Text), txtUnidad.SelectedItem.ToString());
             MessageBox.Show("Prenda Ingresada con exito");
+            Busqueda_ropa a = new Busqueda_ropa();
+            Base_de_datos busc = new Base_de_datos();
+            busc.BuscarRopaNom1("");
+            a.dataGridView1.DataSource = busc.Mostrar_Resultados();
             this.Hide();
 
         }

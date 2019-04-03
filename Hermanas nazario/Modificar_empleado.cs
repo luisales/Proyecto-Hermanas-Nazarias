@@ -329,6 +329,9 @@ namespace Hermanas_nazario
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             dataGridView2.Visible = true;
+            Base_de_datos a = new Base_de_datos();
+            a.BuscarPuesto();
+            dataGridView2.DataSource = a.Mostrar_Resultados();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

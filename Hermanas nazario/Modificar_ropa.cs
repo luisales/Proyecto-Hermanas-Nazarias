@@ -58,7 +58,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            int ver = Base_de_datos.validarNomRopa(txtnom.Text);
+            int ver = Base_de_datos.validarRopaMod(txtnom.Text, txtcod.Text);
             if (ver != 1)
             {
                 MessageBox.Show("Prenda ya existente");
@@ -77,6 +77,7 @@ namespace Hermanas_nazario
 
             Base_de_datos.actualizar_ropa(int.Parse(txtcod.Text), txtnom.Text, int.Parse(Base_de_datos.cant), txtUnidad.SelectedItem.ToString(), estado);
             MessageBox.Show("Prenda modificada.");
+            DialogResult = DialogResult.OK;
             this.Hide();
         }
 

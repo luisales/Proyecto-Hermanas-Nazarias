@@ -14,8 +14,8 @@ namespace Hermanas_nazario
     {
         public Busqueda_ropa()
         {
-            Base_de_datos busc = new Base_de_datos();
             InitializeComponent();
+            Base_de_datos busc = new Base_de_datos();
             busc.BuscarRopaNom1("");
             dataGridView1.DataSource = busc.Mostrar_Resultados();
         }
@@ -29,6 +29,13 @@ namespace Hermanas_nazario
             Base_de_datos.estadoE = lblDes.Text;
             Modificar_ropa a = new Modificar_ropa();
             a.ShowDialog();
+            if (a.DialogResult == DialogResult.OK)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarRopaNom1("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -63,9 +70,8 @@ namespace Hermanas_nazario
             lblDes.Text = "*";
             lblCod.Text = "*";
             label10.Text = "*";
-
             btnIng.Enabled = false;
-            btnSac.Enabled = false;
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -94,7 +100,7 @@ namespace Hermanas_nazario
 
 
             btnIng.Enabled = true;
-            btnSac.Enabled = true;
+            
         }
 
         private void btnIng_Click(object sender, EventArgs e)
@@ -111,9 +117,15 @@ namespace Hermanas_nazario
             txtCod.Text = "";
             txtnom.Text = "";
             btnIng.Enabled = false;
-            btnSac.Enabled = false;
+            
             ingresoPrendaExisntente a = new ingresoPrendaExisntente();
             a.ShowDialog();
+            if (a.DialogResult == DialogResult.OK)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarRopaNom1("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
         }
 
         private void txtnom_TextChanged(object sender, EventArgs e)
@@ -145,10 +157,20 @@ namespace Hermanas_nazario
             label10.Text = "*";
 
             btnIng.Enabled = false;
-            btnSac.Enabled = false;
+            
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblCod_TextChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

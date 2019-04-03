@@ -81,6 +81,10 @@ namespace Hermanas_nazario
             textBox1.Clear();
             txtcant.Clear();
 
+            DialogResult = DialogResult.OK;
+            
+            this.Hide();
+
         }
 
         private void txtnom_TextChanged(object sender, EventArgs e)

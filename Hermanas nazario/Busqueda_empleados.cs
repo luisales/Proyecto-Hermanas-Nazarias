@@ -190,7 +190,7 @@ namespace Hermanas_nazario
 
         private void Busqueda_empleados_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void txtId_TextChanged_1(object sender, EventArgs e)
@@ -265,6 +265,8 @@ namespace Hermanas_nazario
             Base_de_datos.codigo_rol = Convert.ToString(selectedRow.Cells[10].Value);
             txtape.Clear();
             txtnom.Clear();
+            txtGencita.Clear();
+            btnModificar.Enabled = false;
             Modificar_empleado a = new Modificar_empleado();
             a.ShowDialog();
         }
@@ -277,6 +279,11 @@ namespace Hermanas_nazario
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtGencita_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

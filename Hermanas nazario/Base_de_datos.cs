@@ -67,11 +67,11 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
-            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
 
         }
@@ -3023,6 +3023,31 @@ namespace Hermanas_nazario
             finally
             {
                 con.Close();
+            }
+        }
+
+        public static int validarRopaMod(string id, string nombre)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * from Ropa WHERE Descripcion=@id and Codigo != @nombre", con);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("nombre", nombre);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return 1;
+            }
+            else
+            {
+                con.Close();
+                return 0;
             }
         }
 
