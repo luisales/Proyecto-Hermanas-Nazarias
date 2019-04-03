@@ -28,15 +28,11 @@ namespace Hermanas_nazario
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Busqueda_citas a = new Busqueda_citas();
-            a.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Busqueda_citas a = new Busqueda_citas();
-            a.Show();
         }
     }
 }

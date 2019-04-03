@@ -72,18 +72,18 @@ namespace Hermanas_nazario
 
             if (Base_de_datos.Permisos.Contains("F"))
             {
-                bunifuFlatButton6.Enabled = true;
+                bunifuFlatButton11.Enabled = true;
             }
             else
-                bunifuFlatButton6.Enabled = false;
+                bunifuFlatButton11.Enabled = false;
 
 
             if (Base_de_datos.Permisos.Contains("G"))
             {
-                bunifuFlatButton7.Enabled = true;
+                bunifuFlatButton12.Enabled = true;
             }
             else
-                bunifuFlatButton7.Enabled = false;
+                bunifuFlatButton12.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -32,6 +32,8 @@ namespace Hermanas_nazario
             }
             Base_de_datos.Actualizar_cita(int.Parse(Base_de_datos.cita), richTextBox1.Text, richTextBox2.Text);
             MessageBox.Show("Guardado con exito");
+            richTextBox1.Enabled = false;
+            richTextBox2.Enabled = false;
         }
 
         private void Diagnostico_Load(object sender, EventArgs e)

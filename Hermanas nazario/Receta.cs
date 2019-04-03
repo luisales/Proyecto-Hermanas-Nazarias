@@ -47,7 +47,6 @@ namespace Hermanas_nazario
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Base_de_datos.cita = "";
         }
 
         

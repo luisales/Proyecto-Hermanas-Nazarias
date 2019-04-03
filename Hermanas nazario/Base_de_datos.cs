@@ -480,7 +480,7 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Nombre_usuario, Profesor from Usuarios WHERE Nombre_usuario LIKE @nom AND Profesor LIKE @prof", con);
+            SqlCommand cmd = new SqlCommand("SELECT Nombre, Mascota from Usuario WHERE Nombre LIKE @nom AND Mascota LIKE @prof", con);
             cmd.Parameters.AddWithValue("nom", txtusuario);
             cmd.Parameters.AddWithValue("prof", txtprof);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -1417,7 +1417,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Código del Rol', a.Nombre 'Nombre del Rol',a.Estado, a.Permisos ,a.[Fecha_ingreso],b.Primer_nombre+' '+b.Primer_apellido'Empleado ingreso', a.Fecha_modificacion, c.Primer_nombre+' '+c.Primer_apellido'Empleado modifico' from Rol a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
+                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo  'Código del Rol', a.Nombre 'Nombre del Rol',a.Estado, a.Permisos ,a.[Fecha_ingreso],[dbo].[busqueda](a.Codigo_empleado_modificacion)'Empleado ingreso', a.Fecha_modificacion, [dbo].[busqueda](a.Codigo_empleado_modificacion) 'Empleado modificacion' from Rol a", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
