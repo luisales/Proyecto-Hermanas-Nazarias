@@ -2048,7 +2048,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select Codigo_servicio  'Código Servicio', Nombre_servicio  'Nombre Servicio' from [dbo].[Servicios] where Codigo_servicio LIKE " + "'" + Cod + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo  'Código Servicio', Nombre  'Nombre Servicio' from [dbo].[Servicio] where Codigo LIKE " + "'" + Cod + "'", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2350,13 +2350,13 @@ namespace Hermanas_nazario
             con = Base_de_datos.Conectar();
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * from Medicamento WHERE Nombre=@id", con);
+            SqlCommand cmd = new SqlCommand("SELECT * from Medida WHERE Nombre=@id", con);
             cmd.Parameters.AddWithValue("id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            if (dt.Rows.Count == 1)
+            if (dt.Rows.Count == 0)
             {
                 con.Close();
                 return 1;

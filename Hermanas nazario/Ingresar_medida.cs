@@ -24,13 +24,13 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            int ver = Base_de_datos.validarNomMedida(txtNombreRol.Text);
-            if (ver >= 1)
+            if (Base_de_datos.validarNomMedida(txtNombreRol.Text) == 0)
             {
                 MessageBox.Show("Medida ya existente");
                 return;
+
             }
-         
+
             Base_de_datos.Registro_Medida(txtNombreRol.Text.ToUpper());
             MessageBox.Show("Registrado con exito");
 
