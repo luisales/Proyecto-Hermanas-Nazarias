@@ -833,5 +833,26 @@ namespace Hermanas_nazario
             Factura_ropa a = new Factura_ropa();
             a.ShowDialog();
         }
+
+        private void bunifuFlatButton32_Click_2(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            panel8.Visible = false;
+            panel10.Visible = false;
+            panel11.Visible = false;
+            if (panel12.Visible == true)
+            {
+                panel12.Visible = false;
+            }
+            else
+            {
+                panel12.Visible = true;
+            }
+        }
     }
 }
