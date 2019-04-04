@@ -1392,7 +1392,7 @@ namespace Hermanas_nazario
                     cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
                     cmd.Parameters.Add(new SqlParameter("@Nombre", nombreRol));
                     cmd.Parameters.Add(new SqlParameter("@Permisos", Permisos));
-                    cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", cod_empleado));
+                    cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
                     cmd.Parameters.Add(new SqlParameter("@estado", "ACT"));
                     cmd.Parameters.Add(new SqlParameter("@opc", 1));
 
@@ -1417,7 +1417,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo  'Código del Rol', a.Nombre 'Nombre del Rol',a.Estado, a.Permisos ,a.[Fecha_ingreso],[dbo].[busqueda](a.Codigo_empleado_modificacion)'Empleado ingreso', a.Fecha_modificacion, [dbo].[busqueda](a.Codigo_empleado_modificacion) 'Empleado modificacion' from Rol a", con);
+                SqlDataAdapter da = new SqlDataAdapter("  select a.Codigo  'Código del Rol', a.Nombre 'Nombre del Rol',a.Estado, a.Permisos ,a.[Fecha_ingreso],[dbo].[busqueda](a.Codigo_empleado_ingreso)'Empleado ingreso', a.Fecha_modificacion, [dbo].[busqueda](a.Codigo_empleado_modificacion) 'Empleado modificacion' from Rol a", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1603,7 +1603,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de medida', a.Nombre 'Nombre de la medida',a.Estado 'Estado',a.[Fecha_ingreso],b.Primer_nombre+' '+b.Primer_apellido'Empleado ingreso', a.Fecha_modificacion, c.Primer_nombre+' '+c.Primer_apellido'Empleado modifico' from [dbo].[Medida] a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
+                SqlDataAdapter da = new SqlDataAdapter("select a.Codigo  'Codigo de medida', a.Nombre 'Nombre de la medida', a.Estado 'Estado', a.[Fecha_ingreso],[dbo].[busqueda](a.Codigo_empleado_ingreso) 'Empleado ingreso', a.Fecha_modificacion, [dbo].[busqueda](a.Codigo_empleado_modificacion)'Empleado modificacion' from[dbo].[Medida] a", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -2596,7 +2596,7 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlDataAdapter da = new SqlDataAdapter("Select a.Codigo, a.Nombre, b.Primer_nombre+' '+b.Primer_apellido, c.Primer_nombre+' '+c.Primer_apellido, a.Fecha_ingreso, a.Fecha_modificacion, a.Estado from  Puesto a inner join Empleado b on a.Codigo_empleado_ingreso=b.Codigo inner join Empleado c on a.Codigo_empleado_modificacion=c.Codigo", con);
+                SqlDataAdapter da = new SqlDataAdapter("Select a.Codigo, a.Nombre, [dbo].[busqueda](a.Codigo_empleado_ingreso) 'Empleado ingreso', [dbo].[busqueda](a.Codigo_empleado_modificacion)'Empleado modificacion', a.Fecha_ingreso, a.Fecha_modificacion, a.Estado from  Puesto a", con);
                 da.SelectCommand.CommandType = CommandType.Text;
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -3078,6 +3078,34 @@ namespace Hermanas_nazario
             }
         }
 
+        public static void Actualizar_Puesto(int Codigo, string nombreNiv, string estado)
+        {
+            SqlConnection con;
+            con = Base_de_datos.Conectar();
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("mante_puesto", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@codigo", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@nombre", nombreNiv));
+                cmd.Parameters.Add(new SqlParameter("@Codigo_empleado", empleadoAcc));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+        }
+        
 
     }
 }

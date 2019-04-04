@@ -164,6 +164,12 @@
     <Compile Include="Ingreso_ropa.Designer.cs">
       <DependentUpon>Ingreso_ropa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modificar_puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_puesto.Designer.cs">
+      <DependentUpon>Modificar_puesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificar_ropa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso_ropa.resx">
       <DependentUpon>Ingreso_ropa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_puesto.resx">
+      <DependentUpon>Modificar_puesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_ropa.resx">
       <DependentUpon>Modificar_ropa.cs</DependentUpon>

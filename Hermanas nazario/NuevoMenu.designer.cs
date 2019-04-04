@@ -30,21 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoMenu));
             this.panel8 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton29 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton30 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton31 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton33 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton34 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton35 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton36 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton37 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton38 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuFlatButton33 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton34 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton35 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton36 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton29 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton30 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton31 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuFlatButton32 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -80,14 +84,11 @@
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton32 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton37 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton38 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,7 +101,6 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -114,78 +114,6 @@
             this.panel8.Size = new System.Drawing.Size(343, 63);
             this.panel8.TabIndex = 4;
             // 
-            // bunifuFlatButton29
-            // 
-            this.bunifuFlatButton29.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton29.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton29.BorderRadius = 0;
-            this.bunifuFlatButton29.ButtonText = "Modificar medida";
-            this.bunifuFlatButton29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton29.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton29.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton29.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton29.Iconimage")));
-            this.bunifuFlatButton29.Iconimage_right = null;
-            this.bunifuFlatButton29.Iconimage_right_Selected = null;
-            this.bunifuFlatButton29.Iconimage_Selected = null;
-            this.bunifuFlatButton29.IconMarginLeft = 0;
-            this.bunifuFlatButton29.IconMarginRight = 0;
-            this.bunifuFlatButton29.IconRightVisible = true;
-            this.bunifuFlatButton29.IconRightZoom = 0D;
-            this.bunifuFlatButton29.IconVisible = true;
-            this.bunifuFlatButton29.IconZoom = 90D;
-            this.bunifuFlatButton29.IsTab = false;
-            this.bunifuFlatButton29.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton29.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton29.Name = "bunifuFlatButton29";
-            this.bunifuFlatButton29.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton29.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton29.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton29.selected = true;
-            this.bunifuFlatButton29.Size = new System.Drawing.Size(339, 30);
-            this.bunifuFlatButton29.TabIndex = 6;
-            this.bunifuFlatButton29.Text = "Modificar medida";
-            this.bunifuFlatButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton29.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton29.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton29.Click += new System.EventHandler(this.bunifuFlatButton29_Click);
-            // 
-            // bunifuFlatButton30
-            // 
-            this.bunifuFlatButton30.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton30.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton30.BorderRadius = 0;
-            this.bunifuFlatButton30.ButtonText = "Registrar medida";
-            this.bunifuFlatButton30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton30.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton30.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton30.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton30.Iconimage")));
-            this.bunifuFlatButton30.Iconimage_right = null;
-            this.bunifuFlatButton30.Iconimage_right_Selected = null;
-            this.bunifuFlatButton30.Iconimage_Selected = null;
-            this.bunifuFlatButton30.IconMarginLeft = 0;
-            this.bunifuFlatButton30.IconMarginRight = 0;
-            this.bunifuFlatButton30.IconRightVisible = true;
-            this.bunifuFlatButton30.IconRightZoom = 0D;
-            this.bunifuFlatButton30.IconVisible = true;
-            this.bunifuFlatButton30.IconZoom = 90D;
-            this.bunifuFlatButton30.IsTab = false;
-            this.bunifuFlatButton30.Location = new System.Drawing.Point(0, 4);
-            this.bunifuFlatButton30.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton30.Name = "bunifuFlatButton30";
-            this.bunifuFlatButton30.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton30.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton30.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton30.selected = true;
-            this.bunifuFlatButton30.Size = new System.Drawing.Size(339, 27);
-            this.bunifuFlatButton30.TabIndex = 5;
-            this.bunifuFlatButton30.Text = "Registrar medida";
-            this.bunifuFlatButton30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton30.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton30.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton30.Click += new System.EventHandler(this.bunifuFlatButton30_Click);
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.Window;
@@ -197,78 +125,6 @@
             this.panel9.Size = new System.Drawing.Size(343, 66);
             this.panel9.TabIndex = 5;
             // 
-            // bunifuFlatButton9
-            // 
-            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton9.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton9.BorderRadius = 0;
-            this.bunifuFlatButton9.ButtonText = "Registar nivel economico";
-            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton9.Iconimage")));
-            this.bunifuFlatButton9.Iconimage_right = null;
-            this.bunifuFlatButton9.Iconimage_right_Selected = null;
-            this.bunifuFlatButton9.Iconimage_Selected = null;
-            this.bunifuFlatButton9.IconMarginLeft = 0;
-            this.bunifuFlatButton9.IconMarginRight = 0;
-            this.bunifuFlatButton9.IconRightVisible = true;
-            this.bunifuFlatButton9.IconRightZoom = 0D;
-            this.bunifuFlatButton9.IconVisible = true;
-            this.bunifuFlatButton9.IconZoom = 90D;
-            this.bunifuFlatButton9.IsTab = false;
-            this.bunifuFlatButton9.Location = new System.Drawing.Point(3, 1);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
-            this.bunifuFlatButton9.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton9.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton9.selected = true;
-            this.bunifuFlatButton9.Size = new System.Drawing.Size(337, 32);
-            this.bunifuFlatButton9.TabIndex = 98;
-            this.bunifuFlatButton9.Text = "Registar nivel economico";
-            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton9.Click += new System.EventHandler(this.bunifuFlatButton9_Click);
-            // 
-            // bunifuFlatButton31
-            // 
-            this.bunifuFlatButton31.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton31.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton31.BorderRadius = 0;
-            this.bunifuFlatButton31.ButtonText = "Modificar nivel economico";
-            this.bunifuFlatButton31.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton31.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton31.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton31.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton31.Iconimage")));
-            this.bunifuFlatButton31.Iconimage_right = null;
-            this.bunifuFlatButton31.Iconimage_right_Selected = null;
-            this.bunifuFlatButton31.Iconimage_Selected = null;
-            this.bunifuFlatButton31.IconMarginLeft = 0;
-            this.bunifuFlatButton31.IconMarginRight = 0;
-            this.bunifuFlatButton31.IconRightVisible = true;
-            this.bunifuFlatButton31.IconRightZoom = 0D;
-            this.bunifuFlatButton31.IconVisible = true;
-            this.bunifuFlatButton31.IconZoom = 90D;
-            this.bunifuFlatButton31.IsTab = false;
-            this.bunifuFlatButton31.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton31.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton31.Name = "bunifuFlatButton31";
-            this.bunifuFlatButton31.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton31.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton31.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton31.selected = true;
-            this.bunifuFlatButton31.Size = new System.Drawing.Size(338, 32);
-            this.bunifuFlatButton31.TabIndex = 6;
-            this.bunifuFlatButton31.Text = "Modificar nivel economico";
-            this.bunifuFlatButton31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton31.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton31.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton31.Click += new System.EventHandler(this.bunifuFlatButton31_Click);
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.Window;
@@ -279,6 +135,142 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(343, 66);
             this.panel10.TabIndex = 6;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Window;
+            this.panel11.Controls.Add(this.bunifuFlatButton35);
+            this.panel11.Controls.Add(this.bunifuFlatButton36);
+            this.panel11.Location = new System.Drawing.Point(356, 817);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(343, 76);
+            this.panel11.TabIndex = 7;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.SystemColors.Window;
+            this.panel12.Controls.Add(this.bunifuFlatButton37);
+            this.panel12.Controls.Add(this.bunifuFlatButton38);
+            this.panel12.Location = new System.Drawing.Point(356, 876);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(343, 66);
+            this.panel12.TabIndex = 98;
+            this.panel12.Visible = false;
+            // 
+            // bunifuFlatButton37
+            // 
+            this.bunifuFlatButton37.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton37.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton37.BorderRadius = 0;
+            this.bunifuFlatButton37.ButtonText = "Registar puesto";
+            this.bunifuFlatButton37.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton37.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton37.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton37.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton37.Iconimage")));
+            this.bunifuFlatButton37.Iconimage_right = null;
+            this.bunifuFlatButton37.Iconimage_right_Selected = null;
+            this.bunifuFlatButton37.Iconimage_Selected = null;
+            this.bunifuFlatButton37.IconMarginLeft = 0;
+            this.bunifuFlatButton37.IconMarginRight = 0;
+            this.bunifuFlatButton37.IconRightVisible = true;
+            this.bunifuFlatButton37.IconRightZoom = 0D;
+            this.bunifuFlatButton37.IconVisible = true;
+            this.bunifuFlatButton37.IconZoom = 90D;
+            this.bunifuFlatButton37.IsTab = false;
+            this.bunifuFlatButton37.Location = new System.Drawing.Point(3, 1);
+            this.bunifuFlatButton37.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton37.Name = "bunifuFlatButton37";
+            this.bunifuFlatButton37.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton37.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton37.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton37.selected = true;
+            this.bunifuFlatButton37.Size = new System.Drawing.Size(337, 32);
+            this.bunifuFlatButton37.TabIndex = 98;
+            this.bunifuFlatButton37.Text = "Registar puesto";
+            this.bunifuFlatButton37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton37.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton37.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton38
+            // 
+            this.bunifuFlatButton38.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton38.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton38.BorderRadius = 0;
+            this.bunifuFlatButton38.ButtonText = "Modificar puesto";
+            this.bunifuFlatButton38.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton38.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton38.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton38.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton38.Iconimage")));
+            this.bunifuFlatButton38.Iconimage_right = null;
+            this.bunifuFlatButton38.Iconimage_right_Selected = null;
+            this.bunifuFlatButton38.Iconimage_Selected = null;
+            this.bunifuFlatButton38.IconMarginLeft = 0;
+            this.bunifuFlatButton38.IconMarginRight = 0;
+            this.bunifuFlatButton38.IconRightVisible = true;
+            this.bunifuFlatButton38.IconRightZoom = 0D;
+            this.bunifuFlatButton38.IconVisible = true;
+            this.bunifuFlatButton38.IconZoom = 90D;
+            this.bunifuFlatButton38.IsTab = false;
+            this.bunifuFlatButton38.Location = new System.Drawing.Point(0, 30);
+            this.bunifuFlatButton38.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton38.Name = "bunifuFlatButton38";
+            this.bunifuFlatButton38.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton38.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton38.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton38.selected = true;
+            this.bunifuFlatButton38.Size = new System.Drawing.Size(338, 32);
+            this.bunifuFlatButton38.TabIndex = 6;
+            this.bunifuFlatButton38.Text = "Modificar puesto";
+            this.bunifuFlatButton38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton38.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton38.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton38.Click += new System.EventHandler(this.bunifuFlatButton38_Click_1);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.atude;
+            this.pictureBox3.Location = new System.Drawing.Point(981, 14);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 54);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 97;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.cerrar1;
+            this.pictureBox2.Location = new System.Drawing.Point(1144, 14);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(56, 54);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 96;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.cerrar;
+            this.pictureBox1.Location = new System.Drawing.Point(1061, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 95;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // bunifuFlatButton33
             // 
@@ -352,17 +344,6 @@
             this.bunifuFlatButton34.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton34.Click += new System.EventHandler(this.bunifuFlatButton34_Click);
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.Window;
-            this.panel11.Controls.Add(this.bunifuFlatButton35);
-            this.panel11.Controls.Add(this.bunifuFlatButton36);
-            this.panel11.Location = new System.Drawing.Point(356, 817);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(343, 76);
-            this.panel11.TabIndex = 7;
-            // 
             // bunifuFlatButton35
             // 
             this.bunifuFlatButton35.Activecolor = System.Drawing.Color.Turquoise;
@@ -435,53 +416,154 @@
             this.bunifuFlatButton36.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton36.Click += new System.EventHandler(this.bunifuFlatButton36_Click);
             // 
-            // pictureBox3
+            // bunifuFlatButton29
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.atude;
-            this.pictureBox3.Location = new System.Drawing.Point(981, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(65, 54);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 97;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.bunifuFlatButton29.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton29.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton29.BorderRadius = 0;
+            this.bunifuFlatButton29.ButtonText = "Modificar medida";
+            this.bunifuFlatButton29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton29.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton29.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton29.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton29.Iconimage")));
+            this.bunifuFlatButton29.Iconimage_right = null;
+            this.bunifuFlatButton29.Iconimage_right_Selected = null;
+            this.bunifuFlatButton29.Iconimage_Selected = null;
+            this.bunifuFlatButton29.IconMarginLeft = 0;
+            this.bunifuFlatButton29.IconMarginRight = 0;
+            this.bunifuFlatButton29.IconRightVisible = true;
+            this.bunifuFlatButton29.IconRightZoom = 0D;
+            this.bunifuFlatButton29.IconVisible = true;
+            this.bunifuFlatButton29.IconZoom = 90D;
+            this.bunifuFlatButton29.IsTab = false;
+            this.bunifuFlatButton29.Location = new System.Drawing.Point(0, 30);
+            this.bunifuFlatButton29.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton29.Name = "bunifuFlatButton29";
+            this.bunifuFlatButton29.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton29.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton29.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton29.selected = true;
+            this.bunifuFlatButton29.Size = new System.Drawing.Size(339, 30);
+            this.bunifuFlatButton29.TabIndex = 6;
+            this.bunifuFlatButton29.Text = "Modificar medida";
+            this.bunifuFlatButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton29.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton29.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton29.Click += new System.EventHandler(this.bunifuFlatButton29_Click);
             // 
-            // pictureBox2
+            // bunifuFlatButton30
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.cerrar1;
-            this.pictureBox2.Location = new System.Drawing.Point(1144, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(56, 54);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 96;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.bunifuFlatButton30.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton30.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton30.BorderRadius = 0;
+            this.bunifuFlatButton30.ButtonText = "Registrar medida";
+            this.bunifuFlatButton30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton30.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton30.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton30.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton30.Iconimage")));
+            this.bunifuFlatButton30.Iconimage_right = null;
+            this.bunifuFlatButton30.Iconimage_right_Selected = null;
+            this.bunifuFlatButton30.Iconimage_Selected = null;
+            this.bunifuFlatButton30.IconMarginLeft = 0;
+            this.bunifuFlatButton30.IconMarginRight = 0;
+            this.bunifuFlatButton30.IconRightVisible = true;
+            this.bunifuFlatButton30.IconRightZoom = 0D;
+            this.bunifuFlatButton30.IconVisible = true;
+            this.bunifuFlatButton30.IconZoom = 90D;
+            this.bunifuFlatButton30.IsTab = false;
+            this.bunifuFlatButton30.Location = new System.Drawing.Point(0, 4);
+            this.bunifuFlatButton30.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton30.Name = "bunifuFlatButton30";
+            this.bunifuFlatButton30.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton30.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton30.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton30.selected = true;
+            this.bunifuFlatButton30.Size = new System.Drawing.Size(339, 27);
+            this.bunifuFlatButton30.TabIndex = 5;
+            this.bunifuFlatButton30.Text = "Registrar medida";
+            this.bunifuFlatButton30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton30.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton30.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton30.Click += new System.EventHandler(this.bunifuFlatButton30_Click);
             // 
-            // pictureBox1
+            // bunifuFlatButton9
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.cerrar;
-            this.pictureBox1.Location = new System.Drawing.Point(1061, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 95;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton9.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton9.BorderRadius = 0;
+            this.bunifuFlatButton9.ButtonText = "Registar nivel economico";
+            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton9.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton9.Iconimage")));
+            this.bunifuFlatButton9.Iconimage_right = null;
+            this.bunifuFlatButton9.Iconimage_right_Selected = null;
+            this.bunifuFlatButton9.Iconimage_Selected = null;
+            this.bunifuFlatButton9.IconMarginLeft = 0;
+            this.bunifuFlatButton9.IconMarginRight = 0;
+            this.bunifuFlatButton9.IconRightVisible = true;
+            this.bunifuFlatButton9.IconRightZoom = 0D;
+            this.bunifuFlatButton9.IconVisible = true;
+            this.bunifuFlatButton9.IconZoom = 90D;
+            this.bunifuFlatButton9.IsTab = false;
+            this.bunifuFlatButton9.Location = new System.Drawing.Point(3, 1);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
+            this.bunifuFlatButton9.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton9.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton9.selected = true;
+            this.bunifuFlatButton9.Size = new System.Drawing.Size(337, 32);
+            this.bunifuFlatButton9.TabIndex = 98;
+            this.bunifuFlatButton9.Text = "Registar nivel economico";
+            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton9.Click += new System.EventHandler(this.bunifuFlatButton9_Click);
+            // 
+            // bunifuFlatButton31
+            // 
+            this.bunifuFlatButton31.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton31.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton31.BorderRadius = 0;
+            this.bunifuFlatButton31.ButtonText = "Modificar nivel economico";
+            this.bunifuFlatButton31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton31.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton31.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton31.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton31.Iconimage")));
+            this.bunifuFlatButton31.Iconimage_right = null;
+            this.bunifuFlatButton31.Iconimage_right_Selected = null;
+            this.bunifuFlatButton31.Iconimage_Selected = null;
+            this.bunifuFlatButton31.IconMarginLeft = 0;
+            this.bunifuFlatButton31.IconMarginRight = 0;
+            this.bunifuFlatButton31.IconRightVisible = true;
+            this.bunifuFlatButton31.IconRightZoom = 0D;
+            this.bunifuFlatButton31.IconVisible = true;
+            this.bunifuFlatButton31.IconZoom = 90D;
+            this.bunifuFlatButton31.IsTab = false;
+            this.bunifuFlatButton31.Location = new System.Drawing.Point(0, 30);
+            this.bunifuFlatButton31.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton31.Name = "bunifuFlatButton31";
+            this.bunifuFlatButton31.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton31.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton31.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton31.selected = true;
+            this.bunifuFlatButton31.Size = new System.Drawing.Size(338, 32);
+            this.bunifuFlatButton31.TabIndex = 6;
+            this.bunifuFlatButton31.Text = "Modificar nivel economico";
+            this.bunifuFlatButton31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton31.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton31.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton31.Click += new System.EventHandler(this.bunifuFlatButton31_Click);
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton32);
             this.bunifuGradientPanel1.Controls.Add(this.panel7);
             this.bunifuGradientPanel1.Controls.Add(this.panel6);
             this.bunifuGradientPanel1.Controls.Add(this.panel5);
@@ -510,9 +592,46 @@
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
+            // bunifuFlatButton32
+            // 
+            this.bunifuFlatButton32.Activecolor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton32.BackColor = System.Drawing.Color.Turquoise;
+            this.bunifuFlatButton32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton32.BorderRadius = 0;
+            this.bunifuFlatButton32.ButtonText = "Puesto";
+            this.bunifuFlatButton32.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton32.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton32.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton32.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton32.Iconimage")));
+            this.bunifuFlatButton32.Iconimage_right = null;
+            this.bunifuFlatButton32.Iconimage_right_Selected = null;
+            this.bunifuFlatButton32.Iconimage_Selected = null;
+            this.bunifuFlatButton32.IconMarginLeft = 0;
+            this.bunifuFlatButton32.IconMarginRight = 0;
+            this.bunifuFlatButton32.IconRightVisible = true;
+            this.bunifuFlatButton32.IconRightZoom = 0D;
+            this.bunifuFlatButton32.IconVisible = true;
+            this.bunifuFlatButton32.IconZoom = 90D;
+            this.bunifuFlatButton32.IsTab = false;
+            this.bunifuFlatButton32.Location = new System.Drawing.Point(1, 123);
+            this.bunifuFlatButton32.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton32.Name = "bunifuFlatButton32";
+            this.bunifuFlatButton32.Normalcolor = System.Drawing.SystemColors.Window;
+            this.bunifuFlatButton32.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.bunifuFlatButton32.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bunifuFlatButton32.selected = true;
+            this.bunifuFlatButton32.Size = new System.Drawing.Size(342, 36);
+            this.bunifuFlatButton32.TabIndex = 98;
+            this.bunifuFlatButton32.Text = "Puesto";
+            this.bunifuFlatButton32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton32.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton32.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton32.Click += new System.EventHandler(this.bunifuFlatButton32_Click_2);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.Window;
+            this.panel7.Controls.Add(this.bunifuFlatButton32);
             this.panel7.Controls.Add(this.bunifuFlatButton24);
             this.panel7.Controls.Add(this.bunifuFlatButton26);
             this.panel7.Controls.Add(this.bunifuFlatButton27);
@@ -1587,124 +1706,6 @@
             this.bunifuFlatButton1.MouseHover += new System.EventHandler(this.bunifuFlatButton1_MouseHover);
             this.bunifuFlatButton1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bunifuFlatButton1_MouseMove);
             // 
-            // bunifuFlatButton32
-            // 
-            this.bunifuFlatButton32.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton32.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton32.BorderRadius = 0;
-            this.bunifuFlatButton32.ButtonText = "Puesto";
-            this.bunifuFlatButton32.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton32.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton32.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton32.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton32.Iconimage")));
-            this.bunifuFlatButton32.Iconimage_right = null;
-            this.bunifuFlatButton32.Iconimage_right_Selected = null;
-            this.bunifuFlatButton32.Iconimage_Selected = null;
-            this.bunifuFlatButton32.IconMarginLeft = 0;
-            this.bunifuFlatButton32.IconMarginRight = 0;
-            this.bunifuFlatButton32.IconRightVisible = true;
-            this.bunifuFlatButton32.IconRightZoom = 0D;
-            this.bunifuFlatButton32.IconVisible = true;
-            this.bunifuFlatButton32.IconZoom = 90D;
-            this.bunifuFlatButton32.IsTab = false;
-            this.bunifuFlatButton32.Location = new System.Drawing.Point(13, 874);
-            this.bunifuFlatButton32.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton32.Name = "bunifuFlatButton32";
-            this.bunifuFlatButton32.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton32.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton32.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton32.selected = true;
-            this.bunifuFlatButton32.Size = new System.Drawing.Size(341, 36);
-            this.bunifuFlatButton32.TabIndex = 98;
-            this.bunifuFlatButton32.Text = "Puesto";
-            this.bunifuFlatButton32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton32.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton32.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton32.Click += new System.EventHandler(this.bunifuFlatButton32_Click_2);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.SystemColors.Window;
-            this.panel12.Controls.Add(this.bunifuFlatButton37);
-            this.panel12.Controls.Add(this.bunifuFlatButton38);
-            this.panel12.Location = new System.Drawing.Point(356, 871);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(343, 66);
-            this.panel12.TabIndex = 98;
-            this.panel12.Visible = false;
-            // 
-            // bunifuFlatButton37
-            // 
-            this.bunifuFlatButton37.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton37.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton37.BorderRadius = 0;
-            this.bunifuFlatButton37.ButtonText = "Registar puesto";
-            this.bunifuFlatButton37.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton37.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton37.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton37.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton37.Iconimage")));
-            this.bunifuFlatButton37.Iconimage_right = null;
-            this.bunifuFlatButton37.Iconimage_right_Selected = null;
-            this.bunifuFlatButton37.Iconimage_Selected = null;
-            this.bunifuFlatButton37.IconMarginLeft = 0;
-            this.bunifuFlatButton37.IconMarginRight = 0;
-            this.bunifuFlatButton37.IconRightVisible = true;
-            this.bunifuFlatButton37.IconRightZoom = 0D;
-            this.bunifuFlatButton37.IconVisible = true;
-            this.bunifuFlatButton37.IconZoom = 90D;
-            this.bunifuFlatButton37.IsTab = false;
-            this.bunifuFlatButton37.Location = new System.Drawing.Point(3, 1);
-            this.bunifuFlatButton37.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton37.Name = "bunifuFlatButton37";
-            this.bunifuFlatButton37.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton37.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton37.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton37.selected = true;
-            this.bunifuFlatButton37.Size = new System.Drawing.Size(337, 32);
-            this.bunifuFlatButton37.TabIndex = 98;
-            this.bunifuFlatButton37.Text = "Registar puesto";
-            this.bunifuFlatButton37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton37.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton37.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton38
-            // 
-            this.bunifuFlatButton38.Activecolor = System.Drawing.Color.Turquoise;
-            this.bunifuFlatButton38.BackColor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton38.BorderRadius = 0;
-            this.bunifuFlatButton38.ButtonText = "Modificar puesto";
-            this.bunifuFlatButton38.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton38.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton38.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton38.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton38.Iconimage")));
-            this.bunifuFlatButton38.Iconimage_right = null;
-            this.bunifuFlatButton38.Iconimage_right_Selected = null;
-            this.bunifuFlatButton38.Iconimage_Selected = null;
-            this.bunifuFlatButton38.IconMarginLeft = 0;
-            this.bunifuFlatButton38.IconMarginRight = 0;
-            this.bunifuFlatButton38.IconRightVisible = true;
-            this.bunifuFlatButton38.IconRightZoom = 0D;
-            this.bunifuFlatButton38.IconVisible = true;
-            this.bunifuFlatButton38.IconZoom = 90D;
-            this.bunifuFlatButton38.IsTab = false;
-            this.bunifuFlatButton38.Location = new System.Drawing.Point(0, 30);
-            this.bunifuFlatButton38.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuFlatButton38.Name = "bunifuFlatButton38";
-            this.bunifuFlatButton38.Normalcolor = System.Drawing.SystemColors.Window;
-            this.bunifuFlatButton38.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuFlatButton38.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bunifuFlatButton38.selected = true;
-            this.bunifuFlatButton38.Size = new System.Drawing.Size(338, 32);
-            this.bunifuFlatButton38.TabIndex = 6;
-            this.bunifuFlatButton38.Text = "Modificar puesto";
-            this.bunifuFlatButton38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton38.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton38.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // NuevoMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1730,6 +1731,7 @@
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1742,7 +1744,6 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
