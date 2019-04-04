@@ -97,7 +97,7 @@ namespace Hermanas_nazario
         {
             Base_de_datos.Actualizar_Medicamento(int.Parse(codigomed.Text), txtnom.Text.ToUpper(), txtcant.Text.ToUpper(), richTextBox1.Text.ToUpper(), txtprecio.Text.ToUpper(), txtUnidad.SelectedItem.ToString());
             MessageBox.Show("Medicamento guardado con exito");
-
+            this.Hide();
             codigomed.Clear();
             codigomed.Focus();
             txtnom.Enabled = false;

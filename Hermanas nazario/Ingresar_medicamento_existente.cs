@@ -16,8 +16,8 @@ namespace Hermanas_nazario
         {
             InitializeComponent();
             timer1.Enabled = true;
-          
-            
+
+            txtcod.Text = Base_de_datos.CodMed;
             txtnom.Text = Base_de_datos.nommedi;
             txtprecio.Text = Base_de_datos.Precio_medicamento(Base_de_datos.CodMed);
             richTextBox1.Text = Base_de_datos.desc;
@@ -44,7 +44,7 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text) + int.Parse(Base_de_datos.cant), double.Parse(txtprecio.Text), txtUnidad.Text, "ACT", 2);
+            Base_de_datos.registrar_medicamento(int.Parse(txtcod.Text),txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text) + int.Parse(Base_de_datos.cant), double.Parse(txtprecio.Text), txtUnidad.Text, "ACT", 2);
             Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed),(int.Parse(txtcant.Text)), dateTimePicker1.Value.ToString("yyyy/MM/dd"), 1, "ING");
             MessageBox.Show("Medicamento ingresado con exito");
             Hide();

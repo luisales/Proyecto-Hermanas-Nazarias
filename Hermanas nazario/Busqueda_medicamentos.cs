@@ -85,6 +85,7 @@ namespace Hermanas_nazario
             Base_de_datos.unidad = label10.Text;
             btnIng.Enabled = false;
             btnSac.Enabled = false;
+            button1.Enabled = false;
             lblCan.Text = "*";
             lblNom.Text = "*";
             lblDes.Text = "*";
@@ -117,6 +118,7 @@ namespace Hermanas_nazario
             txtnom.Text= "";
             btnIng.Enabled = false;
             btnSac.Enabled = false;
+            button1.Enabled = false;
             Ingresar_medicamentoEx a = new Ingresar_medicamentoEx();
             a.ShowDialog();
             
@@ -134,6 +136,7 @@ namespace Hermanas_nazario
                 lblDes.Text = Convert.ToString(selectedRow.Cells[3].Value);
                 txtUnidad.Text = Convert.ToString(selectedRow.Cells[4].Value);
                 label10.Text = Convert.ToString(selectedRow.Cells[5].Value);
+                button1.Enabled = true;
             }
             if (radioButton2.Checked)
             {
@@ -145,6 +148,7 @@ namespace Hermanas_nazario
                 lblDes.Text = Convert.ToString(selectedRow.Cells[3].Value);
                 txtUnidad.Text = Convert.ToString(selectedRow.Cells[4].Value);
                 label10.Text = Convert.ToString(selectedRow.Cells[5].Value);
+                button1.Enabled = true;
             }
 
 
@@ -182,7 +186,7 @@ namespace Hermanas_nazario
             lblCod.Text = "*";
             txtUnidad.Text = "*";
             label10.Text = "*";
-            
+            button1.Enabled = false;
             btnIng.Enabled = false;
             btnSac.Enabled = false;
         }
@@ -221,6 +225,21 @@ namespace Hermanas_nazario
             Base_de_datos.unidad = label10.Text;
             Modifcar_medicamento a = new Modifcar_medicamento();
             a.ShowDialog();
+            btnIng.Enabled = false;
+            btnSac.Enabled = false;
+            button1.Enabled = false;
+            dataGridView1.DataSource = null;
+            lblCan.Text = "*";
+            lblNom.Text = "*";
+            lblDes.Text = "*";
+            lblCod.Text = "*";
+            txtUnidad.Text = "*";
+            label10.Text = "*";
+        }
+
+        private void lblCod_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -660,7 +660,7 @@ namespace Hermanas_nazario
                 con.Close();
             }
         }
-        public static void registrar_medicamento(string nom, string desc, int cant, double precio, string medida, string estado, int opc )
+        public static void registrar_medicamento(int cod,string nom, string desc, int cant, double precio, string medida, string estado, int opc )
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -671,7 +671,7 @@ namespace Hermanas_nazario
                 SqlCommand cmd = new SqlCommand("mante_Medicamento", con);
                 cmd.CommandType = CommandType.StoredProcedure;
             
-                cmd.Parameters.Add(new SqlParameter("@Codigo", 1));
+                cmd.Parameters.Add(new SqlParameter("@Codigo", cod));
                 cmd.Parameters.Add(new SqlParameter("@Nombre", nom));
                 cmd.Parameters.Add(new SqlParameter("@Cantidad", cant));
                 cmd.Parameters.Add(new SqlParameter("@Descripcion", desc));

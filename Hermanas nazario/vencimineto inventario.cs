@@ -74,9 +74,9 @@ namespace Hermanas_nazario
                 int x, y;
                 x = int.Parse(Base_de_datos.cant);
                 y = int.Parse(txtrem.Text);
-                Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), txtdesc.Text.ToUpper(),x-y, double.Parse(Base_de_datos.Precio_medicamento(Base_de_datos.CodMed)), txtUnidad.Text, "ACT", 2);
+                Base_de_datos.registrar_medicamento(int.Parse(Base_de_datos.CodMed),txtnom.Text.ToUpper(), txtdesc.Text.ToUpper(),x-y, double.Parse(Base_de_datos.Precio_medicamento(Base_de_datos.CodMed)), txtUnidad.Text, "ACT", 2);
                 Base_de_datos.Ingresar_medicamento(int.Parse(Base_de_datos.CodMed), (int.Parse(txtrem.Text)), "", 1, "EGR");
-
+                MessageBox.Show("Egreso de medicamento exitoso");
                txtrem.Enabled = false;
                 txtcod.Enabled = true;
 

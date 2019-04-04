@@ -70,7 +70,7 @@ namespace Hermanas_nazario
                 return;
             }
            
-            Base_de_datos.registrar_medicamento(txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), txtUnidad.SelectedItem.ToString(),"ACT", 1);
+            Base_de_datos.registrar_medicamento(1,txtnom.Text.ToUpper(), richTextBox1.Text.ToUpper(), int.Parse(txtcant.Text), double.Parse(txtprecio.Text), txtUnidad.SelectedItem.ToString(),"ACT", 1);
             Base_de_datos.Ingresar_medicamento(Base_de_datos.codigo_medicamento(), int.Parse(txtcant.Text),  dateTimePicker1.Value.ToString("yyyy/MM/dd"), 1, "ING");
             MessageBox.Show("Medicamento ingresado con exito");
             Hide();
