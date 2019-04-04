@@ -332,6 +332,7 @@
             // 
             // txtcargo
             // 
+            this.txtcargo.Enabled = false;
             this.txtcargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcargo.Location = new System.Drawing.Point(221, 401);
             this.txtcargo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -414,6 +415,7 @@
             // 
             // txtrol
             // 
+            this.txtrol.Enabled = false;
             this.txtrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrol.Location = new System.Drawing.Point(221, 435);
             this.txtrol.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
