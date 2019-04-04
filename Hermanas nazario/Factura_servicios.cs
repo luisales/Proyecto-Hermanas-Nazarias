@@ -52,8 +52,10 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
-            if (txtnom.Text == " ")
-                txtdescripcion.Text = " ";
+            if (!string.IsNullOrEmpty(txtnom.Text) == false)
+            {
+                txtdescripcion.Clear();
+            }
 
             if (radioSerNombre.Checked && txtnom.TextLength >= 1)
             {
@@ -74,7 +76,12 @@ namespace Hermanas_nazario
 
         private void txtCod_TextChanged(object sender, EventArgs e)
         {
-           if (radioSerNombre.Checked && txtnom.TextLength >= 1)
+            if (!string.IsNullOrEmpty(txtCod.Text) == false)
+            {
+                txtdescripcion.Clear();
+            }
+
+            if (radioSerNombre.Checked && txtnom.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.BuscarSerNom(txtnom.Text.ToUpper());

@@ -58,6 +58,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.txtriesgo = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -67,19 +68,18 @@
             this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -87,9 +87,9 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(724, 129);
+            this.label11.Location = new System.Drawing.Point(644, 103);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(212, 32);
+            this.label11.Size = new System.Drawing.Size(181, 29);
             this.label11.TabIndex = 61;
             this.label11.Text = "Codigo de cita: ";
             // 
@@ -97,10 +97,10 @@
             // 
             this.txtcita.Enabled = false;
             this.txtcita.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcita.Location = new System.Drawing.Point(1086, 129);
-            this.txtcita.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtcita.Location = new System.Drawing.Point(965, 103);
+            this.txtcita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcita.Name = "txtcita";
-            this.txtcita.Size = new System.Drawing.Size(94, 32);
+            this.txtcita.Size = new System.Drawing.Size(84, 28);
             this.txtcita.TabIndex = 64;
             this.txtcita.TextChanged += new System.EventHandler(this.txtcita_TextChanged);
             this.txtcita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcita_KeyPress);
@@ -110,9 +110,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(726, 171);
+            this.label2.Location = new System.Drawing.Point(645, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 32);
+            this.label2.Size = new System.Drawing.Size(290, 29);
             this.label2.TabIndex = 66;
             this.label2.Text = "Codigo de medicamento: ";
             // 
@@ -120,10 +120,10 @@
             // 
             this.txtmedicamento.Enabled = false;
             this.txtmedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmedicamento.Location = new System.Drawing.Point(1086, 171);
-            this.txtmedicamento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtmedicamento.Location = new System.Drawing.Point(965, 137);
+            this.txtmedicamento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtmedicamento.Name = "txtmedicamento";
-            this.txtmedicamento.Size = new System.Drawing.Size(94, 32);
+            this.txtmedicamento.Size = new System.Drawing.Size(84, 28);
             this.txtmedicamento.TabIndex = 67;
             this.txtmedicamento.TextChanged += new System.EventHandler(this.txtmedicamento_TextChanged);
             this.txtmedicamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmedicamento_KeyPress);
@@ -133,9 +133,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox1.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
-            this.pictureBox1.Location = new System.Drawing.Point(1191, 132);
+            this.pictureBox1.Location = new System.Drawing.Point(1059, 106);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
@@ -146,9 +147,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 72);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 58);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 69;
             this.pictureBox2.TabStop = false;
@@ -159,19 +161,19 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(724, 209);
+            this.label1.Location = new System.Drawing.Point(644, 167);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 32);
+            this.label1.Size = new System.Drawing.Size(121, 29);
             this.label1.TabIndex = 72;
             this.label1.Text = "Cantidad: ";
             // 
             // txtcantidad
             // 
             this.txtcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcantidad.Location = new System.Drawing.Point(1086, 212);
-            this.txtcantidad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtcantidad.Location = new System.Drawing.Point(965, 170);
+            this.txtcantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(94, 32);
+            this.txtcantidad.Size = new System.Drawing.Size(84, 28);
             this.txtcantidad.TabIndex = 73;
             this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
@@ -188,11 +190,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView2.Location = new System.Drawing.Point(735, 354);
+            this.dataGridView2.Location = new System.Drawing.Point(653, 283);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(591, 188);
+            this.dataGridView2.Size = new System.Drawing.Size(525, 150);
             this.dataGridView2.TabIndex = 74;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -219,10 +222,10 @@
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombre.Location = new System.Drawing.Point(1086, 252);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtnombre.Location = new System.Drawing.Point(965, 202);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(94, 32);
+            this.txtnombre.Size = new System.Drawing.Size(84, 28);
             this.txtnombre.TabIndex = 75;
             this.txtnombre.Visible = false;
             this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
@@ -231,10 +234,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(730, 252);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button1.Location = new System.Drawing.Point(649, 202);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 51);
+            this.button1.Size = new System.Drawing.Size(116, 41);
             this.button1.TabIndex = 76;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = false;
@@ -245,10 +248,10 @@
             this.button2.BackColor = System.Drawing.Color.Tomato;
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1191, 269);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button2.Location = new System.Drawing.Point(1059, 215);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 57);
+            this.button2.Size = new System.Drawing.Size(105, 46);
             this.button2.TabIndex = 77;
             this.button2.Text = "Quitar";
             this.button2.UseVisualStyleBackColor = false;
@@ -261,11 +264,12 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 326);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 261);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(640, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(569, 146);
             this.dataGridView1.TabIndex = 71;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -274,10 +278,11 @@
             // 
             this.txtCod.Enabled = false;
             this.txtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.Location = new System.Drawing.Point(386, 186);
+            this.txtCod.Location = new System.Drawing.Point(343, 149);
+            this.txtCod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCod.MaxLength = 13;
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(212, 41);
+            this.txtCod.Size = new System.Drawing.Size(189, 36);
             this.txtCod.TabIndex = 83;
             this.txtCod.Visible = false;
             this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
@@ -288,9 +293,11 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(32, 155);
+            this.groupBox1.Location = new System.Drawing.Point(28, 124);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(201, 100);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(179, 80);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Metodo de Busqueda";
@@ -299,9 +306,10 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Location = new System.Drawing.Point(6, 57);
+            this.radioButton2.Location = new System.Drawing.Point(5, 46);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 24);
+            this.radioButton2.Size = new System.Drawing.Size(73, 21);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "Código";
             this.radioButton2.UseVisualStyleBackColor = false;
@@ -312,9 +320,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 25);
+            this.radioButton1.Location = new System.Drawing.Point(5, 20);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 24);
+            this.radioButton1.Size = new System.Drawing.Size(79, 21);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nombre";
@@ -324,10 +333,11 @@
             // txtnom
             // 
             this.txtnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.Location = new System.Drawing.Point(386, 186);
+            this.txtnom.Location = new System.Drawing.Point(343, 149);
+            this.txtnom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnom.MaxLength = 30;
             this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(212, 41);
+            this.txtnom.Size = new System.Drawing.Size(189, 36);
             this.txtnom.TabIndex = 79;
             this.txtnom.TextChanged += new System.EventHandler(this.txtnom_TextChanged_1);
             this.txtnom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnom_KeyPress);
@@ -337,9 +347,9 @@
             this.lblBusqueda.AutoSize = true;
             this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.Location = new System.Drawing.Point(240, 191);
+            this.lblBusqueda.Location = new System.Drawing.Point(213, 153);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(128, 36);
+            this.lblBusqueda.Size = new System.Drawing.Size(110, 29);
             this.lblBusqueda.TabIndex = 78;
             this.lblBusqueda.Text = "Nombre:";
             // 
@@ -347,9 +357,9 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(16, 125);
+            this.label7.Location = new System.Drawing.Point(14, 100);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(668, 417);
+            this.label7.Size = new System.Drawing.Size(594, 334);
             this.label7.TabIndex = 84;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
@@ -358,9 +368,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(447, 12);
+            this.label5.Location = new System.Drawing.Point(397, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(426, 64);
+            this.label5.Size = new System.Drawing.Size(357, 54);
             this.label5.TabIndex = 85;
             this.label5.Text = "Generar Receta";
             // 
@@ -368,10 +378,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1191, 174);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button3.Location = new System.Drawing.Point(1059, 139);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 94);
+            this.button3.Size = new System.Drawing.Size(105, 75);
             this.button3.TabIndex = 86;
             this.button3.Text = "Nueva Receta";
             this.button3.UseVisualStyleBackColor = false;
@@ -381,10 +391,10 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1176, 597);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button4.Location = new System.Drawing.Point(1045, 478);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 68);
+            this.button4.Size = new System.Drawing.Size(135, 54);
             this.button4.TabIndex = 87;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = false;
@@ -394,10 +404,10 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(920, 597);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button5.Location = new System.Drawing.Point(818, 478);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(246, 68);
+            this.button5.Size = new System.Drawing.Size(219, 54);
             this.button5.TabIndex = 88;
             this.button5.Text = "Generar Factura";
             this.button5.UseVisualStyleBackColor = false;
@@ -408,9 +418,10 @@
             this.txtriesgo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtriesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtriesgo.FormattingEnabled = true;
-            this.txtriesgo.Location = new System.Drawing.Point(993, 548);
+            this.txtriesgo.Location = new System.Drawing.Point(883, 438);
+            this.txtriesgo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtriesgo.Name = "txtriesgo";
-            this.txtriesgo.Size = new System.Drawing.Size(334, 44);
+            this.txtriesgo.Size = new System.Drawing.Size(297, 37);
             this.txtriesgo.TabIndex = 89;
             // 
             // bunifuGradientPanel1
@@ -452,20 +463,39 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1341, 683);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1192, 546);
             this.bunifuGradientPanel1.TabIndex = 106;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AllowUserToOrderColumns = true;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(728, 453);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(73, 69);
+            this.dataGridView3.TabIndex = 108;
+            this.dataGridView3.Visible = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
-            this.pictureBox6.Location = new System.Drawing.Point(966, 566);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(859, 453);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(20, 15);
+            this.pictureBox6.Size = new System.Drawing.Size(18, 12);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 107;
             this.pictureBox6.TabStop = false;
@@ -474,10 +504,10 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
-            this.pictureBox5.Location = new System.Drawing.Point(1062, 225);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(944, 180);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 15);
+            this.pictureBox5.Size = new System.Drawing.Size(18, 12);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 106;
             this.pictureBox5.TabStop = false;
@@ -486,10 +516,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.Button_Icon_Red;
-            this.pictureBox3.Location = new System.Drawing.Point(358, 203);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(318, 162);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 15);
+            this.pictureBox3.Size = new System.Drawing.Size(18, 12);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 105;
             this.pictureBox3.TabStop = false;
@@ -498,10 +528,10 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Hermanas_nazario.Properties.Resources.logoo;
-            this.pictureBox4.Location = new System.Drawing.Point(1629, 6);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox4.Location = new System.Drawing.Point(1448, 5);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox4.Size = new System.Drawing.Size(89, 78);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 104;
             this.pictureBox4.TabStop = false;
@@ -513,9 +543,10 @@
             this.panel7.Controls.Add(this.bunifuFlatButton26);
             this.panel7.Controls.Add(this.bunifuFlatButton27);
             this.panel7.Controls.Add(this.bunifuFlatButton28);
-            this.panel7.Location = new System.Drawing.Point(15, 1083);
+            this.panel7.Location = new System.Drawing.Point(13, 866);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(386, 152);
+            this.panel7.Size = new System.Drawing.Size(343, 122);
             this.panel7.TabIndex = 4;
             // 
             // bunifuFlatButton24
@@ -539,14 +570,14 @@
             this.bunifuFlatButton24.IconVisible = true;
             this.bunifuFlatButton24.IconZoom = 90D;
             this.bunifuFlatButton24.IsTab = false;
-            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 138);
-            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuFlatButton24.Location = new System.Drawing.Point(0, 110);
+            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuFlatButton24.Name = "bunifuFlatButton24";
             this.bunifuFlatButton24.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton24.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton24.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton24.selected = true;
-            this.bunifuFlatButton24.Size = new System.Drawing.Size(386, 43);
+            this.bunifuFlatButton24.Size = new System.Drawing.Size(343, 34);
             this.bunifuFlatButton24.TabIndex = 8;
             this.bunifuFlatButton24.Text = "Nivel economico";
             this.bunifuFlatButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -574,14 +605,14 @@
             this.bunifuFlatButton26.IconVisible = true;
             this.bunifuFlatButton26.IconZoom = 90D;
             this.bunifuFlatButton26.IsTab = false;
-            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 46);
-            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuFlatButton26.Location = new System.Drawing.Point(0, 37);
+            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuFlatButton26.Name = "bunifuFlatButton26";
             this.bunifuFlatButton26.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton26.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton26.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton26.selected = true;
-            this.bunifuFlatButton26.Size = new System.Drawing.Size(386, 40);
+            this.bunifuFlatButton26.Size = new System.Drawing.Size(343, 32);
             this.bunifuFlatButton26.TabIndex = 6;
             this.bunifuFlatButton26.Text = "Rol";
             this.bunifuFlatButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -609,14 +640,14 @@
             this.bunifuFlatButton27.IconVisible = true;
             this.bunifuFlatButton27.IconZoom = 90D;
             this.bunifuFlatButton27.IsTab = false;
-            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 92);
-            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuFlatButton27.Location = new System.Drawing.Point(0, 74);
+            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuFlatButton27.Name = "bunifuFlatButton27";
             this.bunifuFlatButton27.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton27.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton27.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton27.selected = true;
-            this.bunifuFlatButton27.Size = new System.Drawing.Size(386, 43);
+            this.bunifuFlatButton27.Size = new System.Drawing.Size(343, 34);
             this.bunifuFlatButton27.TabIndex = 7;
             this.bunifuFlatButton27.Text = "Servicio";
             this.bunifuFlatButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -645,46 +676,30 @@
             this.bunifuFlatButton28.IconZoom = 90D;
             this.bunifuFlatButton28.IsTab = false;
             this.bunifuFlatButton28.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuFlatButton28.Name = "bunifuFlatButton28";
             this.bunifuFlatButton28.Normalcolor = System.Drawing.SystemColors.Window;
             this.bunifuFlatButton28.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
             this.bunifuFlatButton28.OnHoverTextColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.bunifuFlatButton28.selected = true;
-            this.bunifuFlatButton28.Size = new System.Drawing.Size(384, 38);
+            this.bunifuFlatButton28.Size = new System.Drawing.Size(341, 30);
             this.bunifuFlatButton28.TabIndex = 5;
             this.bunifuFlatButton28.Text = "Medida";
             this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton28.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(819, 566);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(82, 86);
-            this.dataGridView3.TabIndex = 108;
-            this.dataGridView3.Visible = false;
-            // 
             // Receta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1341, 683);
+            this.ClientSize = new System.Drawing.Size(1192, 546);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(400, 200);
+            this.Location = new System.Drawing.Point(375, 150);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Receta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Receta";
@@ -697,12 +712,12 @@
             this.groupBox1.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }

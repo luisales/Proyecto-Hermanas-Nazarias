@@ -248,6 +248,7 @@
             this.ClientSize = new System.Drawing.Size(991, 395);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(450, 200);
             this.Name = "Modificar_puesto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Modificar_puesto";

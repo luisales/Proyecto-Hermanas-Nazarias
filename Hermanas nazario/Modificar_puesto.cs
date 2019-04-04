@@ -22,6 +22,20 @@ namespace Hermanas_nazario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+
+            if (!string.IsNullOrEmpty(txtNombreRol.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
+
+            int ver = Base_de_datos.validarNomPuestoMod(txtCodigoRol.Text,txtNombreRol.Text);
+            if (ver >= 1)
+            {
+                MessageBox.Show("Puesto ya existente");
+                return;
+
+            }
             String estado;
             if (cmbestado.Text == "Activo")
             {
@@ -33,6 +47,8 @@ namespace Hermanas_nazario
                 estado = "INC";
             }
             Base_de_datos.Actualizar_Puesto(int.Parse(txtCodigoRol.Text), txtNombreRol.Text, estado);
+            MessageBox.Show("Puesto modificado");
+            this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

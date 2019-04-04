@@ -705,5 +705,10 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void txtConsulta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
