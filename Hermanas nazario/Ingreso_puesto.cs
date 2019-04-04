@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Hermanas_nazario
 {
-    public partial class Ingresar_medida : Form
+    public partial class Ingreso_puesto : Form
     {
-        public Ingresar_medida()
+        public Ingreso_puesto()
         {
             InitializeComponent();
+        }
+
+        private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
         }
 
         private void btningresar_Click(object sender, EventArgs e)
@@ -24,37 +29,31 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            int ver = Base_de_datos.validarNomMedida(txtNombreRol.Text);
+
+            int ver = Base_de_datos.validarNomPuesto(txtNombreRol.Text);
             if (ver >= 1)
             {
-                MessageBox.Show("Medida ya existente");
+                MessageBox.Show("Puesto ya existente");
                 return;
+                
             }
-         
-            Base_de_datos.Registro_Medida(txtNombreRol.Text.ToUpper());
-            MessageBox.Show("Registrado con exito");
+            
+                Base_de_datos.Registro_Puesto(txtNombreRol.Text.ToUpper());
+                MessageBox.Show("Registrado con exito");
 
-            this.Hide();
+                this.Hide();
+
+           
+        }
+
+        private void Ingreso_puesto_Load(object sender, EventArgs e)
+        {
+            txtNombreRol.Focus();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void Ingresar_medida_Load(object sender, EventArgs e)
-        {
-            txtNombreRol.Focus();
-        }
-
-        private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.espacio(e);
-        }
-
-        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

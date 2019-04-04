@@ -158,6 +158,12 @@
     <Compile Include="ingresoPrendaExisntente.Designer.cs">
       <DependentUpon>ingresoPrendaExisntente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingreso_puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingreso_puesto.Designer.cs">
+      <DependentUpon>Ingreso_puesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingreso_ropa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ingresoPrendaExisntente.resx">
       <DependentUpon>ingresoPrendaExisntente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso_puesto.resx">
+      <DependentUpon>Ingreso_puesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingreso_ropa.resx">
       <DependentUpon>Ingreso_ropa.cs</DependentUpon>

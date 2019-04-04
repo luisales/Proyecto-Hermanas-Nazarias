@@ -854,5 +854,11 @@ namespace Hermanas_nazario
                 panel12.Visible = true;
             }
         }
+
+        private void bunifuFlatButton37_Click(object sender, EventArgs e)
+        {
+            Ingreso_puesto a = new Ingreso_puesto();
+            a.ShowDialog();
+        }
     }
 }
