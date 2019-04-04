@@ -20,6 +20,15 @@ namespace Hermanas_nazario
             Base_de_datos busc = new Base_de_datos();
             busc.BuscarMedNom("");
             dataGridView1.DataSource = busc.Mostrar_Resultados();
+            busc.BuscarRiesgo();
+            dataGridView3.DataSource = busc.Mostrar_Resultados();
+
+            foreach (DataGridViewRow row in dataGridView3.Rows)
+            {
+                txtriesgo.Items.Add(row.Cells[1].Value.ToString());
+
+            }
+
         }
         public void hola()
         {
@@ -322,6 +331,11 @@ namespace Hermanas_nazario
         private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.espacio(e);
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
