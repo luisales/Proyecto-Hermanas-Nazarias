@@ -31,7 +31,14 @@ namespace Hermanas_nazario
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            string c;
+            c = richTextBox1.Text ;
+            if (c.StartsWith(" "))
+            {
+                MessageBox.Show("No se puede ingresar con espacio");
+                richTextBox1.Text = "";
+                return;
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

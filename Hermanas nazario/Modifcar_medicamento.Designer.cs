@@ -290,6 +290,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(215, 79);
             this.richTextBox1.TabIndex = 83;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             this.richTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox1_KeyPress);
             // 
             // label9
