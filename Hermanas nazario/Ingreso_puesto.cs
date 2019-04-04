@@ -29,7 +29,6 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-
             int ver = Base_de_datos.validarNomPuesto(txtNombreRol.Text);
             if (ver >= 1)
             {

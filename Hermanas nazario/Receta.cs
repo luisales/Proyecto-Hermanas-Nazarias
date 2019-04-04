@@ -295,24 +295,16 @@ namespace Hermanas_nazario
         int riesgo;
         private void button5_Click(object sender, EventArgs e)
         {
-            if (txtriesgo.Text != "Alto" && txtriesgo.Text != "Medio" && txtriesgo.Text != "Bajo")
+            if (!string.IsNullOrEmpty(txtriesgo.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if (txtriesgo.Text == "Alto")
-            {
-                riesgo = 1;
-            }
-            if (txtriesgo.Text == "Medio")
-            {
-                riesgo = 2;
-            }
-            if (txtriesgo.Text == "Bajo")
-            {
-                riesgo = 3;
-            }
-            Base_de_datos.Actualizar_Riesgo(riesgo, txtcita.Text);
+            string h;
+            h = txtriesgo.SelectedItem.ToString();
+            int B;
+            B = Base_de_datos.Buscar_codigo_nivel(txtriesgo.SelectedItem.ToString());
+            Base_de_datos.Actualizar_Riesgo(B, txtcita.Text);
             Base_de_datos.cita = txtcita.Text;
             Generar_factura a = new Generar_factura();
             a.ShowDialog();

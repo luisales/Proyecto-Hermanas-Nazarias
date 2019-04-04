@@ -67,11 +67,11 @@ namespace Hermanas_nazario
 
         public static SqlConnection Conectar()
         {
-            //SqlConnection con = new SqlConnection("Data Source=LOCALHOST;Initial Catalog=HermanasNazario;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-CLSVRED;Initial Catalog=HermanasNazario;Persist Security Info=True;User ID=sa;Password=123");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-6OC6CM3\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True"); 
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-01SF7PQ;Initial Catalog=Clinica;Integrated Security=True");
             //SqlConnection con = new SqlConnection("Data Source=DESKTOP-8KH68A7\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-2FRD256\\SQLEXPRESS;Initial Catalog=HermanasNazario;Integrated Security=True");
             return con;
 
         }
@@ -1219,7 +1219,7 @@ namespace Hermanas_nazario
             con = Conectar();
             string Nombre;
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT a.Nombre_usuario,b.Primer_nombre_empleado,b.Primer_apellido_empleado, b.Segundo_apellido_empleado from [dbo].[Usuarios] a inner join [dbo].[Empleados] b on a.Codigo_empleado=b.Codigo_empleado where a.Nombre_usuario = @id", con);
+            SqlCommand cmd = new SqlCommand("SELECT a.Nombre , b.Primer_nombre,b.Primer_apellido, b.Segundo_apellido from [dbo].[Usuario] a inner join [dbo].[Empleado] b on a.Codigo_empleado=b.Codigo where a.Nombre = @id", con);
             cmd.Parameters.AddWithValue("@id", User);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -1229,18 +1229,12 @@ namespace Hermanas_nazario
                 SqlDataReader registro = cmd.ExecuteReader();
                 if (registro.Read())
                 {
-
-
-                    Nombre = ("Dr(a)." + registro["Primer_nombre_empleado"].ToString() + " " + registro["Primer_apellido_empleado"].ToString() + " " + registro["Segundo_apellido_empleado"].ToString());
+                    Nombre = ("Dr(a)." + registro["Primer_nombre"].ToString() + " " + registro["Primer_apellido"].ToString() + " " + registro["Segundo_apellido"].ToString());
                     con.Close();
                     return Nombre;
-
                 }
-
-
             }
             return null;
-
         }
 
 
@@ -3182,6 +3176,28 @@ namespace Hermanas_nazario
             }
         }
 
+        public static int Buscar_codigo_nivel(string medida)
+        {
+            SqlConnection con;
+            con = Conectar();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select Codigo from [dbo].[Nivel_economico] where Nombre='" + medida + "'", con);
+            SqlDataReader Perm = cmd.ExecuteReader();
+            if (Perm.Read())
+            {
+                int a;
+                a = Convert.ToInt32(Perm["Codigo"]);
+                return Convert.ToInt32(Perm["Codigo"]);
+
+
+            }
+            else
+            {
+                con.Close();
+                return 0;
+            }
+
+        }
     }
 }
 

@@ -216,6 +216,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             if (panel6.Visible == true)
             {
                 panel6.Visible = false;
@@ -239,6 +241,7 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
             Registro_pacientes a = new Registro_pacientes();
             a.Left = 415;
             a.Top = 90;
@@ -260,6 +263,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
+            panel13.Visible = false;
             if (panel8.Visible == true)
             {
                 panel8.Visible = false;
@@ -282,6 +287,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
+            panel13.Visible = false;
             if (panel7.Visible == true)
             {
                 panel7.Visible = false;
@@ -303,6 +310,8 @@ namespace Hermanas_nazario
             panel8.Visible = false;
             panel9.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
+            panel13.Visible = false;
             if (panel10.Visible == true)
             {
                 panel10.Visible = false;
@@ -324,6 +333,7 @@ namespace Hermanas_nazario
             panel8.Visible = false;
             panel9.Visible = false;
             panel10.Visible = false;
+            panel14.Visible = false;
             if (panel13.Visible == true)
             {
                 panel13.Visible = false;
@@ -345,6 +355,8 @@ namespace Hermanas_nazario
             panel8.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
+            panel13.Visible = false;
             if (panel9.Visible == true)
             {
                 panel9.Visible = false;
@@ -886,6 +898,7 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
             Ingresar_Servicio a = new Ingresar_Servicio();
             a.ShowDialog();
         }
@@ -908,6 +921,7 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel14.Visible = false;
             Modificar_servcios a = new Modificar_servcios();
             a.ShowDialog();
         }

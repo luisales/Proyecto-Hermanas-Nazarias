@@ -396,6 +396,7 @@
             this.label7.TabIndex = 76;
             this.label7.Text = "label7";
             this.label7.Visible = false;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel7
             // 

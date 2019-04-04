@@ -165,7 +165,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(332, 591);
+            this.btnModificar.Location = new System.Drawing.Point(340, 560);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(106, 32);
@@ -210,6 +210,7 @@
             this.txtriesgo.Name = "txtriesgo";
             this.txtriesgo.Size = new System.Drawing.Size(326, 26);
             this.txtriesgo.TabIndex = 13;
+            this.txtriesgo.Visible = false;
             this.txtriesgo.SelectedIndexChanged += new System.EventHandler(this.txtriesgo_SelectedIndexChanged);
             // 
             // label15
@@ -409,7 +410,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(76, 488);
+            this.label8.Location = new System.Drawing.Point(84, 457);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 24);
@@ -421,7 +422,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(75, 511);
+            this.label9.Location = new System.Drawing.Point(83, 480);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(174, 24);
@@ -431,7 +432,7 @@
             // txtmadre
             // 
             this.txtmadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmadre.Location = new System.Drawing.Point(268, 488);
+            this.txtmadre.Location = new System.Drawing.Point(276, 457);
             this.txtmadre.Margin = new System.Windows.Forms.Padding(2);
             this.txtmadre.MaxLength = 30;
             this.txtmadre.Name = "txtmadre";
@@ -443,7 +444,7 @@
             // txtpadre
             // 
             this.txtpadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpadre.Location = new System.Drawing.Point(268, 514);
+            this.txtpadre.Location = new System.Drawing.Point(276, 483);
             this.txtpadre.Margin = new System.Windows.Forms.Padding(2);
             this.txtpadre.MaxLength = 30;
             this.txtpadre.Name = "txtpadre";
@@ -627,7 +628,7 @@
             this.groupBox2.Controls.Add(this.txttel);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(75, 374);
+            this.groupBox2.Location = new System.Drawing.Point(83, 343);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(556, 110);
             this.groupBox2.TabIndex = 83;
@@ -646,6 +647,7 @@
             this.label21.Size = new System.Drawing.Size(130, 24);
             this.label21.TabIndex = 84;
             this.label21.Text = "Riegos Social:";
+            this.label21.Visible = false;
             // 
             // pictureBox11
             // 
@@ -737,6 +739,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 124;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Visible = false;
             // 
             // pictureBox8
             // 
@@ -827,7 +830,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label22.Location = new System.Drawing.Point(74, 536);
+            this.label22.Location = new System.Drawing.Point(82, 505);
             this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(80, 27);
@@ -842,7 +845,7 @@
             this.cmbestado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbestado.Location = new System.Drawing.Point(269, 541);
+            this.cmbestado.Location = new System.Drawing.Point(277, 510);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(121, 26);
             this.cmbestado.TabIndex = 115;

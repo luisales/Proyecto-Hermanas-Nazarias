@@ -254,11 +254,6 @@ namespace Hermanas_nazario
                 MessageBox.Show("El campo de de identidad debe ser de 13 digitos");
                 return;
             }
-            if (txtriesgo.Text != "Alto" && txtriesgo.Text != "Medio" && txtriesgo.Text != "Bajo")
-            {
-                MessageBox.Show("Llene todos los campos obligatorios");
-                return;
-            }
 
             if (!string.IsNullOrEmpty(txtdia.Text) == false)
             {

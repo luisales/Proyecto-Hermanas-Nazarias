@@ -19,8 +19,8 @@ namespace Hermanas_nazario
             timer1.Enabled = true;
             Base_de_datos busc = new Base_de_datos();
             busc.BuscarMedida();
-            dataGridView1.DataSource= busc.Mostrar_Resultados(); 
-        
+            dataGridView1.DataSource= busc.Mostrar_Resultados();
+            dateTimePicker1.MinDate = DateTime.Now;
          
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -157,6 +157,11 @@ namespace Hermanas_nazario
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
