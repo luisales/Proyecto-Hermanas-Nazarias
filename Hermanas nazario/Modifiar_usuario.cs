@@ -29,11 +29,21 @@ namespace Hermanas_nazario
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            string est;
             int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
             txtCodigoUsuario.Text = Convert.ToString(selectedRow.Cells[0].Value);
             txtNombreUsuario.Text = Convert.ToString(selectedRow.Cells[1].Value);
-            
+            est = Convert.ToString(selectedRow.Cells[4].Value);
+            if (est == "ACT")
+            {
+                cmbestado.Text = "Activo";
+            }
+            else
+            {
+                cmbestado.Text = "Inactivo";
+            }
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -51,7 +61,19 @@ namespace Hermanas_nazario
                 return;
             }
 
-            Base_de_datos.Actualizar_usuario(int.Parse(txtCodigoUsuario.Text), txtNombreUsuario.Text);
+            string estado;
+
+            if (cmbestado.Text == "Activo")
+            {
+                estado = "ACT";
+            }
+
+            else
+            {
+                estado = "INC";
+            }
+
+            Base_de_datos.Actualizar_usuario(int.Parse(txtCodigoUsuario.Text), txtNombreUsuario.Text, estado);
 
             MessageBox.Show("Usuario modificado.");
 
@@ -61,6 +83,7 @@ namespace Hermanas_nazario
 
             txtCodigoUsuario.Clear();
             txtNombreUsuario.Clear();
+            cmbestado.Text = "";
             btnModificar.Enabled = false;
 
 

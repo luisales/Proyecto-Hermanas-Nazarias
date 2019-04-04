@@ -1568,7 +1568,7 @@ namespace Hermanas_nazario
             }
         }
 
-        public static void Actualizar_usuario(int Codigo, string nombre)
+        public static void Actualizar_usuario(int Codigo, string nombre, string estado)
         {
             SqlConnection con;
             con = Base_de_datos.Conectar();
@@ -1576,10 +1576,12 @@ namespace Hermanas_nazario
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Mante_usuarios", con);
+                SqlCommand cmd = new SqlCommand("mante_usuario", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@cod", Codigo));
+                cmd.Parameters.Add(new SqlParameter("@codigo", Codigo));
                 cmd.Parameters.Add(new SqlParameter("@nombre", nombre));
+                cmd.Parameters.Add(new SqlParameter("@estado", estado));
+                cmd.Parameters.Add(new SqlParameter("@opc", 2));
                 cmd.ExecuteNonQuery();
             }
             catch
