@@ -865,5 +865,11 @@ namespace Hermanas_nazario
             Modificar_puesto a = new Modificar_puesto();
             a.ShowDialog();
         }
+
+        private void bunifuFlatButton37_Click(object sender, EventArgs e)
+        {
+            Ingreso_puesto a = new Ingreso_puesto();
+            a.ShowDialog();
+        }
     }
 }
