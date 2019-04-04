@@ -3052,8 +3052,34 @@ namespace Hermanas_nazario
                 return 0;
             }
         }
+        public void BuscarRiesgo()
+        {
+            SqlConnection con;
+            con = Conectar();
+            try
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("select Codigo, Nombre from [dbo].[Nivel_Economico]", con);
+                da.SelectCommand.CommandType = CommandType.Text;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    Resultado = dt;
+                    con.Close();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
-    } 
+
+    }
 }
 
 
