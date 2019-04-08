@@ -50,7 +50,7 @@ namespace Hermanas_nazario
 
             if (Base_de_datos.validarContraseña(txtcontra.Text) == false)
             {
-                MessageBox.Show("La contraseña debe tener al menos un letra minúscula, una mayúscula, un dígitoy entre 7 y 30 caracteres.");
+                MessageBox.Show("La contraseña debe tener al menos una letra minúscula, una mayúscula, un dígito entre 7 y 30 caracteres.");
                 return;
             }
 
