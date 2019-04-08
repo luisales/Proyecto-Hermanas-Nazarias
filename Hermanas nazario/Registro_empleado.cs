@@ -35,7 +35,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if (txtid.Text == "    -    -")
+            if (txtid.Text == "    -    -     /")
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
@@ -48,6 +48,11 @@ namespace Hermanas_nazario
             if (txtid.TextLength<13)
             {
                 MessageBox.Show("El campo de identidad debe tener 13 digitos");
+                return;
+            }
+            if (txtid.Text.Contains(' ') == true)
+            {
+                MessageBox.Show("El campo de identidad debe ser de 13 digitos");
                 return;
             }
             if (!string.IsNullOrEmpty(txttel.Text) == true)

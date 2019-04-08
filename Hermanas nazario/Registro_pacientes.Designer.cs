@@ -759,7 +759,7 @@
             // 
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(304, 306);
-            this.txtid.Mask = "0000-0000-00000";
+            this.txtid.Mask = "0000-0000-00000/";
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(161, 28);
             this.txtid.TabIndex = 112;

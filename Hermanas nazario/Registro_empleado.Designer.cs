@@ -577,9 +577,9 @@
             // 
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(283, 296);
-            this.txtid.Mask = "0000-0000-00000";
+            this.txtid.Mask = "0000-0000-00000/";
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(214, 36);
+            this.txtid.Size = new System.Drawing.Size(213, 36);
             this.txtid.TabIndex = 115;
             this.txtid.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtid_MaskInputRejected);
             this.txtid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtid_KeyPress_1);

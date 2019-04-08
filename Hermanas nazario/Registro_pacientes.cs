@@ -140,16 +140,22 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if (txtid.Text == "    -    -")
+            if (txtid.Text == "    -    -     /")
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if (txtid.TextLength < 13)
+            if (txtid.TextLength < 11)
             {
                 MessageBox.Show("El campo de identidad debe ser de 13 digitos");
                 return;
             }
+
+            if (txtid.Text.Contains(' ') == true)
+            {
+                MessageBox.Show("El campo de identidad debe ser de 13 digitos");
+                return;
+            } 
 
             if (int.Parse(txtmes.Text) == 2 && int.Parse(txtdia.Text) > 29)
             {
@@ -206,7 +212,13 @@ namespace Hermanas_nazario
 
             Base_de_datos.Registro(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtlugar.Text, txtmes.Text + "/"+ txtdia.Text + "/"+txtanio.Text, txtpadre.Text, txtmadre.Text, txtid.Text, sexo, 3, txtOcupacion.Text.ToUpper(), txtLugarTrabajo.Text.ToUpper(),txtDireccion.Text.ToUpper(), txttel.Text.ToUpper(), txtTelEmer.Text.ToUpper());
 
-            Base_de_datos.expediente(txtid.Text);
+            int hasta = txtid.Text.Length - 1;
+            //Asigno la cadena que va a quedar a una variable
+            string resultado = txtid.Text.Substring(0, hasta);
+            //Pinto el resultado en el textbox
+            txtid.Text = resultado;
+            Base_de_datos.expediente(resultado);
+
             this.Close();
 
 
