@@ -213,6 +213,9 @@ namespace Hermanas_nazario
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+             DateTime hoy = DateTime.Now;
+            DateTime fech = DateTime.Now;
+
             if (int.Parse(txtmes.Text) == 2 && int.Parse(txtdia.Text) > 29)
             {
                 MessageBox.Show("Fecha invalida: no existe el dia");
@@ -281,9 +284,10 @@ namespace Hermanas_nazario
                 MessageBox.Show("El mes tiene que ser 1-12");
                 return;
             }
-            if ((int.Parse(txtanio.Text)) < 1900 || (int.Parse(txtanio.Text)) > 2018)
+            //if ((int.Parse(txtanio.Text)) < 1900 || (int.Parse(txtanio.Text)) > 2018)
+            if ((hoy.Year - (int.Parse(txtanio.Text)) > 100) || (int.Parse(txtanio.Text)) > int.Parse(fech.Year.ToString()))
             {
-                MessageBox.Show("El año tiene que ser 1900-2018 ");
+                MessageBox.Show("El año tiene que ser " + (hoy.Year - 100) + "-" + fech.Year.ToString());
                 return;
             }
 
@@ -293,7 +297,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Identidad ya existente");
                 return;
             }
-            DateTime fech = DateTime.Now;
+            
 
             if ((int.Parse(txtanio.Text)) < 1900 || (int.Parse(txtanio.Text)) > int.Parse(fech.Year.ToString()))
             {

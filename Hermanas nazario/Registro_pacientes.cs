@@ -104,6 +104,8 @@ namespace Hermanas_nazario
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
+            DateTime hoy = DateTime.Now; 
+
             if (!string.IsNullOrEmpty(txtnom1.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
@@ -172,9 +174,9 @@ namespace Hermanas_nazario
             }
             DateTime fech = DateTime.Now;
 
-            if ((int.Parse(txtanio.Text)) < 1900 || (int.Parse(txtanio.Text)) > int.Parse(fech.Year.ToString()))
+            if ((hoy.Year - (int.Parse(txtanio.Text)) > 100) || (int.Parse(txtanio.Text)) > int.Parse(fech.Year.ToString()))
             {
-                MessageBox.Show("El año tiene que ser 1900-" + fech.Year.ToString());
+                MessageBox.Show("El año tiene que ser "+(hoy.Year - 100) +"-" + fech.Year.ToString());
                 return;
             }
             DateTime actual = DateTime.Now;
