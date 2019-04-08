@@ -35,7 +35,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if (!string.IsNullOrEmpty(txtid.Text) == false)
+            if (txtid.Text == "    -    -")
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
@@ -65,12 +65,15 @@ namespace Hermanas_nazario
                 MessageBox.Show("Identidad ya existente");
                 return;
             }
-
-            if (Base_de_datos.validarEmail(txtcorreo.Text) == false)
+            if (!string.IsNullOrEmpty(txtcorreo.Text) == true)
             {
-                MessageBox.Show("El Email Ingresado no se encuentra en el Formato Correcto");
-                return;
+                if (Base_de_datos.validarEmail(txtcorreo.Text) == false)
+                {
+                    MessageBox.Show("El Email Ingresado no se encuentra en el Formato Correcto");
+                    return;
+                }
             }
+            
 
             Base_de_datos.registrar_empleado(txtnom1.Text.ToUpper(), txtnom2.Text.ToUpper(), txtape1.Text.ToUpper(), txtape2.Text.ToUpper(), txtcorreo.Text, txtid.Text, sexo, txttel.Text,txtcargo.Text.ToUpper(), int.Parse(txtrol.Text));
             this.Close();
@@ -140,6 +143,7 @@ namespace Hermanas_nazario
 
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Validar.espacio(e);
         }
 
         private void txttel_KeyPress(object sender, KeyPressEventArgs e)
@@ -201,6 +205,21 @@ namespace Hermanas_nazario
             DataGridViewRow selectedRow = dataGridView2.Rows[selectedrowindex];
             txtcargo.Text = Convert.ToString(selectedRow.Cells[0].Value);
             dataGridView2.Visible = false;
+        }
+
+        private void txtid_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+           
+        }
+
+        private void txtid_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
