@@ -78,6 +78,7 @@
             this.txtcontraseña.BackColor = System.Drawing.SystemColors.ButtonFace;
             resources.ApplyResources(this.txtcontraseña, "txtcontraseña");
             this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
             this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
             // 
             // btningresar
