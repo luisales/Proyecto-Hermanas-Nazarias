@@ -107,6 +107,11 @@ namespace Hermanas_nazario
 
         }
 
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.solonumeros(e);

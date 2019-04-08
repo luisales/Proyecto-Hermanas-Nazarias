@@ -495,6 +495,16 @@ namespace Hermanas_nazario
                     txtMedicamentos.Text = "0";
                     txtSubTotal.Text = "0";
                     Base_de_datos.cita = "";
+                    MessageBox.Show("Factura registrada con exito!");
+                    FormCollection formulariosApp = Application.OpenForms;
+                    foreach (Form f in formulariosApp)
+                    {
+                        if (f.Name != "NuevoMenu")
+                        {
+                            f.Close();
+                        }
+                    }
+                    this.Hide();
                 }
             }
           
