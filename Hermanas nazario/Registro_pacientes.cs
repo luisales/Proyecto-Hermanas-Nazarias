@@ -20,7 +20,6 @@ namespace Hermanas_nazario
         {
 
             InitializeComponent();
-
         }
  
         private void button1_Click(object sender, EventArgs e)
@@ -141,7 +140,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if (!string.IsNullOrEmpty(txtid.Text) == false)
+            if (txtid.Text == "    -    -")
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
@@ -349,6 +348,21 @@ namespace Hermanas_nazario
                 txtpadre.Text = "";
                 return;
             }
+        }
+
+        private void txtid_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtid_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.espacio(e);
+        }
+
+        private void txtid_Validating(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
