@@ -47,7 +47,14 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
-            if(txtcontra.Text!=txtconf.Text)
+
+            if (Base_de_datos.validarContraseña(txtcontra.Text) == false)
+            {
+                MessageBox.Show("La contraseña debe tener al menos un letra minúscula, una mayúscula, un dígitoy entre 7 y 30 caracteres.");
+                return;
+            }
+
+            if (txtcontra.Text!=txtconf.Text)
             {
                 MessageBox.Show("Las contraseñas no coinciden");
                 return;
@@ -58,6 +65,7 @@ namespace Hermanas_nazario
                 MessageBox.Show("Usuario ya existente");
                 return;
             }
+            
             contra = Encriptar.EncriptarContra(txtcontra.Text);
             prof= Encriptar.EncriptarContra(txtprof.Text.ToUpper());
             Base_de_datos.registrar_usuario(txtusu.Text, contra, int.Parse(txtemp.Text), prof.ToUpper());
