@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using System.Diagnostics;
 
 namespace Hermanas_nazario
 {
@@ -250,6 +251,7 @@ namespace Hermanas_nazario
                     }
                     using (FileStream stream = new FileStream(folderPath + "Factura_" + txtCita.Text + ".pdf", FileMode.Create))
                     {
+                        
                         Document pdfDoc = new Document(PageSize.A4.Rotate(), 30f, 10f, 10f, 0f);
                         PdfWriter.GetInstance(pdfDoc, stream);
 
@@ -267,6 +269,7 @@ namespace Hermanas_nazario
                         pdfDoc.Add(Total);
                         pdfDoc.Close();
                         stream.Close();
+
                     }
 
                 }
@@ -295,7 +298,14 @@ namespace Hermanas_nazario
                     while (i < bb);
 
 
-
+                    Process p = new Process();
+                    p.StartInfo = new ProcessStartInfo()
+                    {
+                        CreateNoWindow = true,
+                        Verb = "print",
+                        FileName = @"C:\Facturas\Factura_" + txtCita.Text + ".pdf"
+                    };
+                    p.Start();
                     txtValorC.Enabled = false;
                     btnPagar.Enabled = false;
                     chkIngresar.Enabled = false;
@@ -314,6 +324,7 @@ namespace Hermanas_nazario
                     txtMedicamentos.Text = "0";
                     txtSubTotal.Text = "0";
                     Base_de_datos.cita = "";
+
                 }
             }
             else
@@ -496,14 +507,6 @@ namespace Hermanas_nazario
                     txtSubTotal.Text = "0";
                     Base_de_datos.cita = "";
                     MessageBox.Show("Factura registrada con exito!");
-                    FormCollection formulariosApp = Application.OpenForms;
-                    foreach (Form f in formulariosApp)
-                    {
-                        if (f.Name != "NuevoMenu")
-                        {
-                            f.Close();
-                        }
-                    }
                     this.Hide();
                 }
             }

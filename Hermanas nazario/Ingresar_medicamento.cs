@@ -64,6 +64,11 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
+            if (!string.IsNullOrEmpty(txtUnidad.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
             int ver = Base_de_datos.validarNomMed(txtnom.Text);
             if (ver != 1)
             {

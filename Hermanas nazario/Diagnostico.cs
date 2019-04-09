@@ -34,6 +34,7 @@ namespace Hermanas_nazario
             MessageBox.Show("Guardado con exito");
             richTextBox1.Enabled = false;
             richTextBox2.Enabled = false;
+            button2.Enabled = true;
         }
 
         private void Diagnostico_Load(object sender, EventArgs e)

@@ -103,6 +103,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             if (panel1.Visible == true)
             {
                 panel1.Visible = false;
@@ -126,6 +128,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
@@ -149,6 +153,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             if (panel3.Visible == true)
             {
                 panel3.Visible = false;
@@ -172,6 +178,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             if (panel4.Visible == true)
             {
                 panel4.Visible = false;
@@ -194,6 +202,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             if (panel5.Visible == true)
             {
                 panel5.Visible = false;
@@ -403,6 +413,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Factura_servicios a = new Factura_servicios();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -423,6 +435,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Busqueda_de_pacientes a = new Busqueda_de_pacientes();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -443,6 +457,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Base_de_datos.decis = 3;
             Busqueda_citas a = new Busqueda_citas();
             a.ShowDialog();
@@ -464,6 +480,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Registro_empleado a = new Registro_empleado();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -484,6 +502,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Busqueda_empleados a = new Busqueda_empleados();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -504,6 +524,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Registro_de_usuario a = new Registro_de_usuario();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -524,6 +546,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Modifiar_usuario a = new Modifiar_usuario();
             a.ShowDialog();
         }
@@ -541,6 +565,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Receta a = new Receta();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -561,6 +587,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Busqueda_factura a = new Busqueda_factura();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -581,6 +609,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Ingresar_medicamento a = new Ingresar_medicamento();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -601,6 +631,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Ingreso_ropa a = new Ingreso_ropa();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -622,6 +654,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Busqueda_medicamentos a = new Busqueda_medicamentos();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -642,7 +676,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
-
+            panel13.Visible = false;
+            panel14.Visible = false;
             Referencia a = new Referencia();
             a.ShowDialog();
             Base_de_datos.paca = 0;
@@ -663,6 +698,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Ingresar_medida a = new Ingresar_medida();
             a.ShowDialog();
         }
@@ -680,6 +717,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Modificacion_medida a = new Modificacion_medida();
             a.ShowDialog();
         }
@@ -697,6 +736,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Ingresar_Servicio a = new Ingresar_Servicio();
             a.ShowDialog();
         }
@@ -714,6 +755,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Modificar_servcios a = new Modificar_servcios();
             a.ShowDialog();
         }
@@ -731,6 +774,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Modificar_Nivel a = new Modificar_Nivel();
             a.ShowDialog();
         }
@@ -748,6 +793,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Modificar_Nivel a = new Modificar_Nivel();
             a.ShowDialog();
         }
@@ -765,6 +812,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Registro_roles a = new Registro_roles();
             a.ShowDialog();
         }
@@ -782,6 +831,8 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
+            panel14.Visible = false;
             Modificacion_roles a = new Modificacion_roles();
             a.ShowDialog();
         }
@@ -858,6 +909,7 @@ namespace Hermanas_nazario
             panel8.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
             if (panel14.Visible == true)
             {
                 panel14.Visible = false;
@@ -898,6 +950,7 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
             panel14.Visible = false;
             Ingresar_Servicio a = new Ingresar_Servicio();
             a.ShowDialog();
@@ -921,6 +974,7 @@ namespace Hermanas_nazario
             panel9.Visible = false;
             panel10.Visible = false;
             panel11.Visible = false;
+            panel13.Visible = false;
             panel14.Visible = false;
             Modificar_servcios a = new Modificar_servcios();
             a.ShowDialog();

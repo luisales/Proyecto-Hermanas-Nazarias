@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using iTextSharp.text.pdf;
 using System.IO;
 using iTextSharp.text;
+using System.Diagnostics;
 
 namespace Hermanas_nazario
 {
@@ -74,7 +75,7 @@ namespace Hermanas_nazario
 
         private void txtape_TextChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
+            if (radioButton1.Checked &&txtape.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.Buscar(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
@@ -89,7 +90,7 @@ namespace Hermanas_nazario
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked && txtnom.TextLength >= 1 && txtape.TextLength >= 1)
+            if (radioButton1.Checked && txtnom.TextLength >= 1)
             {
                 Base_de_datos busc = new Base_de_datos();
                 busc.Buscar(txtnom.Text.ToUpper(), txtape.Text.ToUpper());
@@ -128,7 +129,6 @@ namespace Hermanas_nazario
                 int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
                 NombrePaciente = (Convert.ToString(selectedRow.Cells[1].Value)+" "+ Convert.ToString(selectedRow.Cells[2].Value) + " " + Convert.ToString(selectedRow.Cells[3].Value));
-                lblSeleccion.Text = NombrePaciente;
                 String Titulo = "Dispensario Médico Hermana Nazaria";
                 String Titulo2 = "\nAguas del Padre, Siguatepeque, Comayagua\n";
                 Nombre = Base_de_datos.Referencia();
@@ -214,9 +214,17 @@ namespace Hermanas_nazario
                 Paragraph Parrafo3 = new Paragraph(txtFirma.Text);
                 Parrafo3.Alignment = Element.ALIGN_CENTER;
                 doc.Add(Parrafo3);
-                
 
                 doc.Close();
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo()
+                {
+                    CreateNoWindow = true,
+                    Verb = "print",
+                    FileName = @"C:\Facturas\Text.pdf"
+                };
+                p.Start();
+
                 MessageBox.Show("Guardado con exito");
                 this.Hide();
             }

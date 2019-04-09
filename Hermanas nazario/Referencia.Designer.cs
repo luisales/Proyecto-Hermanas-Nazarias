@@ -198,12 +198,12 @@
             // 
             this.btnGenerar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(382, 346);
+            this.btnGenerar.Location = new System.Drawing.Point(326, 340);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(130, 36);
+            this.btnGenerar.Size = new System.Drawing.Size(186, 36);
             this.btnGenerar.TabIndex = 96;
-            this.btnGenerar.Text = "Guardar";
+            this.btnGenerar.Text = "Guardar e imprimir";
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 

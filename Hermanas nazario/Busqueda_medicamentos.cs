@@ -97,7 +97,12 @@ namespace Hermanas_nazario
             dataGridView1.DataSource = null;
             venc a = new venc();
             a.ShowDialog();
-
+            if (a.DialogResult == DialogResult.OK)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarMedNom("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
         }
 
         private void btnIng_Click(object sender, EventArgs e)
@@ -121,7 +126,13 @@ namespace Hermanas_nazario
             button1.Enabled = false;
             Ingresar_medicamentoEx a = new Ingresar_medicamentoEx();
             a.ShowDialog();
-            
+            if (a.DialogResult == DialogResult.OK)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarMedNom("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -235,6 +246,12 @@ namespace Hermanas_nazario
             lblCod.Text = "*";
             txtUnidad.Text = "*";
             label10.Text = "*";
+            if (a.DialogResult == DialogResult.OK)
+            {
+                Base_de_datos busc = new Base_de_datos();
+                busc.BuscarMedNom("");
+                dataGridView1.DataSource = busc.Mostrar_Resultados();
+            }
         }
 
         private void lblCod_TextChanged(object sender, EventArgs e)

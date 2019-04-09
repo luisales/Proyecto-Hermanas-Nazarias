@@ -68,7 +68,7 @@
             this.txtCita.Enabled = false;
             this.txtCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCita.Location = new System.Drawing.Point(207, 128);
-            this.txtCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCita.Margin = new System.Windows.Forms.Padding(2);
             this.txtCita.MaxLength = 8;
             this.txtCita.Name = "txtCita";
             this.txtCita.Size = new System.Drawing.Size(69, 30);
@@ -81,7 +81,7 @@
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.Location = new System.Drawing.Point(779, 578);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.MaxLength = 30;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(83, 30);
@@ -94,7 +94,7 @@
             this.txtValorC.Enabled = false;
             this.txtValorC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorC.Location = new System.Drawing.Point(753, 133);
-            this.txtValorC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtValorC.Margin = new System.Windows.Forms.Padding(2);
             this.txtValorC.MaxLength = 8;
             this.txtValorC.Name = "txtValorC";
             this.txtValorC.Size = new System.Drawing.Size(66, 30);
@@ -108,7 +108,7 @@
             this.txtIngresar.Enabled = false;
             this.txtIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresar.Location = new System.Drawing.Point(478, 407);
-            this.txtIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.txtIngresar.MaxLength = 7;
             this.txtIngresar.Name = "txtIngresar";
             this.txtIngresar.Size = new System.Drawing.Size(74, 30);
@@ -123,7 +123,7 @@
             this.chkIngresar.AutoSize = true;
             this.chkIngresar.Enabled = false;
             this.chkIngresar.Location = new System.Drawing.Point(360, 414);
-            this.chkIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.chkIngresar.Name = "chkIngresar";
             this.chkIngresar.Size = new System.Drawing.Size(64, 17);
             this.chkIngresar.TabIndex = 32;
@@ -136,12 +136,12 @@
             this.btnPagar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPagar.Enabled = false;
             this.btnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagar.Location = new System.Drawing.Point(346, 565);
-            this.btnPagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPagar.Location = new System.Drawing.Point(314, 566);
+            this.btnPagar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(112, 43);
+            this.btnPagar.Size = new System.Drawing.Size(160, 43);
             this.btnPagar.TabIndex = 33;
-            this.btnPagar.Text = "Pagar";
+            this.btnPagar.Text = "Pagar e imprimir";
             this.btnPagar.UseVisualStyleBackColor = false;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
@@ -151,7 +151,7 @@
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(478, 565);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(112, 43);
             this.btnCancelar.TabIndex = 35;
@@ -164,7 +164,7 @@
             this.txtSubTotal.Enabled = false;
             this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubTotal.Location = new System.Drawing.Point(781, 488);
-            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubTotal.MaxLength = 30;
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Size = new System.Drawing.Size(83, 30);
@@ -176,7 +176,7 @@
             this.txtConsulta.Enabled = false;
             this.txtConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsulta.Location = new System.Drawing.Point(779, 533);
-            this.txtConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsulta.MaxLength = 30;
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.Size = new System.Drawing.Size(83, 30);
@@ -189,7 +189,7 @@
             this.txtMedicamentos.Enabled = false;
             this.txtMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicamentos.Location = new System.Drawing.Point(779, 404);
-            this.txtMedicamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMedicamentos.Margin = new System.Windows.Forms.Padding(2);
             this.txtMedicamentos.MaxLength = 30;
             this.txtMedicamentos.Name = "txtMedicamentos";
             this.txtMedicamentos.Size = new System.Drawing.Size(83, 30);
@@ -201,7 +201,7 @@
             this.txtDesc.Enabled = false;
             this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.Location = new System.Drawing.Point(781, 446);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.MaxLength = 30;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(83, 30);
@@ -213,7 +213,7 @@
             this.pictureBox2.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox2.Image = global::Hermanas_nazario.Properties.Resources.Signo_más;
             this.pictureBox2.Location = new System.Drawing.Point(280, 132);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -231,7 +231,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 180);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -257,7 +257,7 @@
             this.pictureBox3.ErrorImage = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda;
             this.pictureBox3.Image = global::Hermanas_nazario.Properties.Resources.volver_boton_de_flecha_de_navegacion_que_apunta_hacia_la_izquierda__2_;
             this.pictureBox3.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 66);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,7 +385,7 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(881, 635);
@@ -439,7 +439,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(380, 80);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Generar_factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Generar_factura";

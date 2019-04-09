@@ -95,8 +95,15 @@ namespace Hermanas_nazario
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            int ver = Base_de_datos.validarNomMedMod(codigomed.Text,txtnom.Text);
+            if (ver != 1)
+            {
+                MessageBox.Show("Medicamento ya existente");
+                return;
+            }
             Base_de_datos.Actualizar_Medicamento(int.Parse(codigomed.Text), txtnom.Text.ToUpper(), txtcant.Text.ToUpper(), richTextBox1.Text.ToUpper(), txtprecio.Text.ToUpper(), txtUnidad.SelectedItem.ToString());
             MessageBox.Show("Medicamento guardado con exito");
+            DialogResult = DialogResult.OK;
             this.Hide();
             codigomed.Clear();
             codigomed.Focus();

@@ -87,7 +87,7 @@ namespace Hermanas_nazario
                 txtrem.Clear();
 
                 txtcod.Focus();
-                
+                DialogResult = DialogResult.OK;
                 Hide();
                 
                

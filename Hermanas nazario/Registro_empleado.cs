@@ -40,6 +40,11 @@ namespace Hermanas_nazario
                 MessageBox.Show("Llene todos los campos obligatorios");
                 return;
             }
+            if (!string.IsNullOrEmpty(txtcargo.Text) == false)
+            {
+                MessageBox.Show("Llene todos los campos obligatorios");
+                return;
+            }
             if (!string.IsNullOrEmpty(txtrol.Text) == false)
             {
                 MessageBox.Show("Llene todos los campos obligatorios");
