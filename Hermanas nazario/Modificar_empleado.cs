@@ -346,6 +346,10 @@ namespace Hermanas_nazario
             txtcargo.Text = Convert.ToString(selectedRow.Cells[0].Value);
             dataGridView2.Visible = false;
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return keyData == (Keys.Alt | Keys.F4);
+        }
     }
     }
 

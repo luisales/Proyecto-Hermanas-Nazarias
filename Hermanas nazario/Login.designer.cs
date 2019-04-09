@@ -55,6 +55,7 @@
             resources.ApplyResources(this.txtusuario, "txtusuario");
             this.txtusuario.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtusuario.Name = "txtusuario";
+            this.txtusuario.ShortcutsEnabled = false;
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 

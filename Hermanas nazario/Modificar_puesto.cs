@@ -78,5 +78,14 @@ namespace Hermanas_nazario
         {
             this.Hide();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return keyData == (Keys.Alt | Keys.F4);
+        }
     }
 }

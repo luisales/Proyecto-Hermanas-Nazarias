@@ -117,5 +117,10 @@ namespace Hermanas_nazario
             Validar.solonumeros(e);
             Validar.espacio(e);
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return keyData == (Keys.Alt | Keys.F4);
+        }
     }
 }

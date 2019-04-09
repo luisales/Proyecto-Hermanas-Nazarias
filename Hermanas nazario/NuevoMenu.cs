@@ -991,5 +991,9 @@ namespace Hermanas_nazario
             Modificar_puesto a = new Modificar_puesto();
             a.ShowDialog();
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return keyData == (Keys.Alt | Keys.F4);
+        }
     }
 }

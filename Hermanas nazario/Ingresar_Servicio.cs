@@ -79,5 +79,15 @@ namespace Hermanas_nazario
         {
 
         }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return keyData == (Keys.Alt | Keys.F4);
+        }
     }
 }

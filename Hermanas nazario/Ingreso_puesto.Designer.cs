@@ -147,6 +147,7 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(645, 280);
             this.bunifuGradientPanel1.TabIndex = 77;
+            this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
             // Ingreso_puesto
             // 

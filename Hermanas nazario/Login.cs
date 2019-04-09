@@ -102,19 +102,25 @@ namespace Hermanas_nazario
         private const Keys k_copy = Keys.Control | Keys.C;
         private const Keys k_paste = Keys.Control | Keys.V;
 
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+        //    return keyData == (Keys.Alt | Keys.F4);
+        //    if (keyData == k_copy || keyData == k_paste)
+        //    {
+        //        return true;
+        //    }
+
+        //    else
+        //    {
+        //        return base.ProcessCmdKey(ref msg, keyData);
+        //    }
+        //}
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == k_copy || keyData == k_paste)
-            {
-                return true;
-            }
+            return keyData == (Keys.Alt | Keys.F4);
+        }
 
-            else
-            {
-                return base.ProcessCmdKey(ref msg, keyData);
-            }
-        }
-            
-        }
     }
+}
 

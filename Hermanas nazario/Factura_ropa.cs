@@ -188,5 +188,10 @@ namespace Hermanas_nazario
             Cant = int.Parse((selectedRow.Cells[2].Value).ToString());
             a = int.Parse((selectedRow.Cells[0].Value).ToString());
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return keyData == (Keys.Alt | Keys.F4);
+        }
     }
 }
